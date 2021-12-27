@@ -1,0 +1,109 @@
+.primary-bg{
+	background-color: #089544 !important;
+}
+
+.primary-border{
+	border-color: #089544 !important;
+}
+
+.primary-color{
+	color: #089544 !important;
+}
+
+.form-control:focus{
+	border: 1px solid #089544 !important;
+}
+
+/*Data Table*/
+.page-item.active .page-link{
+	background-color: #089544 !important;
+	border-color: #089544 !important;
+}
+/*End Data Table*/
+
+/*Form*/
+	.container-form{
+		padding: 40px 40px;
+	}
+/*End Form*/
+
+
+/*Error section*/
+.error-message{
+	color: #dc3545;
+}
+
+.required-fill{
+	color: #dc3545;
+}
+
+.hidden{
+	display: none;
+}
+
+.tox-browse-url {
+	display: none !important;
+}
+
+
+/*Section Doctor*/
+.search-box{
+    display: block;
+    float: left;
+    width: 100%;
+    -moz-margin-end: -4px;
+    vertical-align: top;
+    margin-bottom: 30px;
+    padding: 0 15px;
+}
+
+.select2-container--default .select2-selection--single{
+    padding:5px 12px;
+    height: calc(1.5em + .75rem + 7px) !important;
+    font-size: 16px;  
+    position: relative;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    font-size: 14px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+	top: 5px !important;
+}
+
+
+.input-length{
+	width: 100%;
+}
+
+.input-clock-length{
+	width: 100%;
+}
+
+.row-2{
+	padding-bottom: 35px !important;
+}
+
+.row-2::before{
+	padding-bottom: 25px !important;
+}
+
+.row-2::after{
+	padding-bottom: 25px !important;
+}
+
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media(min-width: 1280px){
+	.input-length{
+		width: 40%;
+	}
+
+	.input-clock-length{
+		width: 50%;
+	}
+}
