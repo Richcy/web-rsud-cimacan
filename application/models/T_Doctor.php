@@ -1,7 +1,9 @@
 <?php 
 class T_Doctor extends CI_Model {
 
-	
+	private $itemPerPage = 8;
+
+
 	public function show_all()
 	{
     $query = $this->db->select('doctor.id, doctor.name, doctor.field, doctor.office, doctor.experience, doctor.year, doctor.month, doctor.alumni, doctor.nip, doctor.str, doctor.sip, doctor.img, fields.id as field_id, fields.name as field');
@@ -94,6 +96,38 @@ class T_Doctor extends CI_Model {
     $query = $this->db->select('doctor.id, doctor.name, doctor.field, doctor.office, doctor.experience, doctor.year, doctor.month, doctor.alumni, doctor.nip, doctor.str, doctor.sip, doctor.img, fields.id as field_id, fields.name as field');
     $query = $this->db->order_by('name', 'ASC');
     $query = $this->db->join('t_field_doctor as fields', 'fields.id = doctor.field', 'left');
+    $query =  $this->db->where('status', 'publish');
+    if (!empty($field)) {
+      $query =  $this->db->where('doctor.field', $field);
+    }
+    if (!empty($s)) {
+      $query =  $this->db->like('doctor.name', $s);
+    }
+    $query = $this->db->get('t_doctor as doctor');
+    return $query->result();
+  }
+
+  public function getPage($page, $field, $s)
+  {
+    $limitbefore = $page <= 1 ? 0 : ($page-1) * $this->itemPerPage;
+    $query = $this->db->select('doctor.id, doctor.name, doctor.field, doctor.office, doctor.experience, doctor.year, doctor.month, doctor.alumni, doctor.nip, doctor.str, doctor.sip, doctor.img, fields.id as field_id, fields.name as field');
+    $query = $this->db->order_by('name', 'ASC');
+    $query = $this->db->join('t_field_doctor as fields', 'fields.id = doctor.field', 'left');
+    $query =  $this->db->where('status', 'publish');
+    if (!empty($field)) {
+      $query =  $this->db->where('doctor.field', $field);
+    }
+    if (!empty($s)) {
+      $query =  $this->db->like('doctor.name', $s);
+    }
+    $query = $query->limit($this->itemPerPage, $limitbefore);
+    $query = $this->db->get('t_doctor as doctor');
+    return $query->result();
+  }
+
+  public function getTotal($field, $s)
+  {
+    $query = $this->db->select('count(id) as totalData');
     $query =  $this->db->where('status', 'publish');
     if (!empty($field)) {
       $query =  $this->db->where('doctor.field', $field);

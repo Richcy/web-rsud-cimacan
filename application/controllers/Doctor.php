@@ -19,17 +19,44 @@ class Doctor extends CI_Controller {
 
 		$field = $this->input->get('field') ? $this->input->get('field') : '';
 		$s = $this->input->get('s') ? $this->input->get('s') : '';
-		// var_dump($field);
-		// die();
+		$page = 1;
+		$totalData = $this->T_Doctor->getTotal($field, $s);
+		$totalPage = ceil($totalData[0]->totalData/8);
 
 		$data['field_selected'] = $field;
 		$data['s'] = $s;
-		$data['datas'] = $this->T_Doctor->getAll($field, $s);
+		$data['lang'] = 'id';
+		$data['page'] = 1;
+		$data['totalData'] = $totalData[0]->totalData;
+		$data['totalPage'] = $totalPage;
+		$data['datas'] = $this->T_Doctor->getPage($page, $field, $s);
 		$data['fields'] = $this->T_Field_Doctor->show_all();
 		$this->load->view('fe/doctor', $data);
 	}
 
-	public function detail($id)
+	public function page($page)
+	{
+		$data['cur_page'] = 'doctor';
+		$data['cur_parent_page'] = '';
+
+		$field = $this->input->get('field') ? $this->input->get('field') : '';
+		$s = $this->input->get('s') ? $this->input->get('s') : '';
+		$page = $page ? $page : 1;
+		$totalData = $this->T_Doctor->getTotal($field, $s);
+		$totalPage = ceil($totalData[0]->totalData/8);
+
+		$data['field_selected'] = $field;
+		$data['s'] = $s;
+		$data['lang'] = 'id';
+		$data['page'] = $page ? $page : 1;
+		$data['totalData'] = $totalData[0]->totalData;
+		$data['totalPage'] = $totalPage;
+		$data['datas'] = $this->T_Doctor->getPage($page, $field, $s);
+		$data['fields'] = $this->T_Field_Doctor->show_all();
+		$this->load->view('fe/doctor', $data);
+	}
+
+	public function detail($id, $name)
 	{
 		$data['cur_page'] = 'doctor';
 		$data['cur_parent_page'] = '';

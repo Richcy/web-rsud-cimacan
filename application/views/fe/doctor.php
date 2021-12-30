@@ -69,6 +69,9 @@
                           <input name="s" type="text" class="form-control input-search-doctor" placeholder="Masukkan keyword" value="<?=$s ? $s : '';?>">
                         </div>
                         <button type="submit" class="btn btn-primary" style="background-color: #01923f; border-color: #01923f;">Submit</button>
+                        <?php if ($field_selected != '' || $s != '') {?>
+                        <a href="<?=base_url('doctor/')?>" type="button" class="btn btn-primary button-reset">Reset</a>
+                        <?php } ?>
                       </div>
                     </div>
                   </form>
@@ -81,11 +84,15 @@
 
         <!-- Doctor list -->
         <section id="doctors" class="doctors">
+          <?php if (!empty($datas)) {?>
           <div class="row" id="list">
             <?php foreach ($datas as $data){?>
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
               <div class="member">
-                <a href="<?=base_url().'doctor-'.$data->id.'.html';?>">
+                <?php $delete_dots = str_replace('.', ' ', $data->name); ?>
+                <?php $delete_coma = str_replace(',', ' ', $delete_dots); ?>
+                <?php $fix_name = str_replace(' ', '-', $delete_coma); ?>
+                <a href="<?=base_url().'doctor-'.$data->id.'-'.$fix_name.'.html';?>">
                   <div class="member-img">
                     <img src="<?=$data->img ? base_url().'assets/uploads/'.$data->img : base_url().'assets/uploads/doctor.jpg' ;?>" class="img-fluid" alt="">
                     
@@ -100,6 +107,49 @@
           <?php } ?>
 
           </div>
+          <?php }else{ ?>
+            <p class="empty-data">Data dokter tidak tersedia</p>
+          <?php } ?>
+          <!-- Pagination -->
+        <div class="doctor-page news-pagination">
+          <ul>
+            <?php if ($page != 1) {?>
+            <li>
+              <?php if ($field_selected != '' || $s != '') {?>
+                <a href="<?=base_url().'doctor/'.($page-1).'?field='.$field_selected.'&s='.$s;?>" class="pagination-link">
+              <?php }else{ ?>
+                <a href="<?=base_url().'doctor/'.($page-1).'/';?>" class="pagination-link">
+              <?php } ?>
+                <i class="fa fa-angle-left"></i>
+              </a>
+            </li>
+            <?php } ?>
+
+            <?php for ($i=1; $i <= $totalPage ; $i++) {?>
+              <li>
+                <?php if ($field_selected != '' || $s != '') {?>
+                  <a href="<?=base_url().'doctor/'.$i.'?field='.$field_selected.'&s='.$s;?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
+                <?php }else{ ?>
+                  <a href="<?=base_url().'doctor/'.$i.'/';?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
+                <?php } ?>
+                  <?=$i;?>
+                </a>
+              </li>
+            <?php } ?>
+            <?php if ($page < $totalPage) {?>
+            <li>
+              <?php if ($field_selected != '' || $s != '') {?>
+                <a href="<?=base_url().'doctor/'.($page+1).'?field='.$field_selected.'&s='.$s;?>" class="pagination-link">
+              <?php }else{ ?>
+                <a href="<?=base_url().'doctor/'.($page+1).'/';?>" class="pagination-link">
+              <?php } ?>
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </li>
+            <?php } ?>
+          </ul>
+        </div>
+        <!-- End Pagination -->
         </section>
         <!-- End Doctor list -->
       </div>

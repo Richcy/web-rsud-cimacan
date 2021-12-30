@@ -532,6 +532,14 @@ table{
 .form-group input{
     font-size: min(14px);
 }
+
+.doctor-page{
+    margin-bottom: -3% !important;
+}
+
+a:hover.button-reset{
+    color: #fff !important;
+}
 /*END Section doctor*/
 
 /*Floating section*/
@@ -759,11 +767,11 @@ position: fixed;
     letter-spacing: 3px;
 }
 
-.modal-body{
+#ambulance-modal .modal-body{
     height: 210px;
 }
 
-.modal-content{
+#ambulance-modal .modal-content{
     margin-top: 40%;
 }
 

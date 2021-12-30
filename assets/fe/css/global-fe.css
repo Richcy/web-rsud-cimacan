@@ -5707,20 +5707,20 @@ button.close {
     letter-spacing: 0.1px;
 }
 .nav-list > ul > li:hover, .nav-list > ul > li:focus, .nav-list > ul > li:active {
-    color: #01923f !important;
+    color: #a82024 !important;
     border-bottom: solid 2px #0077c1;
 }
 .no-border-hover:hover {
     border-bottom: solid 2px transparent !important;
 }
 .nv-sign {
-    border: solid 2px #01923f;
+    border: solid 2px #a82024;
     padding: 7px 19px;
     border-radius: 50px;
 }
 .nv-sign:hover,.nv-sign:focus,.nv-sign:active {
     color: #FFFFFF !important;
-    background-color: #01923f;
+    background-color: #a82024;
 }
 .home-nav {
     background-color: transparent;
@@ -5826,7 +5826,7 @@ body{
     vertical-align: top;
 }
 .top-link {
-    color: #01923f;
+    color: #a82024;
     
     font-size: 14px;
 }
@@ -5850,11 +5850,11 @@ body{
     letter-spacing: 0.5px;
 }
 .nav-link:hover,.nav-link:focus,.nav-link:active {
-    color: #01923f;
+    color: #a82024;
 }
 .top-link:hover,.top-link:focus,.top-link:active {
     font-family: HelveticaNeueLTStdItalic;
-    color: #01923f;
+    color: #a82024;
 }
 .mobile-bar {
     background-color: #ffffff;
@@ -5894,11 +5894,11 @@ body{
     display: inline-block;
 }
 .btn-menu:hover,.btn-menu:focus,.btn-menu:active {
-    background-color: #01923f;
+    background-color: #a82024;
     color: #ffffff;
 }
 .btn-search:hover,.btn-search:focus,.btn-search:active {
-    background-color: #01923f;
+    background-color: #a82024;
     color: #ffffff;
 }
 .mobile-list {
@@ -5994,7 +5994,7 @@ body{
     padding: 0 15px;
     font-family: HelveticaNeueLTStdBlack;
     font-size: 30px;
-    color: #01923f;
+    color: #a82024;
 }
 .homeswiper-link {
     padding: 0 15px 0 20px;
@@ -6004,7 +6004,7 @@ body{
 }
 .homeswiper-link > a {
     display: inline-block;
-    border: solid 2px #01923f;
+    border: solid 2px #a82024;
     padding: 4px 25px;
     border-radius: 30px;
     font-family: HelveticaNeueLTStdBold;
@@ -6012,11 +6012,11 @@ body{
 }
 .homeswiper-link > a:hover,.homeswiper-link > a:focus,.homeswiper-link > a:active {
     color: #FFFFFF;
-    background-color: #01923f;
+    background-color: #a82024;
 }
 .homeswiper-link > span {
     display: inline-block;
-    border: solid 2px #01923f;
+    border: solid 2px #a82024;
     padding: 4px 25px;
     border-radius: 30px;
     font-family: HelveticaNeueLTStdBold;
@@ -6024,7 +6024,7 @@ body{
 }
 .homeswiper-link > span:hover,.homeswiper-link > span:focus,.homeswiper-link > span:active {
     color: #FFFFFF;
-    background-color: #01923f;
+    background-color: #a82024;
 }
 .home-pagination .swiper-pagination-bullet {
     opacity: 1;
@@ -6133,10 +6133,10 @@ body{
     margin: 30px 0 0 0;
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
-    color: #01923f;
+    color: #a82024;
     font-size: 20px;
     display: inline-block;
-    border-bottom: solid 2px #01923f;
+    border-bottom: solid 2px #a82024;
     padding-bottom: 3px;
     margin-bottom: 8px;
 }
@@ -6170,7 +6170,7 @@ body{
     text-align: center;
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
-    color: #01923f;
+    color: #a82024;
     letter-spacing: 0.5px;
 }
 .hproduct-wrap {
@@ -6186,16 +6186,16 @@ body{
 .hproduct-all > a {
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
-    border: solid 2px #01923f;
+    border: solid 2px #a82024;
     padding: 6px 22px;
-    color: #01923f;
+    color: #a82024;
     border-radius: 50px;
     display: inline-block;
     -moz-margin-end:-4px;
 }
 .hproduct-all > a:hover,.hproduct-all > a:focus,.hproduct-all > a:active {
     color: #FFFFFF;
-    background-color: #01923f;
+    background-color: #a82024;
 }
 @media(max-width: 767px){
     .col-hproduct {
@@ -6233,7 +6233,7 @@ body{
     margin-bottom: 20px;
 }
 .hnews-wrap {
-    background-color: #01923f;
+    background-color: #a82024;
 }
 .row-hnews {
     display: table;
@@ -6293,7 +6293,7 @@ body{
 }
 .hnews-read > a:hover,.hnews-read > a:focus,.hnews-read > a:active {
     background-color: #FFFFFF;
-    color: #01923f;
+    color: #a82024;
 }
 .hnews-all {
     text-align: center;
@@ -6311,7 +6311,7 @@ body{
 }
 .hnews-all > a:hover,.hnews-all > a:focus,.hnews-all > a:active {
     background-color: #FFFFFF;
-    color: #01923f;
+    color: #a82024;
 }
 .news-pagination {
     text-align: center;
@@ -6330,9 +6330,9 @@ body{
 .pagination-link {
     font-size: 14px;
     
-    color: #01923f;
+    color: #a82024;
     padding: 3px 2px;
-    border: solid 1px #01923f;
+    border: solid 1px #a82024;
     display: block;
     text-align: center;
     border-radius: 5px;
@@ -6341,11 +6341,11 @@ body{
 }
 .pagination-link:hover,.pagination-link:focus,.pagination-link:active {
     color: #fff !important;
-    background-color: #01923f;
+    background-color: #a82024;
 }
 .active-pag{
     color: #FFFFFF;
-    background-color: #01923f;
+    background-color: #a82024;
 }
 @media(max-width: 767px){
     .col-hnews {
@@ -6448,7 +6448,7 @@ body{
 .hevent-title {
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
-    color: #01923f;
+    color: #a82024;
     font-size: 16px;
 }
 .hevent-place {
@@ -6473,7 +6473,7 @@ body{
 }
 .hevent-view > a:hover,.hevent-view > a:focus,.hevent-view > a:active {
     background-color: #FFFFFF;
-    color: #01923f;
+    color: #a82024;
 }
 .datepicker-ids .ui-datepicker {
     max-width: 100% !important;
@@ -6493,7 +6493,7 @@ body{
     margin-bottom: 5px;
 }
 .highlight > a {
-    background-color: #01923f !important;
+    background-color: #a82024 !important;
     color: #FFFFFF !important;
     background-image: none !important;
 }
@@ -6543,10 +6543,10 @@ body{
     margin: 30px 0 0 0;
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
-    color: #01923f;
+    color: #a82024;
     font-size: 20px;
     display: inline-block;
-    border-bottom: solid 2px #01923f;
+    border-bottom: solid 2px #a82024;
     padding-bottom: 3px;
     margin-bottom: 8px;
 }
@@ -6617,7 +6617,7 @@ body{
     text-transform: uppercase;
 }
 .breadcrumb-ids > a:hover,.breadcrumb-ids > a:focus,.breadcrumb-ids > a:active {
-    color: #01923f;
+    color: #a82024;
 }
 .newsswiper-image {
     display: table;
@@ -6686,7 +6686,7 @@ body{
 }
 .newsswiper-link > a:hover,.newsswiper-link > a:focus,.newsswiper-link > a:active {
     background-color: #FFFFFF;
-    color: #01923f;
+    color: #a82024;
 }
 .news-pagination .swiper-pagination-bullet-active {
     opacity: 1;
@@ -6716,10 +6716,10 @@ body{
 .news-head {
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
-    color: #01923f;
+    color: #a82024;
     font-size: 18px;
     display: inline-block;
-    border-bottom: solid 2px #01923f;
+    border-bottom: solid 2px #a82024;
     margin-bottom: 8px;
 }
 .news-filter {
@@ -6817,7 +6817,7 @@ body{
     display: inline-block;
 }
 .news-title:hover,.news-title:focus,.news-title:active {
-    color: #01923f;
+    color: #a82024;
 }
 .news-read > a {
     display: inline-block;
@@ -6845,7 +6845,7 @@ body{
     text-align: right;
 }
 .clear-nfilter > a {
-    color: #01923f;
+    color: #a82024;
     
     text-decoration: underline !important;
     font-size: 12px;
@@ -6944,7 +6944,7 @@ body{
 .dnews-gallery-head {
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
-    color: #01923f;
+    color: #a82024;
     font-size: 18px;
     line-height: normal;
     margin-bottom: 20px;
@@ -7012,7 +7012,7 @@ body{
 }
 .bookmark-icon {
     font-size: 30px;
-    color: #01923f;
+    color: #a82024;
 }
 .dnews-share > .title {
     
@@ -7038,7 +7038,7 @@ body{
 .other-head > h3 {
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
-    color: #01923f;
+    color: #a82024;
     font-size: 16px;
     position: relative;
     display: inline-block;
@@ -7048,7 +7048,7 @@ body{
 }
 .other-head > hr {
     margin: 0 !important;
-    border-top: solid 2px #01923f;
+    border-top: solid 2px #a82024;
 }
 .row-other {
     display: table;
@@ -7070,7 +7070,7 @@ body{
     padding-bottom: 70%;
 }
 .other-date {
-    color: #01923f;
+    color: #a82024;
     
     margin: 7px 0;
 }
@@ -7088,7 +7088,7 @@ body{
     color: #444444;
 }
 .other-title:hover,.other-title:focus,.other-title:active {
-    color: #01923f;
+    color: #a82024;
 }
 @media(max-width: 991px){
     .row-dnews {
@@ -7312,7 +7312,7 @@ body{
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
     font-size: 14px;
-    background-color: #01923f;
+    background-color: #a82024;
     border: solid 2px #FFFFFF;
     padding: 6px 12px;
     border-radius: 50px;
@@ -7321,9 +7321,9 @@ body{
     text-align: center;
 }
 .eventswiper-rlink:hover {
-    color: #01923f;
+    color: #a82024;
     background-color: #FFFFFF;
-    border: solid 2px #01923f;
+    border: solid 2px #a82024;
 }
 .eventswiper-link {
     color: #FFFFFF !important;
@@ -7336,12 +7336,12 @@ body{
     width: 150px;
     display: inline-block;
     text-align: center;
-    background-color: #01923f;
+    background-color: #a82024;
 }
 .eventswiper-link:hover {
-    color: #01923f !important;
+    color: #a82024 !important;
     background-color: #ffffff !important;
-    border-color:  #01923f;
+    border-color:  #a82024;
 }
 .eventswiper-link:hover > .love-eventswiper {
     background-image: url(../img/idsMedHeart.svg);
@@ -7385,10 +7385,10 @@ body{
 .event-head {
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
-    color: #01923f;
+    color: #a82024;
     font-size: 18px;
     display: inline-block;
-    border-bottom: solid 2px #01923f;
+    border-bottom: solid 2px #a82024;
     margin-bottom: 8px;
 }
 .event-note {
@@ -7434,7 +7434,7 @@ body{
 }
 .month-drop {
     display: block;
-    background-color: #01923f;
+    background-color: #a82024;
     color: #ffffff !important;
     padding: 13px 10px;
     text-align: center;
@@ -7454,13 +7454,13 @@ body{
     top: 100%;
     margin: 0;
     border: 0;
-    background-color: #01923f;
+    background-color: #a82024;
     border-radius: 0;
     max-height: 300px;
     overflow-y: auto;
 }
 .dropdown-menu-month > li {
-    border-bottom: solid 1px #01923f;
+    border-bottom: solid 1px #a82024;
 }
 .dropdown-menu-month > li:last-child {
     border-bottom: 0 !important;
@@ -7469,7 +7469,7 @@ body{
     
     font-size: 14px;
     text-align: left;
-    background-color: #01923f;
+    background-color: #a82024;
     color: #ffffff !important;
 }
 .dropdown-menu-month > li > a:hover, .dropdown-menu-month > li > a:focus {
@@ -7480,14 +7480,14 @@ body{
     
     font-size: 14px;
     text-align: left;
-    color: #01923f !important;
+    color: #a82024 !important;
 }
 .dateswiper-number {
     display: inline-block;
     background-color: #FFFFFF;
     padding: 9px 5px;
     
-    color: #01923f;
+    color: #a82024;
     font-size: 20px;
     border-radius: 5px;
     width: 45px;
@@ -7538,7 +7538,7 @@ body{
 }
 .filter-type {
     display: block;
-    background-color: #01923f;
+    background-color: #a82024;
     color: #FFFFFF !important;
     padding: 13px 22px;
     text-align: center;
@@ -7553,11 +7553,11 @@ body{
     padding: 0;
     margin: 0;
     top: 105%;
-    border: solid 2px #01923f;
+    border: solid 2px #a82024;
     min-width: 150px;
 }
 .dropdown-menu-type > li {
-    border-bottom: solid 1px #01923f;
+    border-bottom: solid 1px #a82024;
 }
 .dropdown-menu-type > li:last-child {
     border-bottom: 0 !important;
@@ -7566,7 +7566,7 @@ body{
     text-align: right;
 }
 .clear-filter > a {
-    color: #01923f;
+    color: #a82024;
     
     text-decoration: underline !important;
     font-size: 14px;
@@ -7599,7 +7599,7 @@ body{
 .event-date {
     
     margin: 5px 0;
-    color: #01923f;
+    color: #a82024;
     font-size: 14px;
 }
 .event-title {
@@ -7645,8 +7645,8 @@ body{
 .btn-join {
     display: inline-block;
     padding: 4px 22px;
-    border: solid 2px #01923f;
-    color: #01923f;
+    border: solid 2px #a82024;
+    color: #a82024;
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
     border-radius: 50px;
@@ -7654,7 +7654,7 @@ body{
 }
 .btn-join:hover,.btn-join:focus,.btn-join:active {
     color: #ffffff;
-    background-color: #01923f;
+    background-color: #a82024;
 }
 .event-place > img {
     width: 10px;
@@ -7752,7 +7752,7 @@ body{
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
     font-size: 14px;
-    background-color: #01923f;
+    background-color: #a82024;
     border: solid 2px #FFFFFF;
     padding: 6px 12px;
     border-radius: 50px;
@@ -7763,9 +7763,9 @@ body{
     -moz-margin-end:-4px;
 }
 .devent-jlink:hover {
-    color: #01923f !important;
+    color: #a82024 !important;
     background-color: #FFFFFF;
-    border: solid 2px #01923f;
+    border: solid 2px #a82024;
 }
 .devent-unjoin {
     background-color: #ab2700;
@@ -7795,7 +7795,7 @@ body{
     display: inline-block;
     -moz-margin-end:-4px;
     text-align: center;
-    background-color: #01923f;
+    background-color: #a82024;
 }
 .love-blink{
     background-image: url(../img/idsMedHeart-White.svg);
@@ -7810,9 +7810,9 @@ body{
     margin-right: 5px;
 }
 .devent-blink:hover {
-    color: #01923f !important;
+    color: #a82024 !important;
     background-color: #ffffff;
-    border-color:  #01923f;
+    border-color:  #a82024;
 }
 .devent-blink:hover > .love-blink{
     background-image: url(../img/idsMedHeart.svg);
@@ -7824,14 +7824,14 @@ body{
     margin-right: 1px;
 }
 .blink-active{
-    color: #01923f !important;
-    border-color:  #01923f;
+    color: #a82024 !important;
+    border-color:  #a82024;
     background-color: #ffffff;
 }
 .devent-joined{
-    color: #01923f !important;
+    color: #a82024 !important;
     background-color: #FFFFFF !important;
-    border: solid 2px #01923f !important;
+    border: solid 2px #a82024 !important;
     pointer-events: none !important;
     cursor: not-allowed !important;
 }
@@ -7853,7 +7853,7 @@ body{
 }
 .tabs-event > .active > a {
     border: 0 !important;
-    border-bottom: solid 2px #01923f !important;
+    border-bottom: solid 2px #a82024 !important;
 }
 .tabs-event > li > a {
     font-family: HelveticaNeueLTStdBold;
@@ -7868,7 +7868,7 @@ body{
 .tabs-event > li > a:hover,.tabs-event > li > a:focus {
     background-color: #f7f7f7 !important;
     border: 0 !important;
-    border-bottom: solid 2px #01923f !important;
+    border-bottom: solid 2px #a82024 !important;
 }
 .overview-content {
     
@@ -7932,7 +7932,7 @@ body{
 .devent-side-header {
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
-    color: #01923f;
+    color: #a82024;
     font-size: 15px;
     margin-bottom: 3px;
 }
@@ -8000,9 +8000,9 @@ body{
 .revent-head {
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
-    color: #01923f;
+    color: #a82024;
     font-size: 18px;
-    border-bottom: solid 2px #01923f;
+    border-bottom: solid 2px #a82024;
     margin-bottom: 40px;
 }
 .revent-head > span {
@@ -8046,7 +8046,7 @@ body{
     margin-bottom: 10px;
 }
 .revent-title:hover,.revent-title:focus,.revent-title:active {
-    color: #01923f;
+    color: #a82024;
 }
 .revent-place {
     
@@ -8215,7 +8215,7 @@ body{
     
     margin: 5px 0;
     padding: 0 10px;
-    color: #01923f !important;
+    color: #a82024 !important;
 }
 .sproduct-link:hover,.sproduct-link:focus,.sproduct-link:active {
     opacity: 1;
@@ -8244,7 +8244,7 @@ body{
     padding: 0 15px;
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
-    color: #01923f;
+    color: #a82024;
     font-size: 24px;
     padding: 40px 0;
 }
@@ -8294,7 +8294,7 @@ body{
 .phead-border hr {
     width: 50px;
     display: inline-block;
-    border-top: solid 3px #01923f;
+    border-top: solid 3px #a82024;
     margin: 0 !important;
 }
 .phead-desc {
@@ -8358,7 +8358,7 @@ body{
     display: inline-block;
     border-radius: 20px;
     font-size: 14px;
-    color: #01923f;
+    color: #a82024;
     /**/
     text-transform: uppercase;
     font-family: HelveticaNeueLTStdBold;
@@ -8388,19 +8388,19 @@ body{
     
     display: inline-block;
     line-height: normal;
-    border: solid 2px #01923f;
+    border: solid 2px #a82024;
     padding: 4px 20px;
     border-radius: 50px;
-    color: #01923f;
+    color: #a82024;
     font-size: 14px;
 }
 .product-content:hover > .product-title,.product-content:focus > .product-title,.product-content:active > .product-title {
-    color: #01923f;
+    color: #a82024;
 }
 .product-view:hover,.product-view:focus,.product-view:active {
     color: #FFFFFF;
-    background-color: #01923f;
-    border-color: #01923f;
+    background-color: #a82024;
+    border-color: #a82024;
 }
 .bookmark-icon{
     display: inline-block;
@@ -8432,9 +8432,9 @@ body{
 .dproduct-title {
     font-size: 20px;
     font-family: HelveticaNeueLTStdBlack;
-    color: #01923f;
+    color: #a82024;
     padding-bottom: 5px;
-    border-bottom: solid 3px #01923f;
+    border-bottom: solid 3px #a82024;
     display: inline-block;
     margin-bottom: 10px;
 }
@@ -8442,7 +8442,7 @@ body{
     display: inline-block;
     border-radius: 20px;
     font-size: 14px;
-    color: #01923f;
+    color: #a82024;
     text-transform: uppercase;
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
@@ -8451,7 +8451,7 @@ body{
 .dproduct-quote {
     font-family: HelveticaNeueLTStdBoldItalic;
     font-weight: bold;
-    color: #01923f;
+    color: #a82024;
     font-size: 14px;
     margin-bottom: 15px;
 }
@@ -8487,8 +8487,8 @@ body{
     display: inline-block;
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
-    border: solid 2px #01923f;
-    color: #01923f;
+    border: solid 2px #a82024;
+    color: #a82024;
     height: 35px;
     vertical-align: middle;
     border-radius: 50px;
@@ -8498,30 +8498,30 @@ body{
 }
 .dproduct-inquiry > a:hover {
     color: #FFFFFF;
-    background-color: #01923f;
+    background-color: #a82024;
 }
 .bookmark-product{
     display: inline-block;
     padding: 4px 25px !important;
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
-    border: solid 2px #01923f;
-    color: #01923f;
+    border: solid 2px #a82024;
+    color: #a82024;
     border-radius: 50px;
     line-height: normal;
 }
 .bookmark-product:hover {
     color: #FFFFFF !important;
-    background-color: #01923f !important;
-    border-color: #01923f !important;
+    background-color: #a82024 !important;
+    border-color: #a82024 !important;
 }
 .bookmark-product:hover > .love-product{
     background-image: url('../img/idsMedHeart-White.svg') !important;
 }
 .active-bookmark{
     background-color: #ffffff !important;
-    color: #01923f !important;
-    border-color: #01923f !important;
+    color: #a82024 !important;
+    border-color: #a82024 !important;
 }
 .active-bookmark > .love-product{
     background-image: url('../img/idsMedHeart2.svg') !important;
@@ -8589,13 +8589,13 @@ body{
     margin-bottom: 20px;
 }
 .tabs-product > .active > a {
-    border-bottom: solid 2px #01923f !important;
-    color: #01923f !important;
+    border-bottom: solid 2px #a82024 !important;
+    color: #a82024 !important;
 }
 .tabs-product > li > a:hover,.tabs-product > li > a:focus,.tabs-product > li > a:active {
     background-color: transparent !important;
-    border-bottom: solid 2px #01923f !important;
-    color: #01923f !important;
+    border-bottom: solid 2px #a82024 !important;
+    color: #a82024 !important;
 }
 .related-event {
     margin-bottom: 30px;
@@ -8603,9 +8603,9 @@ body{
 .rproduct-head {
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
-    color: #01923f;
+    color: #a82024;
     font-size: 18px;
-    border-bottom: solid 2px #01923f;
+    border-bottom: solid 2px #a82024;
     margin-bottom: 40px;
 }
 .rproduct-head > span {
@@ -8669,7 +8669,7 @@ body{
     }
     .brand-list-head {
         font-size: 15px;
-        color: #01923f;
+        color: #a82024;
         border-bottom: solid 1px #ddd;
         padding-bottom: 10px;
     }
@@ -8757,9 +8757,9 @@ body{
     margin-left: 0px;
 }
 .eventswiper-jlink-head {
-    color: #01923f;
+    color: #a82024;
     background-color: #ffffff;
-    border: solid 2px #01923f;
+    border: solid 2px #a82024;
     padding: 8px 28px;
     border-radius: 50px;
     width: 150px;
@@ -8769,7 +8769,7 @@ body{
 }
 .eventswiper-jlink-head:hover {
     color: #ffffff;
-    background-color: #01923f;
+    background-color: #a82024;
 }
 .eventswiper-link{
   -webkit-transition-duration: 0.4s; /* Safari */
@@ -8810,9 +8810,9 @@ body{
     margin-left: 0px;
 }
 .eventswiper-jlink-head {
-    color: #01923f;
+    color: #a82024;
     background-color: #ffffff;
-    border: solid 2px #01923f;
+    border: solid 2px #a82024;
     padding: 8px 28px;
     border-radius: 50px;
     width: 150px;
@@ -8822,23 +8822,23 @@ body{
 }
 .eventswiper-jlink-head:hover {
     color: #ffffff;
-    background-color: #01923f;
+    background-color: #a82024;
 }
 .eventswiper-link{
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
 }
 .eventswiper-jlink{
-  background-color: #01923f;
+  background-color: #a82024;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
 }
 .eventswiper-jlink:hover{
-  color: #01923f;
-  border: solid 2px #01923f;
+  color: #a82024;
+  border: solid 2px #a82024;
 }
 .dateswiper-number:hover {
-    background-color: #01923f;
+    background-color: #a82024;
 }
 .btn-join{
     -webkit-transition-duration: 0.4s; /* Safari */
@@ -8901,8 +8901,8 @@ body{
     transition-duration: 0.4s;
     display: inline-block;
     padding: 3px 15px;
-    border: solid 2px #01923f;
-    color: #01923f !important;
+    border: solid 2px #a82024;
+    color: #a82024 !important;
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
     border-radius: 50px;
@@ -8913,16 +8913,16 @@ body{
 }
 .btn-bookmark2:hover{
     color: #FFFFFF !important;
-    border: solid 2px #01923f;
-    background-color: #01923f !important;
+    border: solid 2px #a82024;
+    background-color: #a82024 !important;
 }
 .btn-bookmark2:hover > .love-icon{
     background-image: url('../img/idsMedHeart-White.svg');
 }
 .ebookmark-active{
-    border: solid 2px #01923f !important;
+    border: solid 2px #a82024 !important;
     background-color: #ffffff !important;
-    color: #01923f !important;
+    color: #a82024 !important;
 }
 .ebookmark-active > .love-icon{
     background-image: url('../img/idsMedHeart2.svg');
@@ -8984,7 +8984,7 @@ body{
 .chead-border hr {
     width: 50px;
     display: inline-block;
-    border-top: solid 3px #01923f;
+    border-top: solid 3px #a82024;
     margin: 0 !important;
 }
 .chead-desc {
@@ -8995,7 +8995,7 @@ body{
     margin-bottom: 20px;
 }
 #title-header {
-    color: #01923f;
+    color: #a82024;
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
 }
@@ -9131,7 +9131,7 @@ body{
     width: 50px;
     display: inline-block;
     -moz-margin-end:-4px;
-    border-top: solid 3px #01923f;
+    border-top: solid 3px #a82024;
     margin: 0 !important;
 }
 .about-head-desc {
@@ -9172,7 +9172,7 @@ body{
     width: 250px;
     display: inline-block;
     -moz-margin-end:-4px;
-    border-top: solid 1px #01923f;
+    border-top: solid 1px #a82024;
     text-align: right;
     margin: 10px 0;
 }
@@ -9247,7 +9247,7 @@ body{
     }
 }
 .about-side-menu > .selected {
-    border-bottom: 2px solid #01923f;
+    border-bottom: 2px solid #a82024;
     font-size: 16px;
     padding: 3px 0;
     font-family: HelveticaNeueLTStdBold;
@@ -9273,8 +9273,8 @@ body{
 .blue-button{
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
-  border: solid 2px #01923f;
-  color: #01923f;
+  border: solid 2px #a82024;
+  color: #a82024;
   border-radius: 50px;
   display: inline-block;
   padding: 4px 15px;
@@ -9285,7 +9285,7 @@ body{
   text-align: center;
 }
 .blue-button:hover{
-  background-color: #01923f;
+  background-color: #a82024;
   color: white;
 }
 .green-button{
@@ -9330,9 +9330,9 @@ body{
   background-repeat: no-repeat;
 }
 .eventswiper-book .ebookmark-active{
-    border: solid 2px #01923f !important;
+    border: solid 2px #a82024 !important;
     background-color: #ffffff !important;
-    color: #01923f !important;
+    color: #a82024 !important;
 }
 .ebookmark-active > .loveids{
   background: url('../img/icon/idsMedHeart.png') ;
@@ -9345,7 +9345,7 @@ body{
 .title-catalogue{
   margin-bottom: -20px;
   font-size: 35px;
-  color: #01923f;
+  color: #a82024;
   font-weight: 900;
 }
 .brand-list-head {
@@ -9443,10 +9443,10 @@ ul > li > ul > li > a{
     transition-duration: 0.4s;
 }
 a:hover > div > div > div > div > .title-color{
-  color: #01923f;
+  color: #a82024;
 }
 a:hover > div > div > div > div > div > .title-color{
-  color: #01923f;
+  color: #a82024;
 }
 .pagination-list {
     text-align: center;
@@ -9466,7 +9466,7 @@ a:hover > div > div > div > div > div > .title-color{
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
     text-align: center;
-    color: #01923f;
+    color: #a82024;
     font-size: 20px;
     padding: 100px 20px;
 }
@@ -9540,7 +9540,7 @@ a:hover > div > div > div > div > div > .title-color{
     }
 }
 .login-square > h1 {
-    color: #01923f;
+    color: #a82024;
     
     text-align: center;
     padding: 30px 0;
@@ -9606,7 +9606,7 @@ a:hover > div > div > div > div > div > .title-color{
     font-size: 14px;
     color: white;
     padding: 10px 0px;
-    background-color: #01923f;
+    background-color: #a82024;
     display: block;
     width: 100%;
     text-align: center;
@@ -9644,7 +9644,7 @@ a:hover > div > div > div > div > div > .title-color{
 #signuphere {
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
-    color: #01923f;
+    color: #a82024;
 }
 #socmed-txt {
     text-align: left;
@@ -9730,7 +9730,7 @@ a:hover > div > div > div > div > div > .title-color{
     font-size: 14px;
     color: white;
     padding: 10px 0px;
-    background-color: #01923f;
+    background-color: #a82024;
     margin-top: 15px;
     display: block;
     text-align: center;
@@ -9744,7 +9744,7 @@ a:hover > div > div > div > div > div > .title-color{
 .dproduct-price {
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
-    color: #01923f;
+    color: #a82024;
     margin-bottom: 20px;
     font-size: 16px;
 }
@@ -9820,7 +9820,7 @@ a:hover > div > div > div > div > div > .title-color{
     display: inline-block;
 }
 .list-user > .active{
-    color: #01923f;
+    color: #a82024;
     font-weight: bolder;
 }
 
@@ -9934,12 +9934,12 @@ a:hover > div > div > div > div > div > .title-color{
     display: block;
 }
 .suser-active {
-    color: #01923f;
+    color: #a82024;
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
 }
 .suser-link:hover,.suser-link:focus,.suser-link:active {
-    color: #01923f;
+    color: #a82024;
 }
 .user-wrap {
     padding-bottom: 30px;
@@ -9973,7 +9973,7 @@ a:hover > div > div > div > div > div > .title-color{
     min-height: 50px;
 }
 .fnews-title:hover,.fnews-title:focus,.fnews-title:active {
-    color: #01923f;
+    color: #a82024;
 }
 .fnews-desc {
     /**/
@@ -9987,16 +9987,16 @@ a:hover > div > div > div > div > div > .title-color{
 }
 .fnews-read > a {
     display: inline-block;
-    color: #01923f;
+    color: #a82024;
     font-size: 14px;
-    border: solid 2px #01923f;
+    border: solid 2px #a82024;
     padding: 3px 15px;
     border-radius: 50px;
 }
 .fnews-read > a:hover,.fnews-read > a:focus,.fnews-read > a:active {
     color: #ffffff !important;
-    background-color: #01923f;
-    border-color: #01923f;
+    background-color: #a82024;
+    border-color: #a82024;
 }
 .fnews-category {
     text-align: right;
@@ -10008,7 +10008,7 @@ a:hover > div > div > div > div > div > .title-color{
 .order-head {
     font-weight: bold;
     font-size: 16px;
-    color: #01923f;
+    color: #a82024;
     margin-bottom: 5px;
     text-align: center;
 }
@@ -10058,11 +10058,11 @@ a:hover > div > div > div > div > div > .title-color{
 }
 .cheader-title > h1 {
     font-weight: bold;
-    color: #01923f;
+    color: #a82024;
     font-size: 42px;
 }
 .cheader-title hr {
-    border-top: solid 2px #01923f;
+    border-top: solid 2px #a82024;
     width: 50px;
     margin: 3px 0 0 0!important;
 }
@@ -10155,7 +10155,7 @@ a:hover > div > div > div > div > div > .title-color{
     color: #808285 !important;
 }
 .tcareer-list a:hover,.tcareer-list a:focus {
-    color: #01923f !important;
+    color: #a82024 !important;
 }
 .table-career {
     padding: 0 15px 30px 15px;
@@ -10200,16 +10200,16 @@ a:hover > div > div > div > div > div > .title-color{
 }
 .btn-capply {
     
-    color: #01923f;
+    color: #a82024;
     border-radius: 50px;
-    border: solid 2px #01923f;
+    border: solid 2px #a82024;
     display: inline-block;
     padding: 6px 25px;
     font-size: 14px;
 }
 .btn-capply:hover,.btn-capply:focus,.btn-capply:active {
     color: #FFFFFF;
-    background-color: #01923f;
+    background-color: #a82024;
 }
 
 .container-talent {
@@ -10431,7 +10431,7 @@ a:hover > div > div > div > div > div > .title-color{
     font-size: 14px;
 }
 .sitemap-list >  li > a:hover,.sitemap-list >  li > a:focus,.sitemap-list >  li > a:active {
-    color: #01923f;
+    color: #a82024;
 }
 .sitemap-child {
     margin: 3px 0 0 0;
@@ -10447,7 +10447,7 @@ a:hover > div > div > div > div > div > .title-color{
     font-size: 14px;
 }
 .sitemap-child >  li > a:hover,.sitemap-child >  li > a:focus,.sitemap-child >  li > a:active {
-    color: #01923f;
+    color: #a82024;
 }
 .sitemap-child > li > span {
     
@@ -10467,7 +10467,7 @@ a:hover > div > div > div > div > div > .title-color{
     font-size: 14px;
 }
 .sitemap-child-2 > li > a:hover, .sitemap-child-2 > li > a:focus, .sitemap-child-2 > li > a:active {
-    color: #01923f;
+    color: #a82024;
 }
 .lang-wrap {
     display: inline-block;
@@ -10475,7 +10475,7 @@ a:hover > div > div > div > div > div > .title-color{
 .flag-lang {
     display: block;
     color: #FFFFFF;
-    background-color: #01923f;
+    background-color: #a82024;
     border-radius: 20px;
     padding: 3px 10px;
 }
@@ -10632,7 +10632,7 @@ a:hover > div > div > div > div > div > .title-color{
     font-weight: bold;
     font-size: 16px;
     padding: 10px 30px;
-    color: #01923f;
+    color: #a82024;
 }
 .event-tab > .active-etab {
     background-color: #ececec;
@@ -10645,7 +10645,7 @@ a:hover > div > div > div > div > div > .title-color{
     border: 0;
 }
 .event-tab > li > a:hover,.event-tab > li > a:focus {
-    color: #01923f;
+    color: #a82024;
     background-color: #ececec;
     border-color: transparent;
 }
@@ -10683,7 +10683,7 @@ a:hover > div > div > div > div > div > .title-color{
 .ccat-active {
     font-family: HelveticaNeueLTStdBold !important;
     font-weight: bold;
-    color: #01923f !important;
+    color: #a82024 !important;
 }
 .ccat-parent {
     
@@ -10725,10 +10725,10 @@ a:hover > div > div > div > div > div > .title-color{
     text-transform: capitalize;
 }
 .ccat-parent:hover,.ccat-parent:focus {
-    color: #01923f;
+    color: #a82024;
 }
 .ccat-child > li > a:hover,.ccat-child > li > a:focus {
-    color: #01923f;
+    color: #a82024;
 }
 /*STORY CSS*/
 .story-desc {
@@ -10767,13 +10767,13 @@ a:hover > div > div > div > div > div > .title-color{
     margin-bottom: 5px;
 }
 .sstory-link:hover,.sstory-link:focus {
-    border-bottom: 2px solid #01923f;
+    border-bottom: 2px solid #a82024;
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
     color: #000000;
 }
 .sstory-active {
-    border-bottom: 2px solid #01923f;
+    border-bottom: 2px solid #a82024;
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
     color: #000000;
@@ -10917,7 +10917,7 @@ a:hover > div > div > div > div > div > .title-color{
     unicode-bidi: bidi-override;
     direction: rtl;
     display: inline-block;
-    color: #01923f;
+    color: #a82024;
 }
 @media(max-width: 1200px){
     .regional-col {
@@ -11268,7 +11268,7 @@ a:hover > div > div > div > div > div > .title-color{
     padding: 0 15px;
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
-    color: #01923f;
+    color: #a82024;
     font-size: 20px;
     line-height: normal;
 }
@@ -11305,7 +11305,7 @@ a:hover > div > div > div > div > div > .title-color{
 }
 .pcorp-border hr {
     margin: 10px 0 !important;
-    border-top: solid 2px #01923f;
+    border-top: solid 2px #a82024;
     width: 150px;
     display: inline-block;
 }
@@ -11469,7 +11469,7 @@ a:hover > div > div > div > div > div > .title-color{
     top: -2px;
 }
 .mob-clink {
-    background-color: #01923f !important;
+    background-color: #a82024 !important;
     color: #FFFFFF;
 }
 .mob-clink >
@@ -11510,7 +11510,7 @@ a:hover > div > div > div > div > div > .title-color{
     padding:15px;
 }
 .col-event-catalog:hover .cat-title{
-    color: #01923f;
+    color: #a82024;
 }
 @media(max-width: 1200px){
     .cat-title {
@@ -11635,21 +11635,21 @@ a:hover > div > div > div > div > div > .title-color{
     padding: 6px 12px;
     width: 55px;
     height: 55px;
-    border: solid 1px #01923f;
+    border: solid 1px #a82024;
     border-radius: 8px;
     background-color: #ffffff;
     text-align: center;
-    color: #01923f;
+    color: #a82024;
     box-shadow: 0 0 5px rgb(39, 39, 39);
 }
 .backtop-link:hover,.backtop-link:focus,.backtop-link:active{
     border: solid 1px #FFFFFF;
     box-shadow: 0 0 5px #FFFFFF;
-    background-color: #01923f;
+    background-color: #a82024;
 }
 .backtop-link > .fa {
     font-size: 30px;
-    color: #01923f;
+    color: #a82024;
     line-height: 50%;
 }
 .backtop-link > span {
@@ -11677,7 +11677,7 @@ a:hover > div > div > div > div > div > .title-color{
     width: 250px;
     max-width: 100%;
     margin: 0 auto 10px auto;
-    color: #01923f;
+    color: #a82024;
 }
 .mbrowser-desc {
     
@@ -11704,14 +11704,14 @@ a:hover > div > div > div > div > div > .title-color{
 .btn-mbrowser {
     font-family:  HelveticaNeueLtStdRoman;
     display: inline-block;
-    border: solid 1px #01923f;
+    border: solid 1px #a82024;
     color: #444;
     width: 120px;
     font-size: 14px;
 }
 .btn-mbrowser:hover,.btn-mbrowser:focus,.btn-mbrowser:active {
     color: #FFFFFF;
-    background-color: #01923f;
+    background-color: #a82024;
 }
 @media(max-width: 767px){
     .mbrowser-list > img {
@@ -11748,7 +11748,7 @@ img.flag-img {
     background-color: inherit;
 }
 .flag-wrap:hover::-webkit-scrollbar-thumb{
-    background-color: #01923f;
+    background-color: #a82024;
 } */
 
 /*
@@ -11870,7 +11870,7 @@ a{
     text-decoration: none !important;
     outline: none !important;
 }
-a.link { color: #01923f; }
+a.link { color: #a82024; }
 .email-text{
     unicode-bidi: bidi-override;
     direction: rtl;
@@ -11907,9 +11907,9 @@ a.link { color: #01923f; }
     text-align: center;
     box-shadow: 0px 0px 10px #ababab;
     border-radius: 5px;
-    border: solid 3px #01923f;
+    border: solid 3px #a82024;
     font-family: HelveticaNeueLTStdBold;
-    color: #01923f;
+    color: #a82024;
 }
 .popup-text {
     text-transform: capitalize;
@@ -11931,7 +11931,7 @@ a.link { color: #01923f; }
     border-left: solid 2px #FFF;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    background-color: #01923f;
+    background-color: #a82024;
 }
 .scart-wrap > a {
     display: block;
@@ -11952,8 +11952,8 @@ a.link { color: #01923f; }
     left: -17px;
     
     top: -17px;
-    color: #01923f;
-    border: solid 1px #01923f;
+    color: #a82024;
+    border: solid 1px #a82024;
 }
 .subpopup-cart {
     display: none;
@@ -11974,9 +11974,9 @@ a.link { color: #01923f; }
     text-align: center;
     box-shadow: 0px 0px 10px #ababab;
     border-radius: 5px;
-    border: solid 3px #01923f;
+    border: solid 3px #a82024;
     font-family: HelveticaNeueLTStdBold;
-    color: #01923f;
+    color: #a82024;
 }
 .subpopup-text {
     text-transform: capitalize;
