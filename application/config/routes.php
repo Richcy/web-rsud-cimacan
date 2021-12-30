@@ -81,8 +81,8 @@ $route['radiology.html'] = 'radiologi';
 $route['radiology-(:any).html'] = 'radiologi/detail/$1';
 
 // $route['doctor'] = 'doctor';
-$route['doctor-(:any).html'] = 'doctor/detail/$1';
-$route['doctor/(:num)'] = 'doctor';
+$route['doctor-(:num)-(:any).html'] = 'doctor/detail/$1/$2';
+$route['doctor/(:num)'] = 'doctor/page/$1';
 
 $route['event'] = 'event';
 $route['event-(:any).html'] = 'event/detail/$1';
