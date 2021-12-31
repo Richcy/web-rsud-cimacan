@@ -1,6 +1,10 @@
 /*Section main color*/
 /*#a82024 -> Merah*/
 /*#a82024 -> Hijau*/
+
+.content-section{
+    font-size: min(14px);
+}
 .main-bg-color{
 	background: #a82024 !important;
 }
@@ -379,6 +383,22 @@ a:hover{
 
 /*End event home section*/
 
+/*Section Event*/
+.datetime-event{
+    font-size: 16px;
+    margin-top: 4%;
+    color: #a82024;
+    font-weight: 700;
+}
+
+.detail-date{
+    font-size: 14px;
+    margin-top: 1%;
+}
+
+.detail-time{
+    font-size: 14px;
+}
 
 /*Page layanan unggulan*/
 /*Banner*/

@@ -100,7 +100,7 @@ a.disabled {
 
 @media(min-width: 1280px){
 	.input-length{
-		width: 40%;
+		width: 40% !important;
 	}
 
 	.input-clock-length{

@@ -24,7 +24,9 @@
       <div class="breadcrumb-part">
         <a href="javascript:void(0);">Home</a>
         <span><i class="fa fa-angle-right"></i></span>
-        <a href="javascript:void(0);">Doctor's Profile</a>
+        <a href="<?=base_url('doctor/');?>">Doctor</a>
+        <span><i class="fa fa-angle-right"></i></span>
+        <a href="javascript:void(0);"><?=$datas[0]->name;?></a>
       </div>
       <!-- End breadcumb -->
       <!-- <div class="hidden-xs nhead-bg" style="background-image: url('<?php echo base_url().'assets/uploads/'.$datas[0]->img;?>');">

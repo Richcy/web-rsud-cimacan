@@ -96,6 +96,21 @@
           </div>
         </div>
       </li>
+
+      <li class="nav-item <?=$cur_parent_page == 'event' ? 'active' : ''?>">
+        <a class="nav-link <?=$cur_parent_page == 'event' ? '' : 'collapsed'?>" haref="javascript:void(0);" data-toggle="collapse" data-target="#event" aria-expanded="true"
+          aria-controls="collapsePage">
+          <i class="fas fa-fw fa-calendar-check"></i>
+          <span>Event</span>
+        </a>
+        <div id="event" class="collapse <?=$cur_parent_page == 'event' ? 'show' : ''?>" aria-labelledby="headingPage" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Event Module</h6>
+            <a class="collapse-item <?=$cur_page == 'event_category' ? 'active' : ''?>" href="<?=base_url('administrator/event_category')?>">Event Category</a>
+            <a class="collapse-item <?=$cur_page == 'event' ? 'active' : ''?>" href="<?=base_url('administrator/event')?>">Event</a>
+          </div>
+        </div>
+      </li>
       <!-- <li class="nav-item">
         <a class="nav-link" href="charts.html">
           <i class="fas fa-fw fa-chart-area"></i>

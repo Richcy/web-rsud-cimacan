@@ -23,6 +23,9 @@
   <!-- ClockPicker -->
   <script src="<?=base_url()?>assets/be/vendor/clock-picker/clockpicker.js"></script>
 
+  <!-- Datepicker -->
+  <script src="<?=base_url()?>assets/be/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+
   <!-- Page level custom scripts -->
   <script>
     <?php if ($this->session->flashdata('title') && $this->session->flashdata('message') && $this->session->flashdata('status')) { ?>

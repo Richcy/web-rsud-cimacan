@@ -20,6 +20,9 @@
   <!-- ClockPicker -->
   <link href="<?=base_url()?>assets/be/vendor/clock-picker/clockpicker.css" rel="stylesheet">
 
+  <!-- DatePicker -->
+  <link href="<?=base_url()?>assets/be/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" >
+
 
   <?php
     $name_session =  $this->session->userdata('name_admin');

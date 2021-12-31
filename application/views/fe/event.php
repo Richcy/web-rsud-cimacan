@@ -53,7 +53,7 @@
                 <div class="ln-desc">
                   <form>
                     <div class="row">
-                      <div class="col-md-4">
+                      <!-- <div class="col-md-4">
                         <div class="form-group">
                           <label for="">Event Type</label>
                           <select class="form-control type-search" id="">
@@ -63,25 +63,27 @@
                             <option>Expired </option>
                           </select>
                         </div>
-                      </div>
-                      <div class="col-md-4">
+                      </div> -->
+                      <div class="col-md-6">
                         <div class="form-group">
-                          <label for="">Category</label>
-                          <select class="form-control category-search" id="">
+                          <label for="">Kategori</label>
+                          <select class="form-control category-search" id="" name="category">
                             <option>-- Choose Category --</option>
-                            <option>Category 1</option>
-                            <option>Category 2</option>
-                            <option>Category 3</option>
-                            <option>Category 4</option>
+                            <?php foreach ($categories as $cat) {;?>
+                              <option value="<?=$cat->id;?>" <?=$cat->id == $category_selected ? 'selected' : '';?>><?=$cat->name;?></option>
+                            <?php } ?>
                           </select>
                         </div>
                       </div>
-                      <div class="col-md-4">
+                      <div class="col-md-6">
                         <div class="form-group">
-                          <label for="">Keyword</label>
-                          <input type="text" class="form-control input-search-doctor" placeholder="Masukkan keyword">
+                          <label for="">Judul Event</label>
+                          <input type="text" class="form-control input-search-doctor" placeholder="Masukkan keyword" name="s">
                         </div>
                         <button type="submit" class="btn btn-primary" style="background-color: #01923f; border-color: #01923f;">Submit</button>
+                        <?php if ($category_selected != '' || $s != '') {?>
+                        <a href="<?=base_url('event/')?>" type="button" class="btn btn-primary button-reset">Reset</a>
+                        <?php } ?>
                       </div>
                     </div>
                   </form>
@@ -94,9 +96,11 @@
 
         <div class="row-news">
           <!-- Looping event -->
-          <!-- <div class="col-news">
+          <?php foreach ($datas as $data) {?>
+          <div class="col-news">
             <div class="fnews-wrap">
-              <a href="javascript:void(0);" class="fnews-img" style="background-image: url('<?php echo base_url();?>assets/fe/img/departments-3.jpg')">
+              <?php $change_url = str_replace(' ', '-', $data->title); ?>
+              <a href="<?=base_url().'event-'.$data->id.'-'.$change_url.'.html';?>" class="fnews-img" style="background-image: url('<?=$data->img ? base_url().'assets/uploads/'.$data->img : base_url().'assets/uploads/default-image.jpg';?>')">
                 <span style=" opacity: 0;">
                   Event Title 1
                 </span>
@@ -104,71 +108,71 @@
               <div class="fnews-content">
                 <div class="row down1" style="height:50px;">
                   <div class="col-xs-8" style="padding-left:0;">
-                    <div class="fnews-date">25 November 2021</div>
+                    <div class="fnews-date"><?=date('d M Y', strtotime($data->start_date));?> - <?=date('d M Y', strtotime($data->end_date));?></div>
                   </div>
                 </div>
-                <a href="javascript:void(0);" class="fnews-title">
-                  Event Title 1
+                <a href="<?=base_url().'event-'.$data->id.'-'.$change_url.'.html';?>" class="fnews-title">
+                  <?=$data->title;?>
                 </a>
                 <div class="fnews-desc">
-                 Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas. . .
+                 <?=substr($data->description, 0, 250);?>...
                 </div>
                 <div class="row up2">
                   <div class="col-xs-6 pad0">
                     <div class="fnews-read">
-                      <a href="javascript:void(0);">See detail Event</a>
+                      <a href="<?=base_url().'event-'.$data->id.'-'.$change_url.'.html';?>">See detail Event</a>
                     </div>
                   </div>
                   <div class="col-xs-6 pad0">
-                    <div class="fnews-category">Category 1</div>
+                    <div class="fnews-category"><?=$data->category_name;?></div>
                   </div>
                 </div>
               </div>
             </div>
-          </div> -->
+          </div>
+          <?php } ?>
           <!-- End looping event -->
-          <p class="empty-data">Data event tidak tersedia</p>
+          <!-- <p class="empty-data">Data event tidak tersedia</p> -->
         </div>
         <!-- Pagination -->
-        <!-- <div class="news-pagination" data-aos="fade-up" data-aos-duration="1000">
+        <div class="news-pagination">
           <ul>
+            <?php if ($page != 1) {?>
             <li>
-              <a href="javascript:void(0);" class="pagination-link">
+              <?php if ($category_selected != '' || $s != '') {?>
+                <a href="<?=base_url().'event/'.($page-1).'?field='.$category_selected.'&s='.$s;?>" class="pagination-link">
+              <?php }else{ ?>
+                <a href="<?=base_url().'event/'.($page-1).'/';?>" class="pagination-link">
+              <?php } ?>
                 <i class="fa fa-angle-left"></i>
               </a>
             </li>
+            <?php } ?>
+
+            <?php for ($i=1; $i <= $totalPage ; $i++) {?>
+              <li>
+                <?php if ($category_selected != '' || $s != '') {?>
+                  <a href="<?=base_url().'event/'.$i.'?field='.$category_selected.'&s='.$s;?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
+                <?php }else{ ?>
+                  <a href="<?=base_url().'event/'.$i.'/';?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
+                <?php } ?>
+                  <?=$i;?>
+                </a>
+              </li>
+            <?php } ?>
+            <?php if ($page < $totalPage) {?>
             <li>
-              <a href="javascript:void(0);" class="pagination-link active-pag">
-                1
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0);" class="pagination-link">
-                2
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0);" class="pagination-link">
-                3
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0);" class="pagination-link">
-                4
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0);" class="pagination-link">
-                5
-              </a>
-            </li>
-            <li>
-              <a href="javascript:void(0);" class="pagination-link">
+              <?php if ($category_selected != '' || $s != '') {?>
+                <a href="<?=base_url().'event/'.($page+1).'?field='.$category_selected.'&s='.$s;?>" class="pagination-link">
+              <?php }else{ ?>
+                <a href="<?=base_url().'event/'.($page+1).'/';?>" class="pagination-link">
+              <?php } ?>
                 <i class="fa fa-angle-right"></i>
               </a>
             </li>
+            <?php } ?>
           </ul>
-        </div> -->
+        </div>
         <!-- End Pagination -->
 
       </div>
