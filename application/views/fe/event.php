@@ -68,7 +68,7 @@
                         <div class="form-group">
                           <label for="">Kategori</label>
                           <select class="form-control category-search" id="" name="category">
-                            <option>-- Choose Category --</option>
+                            <option value="">-- All Category --</option>
                             <?php foreach ($categories as $cat) {;?>
                               <option value="<?=$cat->id;?>" <?=$cat->id == $category_selected ? 'selected' : '';?>><?=$cat->name;?></option>
                             <?php } ?>
@@ -78,7 +78,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label for="">Judul Event</label>
-                          <input type="text" class="form-control input-search-doctor" placeholder="Masukkan keyword" name="s">
+                          <input type="text" class="form-control input-search-doctor" placeholder="Masukkan keyword" name="s" value="<?=$s ? $s : '';?>">
                         </div>
                         <button type="submit" class="btn btn-primary" style="background-color: #01923f; border-color: #01923f;">Submit</button>
                         <?php if ($category_selected != '' || $s != '') {?>
@@ -94,37 +94,37 @@
         </div>
         <!-- End Search Section -->
 
-        <div class="row-news">
+        <div class="row-listbox">
           <!-- Looping event -->
           <?php foreach ($datas as $data) {?>
-          <div class="col-news">
-            <div class="fnews-wrap">
+          <div class="col-listbox">
+            <div class="listboxd-wrap">
               <?php $change_url = str_replace(' ', '-', $data->title); ?>
-              <a href="<?=base_url().'event-'.$data->id.'-'.$change_url.'.html';?>" class="fnews-img" style="background-image: url('<?=$data->img ? base_url().'assets/uploads/'.$data->img : base_url().'assets/uploads/default-image.jpg';?>')">
+              <a href="<?=base_url().'event-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-img" style="background-image: url('<?=$data->img ? base_url().'assets/uploads/'.$data->img : base_url().'assets/uploads/default-image.jpg';?>')">
                 <span style=" opacity: 0;">
                   Event Title 1
                 </span>
               </a>
-              <div class="fnews-content">
+              <div class="listboxd-content">
                 <div class="row down1" style="height:50px;">
                   <div class="col-xs-8" style="padding-left:0;">
-                    <div class="fnews-date"><?=date('d M Y', strtotime($data->start_date));?> - <?=date('d M Y', strtotime($data->end_date));?></div>
+                    <div class="listboxd-date"><?=date('d M Y', strtotime($data->start_date));?> - <?=date('d M Y', strtotime($data->end_date));?></div>
                   </div>
                 </div>
-                <a href="<?=base_url().'event-'.$data->id.'-'.$change_url.'.html';?>" class="fnews-title">
+                <a href="<?=base_url().'event-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-title">
                   <?=$data->title;?>
                 </a>
-                <div class="fnews-desc">
+                <div class="listboxd-desc">
                  <?=substr($data->description, 0, 250);?>...
                 </div>
                 <div class="row up2">
                   <div class="col-xs-6 pad0">
-                    <div class="fnews-read">
-                      <a href="<?=base_url().'event-'.$data->id.'-'.$change_url.'.html';?>">See detail Event</a>
-                    </div>
+                    <div class="listboxd-category"><?=$data->category_name;?></div>
                   </div>
                   <div class="col-xs-6 pad0">
-                    <div class="fnews-category"><?=$data->category_name;?></div>
+                    <div class="listboxd-read">
+                      <a href="<?=base_url().'event-'.$data->id.'-'.$change_url.'.html';?>">Detail</a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -135,7 +135,7 @@
           <!-- <p class="empty-data">Data event tidak tersedia</p> -->
         </div>
         <!-- Pagination -->
-        <div class="news-pagination">
+        <div class="listbox-pagination">
           <ul>
             <?php if ($page != 1) {?>
             <li>

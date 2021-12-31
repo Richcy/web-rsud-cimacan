@@ -25,7 +25,7 @@
   <!-- Template Main CSS File -->
   <link href="<?php echo base_url();?>assets/fe/css/style.css" rel="stylesheet">
   <link href="<?php echo base_url();?>assets/fe/css/style-fe.css" rel="stylesheet">
-  <link href="<?php echo base_url();?>assets/fe/css/global-fe.css" rel="stylesheet">
+  <link href="<?php echo base_url();?>assets/fe/css/style-fe-plus.css" rel="stylesheet">
 
   <!-- External -->
   <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/fe/css/datatables.min.css"/>

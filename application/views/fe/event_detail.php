@@ -130,7 +130,7 @@
                   </div>
 
                   <div class="datetime-event">Tanggal dan Waktu</div>
-                  <div class="detail-date"><?=$start_date;?>, <?=date('d M Y', strtotime($datas[0]->start_date));?> - <?=$end_date;?>, <?=date('d M Y', strtotime($datas[0]->start_date));?></div>
+                  <div class="detail-date"><?=$start_date;?>, <?=date('d M Y', strtotime($datas[0]->start_date));?> - <?=$end_date;?>, <?=date('d M Y', strtotime($datas[0]->end_date));?></div>
                   <div class="detail-time"><?=$datas[0]->start_time;?> - <?=$datas[0]->end_time;?></div>
 
                   <div class="datetime-event">Bagikan</div>
@@ -142,7 +142,7 @@
                     <a href="javascript:void(0);" onclick="popUpSocmed('https://twitter.com/intent/tweet?url=<?=base_url().'event-'.$datas[0]->id.'-'.$change_url.'.html';?>&text=<?=$datas[0]->title;?>');return false" class="share-link">
                       <img src="<?=base_url().'assets/fe/img/icon_twitter.png';?>" alt="twitter">
                     </a>
-                    <a href="javascript:void(0);" onclick="popUpSocmed('whatsapp://send?text=<?=base_url().'event-'.$datas[0]->id.'-'.$change_url.'.html';?>','myWindow','600','300','yes');return false" data-action="share/whatsapp/share" class="share-link">
+                    <a href="javascript:void(0);" onclick="popUpSocmed('https://api.whatsapp.com/send?text=<?=base_url().'event-'.$datas[0]->id.'-'.$change_url.'.html';?>','myWindow','600','300','yes');return false" data-action="share/whatsapp/share" class="share-link">
                       <img src="<?=base_url().'assets/fe/img/icon_whatsapp.png';?>" alt="whatsapp">
                     </a>
                   </div>

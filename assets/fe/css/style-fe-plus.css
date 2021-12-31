@@ -6212,11 +6212,11 @@ body{
     }
 }
 /*END HOME PRODUCT CSS*/
-/*START HOME NEWS CSS*/
-.hnews-header {
+/*START HOME listbox CSS*/
+.hlistbox-header {
     padding: 0 15px;
 }
-.hnews-head {
+.hlistbox-head {
     margin: 30px 0 0 0;
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
@@ -6227,20 +6227,20 @@ body{
     padding-bottom: 3px;
     margin-bottom: 8px;
 }
-.hnews-note {
+.hlistbox-note {
     
     color: #ffffff;
     margin-bottom: 20px;
 }
-.hnews-wrap {
+.hlistbox-wrap {
     background-color: #a82024;
 }
-.row-hnews {
+.row-hlistbox {
     display: table;
     width: 100%;
     position: relative;
 }
-.col-hnews {
+.col-hlistbox {
     display: block;
     float: left;
     vertical-align: top;
@@ -6249,7 +6249,7 @@ body{
     margin-bottom: 30px;
     -moz-margin-end:-4px;
 }
-.hnews-img {
+.hlistbox-img {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -6257,12 +6257,12 @@ body{
     display: block;
     margin-bottom: 10px;
 }
-.hnews-date {
+.hlistbox-date {
     
     color: #ffffff;
     margin-bottom: 10px;
 }
-.hnews-title {
+.hlistbox-title {
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
     color: #FFFFFF;
@@ -6270,19 +6270,19 @@ body{
     display: inline-block;
     margin-bottom: 10px;
 }
-.hnews-title:hover,.hnews-title:focus,.hnews-title:active {
+.hlistbox-title:hover,.hlistbox-title:focus,.hlistbox-title:active {
     color: #bfe6ff;
 }
-.hnews-desc {
+.hlistbox-desc {
     /**/
     color: #FFFFFF;
     font-size: 14px;
     margin-bottom: 20px;
 }
-.hnews-read {
+.hlistbox-read {
     text-align: left;
 }
-.hnews-read > a {
+.hlistbox-read > a {
     display: inline-block;
     padding: 2px 15px;
     color: #FFFFFF;
@@ -6291,15 +6291,15 @@ body{
     font-size: 12px;
     
 }
-.hnews-read > a:hover,.hnews-read > a:focus,.hnews-read > a:active {
+.hlistbox-read > a:hover,.hlistbox-read > a:focus,.hlistbox-read > a:active {
     background-color: #FFFFFF;
     color: #a82024;
 }
-.hnews-all {
+.hlistbox-all {
     text-align: center;
     margin-bottom: 30px;
 }
-.hnews-all > a {
+.hlistbox-all > a {
     display: inline-block;
     padding: 5px 22px;
     color: #FFFFFF;
@@ -6309,21 +6309,21 @@ body{
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
 }
-.hnews-all > a:hover,.hnews-all > a:focus,.hnews-all > a:active {
+.hlistbox-all > a:hover,.hlistbox-all > a:focus,.hlistbox-all > a:active {
     background-color: #FFFFFF;
     color: #a82024;
 }
-.news-pagination {
+.listbox-pagination {
     text-align: center;
     margin: 20px 0;
 }
-.news-pagination > ul {
+.listbox-pagination > ul {
     display: table;
     width: 100%;
     margin: 0;
     padding: 0;
 }
-.news-pagination > ul > li {
+.listbox-pagination > ul > li {
     display: inline-block;
     margin: 0 3px;
 }
@@ -6348,23 +6348,23 @@ body{
     background-color: #a82024;
 }
 @media(max-width: 767px){
-    .col-hnews {
+    .col-hlistbox {
         width: 50%;
     }
-    .col-hnews:last-child {
+    .col-hlistbox:last-child {
         display: none;
     }
 }
 @media(max-width: 500px){
-    .col-hnews {
+    .col-hlistbox {
         width: 100%;
     }
-    .col-hnews:last-child {
+    .col-hlistbox:last-child {
         display: inline-block;
         -moz-margin-end:-4px;
     }
 }
-/*END HOME NEWS CSS*/
+/*END HOME listbox CSS*/
 /*START HOME EVENT CSS*/
 .hevent-wrap {
     background-image: url('../img/bg-event.png');
@@ -6604,7 +6604,7 @@ body{
 }
 /*END HOME PARTNER CSS*/
 
-/*START NEWS CSS*/
+/*START listbox CSS*/
 .breadcrumb-ids {
     padding: 10px 15px;
     margin: 10px 0 0 0;
@@ -6619,7 +6619,7 @@ body{
 .breadcrumb-ids > a:hover,.breadcrumb-ids > a:focus,.breadcrumb-ids > a:active {
     color: #a82024;
 }
-.newsswiper-image {
+.listboxswiper-image {
     display: table;
     width: 100%;
     position: relative;
@@ -6627,7 +6627,7 @@ body{
     background-repeat: no-repeat;
     background-position: center;
 }
-.newsswiper-content {
+.listboxswiper-content {
     display: table-cell;
     width: 100%;
     height: 500px;
@@ -6635,13 +6635,13 @@ body{
     position: relative;
     z-index: 5;
 }
-.newsswiper-date {
+.listboxswiper-date {
     
     color: #FFFFFF;
     padding: 0 15px;
     text-align: center;
 }
-.newsswiper-title {
+.listboxswiper-title {
     color: #FFFFFF;
     font-family: HelveticaNeueLTStdBlack;
     font-size: 30px;
@@ -6651,7 +6651,7 @@ body{
     max-width: 100%;
     margin: 10px auto;
 }
-.newsswiper-desc {
+.listboxswiper-desc {
     /**/
     color: #FFFFFF;
     font-size: 16px;
@@ -6661,7 +6661,7 @@ body{
     max-width: 100%;
     margin: 0 auto;
 }
-.newsswiper-layer {
+.listboxswiper-layer {
     background-color: rgba(0, 0, 0, 0.45);
     position: absolute;
     top: 0;
@@ -6670,10 +6670,10 @@ body{
     height: 100%;
     z-index: 3;
 }
-.newsswiper-link {
+.listboxswiper-link {
     text-align: center;
 }
-.newsswiper-link > a {
+.listboxswiper-link > a {
     color: #FFFFFF;
     border: solid 2px #FFFFFF;
     padding: 5px 20px;
@@ -6684,28 +6684,28 @@ body{
     font-weight: bold;
     font-size: 14px;
 }
-.newsswiper-link > a:hover,.newsswiper-link > a:focus,.newsswiper-link > a:active {
+.listboxswiper-link > a:hover,.listboxswiper-link > a:focus,.listboxswiper-link > a:active {
     background-color: #FFFFFF;
     color: #a82024;
 }
-.news-pagination .swiper-pagination-bullet-active {
+.listbox-pagination .swiper-pagination-bullet-active {
     opacity: 1;
     width: 12px;
     height: 12px;
 }
-.news-pagination .swiper-pagination-bullet {
+.listbox-pagination .swiper-pagination-bullet {
     opacity: 1;
     background-color: #FFFFFF;
     margin: 0 3px !important;
 }
-.news-wrap {
+.listbox-wrap {
     padding: 30px 0;
 }
-.row-tnews {
+.row-tlistbox {
     display: table;
     width: 100%;
 }
-.col-tnews {
+.col-tlistbox {
     display: block;
     float: left;
     width: 50%;
@@ -6713,7 +6713,7 @@ body{
     -moz-margin-end:-4px;
     padding: 0 15px;
 }
-.news-head {
+.listbox-head {
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
     color: #a82024;
@@ -6722,14 +6722,14 @@ body{
     border-bottom: solid 2px #a82024;
     margin-bottom: 8px;
 }
-.news-filter {
+.listbox-filter {
     display: table;
     margin: 0;
     padding: 0;
     text-align: right;
     width: 100%;
 }
-.news-filter > li {
+.listbox-filter > li {
     display: inline-block;
     margin-left: 15px;
     vertical-align: middle;
@@ -6774,19 +6774,19 @@ body{
     color: #FFFFFF;
     background-color: #808080;
 }
-.news-note {
+.listbox-note {
     
     color: #808080;
     font-size: 14px;
 }
-.news-list {
+.listbox-list {
     margin: 30px 0 0 0;
 }
-.row-news {
+.row-listbox {
     display: table;
     width: 100%;
 }
-.col-news {
+.col-listbox {
     display: block;
     float: left;
     width: 33.3333%;
@@ -6795,20 +6795,20 @@ body{
     vertical-align: top;
     margin-bottom: 30px;
 }
-.news-img {
+.listbox-img {
     padding-bottom: 70%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     display: block;
 }
-.news-date {
+.listbox-date {
     
     margin: 10px 0;
     color: #808080;
     font-size: 14px;
 }
-.news-title {
+.listbox-title {
     font-size: 16px;
     color: #444;
     font-family: HelveticaNeueLTStdBold;
@@ -6816,10 +6816,10 @@ body{
     margin-bottom: 20px;
     display: inline-block;
 }
-.news-title:hover,.news-title:focus,.news-title:active {
+.listbox-title:hover,.listbox-title:focus,.listbox-title:active {
     color: #a82024;
 }
-.news-read > a {
+.listbox-read > a {
     display: inline-block;
     padding: 3px 15px;
     font-size: 12px;
@@ -6830,11 +6830,11 @@ body{
     color: #444444;
     line-height: normal;
 }
-.news-read > a:hover,.news-read > a:focus,.news-read > a:active {
+.listbox-read > a:hover,.listbox-read > a:focus,.listbox-read > a:active {
     color: #ffffff;
     background-color: #444444;
 }
-.news-headline {
+.listbox-headline {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -6852,7 +6852,7 @@ body{
     display: inline-block;
     margin: 10px 0 0 0;
 }
-.dnews-layer {
+.dlistbox-layer {
     position: absolute;
     top: 0;
     left: 0;
@@ -6861,7 +6861,7 @@ body{
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 3;
 }
-.dnews-wrap {
+.dlistbox-wrap {
     position: absolute;
     z-index: 5;
     bottom: 0;
@@ -6869,25 +6869,25 @@ body{
     width: 100%;
     padding-bottom: 30px;
 }
-.dnews-title {
+.dlistbox-title {
     font-family: HelveticaNeueLTStdBlack;
     color: #FFFFFF;
     font-size: 30px;
     margin-bottom: 5px;
     padding: 0 15px;
 }
-.dnews-note {
+.dlistbox-note {
     /**/
     color: #FFFFFF;
     font-size: 16px;
     padding: 0 15px;
 }
-.row-dnews {
+.row-dlistbox {
     display: table;
     width: 100%;
     padding: 30px 0;
 }
-.col-dnews-left {
+.col-dlistbox-left {
     width: 65%;
     display: block;
     float: left;
@@ -6895,45 +6895,45 @@ body{
     -moz-margin-end:-4px;
     padding: 0 15px;
 }
-.dnews-type {
+.dlistbox-type {
     
     font-size: 14px;
     color: #808080;
     margin-bottom: 3px;
 }
-.dnews-date {
+.dlistbox-date {
     
     font-size: 14px;
     color: #808080;
 }
-.news-desc {
+.listbox-desc {
     margin: 30px 0 0 0;
     /**/
     color: #444444;
     border-bottom: solid 1px #dddddd;
     padding-bottom: 30px;
 }
-.news-desc strong {
+.listbox-desc strong {
     /*font-family: HelveticaNeueLTStdBold;*/
     font-weight: bold;
     /*font-weight: normal;*/
 }
-.news-desc em {
+.listbox-desc em {
     /*font-family: HelveticaNeueLTStdItalic;*/
 }
-.news-desc i {
+.listbox-desc i {
     /*font-family: HelveticaNeueLTStdItalic;*/
 }
-.news-desc iframe {
+.listbox-desc iframe {
     max-width: 100%;
 }
-.news-desc img {
+.listbox-desc img {
     max-width: 100%;
 }
-.news-desc blockquote {
+.listbox-desc blockquote {
     font-size: 15px !important;
 }
-.col-dnews-right {
+.col-dlistbox-right {
     display: block;
     float: left;
     vertical-align: top;
@@ -6941,7 +6941,7 @@ body{
     width: 35%;
     padding: 0 15px;
 }
-.dnews-gallery-head {
+.dlistbox-gallery-head {
     font-family: HelveticaNeueLTStdBold;
     font-weight: bold;
     color: #a82024;
@@ -7001,26 +7001,26 @@ body{
 .ngalleryswiper-container {
     margin-bottom: 20px !important;
 }
-.dnews-bookmark > .title {
+.dlistbox-bookmark > .title {
     
     color: #808080;
     font-size: 15px;
     margin-bottom: 5px;
 }
-.dnews-bookmark {
+.dlistbox-bookmark {
     margin-bottom: 10px;
 }
 .bookmark-icon {
     font-size: 30px;
     color: #a82024;
 }
-.dnews-share > .title {
+.dlistbox-share > .title {
     
     color: #808080;
     font-size: 15px;
     margin-bottom: 5px;
 }
-.dnews-share {
+.dlistbox-share {
     margin-bottom: 10px;
 }
 .share-icon {
@@ -7091,25 +7091,25 @@ body{
     color: #a82024;
 }
 @media(max-width: 991px){
-    .row-dnews {
+    .row-dlistbox {
         display: block;
     }
-    .news-headline {
+    .listbox-headline {
         height: 400px;
     }
-    .dnews-title {
+    .dlistbox-title {
         font-size: 25px;
     }
-    .dnews-note {
+    .dlistbox-note {
         font-size: 14px;
     }
-    .col-dnews-left {
+    .col-dlistbox-left {
         width: 100%;
     }
-    .col-dnews-right {
+    .col-dlistbox-right {
         width: 100%;
     }
-    .dnews-gallery-head {
+    .dlistbox-gallery-head {
         margin-top: 20px;
     }
     .col-other {
@@ -7120,52 +7120,52 @@ body{
     .breadcrumb-ids > a {
         font-size: 12px;
     }
-    .newsswiper-content {
+    .listboxswiper-content {
         height: 400px;
     }
-    .newsswiper-date {
+    .listboxswiper-date {
         font-size: 14px;
     }
-    .newsswiper-title {
+    .listboxswiper-title {
         font-size: 25px;
         width: 100%;
     }
-    .newsswiper-desc {
+    .listboxswiper-desc {
         display: none;
     }
-    .newsswiper-link > a {
+    .listboxswiper-link > a {
         font-size: 12px;
         line-height: normal;
         margin: 10px 0 0 0;
     }
-    .col-tnews {
+    .col-tlistbox {
         width: 100%;
     }
-    .news-filter {
+    .listbox-filter {
         display: none;
     }
-    .col-tnews:last-child {
+    .col-tlistbox:last-child {
         display: none;
     }
-    .col-news {
+    .col-listbox {
         width: 50%;
     }
-    .news-headline {
+    .listbox-headline {
         height: 350px;
     }
-    .dnews-title {
+    .dlistbox-title {
         font-size: 20px;
     }
-    .dnews-note {
+    .dlistbox-note {
         font-size: 14px;
     }
-    .row-dnews {
+    .row-dlistbox {
         padding: 20px 0;
     }
-    .news-desc {
+    .listbox-desc {
         margin: 15px 0;
     }
-    .dnews-gallery-head {
+    .dlistbox-gallery-head {
         margin-top: 10px;
     }
     .ngalleryswiper-image{
@@ -7173,23 +7173,23 @@ body{
     }
 }
 @media(max-width: 500px){
-    .newsswiper-content {
+    .listboxswiper-content {
         height: 350px;
     }
-    .col-news {
+    .col-listbox {
         width: 100%;
     }
-    .fnews-title{
+    .listboxd-title{
         height: auto !important; 
     }
-    .fnews-desc{
+    .listboxd-desc{
         height: auto !important; 
     }
     .col-other {
         width: 100%;
     }
 }
-/*END NEWS CSS*/
+/*END listbox CSS*/
 /*START EVENT CSS*/
 .eventswiper-image {
     background-repeat: no-repeat;
@@ -8860,7 +8860,7 @@ body{
   height: 23px;
 }
 /*event update*/
-.text-news{
+.text-listbox{
   
   color: #808285;
   font-size: 14px;
@@ -9944,26 +9944,26 @@ a:hover > div > div > div > div > div > .title-color{
 .user-wrap {
     padding-bottom: 30px;
 }
-.fnews-wrap {
+.listboxd-wrap {
     box-shadow: 0 0 10px #ddd;
 }
-.fnews-img {
+.listboxd-img {
     padding-bottom: 70%;
     display: block;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-.fnews-content {
+.listboxd-content {
     padding: 15px;
 }
-.fnews-date {
+.listboxd-date {
     
     color: #808285;
     font-size: 14px;
     margin-bottom: 5px;
 }
-.fnews-title {
+.listboxd-title {
     
     color: #333333;
     font-size: 16px;
@@ -9972,20 +9972,20 @@ a:hover > div > div > div > div > div > .title-color{
     text-align: justify;
     min-height: 50px;
 }
-.fnews-title:hover,.fnews-title:focus,.fnews-title:active {
+.listboxd-title:hover,.listboxd-title:focus,.listboxd-title:active {
     color: #a82024;
 }
-.fnews-desc {
+.listboxd-desc {
     /**/
     color: #808285;
     font-size: 14px;
     text-align: justify;
     margin-bottom: 5px;
 }
-.fnews-read {
-    text-align: left;
+.listboxd-read {
+    text-align: right;
 }
-.fnews-read > a {
+.listboxd-read > a {
     display: inline-block;
     color: #a82024;
     font-size: 14px;
@@ -9993,13 +9993,13 @@ a:hover > div > div > div > div > div > .title-color{
     padding: 3px 15px;
     border-radius: 50px;
 }
-.fnews-read > a:hover,.fnews-read > a:focus,.fnews-read > a:active {
+.listboxd-read > a:hover,.listboxd-read > a:focus,.listboxd-read > a:active {
     color: #ffffff !important;
     background-color: #a82024;
     border-color: #a82024;
 }
-.fnews-category {
-    text-align: right;
+.listboxd-category {
+    text-align: left;
     text-transform: uppercase;
     color: #808285;
     margin: 4px 0 0 0;
@@ -10582,7 +10582,7 @@ a:hover > div > div > div > div > div > .title-color{
         padding: 3px 10px;
         font-size: 12px;
     }
-    .text-news {
+    .text-listbox {
         font-size: 14px;
     }
 }
