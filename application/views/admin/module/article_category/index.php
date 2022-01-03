@@ -19,10 +19,10 @@
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Event Category</h1>
+            <h1 class="h3 mb-0 text-gray-800">Article Category</h1>
             <ol class="breadcrumb">
               <li class="breadcrumb-item">Content</li>
-              <li class="breadcrumb-item active" aria-current="page">Event Category</li>
+              <li class="breadcrumb-item active" aria-current="page">Article Category</li>
             </ol>
           </div>
 
@@ -32,7 +32,7 @@
             <div class="col-lg-12">
               <div class="card mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold primary-color">Event Category</h6>
+                  <h6 class="m-0 font-weight-bold primary-color">Article Category</h6>
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addData"><span><i class="fa fa-plus"></i></span> Add Data</button>
                 </div>
                 <div class="table-responsive p-3">
@@ -73,7 +73,7 @@
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <form action="<?=base_url('administrator/event_category/create')?>" method="POST" enctype="multipart/form-data">
+                <form action="<?=base_url('administrator/article_category/create')?>" method="POST" enctype="multipart/form-data">
                   <div class="modal-body">                    
                       <div class="mb-3" style="margin-top: 2%;">
                             <label class="form-label">Nama</label>
@@ -101,7 +101,7 @@
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <form action="<?=base_url('administrator/event_category/update')?>" method="POST" enctype="multipart/form-data">
+                  <form action="<?=base_url('administrator/article_category/update')?>" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="id" value="<?=$detail->id;?>">
                     <div class="modal-body">                    
                         <div class="mb-3" style="margin-top: 2%;">
@@ -149,11 +149,11 @@
         if (willDelete) {
           swal({
             title: " ",
-            text: "Loading delete event category. It might take a few minutes, please wait..",
+            text: "Loading delete article category. It might take a few minutes, please wait..",
             icon: "success",
             buttons: false
           }); 
-          var url = "<?=base_url('administrator/event_category/delete')?>";
+          var url = "<?=base_url('administrator/article_category/delete')?>";
           $.ajax({
             type:'POST',
             url: url, 
@@ -176,14 +176,14 @@
               }else if (result == 2){
                 swal({
                   title: "Failed",
-                  text: "The category has been used by another event",
+                  text: "The category has been used by another article",
                   icon: "error",
                   button: "Ok",
                 });
               }else{
                 swal({
                   title: "Failed",
-                  text: "Deleted field. Please try again",
+                  text: "Deleted category. Please try again",
                   icon: "error",
                   button: "Ok",
                 });

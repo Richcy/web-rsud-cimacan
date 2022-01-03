@@ -89,7 +89,8 @@
             <?php foreach ($datas as $data){?>
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
               <div class="member">
-                <?php $delete_dots = str_replace('.', ' ', $data->name); ?>
+                <?php $lower_name = strtolower($data->name); ?>
+                <?php $delete_dots = str_replace('.', ' ', $lower_name); ?>
                 <?php $delete_coma = str_replace(',', ' ', $delete_dots); ?>
                 <?php $fix_name = str_replace(' ', '-', $delete_coma); ?>
                 <a href="<?=base_url().'doctor-'.$data->id.'-'.$fix_name.'.html';?>">
@@ -111,7 +112,7 @@
             <p class="empty-data">Data dokter tidak tersedia</p>
           <?php } ?>
           <!-- Pagination -->
-        <div class="doctor-page news-pagination">
+        <div class="doctor-page listbox-pagination">
           <ul>
             <?php if ($page != 1) {?>
             <li>

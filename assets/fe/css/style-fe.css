@@ -204,18 +204,18 @@ a:hover{
 }
 .le-date {
     color: #B9BBBC;
-    /*font-family: HelveticaNeueLtStdRoman;*/
+    
     font-size: 14px;
     margin-bottom: 5px;
 }
 .le-title {
-    /*font-family: HelveticaNeueLtStdBold;*/
+    
     color: #333333;
     font-size: 24px;
     font-weight: 600;
 }
 .le-location {
-    /*font-family: HelveticaNeueLtStdRoman;*/
+    
     letter-spacing: 0.5px;
     color: #333333;
     margin-top: 3px;
@@ -223,13 +223,13 @@ a:hover{
 }
 .le-desc {
     color: #818283;
-    /*font-family: HelveticaNeueLtStdRoman;*/
+    
     letter-spacing: 0.5px;
     font-size: 15px;
     margin-top: 25px;
 }
 .le-see > a {
-    /*font-family: HelveticaNeueLtStdRoman;*/
+    
     font-size: 14px;
     display: inline-block;
     padding: 4px 22px 6px 22px;
@@ -278,7 +278,7 @@ a:hover{
     padding: 6px 22px;
     border: solid 2px #a82024;
     border-radius: 20px;
-    /*font-family: HelveticaNeueLtStdRoman;*/
+    
     color: #a82024;
     width: 180px;
     max-width: 100%;
@@ -400,6 +400,22 @@ a:hover{
     font-size: 14px;
 }
 
+/*Section Article*/
+
+.space-detail{
+    margin-bottom: 1%;
+}
+
+.detail-article{
+    font-size: 16px;
+    color: #797677;
+    margin-bottom: 3%;
+}
+
+.rightPosition{
+    text-align: right !important;
+}
+
 /*Page layanan unggulan*/
 /*Banner*/
 .nhead-bg {
@@ -472,6 +488,10 @@ a:hover{
 /*End section denah*/
 
 /*Section Doctor*/
+section.doctors{
+    padding: 0px;
+}
+
 .search-box{
     display: block;
     float: left;
@@ -800,7 +820,7 @@ position: fixed;
 }
 
 /*Responsive section*/
-@media(max-width: 1024px ){
+@media(max-width: 1023px ){
     .denah-rs{
         max-width: 900px;
     }
@@ -852,6 +872,10 @@ position: fixed;
 
     .call-ambulance{
         margin-top: 8%;
+    }
+
+    .detail-article{
+        text-align: center;
     }
 }
 
@@ -942,7 +966,7 @@ position: fixed;
     }
 }
 
-@media(min-width: 1025px){
+@media(min-width: 1024px){
     a.nav-link.active::after{
         content: "";
         display: block;

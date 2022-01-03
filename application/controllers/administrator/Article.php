@@ -1,39 +1,39 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Event extends CI_Controller {
+class Article extends CI_Controller {
 
 	function __construct()
 	{
 		parent::__construct();
-    	$this->load->model('T_Event');
-    	$this->load->model('T_Event_Category');
+    	$this->load->model('T_Article');
+    	$this->load->model('T_Article_Category');
         $this->load->library('session');
 	}
 
 	public function index()
 	{
-		$data['cur_page'] = 'event';
-		$data['cur_parent_page'] = 'event';
-		$data['datas'] = $this->T_Event->show_all();
-		$this->load->view('admin/module/event/index', $data);
+		$data['cur_page'] = 'article';
+		$data['cur_parent_page'] = 'article';
+		$data['datas'] = $this->T_Article->show_all();
+		$this->load->view('admin/module/article/index', $data);
 	}
 
 	public function Add()
 	{
-		$data['cur_page'] = 'event';
-		$data['cur_parent_page'] = 'event';
-		$data['fields'] = $this->T_Event_Category->show_all();
-		$this->load->view('admin/module/event/add', $data);
+		$data['cur_page'] = 'article';
+		$data['cur_parent_page'] = 'article';
+		$data['fields'] = $this->T_Article_Category->show_all();
+		$this->load->view('admin/module/article/add', $data);
 	}
 
 	public function edit($id)
 	{
-		$data['cur_page'] = 'event';
-		$data['cur_parent_page'] = 'event';
-		$data['fields'] = $this->T_Event_Category->show_all();
-		$data['datas'] = $this->T_Event->get_detail($id);
-		$this->load->view('admin/module/event/edit', $data);
+		$data['cur_page'] = 'article';
+		$data['cur_parent_page'] = 'article';
+		$data['fields'] = $this->T_Article_Category->show_all();
+		$data['datas'] = $this->T_Article->get_detail($id);
+		$this->load->view('admin/module/article/edit', $data);
 	}
 
 	public function create()
@@ -41,18 +41,13 @@ class Event extends CI_Controller {
 		// $id = random_string('alnum',24);
 		$title = $this->input->post('title') ? $this->input->post('title') : '';
 		$category = $this->input->post('category') ? $this->input->post('category') : '';
-		$url = $this->input->post('url') ? $this->input->post('url') : '';
 		$description = $this->input->post('desc') ? str_replace("'", "’", $this->input->post('desc')) : '';
-		$start_date = $this->input->post('start_date') ? $this->input->post('start_date'): '';
-		$end_date = $this->input->post('end_date') ? $this->input->post('end_date'): '';
-		$start_time = $this->input->post('start_time') ? $this->input->post('start_time'): '';
-		$end_time = $this->input->post('end_time') ? $this->input->post('end_time'): '';
 		
 		$now = date('YmdHis');
-		$edit_name = str_replace(' ', '-', $_FILES["event_img"]['name']);
+		$edit_name = str_replace(' ', '-', $_FILES["article_img"]['name']);
 		$file_name = $now.'_'.$edit_name;
 		
-		$config['upload_path']          = FCPATH.'assets/uploads/event';
+		$config['upload_path']          = FCPATH.'assets/uploads/article';
         // $config['allowed_types']        = 'gif|jpg|png';
         $config['allowed_types']        = '*';
         $config['max_size']             = 10000;
@@ -63,38 +58,33 @@ class Event extends CI_Controller {
 		// var_dump($start_date);
 		// die();
 		
-		if ($_FILES["event_img"]['name'] == '' || $_FILES["event_img"]['name'] == NULL ) {
+		if ($_FILES["article_img"]['name'] == '' || $_FILES["article_img"]['name'] == NULL ) {
 			$datas = array(
 	        	'title' => $title,
 	        	'category' => $category,
-	        	'url' => $url,
 	        	'description' => $description,
-	        	'start_date' => $start_date,
-	        	'end_date' => $end_date,
-	        	'start_time' => $start_time,
-	        	'end_time' => $end_time,
 	        	'create_date' => date('Y-m-d H:i:s')
 	        );
-	        $insert = $this->T_Event->insert($datas,'T_Event');
+	        $insert = $this->T_Article->insert($datas,'T_Article');
 	        if ($insert) {
 	        	$this->session->set_flashdata('title','Success');
-	        	$this->session->set_flashdata('message','Insert data event');
+	        	$this->session->set_flashdata('message','Insert data article');
 	        	$this->session->set_flashdata('status','success');
-	        	redirect('/administrator/event');
+	        	redirect('/administrator/article');
 	        }else{
 	        	$this->session->set_flashdata('title','Failed');
-	        	$this->session->set_flashdata('message','Insert data event');
+	        	$this->session->set_flashdata('message','Insert data article');
 	        	$this->session->set_flashdata('status','error');
-	        	redirect('/administrator/event');
+	        	redirect('/administrator/article');
 	        }
 		}else{
-			if ( ! $this->upload->do_upload('event_img'))
+			if ( ! $this->upload->do_upload('article_img'))
 	        {
 	            $error = array('error' => $this->upload->display_errors());
 	            $this->session->set_flashdata('title','Failed');
 	        	$this->session->set_flashdata('message','File type not support. Please Try again!');
 	        	$this->session->set_flashdata('status','error');
-	        	// redirect('/administrator/event/add');
+	        	// redirect('/administrator/article/add');
 	        	redirect($_SERVER['HTTP_REFERER']);
 	        }
 
@@ -103,28 +93,23 @@ class Event extends CI_Controller {
 		        $data = array('upload_data' => $this->upload->data());
 				$datas = array(
 		        	// 'id' => $id,
-		        	'img' => 'event/'.$file_name,
+		        	'img' => 'article/'.$file_name,
 		        	'title' => $title,
 		        	'category' => $category,
-		        	'url' => $url,
 		        	'description' => $description,
-		        	'start_date' => $start_date,
-		        	'end_date' => $end_date,
-		        	'start_time' => $start_time,
-		        	'end_time' => $end_time,
 		        	'create_date' => date('Y-m-d H:i:s')
 		        );
-		        $insert = $this->T_Event->insert($datas,'T_Event');
+		        $insert = $this->T_Article->insert($datas,'T_Article');
 		        if ($insert) {
 		        	$this->session->set_flashdata('title','Success');
-		        	$this->session->set_flashdata('message','Insert data event');
+		        	$this->session->set_flashdata('message','Insert data article');
 		        	$this->session->set_flashdata('status','success');
-		        	redirect('/administrator/event');
+		        	redirect('/administrator/article');
 		        }else{
 		        	$this->session->set_flashdata('title','Failed');
-		        	$this->session->set_flashdata('message','Insert data event');
+		        	$this->session->set_flashdata('message','Insert data article');
 		        	$this->session->set_flashdata('status','error');
-		        	redirect('/administrator/event');
+		        	redirect('/administrator/article');
 		        }
 	        }
     	}
@@ -135,18 +120,13 @@ class Event extends CI_Controller {
 		$id = $this->input->post('id') ? $this->input->post('id'): '';
 		$title = $this->input->post('title') ? $this->input->post('title') : '';
 		$category = $this->input->post('category') ? $this->input->post('category') : '';
-		$url = $this->input->post('url') ? $this->input->post('url') : '';
 		$description = $this->input->post('desc') ? str_replace("'", "’", $this->input->post('desc')) : '';
-		$start_date = $this->input->post('start_date') ? $this->input->post('start_date'): '';
-		$end_date = $this->input->post('end_date') ? $this->input->post('end_date'): '';
-		$start_time = $this->input->post('start_time') ? $this->input->post('start_time'): '';
-		$end_time = $this->input->post('end_time') ? $this->input->post('end_time'): '';
 		
 		$now = date('YmdHis');
-		$edit_name = str_replace(' ', '-', $_FILES["event_img"]['name']);
+		$edit_name = str_replace(' ', '-', $_FILES["article_img"]['name']);
 		$file_name = $now.'_'.$edit_name;
 		
-		$config['upload_path']          = FCPATH.'assets/uploads/event';
+		$config['upload_path']          = FCPATH.'assets/uploads/article';
         // $config['allowed_types']        = 'gif|jpg|png';
         $config['allowed_types']        = '*';
         $config['max_size']             = 10000;
@@ -154,69 +134,59 @@ class Event extends CI_Controller {
 		$config['overwrite']            = true;
 		$this->load->library('upload', $config);
 
-    	 if ($_FILES["event_img"]['name'] == '') {
+    	 if ($_FILES["article_img"]['name'] == '') {
         	$datas = array(
 	        	'title' => $title,
 	        	'category' => $category,
-	        	'url' => $url,
-	        	'description' => $description,
-	        	'start_date' => $start_date,
-	        	'end_date' => $end_date,
-	        	'start_time' => $start_time,
-	        	'end_time' => $end_time
+	        	'description' => $description
 	        );
-	        $update = $this->T_Event->update($datas, $id);
+	        $update = $this->T_Article->update($datas, $id);
 	        if ($update) {
 	        	$this->session->set_flashdata('title','Success');
-	        	$this->session->set_flashdata('message','Edit data event');
+	        	$this->session->set_flashdata('message','Edit data article');
 	        	$this->session->set_flashdata('status','success');
-	        	redirect('/administrator/event');
+	        	redirect('/administrator/article');
 	        }else{
 	        	$this->session->set_flashdata('title','Failed');
-	        	$this->session->set_flashdata('message','Edit data event');
+	        	$this->session->set_flashdata('message','Edit data article');
 	        	$this->session->set_flashdata('status','error');
-	        	redirect('/administrator/event');
+	        	redirect('/administrator/article');
 	        }
         }else{
         	$this->load->library('upload', $config);
-        	if ( ! $this->upload->do_upload('event_img'))
+        	if ( ! $this->upload->do_upload('article_img'))
 	        {
 	            $error = array('error' => $this->upload->display_errors());
 	            $this->session->set_flashdata('title','Failed');
 	        	$this->session->set_flashdata('message','File type not support. Please Try again!');
 	        	$this->session->set_flashdata('status','error');
-	        	redirect('/administrator/event/edit/'.$id);
+	        	redirect('/administrator/article/edit/'.$id);
 	        }
 	        else
 	        {
-	        	$result = $this->T_Event->get_detail($id);
+	        	$result = $this->T_Article->get_detail($id);
 				if ($result) {
 					$path = FCPATH.'/assets/uploads/'.$result[0]->img;
 					$action_delete = unlink($path);
 				}
 		        $data = array('upload_data' => $this->upload->data());
 		        $datas = array(
-		        	'img' => 'event/'.$file_name,
+		        	'img' => 'article/'.$file_name,
 		        	'title' => $title,
 		        	'category' => $category,
-		        	'url' => $url,
-		        	'description' => $description,
-		        	'start_date' => $start_date,
-		        	'end_date' => $end_date,
-		        	'start_time' => $start_time,
-		        	'end_time' => $end_time
+		        	'description' => $description
 		        );
-		        $update = $this->T_Event->update($datas, $id);
+		        $update = $this->T_Article->update($datas, $id);
 		        if ($update) {
 		        	$this->session->set_flashdata('title','Success');
-		        	$this->session->set_flashdata('message','Edit data event');
+		        	$this->session->set_flashdata('message','Edit data article');
 		        	$this->session->set_flashdata('status','success');
-		        	redirect('/administrator/event');
+		        	redirect('/administrator/article');
 		        }else{
 		        	$this->session->set_flashdata('title','Failed');
-		        	$this->session->set_flashdata('message','Edit data event');
+		        	$this->session->set_flashdata('message','Edit data article');
 		        	$this->session->set_flashdata('status','error');
-		        	redirect('/administrator/event');
+		        	redirect('/administrator/article');
 		        }
 	        }
         }
@@ -225,13 +195,13 @@ class Event extends CI_Controller {
 	public function delete()
 	{
 		$id = $this->input->post('id');
-		$result = $this->T_Event->get_detail($id);
+		$result = $this->T_Article->get_detail($id);
 		if ($result) {
 			if ($result[0]->img != '' || $result[0]->img != NULL) {
 				$path = FCPATH.'/assets/uploads/'.$result[0]->img;
 				$action_delete = unlink($path);
 			}
-			$action = $this->T_Event->delete($id);
+			$action = $this->T_Article->delete($id);
 		}else{
 			$action = false;
 		}

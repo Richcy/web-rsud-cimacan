@@ -111,6 +111,27 @@
           </div>
         </div>
       </li>
+
+      <li class="nav-item <?=$cur_parent_page == 'article' ? 'active' : ''?>">
+        <a class="nav-link <?=$cur_parent_page == 'article' ? '' : 'collapsed'?>" haref="javascript:void(0);" data-toggle="collapse" data-target="#article" aria-expanded="true"
+          aria-controls="collapsePage">
+          <i class="fas fa-fw fa-newspaper"></i>
+          <span>Article</span>
+        </a>
+        <div id="article" class="collapse <?=$cur_parent_page == 'article' ? 'show' : ''?>" aria-labelledby="headingPage" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Article Module</h6>
+            <a class="collapse-item <?=$cur_page == 'article_category' ? 'active' : ''?>" href="<?=base_url('administrator/article_category')?>">Article Category</a>
+            <a class="collapse-item <?=$cur_page == 'article' ? 'active' : ''?>" href="<?=base_url('administrator/article')?>">Article</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item <?=$cur_page == 'career' ? 'active' : '' ?>">
+        <a class="nav-link" href="<?=base_url('administrator/career')?>">
+          <i class="fas fa-fw fa-binoculars"></i>
+          <span>Career</span>
+        </a>
+      </li>
       <!-- <li class="nav-item">
         <a class="nav-link" href="charts.html">
           <i class="fas fa-fw fa-chart-area"></i>

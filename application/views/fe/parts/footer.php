@@ -30,7 +30,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 footer-links">
+          <div class="col-lg-2 col-md-6 footer-links">
             <h4>Persingkat Tautan</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="<?=base_url();?>">Beranda</a></li>
@@ -40,7 +40,7 @@
             </ul>
           </div>
 
-          <div class="col-lg-4 col-md-6 footer-links">
+          <div class="col-lg-2 col-md-6 footer-links">
             <h4>Layanan Kami</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="<?=base_url();?>superior-service.html">Layanan Unggulan</a></li>
@@ -49,6 +49,21 @@
               <li><i class="bx bx-chevron-right"></i> <a href="<?=base_url();?>igd.html">Instalasi Gawat Darurat</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="<?=base_url();?>laboratorium.html">Laboratorium</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="<?=base_url();?>radiology.html">Radiologi</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Kepegawaian</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="<?=base_url('career/');?>">Karir</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Pemerintahan</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.kemkes.go.id/" target="_blank">Kemenkes</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://cianjurkab.go.id/" target="_blank">PEMDA Cianjur</a></li>
             </ul>
           </div>
 

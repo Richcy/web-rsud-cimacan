@@ -88,8 +88,12 @@ $route['doctor/(:num)'] = 'doctor/page/$1';
 $route['event-(:num)-(:any).html'] = 'event/detail/$1';
 $route['event/(:num)'] = 'event/page/$1';
 
-$route['article'] = 'news';
-$route['article-(:any).html'] = 'news/detail/$1';
+// $route['article'] = 'news';
+$route['article-(:num)-(:any).html'] = 'article/detail/$1';
+$route['article/(:num)'] = 'article/page/$1';
+
+$route['career-(:num)-(:any).html'] = 'career/detail/$1';
+$route['career/(:num)'] = 'career/page/$1';
 
 $route['contact.html'] = 'contact';
 

@@ -58,7 +58,7 @@
           <!-- <li><a class="nav-link" href="javascript:void();">Departemen</a></li> -->
           <li><a class="nav-link <?=$cur_page=='doctor' ? 'active' : '';?>" href="<?=base_url('doctor/');?>">Dokter</a></li>
           <li><a class="nav-link <?=$cur_page=='event' ? 'active' : '';?>" href="<?=base_url('event/');?>">Event</a></li>
-          <li><a class="nav-link <?=$cur_page=='news' ? 'active' : '';?>" href="<?=base_url('article/');?>">Artikel</a></li>
+          <li><a class="nav-link <?=$cur_page=='article' ? 'active' : '';?>" href="<?=base_url('article/');?>">Artikel</a></li>
           <?php if ($cur_page == 'home') {?>
             <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
           <?php }else{ ?>

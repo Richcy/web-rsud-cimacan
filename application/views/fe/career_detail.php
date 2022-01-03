@@ -1,66 +1,8 @@
-<?php 
-  $start_date = date('D', strtotime($datas[0]->start_date));
-  if ($start_date == 'Sun') {
-    $start_date = 'Minggu';
-  }
-  else if($start_date == 'Mon'){
-    $start_date = 'Senin';
-  }
-
-  else if($start_date == 'Tue'){
-    $start_date = 'Selasa';
-  }
-
-  else if($start_date == 'Wed'){
-    $start_date = 'Rabu';
-  }
-
-  else if($start_date == 'Thu'){
-    $start_date = 'Kamis';
-  }
-
-  else if($start_date == 'Fri'){
-    $start_date = "Jum'at";
-  }
-
-  else if($start_date == 'Sat'){
-    $start_date = 'Sabtu';
-  }
-
-  $end_date = date('D', strtotime($datas[0]->end_date));
-  if ($end_date == 'Sun') {
-    $end_date = 'Minggu';
-  }
-  else if($end_date == 'Mon'){
-    $end_date = 'Senin';
-  }
-
-  else if($end_date == 'Tue'){
-    $end_date = 'Selasa';
-  }
-
-  else if($end_date == 'Wed'){
-    $end_date = 'Rabu';
-  }
-
-  else if($end_date == 'Thu'){
-    $end_date = 'Kamis';
-  }
-
-  else if($end_date == 'Fri'){
-    $end_date = "Jum'at";
-  }
-
-  else if($end_date == 'Sat'){
-    $end_date = 'Sabtu';
-  }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>RSUD Cimacan | Event</title>
+  <title>RSUD Cimacan | Career</title>
   <?php 
     $this->load->view('fe/packages/head');
   ?>
@@ -82,7 +24,7 @@
       <div class="breadcrumb-part">
         <a href="javascript:void(0);">Home</a>
         <span><i class="fa fa-angle-right"></i></span>
-        <a href="javascript:void(0);">Event</a>
+        <a href="javascript:void(0);">Career</a>
         <span><i class="fa fa-angle-right"></i></span>
         <a href="javascript:void(0);"><?=$datas[0]->title;?></a>
       </div>
@@ -101,6 +43,30 @@
   <main id="main">
     <section id="content" class="main-page">
       <div class="container" data-aos="fade-up">
+        <div class="row space-detail">
+          <div class="col-md-6 pad0">
+            <div class="detail-article">
+              <?=date('d F Y', strtotime($datas[0]->create_date));?> <span>|</span> <span><i class="fa fa-user"></i> Admin</span>
+            </div>
+          </div>
+          <div class="col-md-6 pad0 rightPosition">
+            <div class="side-share">
+              <?php 
+                $lowerText = strtolower($datas[0]->title); 
+                $change_url = str_replace(' ', '-', $lowerText); 
+              ?>
+              <a href="javascript:void(0);" onclick="popUpSocmed('https://www.facebook.com/sharer/sharer.php?u=<?=base_url().'career-'.$datas[0]->id.'-'.$change_url.'.html';?>','myWindow','500','300','yes');return false" class="share-link">
+                <img src="<?=base_url().'assets/fe/img/icon_facebook.png';?>" alt="facebook">
+              </a>
+              <a href="javascript:void(0);" onclick="popUpSocmed('https://twitter.com/intent/tweet?url=<?=base_url().'career-'.$datas[0]->id.'-'.$change_url.'.html';?>&text=<?=$datas[0]->title;?>');return false" class="share-link">
+                <img src="<?=base_url().'assets/fe/img/icon_twitter.png';?>" alt="twitter">
+              </a>
+              <a href="javascript:void(0);" onclick="popUpSocmed('https://api.whatsapp.com/send?text=<?=base_url().'career-'.$datas[0]->id.'-'.$change_url.'.html';?>','myWindow','600','300','yes');return false" data-action="share/whatsapp/share" class="share-link">
+                <img src="<?=base_url().'assets/fe/img/icon_whatsapp.png';?>" alt="whatsapp">
+              </a>
+            </div>
+          </div>
+        </div>
         <div class="section-title">
           <h2 class="title-page"><?=$datas[0]->title;?></h2>
         </div>
@@ -128,34 +94,6 @@
                       </div>
                     </div>
                   </div>
-
-                  <div class="datetime-event">Tanggal dan Waktu</div>
-                  <div class="detail-date"><?=$start_date;?>, <?=date('d M Y', strtotime($datas[0]->start_date));?> - <?=$end_date;?>, <?=date('d M Y', strtotime($datas[0]->end_date));?></div>
-                  <div class="detail-time"><?=$datas[0]->start_time;?> - <?=$datas[0]->end_time;?></div>
-
-                  <div class="datetime-event">Bagikan</div>
-                  <div class="side-share">
-                    <?php 
-                      $lowerText = strtolower($datas[0]->title); 
-                      $change_url = str_replace(' ', '-', $lowerText); 
-                    ?>
-                    <a href="javascript:void(0);" onclick="popUpSocmed('https://www.facebook.com/sharer/sharer.php?u=<?=base_url().'event-'.$datas[0]->id.'-'.$change_url.'.html';?>','myWindow','500','300','yes');return false" class="share-link">
-                      <img src="<?=base_url().'assets/fe/img/icon_facebook.png';?>" alt="facebook">
-                    </a>
-                    <a href="javascript:void(0);" onclick="popUpSocmed('https://twitter.com/intent/tweet?url=<?=base_url().'event-'.$datas[0]->id.'-'.$change_url.'.html';?>&text=<?=$datas[0]->title;?>');return false" class="share-link">
-                      <img src="<?=base_url().'assets/fe/img/icon_twitter.png';?>" alt="twitter">
-                    </a>
-                    <a href="javascript:void(0);" onclick="popUpSocmed('https://api.whatsapp.com/send?text=<?=base_url().'event-'.$datas[0]->id.'-'.$change_url.'.html';?>','myWindow','600','300','yes');return false" data-action="share/whatsapp/share" class="share-link">
-                      <img src="<?=base_url().'assets/fe/img/icon_whatsapp.png';?>" alt="whatsapp">
-                    </a>
-                  </div>
-                  <?php if(!empty($datas[0]->url)){ ?>
-                  <div class="datetime-event">Bergabung</div>
-                  <div class="detail-time">
-                    <a href="http://dev-barii.42web.io/web-profile/" target="_blank">http://dev-barii.42web.io/web-profile/</a>
-                  </div>
-                  <?php } ?>
-                  
               </div>
             </div>
           </div>

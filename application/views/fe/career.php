@@ -54,10 +54,13 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label for="">Pencarian Karir</label>
-                          <input name="s" type="text" class="form-control input-search-doctor" placeholder="Masukkan keyword" value="">
+                          <label for="">Judul Karir</label>
+                          <input name="s" type="text" class="form-control input-search-doctor" placeholder="Masukkan keyword" name="s" value="<?=$s ? $s : '';?>">
                         </div>
                         <button type="submit" class="btn btn-primary" style="background-color: #01923f; border-color: #01923f;">Submit</button>
+                        <?php if ($s != '') {?>
+                        <a href="<?=base_url('career/')?>" type="button" class="btn btn-primary button-reset">Reset</a>
+                        <?php } ?>
                       </div>
                     </div>
                   </form>
@@ -69,12 +72,91 @@
         <!-- End Search Section -->
 
         <!-- career list -->
-        <section id="careers" class="careers">
           <div class="row" id="list">
+            <?php if (!empty($datas)) {?>
+            <?php foreach ($datas as $data) {?>
+            <div class="col-listbox">
+              <div class="listboxd-wrap">
+                <?php
+                  $lowerText = strtolower($data->title); 
+                  $change_url = str_replace(' ', '-', $lowerText); 
+                ?>
+                <a href="<?=base_url().'career-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-img" style="background-image: url('<?=$data->img ? base_url().'assets/uploads/'.$data->img : base_url().'assets/uploads/default-image.jpg';?>')">
+                  <span style=" opacity: 0;">
+                    Event Title 1
+                  </span>
+                </a>
+                <div class="listboxd-content">
+                  <!-- <div class="row down1" style="height:50px;">
+                    <div class="col-xs-8" style="padding-left:0;">
+                      <div class="listboxd-date"><?=date('d M Y', strtotime($data->start_date));?> - <?=date('d M Y', strtotime($data->end_date));?></div>
+                    </div>
+                  </div> -->
+                  <a href="<?=base_url().'career-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-title">
+                    <?=$data->title;?>
+                  </a>
+                  <div class="listboxd-desc">
+                   <?=substr($data->description, 0, 150);?>...
+                  </div>
+                  <div class="row up2">
+                    <div class="col-xs-6 pad0">
+                      <div class="listboxd-category"><?=date('d F Y', strtotime($data->create_date));?></div>
+                    </div>
+                    <div class="col-xs-6 pad0">
+                      <div class="listboxd-read">
+                      <a href="<?=base_url().'career-'.$data->id.'-'.$change_url.'.html';?>">Selengkapnya</a>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <?php } }else{ ?>
+            <!-- End looping event -->
             <p class="empty-data">Data karir tidak tersedia</p>
+            <?php } ?>
           </div>
-        </section>
         <!-- End career list -->
+        <!-- Pagination -->
+        <div class="listbox-pagination">
+          <ul>
+            <?php if ($page != 1) {?>
+            <li>
+              <?php if ($s != '') {?>
+                <a href="<?=base_url().'career/'.($page-1).'?s='.$s;?>" class="pagination-link">
+              <?php }else{ ?>
+                <a href="<?=base_url().'career/'.($page-1).'/';?>" class="pagination-link">
+              <?php } ?>
+                <i class="fa fa-angle-left"></i>
+              </a>
+            </li>
+            <?php } ?>
+
+            <?php for ($i=1; $i <= $totalPage ; $i++) {?>
+              <li>
+                <?php if ($s != '') {?>
+                  <a href="<?=base_url().'career/'.$i.'?s='.$s;?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
+                <?php }else{ ?>
+                  <a href="<?=base_url().'career/'.$i.'/';?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
+                <?php } ?>
+                  <?=$i;?>
+                </a>
+              </li>
+            <?php } ?>
+            <?php if ($page < $totalPage) {?>
+            <li>
+              <?php if ($s != '') {?>
+                <a href="<?=base_url().'career/'.($page+1).'?s='.$s;?>" class="pagination-link">
+              <?php }else{ ?>
+                <a href="<?=base_url().'career/'.($page+1).'/';?>" class="pagination-link">
+              <?php } ?>
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </li>
+            <?php } ?>
+          </ul>
+        </div>
+        <!-- End Pagination -->
       </div>
     </section>
   </main>
