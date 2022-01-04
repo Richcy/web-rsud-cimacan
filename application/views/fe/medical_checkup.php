@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>RSUD Cimacan | Medical Check Up</title>
+  <title>RSD Cimacan | Medical Check Up</title>
   <?php 
     $this->load->view('fe/packages/head');
   ?>

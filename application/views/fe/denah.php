@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>RSUD Cimacan | Denah</title>
+  <title>RSD Cimacan | Denah</title>
   <?php 
     $this->load->view('fe/packages/head');
   ?>
@@ -46,7 +46,7 @@
     <section id="content" class="main-page">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2 class="title-page">Denah RSUD Cimacan</h2>
+          <h2 class="title-page">Denah RSD Cimacan</h2>
         </div>
 
         <div class="container">

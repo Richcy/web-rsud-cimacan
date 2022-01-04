@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>RSUD Cimacan | IGD</title>
+  <title>RSD Cimacan | IGD</title>
   <?php 
     $this->load->view('fe/packages/head');
   ?>

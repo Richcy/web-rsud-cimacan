@@ -42,7 +42,7 @@
     <section id="content" class="main-page">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2 class="title-page">Event RSUD Cimacan</h2>
+          <h2 class="title-page">Event RSD Cimacan</h2>
         </div>
 
         <!-- Search Section -->

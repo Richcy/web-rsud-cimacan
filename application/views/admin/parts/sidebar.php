@@ -1,9 +1,9 @@
 <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
       <a class="sidebar-brand d-flex align-items-center justify-content-center primary-bg" href="index.html">
         <div class="sidebar-brand-icon">
-          RSUD Cimacan
+          RSD Cimacan
         </div>
-        <!-- <div class="sidebar-brand-text mx-3">RSUD Cimacan</div> -->
+        <!-- <div class="sidebar-brand-text mx-3">RSD Cimacan</div> -->
       </a>
       <hr class="sidebar-divider my-0">
       <li class="nav-item <?=$cur_page == 'dashboard' ? 'active' : '' ?>">

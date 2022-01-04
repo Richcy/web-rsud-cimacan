@@ -21,7 +21,7 @@
           </a>
           <div class="le-location">
             <img src="<?php echo base_url();?>assets/fe/img/map-pin.png?>" alt="icon" class="visible-xs">
-            RSUD Cimacan
+            RSD Cimacan
             <img src="<?php echo base_url();?>assets/fe/img/map-pin.png?>" alt="icon" class="hidden-xs">
           </div>
           <div class="le-desc">
@@ -59,7 +59,7 @@
           </a>
           <div class="le-location">
             <img src="<?php echo base_url();?>assets/fe/img/map-pin.png?>" alt="icon" class="visible-xs">
-            RSUD Cimacan
+            RSD Cimacan
             <img src="<?php echo base_url();?>assets/fe/img/map-pin.png?>" alt="icon" class="hidden-xs">
           </div>
           <div class="le-desc">

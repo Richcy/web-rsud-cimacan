@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>RSUD Cimacan | Layanan Unggulan</title>
+  <title>RSD Cimacan | Layanan Unggulan</title>
   <?php 
     $this->load->view('fe/packages/head');
   ?>

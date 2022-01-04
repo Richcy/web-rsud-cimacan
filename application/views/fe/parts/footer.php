@@ -13,7 +13,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="footer-info">
-              <h3>RSUD Cimacan</h3>
+              <h3>RSD Cimacan</h3>
               <p>
                 Jl. Raya Cimacan No.17A, Palasari, Kec. Cipanas, Kabupaten Cianjur, Jawa Barat 43253
                 <br><br>
@@ -82,7 +82,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>RSUD Cimacan</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>RSD Cimacan</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->

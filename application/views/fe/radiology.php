@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>RSUD Cimacan | Radiology</title>
+  <title>RSD Cimacan | Radiology</title>
   <?php 
     $this->load->view('fe/packages/head');
   ?>

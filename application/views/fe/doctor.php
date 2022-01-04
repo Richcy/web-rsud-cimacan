@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>RSUD Cimacan | Dokter</title>
+  <title>RSD Cimacan | Dokter</title>
   <?php 
     $this->load->view('fe/packages/head');
   ?>
@@ -42,7 +42,7 @@
     <section id="content" class="main-page">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2 class="title-page">Dokter RSUD Cimacan</h2>
+          <h2 class="title-page">Dokter RSD Cimacan</h2>
         </div>
         <!-- Search Section -->
         <div class="row-ln" style="display: table;">

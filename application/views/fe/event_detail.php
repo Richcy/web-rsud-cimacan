@@ -60,7 +60,7 @@
 <html lang="en">
 
 <head>
-  <title>RSUD Cimacan | Event</title>
+  <title>RSD Cimacan | Event</title>
   <?php 
     $this->load->view('fe/packages/head');
   ?>
