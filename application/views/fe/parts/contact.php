@@ -34,8 +34,11 @@
               <div class="col-md-6">
                 <div class="info-box mt-4">
                   <i class="bx bx-phone-call"></i>
-                  <h3>Hubungi Kami</h3>
-                  <p>(+62)8112031117</p>
+                  <h3>Hotline WA</h3>
+                  <p>(+62) 8112031117</p>
+
+                  <!-- <h3>Ambulance</h3>
+                  <p>(+62)8112031117</p> -->
                 </div>
               </div>
             </div>

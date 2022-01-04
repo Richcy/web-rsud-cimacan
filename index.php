@@ -89,6 +89,13 @@ switch (ENVIRONMENT)
 		exit(1); // EXIT_ERROR
 }
 
+if(substr($_SERVER['SERVER_NAME'],0,3)!="www"){
+    header("HTTP/1.1 301 Moved Permanently");
+    header("Location: http://www.localhost".$_SERVER['REQUEST_URI']);
+}else{
+    //the current contents of your file
+}
+
 /*
  *---------------------------------------------------------------
  * SYSTEM DIRECTORY NAME

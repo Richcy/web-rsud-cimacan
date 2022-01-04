@@ -165,7 +165,7 @@
                           -
                         </div>
                         <div class="col-md-5">
-                          <div class="input-group clockpicker" id="kamis2">
+                          <div class="input-group clockpicker" id="jumat2">
                           <input type="text" class="form-control" id="jumat_2" value="" autocomplete="off">                     
                           <div class="input-group-append">
                             <span class="input-group-text"><i class="fas fa-clock"></i></span>

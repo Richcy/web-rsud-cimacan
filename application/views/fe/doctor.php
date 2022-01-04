@@ -112,7 +112,7 @@
             <p class="empty-data">Data dokter tidak tersedia</p>
           <?php } ?>
           <!-- Pagination -->
-        <div class="doctor-page listbox-pagination">
+        <div class="listbox-pagination">
           <ul>
             <?php if ($page != 1) {?>
             <li>
