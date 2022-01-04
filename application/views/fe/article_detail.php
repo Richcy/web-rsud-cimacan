@@ -49,6 +49,7 @@
           <div class="col-md-6 pad0">
             <div class="detail-article">
               <?=$datas[0]->category_name;?> <span>|</span> <span><?=date('d F Y', strtotime($datas[0]->create_date));?></span>
+              <div><span><i class="fa fa-user"></i> <?=$datas[0]->author;?></span></div>
             </div>
           </div>
           <div class="col-md-6 pad0 rightPosition">

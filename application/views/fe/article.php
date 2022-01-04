@@ -118,6 +118,9 @@
                   <a href="<?=base_url().'article-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-title">
                     <?=$data->title;?>
                   </a>
+                  <div class="author">
+                    <span><i class="fa fa-user"></i></span> <?=$data->author;?>
+                  </div>
                   <div class="listboxd-desc">
                    <?=substr($data->description, 0, 150);?>...
                   </div>

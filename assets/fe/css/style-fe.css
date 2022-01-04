@@ -416,6 +416,12 @@ a:hover{
     text-align: right !important;
 }
 
+.author{
+    font-size: 14px;
+    color: #808285;
+    min-height: 32px;
+}
+
 /*Page layanan unggulan*/
 /*Banner*/
 .nhead-bg {

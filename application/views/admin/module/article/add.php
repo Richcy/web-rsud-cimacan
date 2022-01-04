@@ -36,6 +36,12 @@
                   <form id="form-article" action="<?=base_url('administrator/article/create')?>" method="POST" enctype="multipart/form-data">
                     
                     <div class="mb-3" style="margin-top: 2%;">
+                      <label class="form-label">Author</label>
+                      <input type="text" class="form-control input-length" id="author" name="author">
+                      <div class="error-message hidden" id="error-name-message">Please Fill this input section!</div>
+                    </div>
+
+                    <div class="mb-3" style="margin-top: 2%;">
                       <label class="form-label">Title <span class="required-fill">*</span></label>
                       <input type="text" class="form-control input-length" id="title" name="title" required="">
                       <div class="error-message hidden" id="error-name-message">Please Fill this input section!</div>

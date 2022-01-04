@@ -42,6 +42,7 @@
                         <th>Action</th>
                         <th>#</th>
                         <th>Image</th>
+                        <th>Author</th>
                         <th>Title</th>
                         <th>Description</th>
                         <th>Category</th>
@@ -61,6 +62,7 @@
                             <img style="max-width: 100px" src="<?=$data->img ? base_url().'assets/uploads/'.$data->img : base_url().'assets/uploads/default-image.jpg';?>">
                           </a>
                         </td>
+                        <td><?=$data->author;?></td>
                         <td><?=$data->title;?></td>
                         <td><?=substr($data->description,0,50);?>....</td>
                         <td><?=$data->category_name;?></td>

@@ -39,6 +39,7 @@ class Article extends CI_Controller {
 	public function create()
 	{
 		// $id = random_string('alnum',24);
+		$author = $this->input->post('author') ? $this->input->post('author') : '';
 		$title = $this->input->post('title') ? $this->input->post('title') : '';
 		$category = $this->input->post('category') ? $this->input->post('category') : '';
 		$description = $this->input->post('desc') ? str_replace("'", "’", $this->input->post('desc')) : '';
@@ -60,6 +61,7 @@ class Article extends CI_Controller {
 		
 		if ($_FILES["article_img"]['name'] == '' || $_FILES["article_img"]['name'] == NULL ) {
 			$datas = array(
+	        	'author' => $author,
 	        	'title' => $title,
 	        	'category' => $category,
 	        	'description' => $description,
@@ -94,6 +96,7 @@ class Article extends CI_Controller {
 				$datas = array(
 		        	// 'id' => $id,
 		        	'img' => 'article/'.$file_name,
+		        	'author' => $author,
 		        	'title' => $title,
 		        	'category' => $category,
 		        	'description' => $description,
@@ -118,6 +121,7 @@ class Article extends CI_Controller {
 	public function update()
 	{
 		$id = $this->input->post('id') ? $this->input->post('id'): '';
+		$author = $this->input->post('author') ? $this->input->post('author') : '';
 		$title = $this->input->post('title') ? $this->input->post('title') : '';
 		$category = $this->input->post('category') ? $this->input->post('category') : '';
 		$description = $this->input->post('desc') ? str_replace("'", "’", $this->input->post('desc')) : '';
@@ -136,6 +140,7 @@ class Article extends CI_Controller {
 
     	 if ($_FILES["article_img"]['name'] == '') {
         	$datas = array(
+	        	'author' => $author,
 	        	'title' => $title,
 	        	'category' => $category,
 	        	'description' => $description
@@ -172,6 +177,7 @@ class Article extends CI_Controller {
 		        $data = array('upload_data' => $this->upload->data());
 		        $datas = array(
 		        	'img' => 'article/'.$file_name,
+		        	'author' => $author,
 		        	'title' => $title,
 		        	'category' => $category,
 		        	'description' => $description
