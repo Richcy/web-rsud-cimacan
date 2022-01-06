@@ -133,6 +133,9 @@
                   <div class="detail-date"><?=$start_date;?>, <?=date('d M Y', strtotime($datas[0]->start_date));?> - <?=$end_date;?>, <?=date('d M Y', strtotime($datas[0]->end_date));?></div>
                   <div class="detail-time"><?=$datas[0]->start_time;?> - <?=$datas[0]->end_time;?></div>
 
+                  <div class="datetime-event">Lokasi</div>
+                  <div class="detail-date"><?=$datas[0]->location ? $datas[0]->location : '-' ;?></div>
+
                   <div class="datetime-event">Bagikan</div>
                   <div class="side-share">
                     <?php 
@@ -152,7 +155,7 @@
                   <?php if(!empty($datas[0]->url)){ ?>
                   <div class="datetime-event">Bergabung</div>
                   <div class="detail-time">
-                    <a href="http://dev-barii.42web.io/web-profile/" target="_blank">http://dev-barii.42web.io/web-profile/</a>
+                    <a href="<?=$datas[0]->url;?>" target="_blank"><?=$datas[0]->url;?></a>
                   </div>
                   <?php } ?>
                   

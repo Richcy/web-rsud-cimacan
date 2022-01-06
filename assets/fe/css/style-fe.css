@@ -400,13 +400,21 @@ a:hover{
 }
 
 .detail-date{
-    font-size: 14px;
+    font-size: 15px;
     margin-top: 1%;
 }
 
 .detail-time{
-    font-size: 14px;
+    font-size: 15px;
 }
+
+.top-footer-card{
+    margin-top: 9%;
+}
+
+/*.listboxd-desc br{
+    display: none;
+}*/
 
 /*Section Article*/
 

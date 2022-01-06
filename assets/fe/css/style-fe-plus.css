@@ -5324,6 +5324,10 @@ body{
     .listboxd-desc{
         height: auto !important; 
     }
+
+    .listboxd-desc-event{
+        height: auto !important; 
+    }
     .col-other {
         width: 100%;
     }
@@ -8087,6 +8091,10 @@ a:hover > div > div > div > div > div > .title-color{
 .listboxd-wrap {
     box-shadow: 0 0 10px #ddd;
 }
+.listboxd-wrap-event {
+    box-shadow: 0 0 10px #ddd;
+    min-height: 570px;
+}
 .listboxd-img {
     padding-bottom: 70%;
     display: block;
@@ -8098,10 +8106,15 @@ a:hover > div > div > div > div > div > .title-color{
     padding: 15px;
 }
 .listboxd-date {
-    
     color: #808285;
     font-size: 14px;
     margin-bottom: 5px;
+}
+
+.listboxd-location {   
+    color: #808285;
+    font-size: 13px;
+    /*margin-bottom: 5px;*/
 }
 .listboxd-title {
     
@@ -8125,7 +8138,17 @@ a:hover > div > div > div > div > div > .title-color{
     font-size: 14px;
     text-align: justify;
     margin-bottom: 5px;
+    height: 130px;
 }
+.listboxd-desc-event {
+    /**/
+    color: #808285;
+    font-size: 14px;
+    text-align: justify;
+    margin-bottom: 5px;
+    height: 130px;
+}
+
 .listboxd-read {
     text-align: right;
 }

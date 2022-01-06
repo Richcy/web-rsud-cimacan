@@ -111,17 +111,18 @@
               </a>
               <div class="listboxd-content">
                 <div class="row down1" style="height:50px;">
-                  <div class="col-xs-8" style="padding-left:0;">
+                  <div class="col-xs-12" style="padding-left:0;">
                     <div class="listboxd-date"><?=date('d M Y', strtotime($data->start_date));?> - <?=date('d M Y', strtotime($data->end_date));?></div>
+                    <div class="listboxd-location"><i class="fa fa-map-marker"></i> <?=$data->location ? substr($data->location, 0, 35).'....' : '-' ;?></div>
                   </div>
                 </div>
                 <a href="<?=base_url().'event-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-title min-heigt-title">
                   <?=$data->title;?>
                 </a>
-                <div class="listboxd-desc">
+                <div class="listboxd-desc" id="desc_event">
                  <?=substr($data->description, 0, 150);?>...
                 </div>
-                <div class="row up2">
+                <div class="row up2 top-footer-card">
                   <div class="col-xs-6 pad0">
                     <div class="listboxd-category"><?=$data->category_name;?></div>
                   </div>
@@ -200,6 +201,8 @@
     $(document).ready(function() {
         $('.type-search').select2();
         $('.category-search').select2();
+
+        // $('#desc_event br').replaceWith(' ');
     });
   </script>
 

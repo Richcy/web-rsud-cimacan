@@ -45,6 +45,7 @@
                         <th>Title</th>
                         <th>Description</th>
                         <th>Category</th>
+                        <th>Location</th>
                         <th>URL</th>
                         <th>Start Date</th>
                         <th>End Date</th>
@@ -68,6 +69,7 @@
                         <td><?=$data->title;?></td>
                         <td><?=substr($data->description,0,50);?>....</td>
                         <td><?=$data->category_name;?></td>
+                        <td><?=$data->location ? substr($data->location,0,30).'....' : '' ;?></td>
                         <td><?=$data->url ? $data->url : '-';?></td>
                         <td><?=$data->start_date;?></td>
                         <td><?=$data->end_date;?></td>

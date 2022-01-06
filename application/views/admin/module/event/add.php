@@ -110,6 +110,11 @@
                     </div>
 
                     <div class="mb-3" style="margin-top: 2%;">
+                      <label class="form-label">Location</label>
+                      <input type="text" class="form-control input-length" id="location" name="location" required="" value="">
+                    </div>
+
+                    <div class="mb-3" style="margin-top: 2%;">
                       <label class="form-label">URL</label>
                       <input type="text" class="form-control input-length" id="url" name="url" required="" value="">
                     </div>

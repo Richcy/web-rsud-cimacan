@@ -47,6 +47,7 @@ class Event extends CI_Controller {
 		$end_date = $this->input->post('end_date') ? $this->input->post('end_date'): '';
 		$start_time = $this->input->post('start_time') ? $this->input->post('start_time'): '';
 		$end_time = $this->input->post('end_time') ? $this->input->post('end_time'): '';
+		$location = $this->input->post('location') ? $this->input->post('location'): '';
 		
 		$now = date('YmdHis');
 		$edit_name = str_replace(' ', '-', $_FILES["event_img"]['name']);
@@ -73,6 +74,7 @@ class Event extends CI_Controller {
 	        	'end_date' => $end_date,
 	        	'start_time' => $start_time,
 	        	'end_time' => $end_time,
+	        	'location' => $location,
 	        	'create_date' => date('Y-m-d H:i:s')
 	        );
 	        $insert = $this->T_Event->insert($datas,'T_Event');
@@ -112,6 +114,7 @@ class Event extends CI_Controller {
 		        	'end_date' => $end_date,
 		        	'start_time' => $start_time,
 		        	'end_time' => $end_time,
+		        	'location' => $location,
 		        	'create_date' => date('Y-m-d H:i:s')
 		        );
 		        $insert = $this->T_Event->insert($datas,'T_Event');
@@ -141,6 +144,7 @@ class Event extends CI_Controller {
 		$end_date = $this->input->post('end_date') ? $this->input->post('end_date'): '';
 		$start_time = $this->input->post('start_time') ? $this->input->post('start_time'): '';
 		$end_time = $this->input->post('end_time') ? $this->input->post('end_time'): '';
+		$location = $this->input->post('location') ? $this->input->post('location'): '';
 		
 		$now = date('YmdHis');
 		$edit_name = str_replace(' ', '-', $_FILES["event_img"]['name']);
@@ -163,7 +167,8 @@ class Event extends CI_Controller {
 	        	'start_date' => $start_date,
 	        	'end_date' => $end_date,
 	        	'start_time' => $start_time,
-	        	'end_time' => $end_time
+	        	'end_time' => $end_time,
+	        	'location' => $location
 	        );
 	        $update = $this->T_Event->update($datas, $id);
 	        if ($update) {
@@ -204,7 +209,8 @@ class Event extends CI_Controller {
 		        	'start_date' => $start_date,
 		        	'end_date' => $end_date,
 		        	'start_time' => $start_time,
-		        	'end_time' => $end_time
+		        	'end_time' => $end_time,
+	        		'location' => $location
 		        );
 		        $update = $this->T_Event->update($datas, $id);
 		        if ($update) {
