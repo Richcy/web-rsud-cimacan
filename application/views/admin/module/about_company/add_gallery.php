@@ -22,6 +22,7 @@
             <h1 class="h3 mb-0 text-gray-800">Add Tentang Rumah Sakit's Gallery</h1>
             <ol class="breadcrumb">
               <li class="breadcrumb-item">Content</li>
+              <li class="breadcrumb-item" aria-current="page">About Hospital</li>
               <li class="breadcrumb-item" aria-current="page"> <a style="text-decoration: none; color: inherit;" href="<?=base_url('administrator/about_company')?>"> Tentang Rumah Sakit </a></li>
               <li class="breadcrumb-item" aria-current="page"> <a style="text-decoration: none; color: inherit;" href="<?=base_url('administrator/about_company/gallery')?>"> Gallery </a></li>
               <li class="breadcrumb-item active" aria-current="page">Add</li>

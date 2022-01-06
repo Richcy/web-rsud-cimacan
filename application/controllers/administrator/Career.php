@@ -198,5 +198,21 @@ class Career extends CI_Controller {
 		}
 		echo $action;
 	}
-	// End gallery section
+	
+	public function change_status()
+	{
+		$id = $this->input->post('id') ? $this->input->post('id'): '';
+		$status = $this->input->post('status') ? $this->input->post('status') : '';
+
+    	$datas = array(
+        	'status' => $status
+        );
+        $update = $this->T_Career->update($datas, $id);
+        if ($update) {
+        	$action = true;
+        }else{
+        	$action = false;
+        }
+        echo $action;
+	}
 }

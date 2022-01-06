@@ -56,8 +56,8 @@
                       <?php $num = 0; foreach ($datas as $data) { $num++;?>
                       <tr class="sort-wrap" data-snum="<?=$num;?>" data-sid="<?=$data->id;?>">
                         <td style="width: 20%;">
-                          <button onclick="confirmDelete('<?=$data->id;?>')" style="font-size: 12px;" class="btn btn-danger">Delete</button>
-                          <a href="<?=base_url('administrator/doctor/edit/').$data->id;?>" style="font-size: 12px;" class="btn btn-warning">Edit</a>
+                          <button onclick="confirmDelete('<?=$data->id;?>')" style="font-size: 12px;" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                          <a href="<?=base_url('administrator/doctor/edit/').$data->id;?>" style="font-size: 12px;" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
                         </td>
                         <td style="width: 10%;"><?=$num;?></td>
                         <td style="width: 20%;">

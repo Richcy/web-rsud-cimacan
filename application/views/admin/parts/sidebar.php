@@ -21,12 +21,12 @@
           <span>Slider</span>
         </a>
       </li>
-      <li class="nav-item <?=$cur_page == 'about_home' ? 'active' : '' ?>">
+      <!-- <li class="nav-item <?=$cur_page == 'about_home' ? 'active' : '' ?>">
         <a class="nav-link" href="<?=base_url('administrator/about_home')?>">
           <i class="fas fa-fw fa-hospital"></i>
           <span>About Hospital</span>
         </a>
-      </li>
+      </li> -->
       <li class="nav-item">
         <!-- <a class="nav-link collapsed" haref="javascript:void(0);" data-toggle="collapse" data-target="#collapseBanner" aria-expanded="true"
           aria-controls="collapseBanner">
@@ -54,11 +54,27 @@
       <div class="sidebar-heading">
         Content
       </div>
-      <li class="nav-item <?=$cur_page == 'about_company' ? 'active' : '' ?>">
+      <!-- <li class="nav-item <?=$cur_page == 'about_company' ? 'active' : '' ?>">
         <a class="nav-link" href="<?=base_url('administrator/about_company')?>">
           <i class="fas fa-fw fa-hospital"></i>
           <span>About Hospital</span>
         </a>
+      </li> -->
+      <li class="nav-item <?=$cur_parent_page == 'about_company' ? 'active' : ''?>">
+        <a class="nav-link <?=$cur_parent_page == 'about_company' ? '' : 'collapsed'?>" haref="javascript:void(0);" data-toggle="collapse" data-target="#about_company" aria-expanded="true"
+          aria-controls="collapsePage">
+          <i class="fas fa-fw fa-hospital"></i>
+          <span>About Hospital</span>
+        </a>
+        <div id="about_company" class="collapse <?=$cur_parent_page == 'about_company' ? 'show' : ''?>" aria-labelledby="headingPage" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">About Hospital Module</h6>
+            <a class="collapse-item <?=$cur_page == 'about_company' ? 'active' : ''?>" href="<?=base_url('administrator/about_company')?>">Profile</a>
+            <a class="collapse-item <?=$cur_page == 'greeting_directur' ? 'active' : ''?>" href="<?=base_url('administrator/greeting_directur')?>">Sambutan Direktur</a>
+            <a class="collapse-item <?=$cur_page == 'structure' ? 'active' : ''?>" href="<?=base_url('administrator/structure')?>">Struktur Organisasi</a>
+            <a class="collapse-item <?=$cur_page == 'sketch' ? 'active' : ''?>" href="<?=base_url('administrator/sketch')?>">Denah</a>
+          </div>
+        </div>
       </li>
       <li class="nav-item <?=$cur_parent_page == 'service' ? 'active' : ''?>">
         <a class="nav-link <?=$cur_parent_page == 'service' ? '' : 'collapsed'?>" haref="javascript:void(0);" data-toggle="collapse" data-target="#collapsePage" aria-expanded="true"
@@ -76,6 +92,7 @@
             <a class="collapse-item <?=$cur_page == 'igd' ? 'active' : ''?>" href="<?=base_url('administrator/igd')?>">Instalasi Gawat Darurat</a>
             <a class="collapse-item <?=$cur_page == 'lab' ? 'active' : ''?>" href="<?=base_url('administrator/lab')?>">Laboratorium</a>
             <a class="collapse-item <?=$cur_page == 'radiology' ? 'active' : ''?>" href="<?=base_url('administrator/radiology')?>">Radiology</a>
+            <!-- <a class="collapse-item <?=$cur_page == 'medical_support' ? 'active' : ''?>" href="<?=base_url('administrator/medical_support')?>">Penunjang Medis</a> -->
           </div>
         </div>
       </li>

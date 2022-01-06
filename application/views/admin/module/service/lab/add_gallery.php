@@ -19,11 +19,11 @@
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Add Instalasi Gawat Darurat's Gallery</h1>
+            <h1 class="h3 mb-0 text-gray-800">Add Laboratorium's Gallery</h1>
             <ol class="breadcrumb">
               <li class="breadcrumb-item">Content</li>
               <li class="breadcrumb-item" aria-current="page">Service</li>
-              <li class="breadcrumb-item" aria-current="page"> <a style="text-decoration: none; color: inherit;" href="<?=base_url('administrator/lab')?>"> Instalasi Gawat Darurat </a></li>
+              <li class="breadcrumb-item" aria-current="page"> <a style="text-decoration: none; color: inherit;" href="<?=base_url('administrator/lab')?>"> Laboratorium </a></li>
               <li class="breadcrumb-item" aria-current="page"> <a style="text-decoration: none; color: inherit;" href="<?=base_url('administrator/lab/gallery')?>"> Gallery </a></li>
               <li class="breadcrumb-item active" aria-current="page">Add</li>
             </ol>
@@ -37,7 +37,7 @@
                 <div class="container-form">
                   <form action="<?=base_url('administrator/lab/create_gallery')?>" method="POST" enctype="multipart/form-data">
                     <div>
-                      <label for="exampleInputEmail1" class="form-label">Instalasi Gawat Darurat's Gallery Image</label>
+                      <label for="exampleInputEmail1" class="form-label">Laboratorium's Gallery Image</label>
                       <div>
                         <!-- <a id="link-zoom" href="<?=base_url()?>assets/uploads/default-image.jpg" class="ngalleryswiper-zoom gallery-lightbox"> -->
                           <img id="preview-image" style="max-width: 245px; margin-bottom: 1%;" src="<?=base_url()?>assets/uploads/slider/default-image.jpg">

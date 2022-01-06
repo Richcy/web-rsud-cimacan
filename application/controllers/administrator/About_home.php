@@ -13,7 +13,7 @@ class About_home extends CI_Controller {
 	public function index()
 	{
 		$data['cur_page'] = 'about_home';
-		$data['cur_parent_page'] = '';
+		$data['cur_parent_page'] = 'about_company';
 		$data['datas'] = $this->M_About_Home->show_about_home();
 		$this->load->view('admin/module/about_home/index', $data);
 	}

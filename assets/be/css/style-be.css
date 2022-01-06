@@ -98,6 +98,22 @@ a.disabled {
   cursor: default;
 }
 
+.status-publish{
+	width: 108%;
+    text-align: center;
+    background: #089544;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.status-unpublish{
+	width: 108%;
+    text-align: center;
+    background: #fc544b;
+    color: #fff;
+    border-radius: 10px;
+}
+
 @media(min-width: 1280px){
 	.input-length{
 		width: 40% !important;

@@ -96,7 +96,7 @@
                     <?=$data->title;?>
                   </a>
                   <div class="listboxd-desc">
-                   <?=substr($data->description, 0, 150);?>...
+                   <?=substr($data->description, 0, 100);?>...
                   </div>
                   <div class="row up2">
                     <div class="col-xs-6 pad0">

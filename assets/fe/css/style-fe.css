@@ -2,6 +2,10 @@
 /*#a82024 -> Merah*/
 /*#a82024 -> Hijau*/
 
+.center-content{
+    text-align: center;
+}
+
 .content-section{
     font-size: min(14px);
 }
@@ -19,6 +23,10 @@
 
 .header-bar{
     background: #a82024 !important;
+}
+
+.text-size-default{
+    font-size: min(15px);
 }
 
 p{
@@ -493,6 +501,16 @@ a:hover{
 
 /*End section denah*/
 
+/*Section Greeting*/
+.img-size-title{
+    height: auto;
+    max-width: 40%;
+}
+
+.text-greeting{
+    margin-top: 3%;
+}
+
 /*Section Doctor*/
 section.doctors{
     padding: 0px;
@@ -585,6 +603,10 @@ table{
 
 a:hover.button-reset{
     color: #fff !important;
+}
+
+.modal-schedule{
+    max-width: 728px;
 }
 /*END Section doctor*/
 
@@ -937,6 +959,17 @@ position: fixed;
     .mobile-nav-toggle{
         color: #fff !important;   
     }
+    .img-size-title{
+        max-width: 70%;
+    }
+
+    .text-greeting{
+        margin-top: 5%;
+    }
+
+    .font-size-table{
+        font-size: 12px;
+    }
 }
 
 @media(max-width: 420px){
@@ -945,6 +978,17 @@ position: fixed;
     }
     .center-img{
         text-align: center;
+    }
+
+    .img-size-title{
+        max-width: 70%;
+    }
+    .text-greeting{
+        margin-top: 5%;
+    }
+
+    .font-size-table{
+        font-size: 12px;
     }
 }
 
@@ -959,6 +1003,10 @@ position: fixed;
 
     .center-img{
         text-align: center;
+    }
+
+    .font-size-table{
+        font-size: 10px;
     }
 }
 
@@ -1039,6 +1087,10 @@ position: fixed;
 
     #header .logo{
         pointer-events: none;
+    }
+
+    .modal-schedule{
+        max-width: 728px !important;
     }
 }
 

@@ -8112,6 +8112,10 @@ a:hover > div > div > div > div > div > .title-color{
     text-align: justify;
     min-height: 25px;
 }
+
+.min-heigt-title {   
+    min-height: 50px !important;
+}
 .listboxd-title:hover,.listboxd-title:focus,.listboxd-title:active {
     color: #a82024;
 }

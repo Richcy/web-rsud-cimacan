@@ -22,7 +22,8 @@
             <h1 class="h3 mb-0 text-gray-800">Tentang Rumah Sakit Gallery</h1>
             <ol class="breadcrumb">
               <li class="breadcrumb-item">Content</li>
-              <li class="breadcrumb-item" aria-current="page"><a style="text-decoration: none; color: inherit;" href="<?=base_url('administrator/about_company')?>">Tentang Rumah Sakit</a></li>
+              <li class="breadcrumb-item" aria-current="page">About Hospital</li>
+              <li class="breadcrumb-item" aria-current="page"><a style="text-decoration: none; color: inherit;" href="<?=base_url('administrator/about_company')?>">Profile</a></li>
               <li class="breadcrumb-item active" aria-current="page">Gallery</li>
             </ol>
           </div>

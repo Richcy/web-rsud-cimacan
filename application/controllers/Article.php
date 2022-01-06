@@ -20,7 +20,7 @@ class Article extends CI_Controller {
 		$s = $this->input->get('s') ? $this->input->get('s') : '';
 		$page = 1;
 		$totalData = $this->T_Article->getTotal($category, $s);
-		$totalPage = ceil($totalData[0]->totalData/8);
+		$totalPage = ceil($totalData[0]->totalData/6);
 
 		$data['category_selected'] = $category;
 		$data['s'] = $s;
@@ -42,7 +42,7 @@ class Article extends CI_Controller {
 		$s = $this->input->get('s') ? $this->input->get('s') : '';
 		$page = $page ? $page : 1;
 		$totalData = $this->T_Article->getTotal($category, $s);
-		$totalPage = ceil($totalData[0]->totalData/8);
+		$totalPage = ceil($totalData[0]->totalData/6);
 
 		$data['category_selected'] = $category;
 		$data['s'] = $s;

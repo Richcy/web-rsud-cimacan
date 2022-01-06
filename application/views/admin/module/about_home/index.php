@@ -19,10 +19,10 @@
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Data Tentang Rumah Sakit</h1>
+            <h1 class="h3 mb-0 text-gray-800">Data Sambutan Direktur</h1>
             <ol class="breadcrumb">
-              <li class="breadcrumb-item">Home</li>
-              <li class="breadcrumb-item active" aria-current="page">Tentang Rumah Sakit</li>
+              <li class="breadcrumb-item">About Hospital</li>
+              <li class="breadcrumb-item active" aria-current="page">Sambutan Direktur</li>
             </ol>
           </div>
 
@@ -40,7 +40,7 @@
                       <textarea name="desc" id="desc" class="tinymce"><?=$datas ? $datas[0]->description : '';?></textarea>
                     </div>
                     <div>
-                      <label for="exampleInputEmail1" class="form-label">Banner Tentang Rumah Sakit</label>
+                      <label for="exampleInputEmail1" class="form-label">Banner Sambutan Direktur</label>
                       <div>
                           <img id="preview-image" style="max-width: 245px; margin-bottom: 1%;" src="<?=$datas ? ($datas[0]->banner ? base_url().'assets/uploads/'.$datas[0]->banner : base_url().'assets/uploads/default-image.jpg') : base_url().'assets/uploads/default-image.jpg';?>">
                       </div>

@@ -51,7 +51,7 @@
             <div class="ln-wrap">
               <div class="ln-content">
                 <div class="ln-desc">
-                  <form>
+                  <form action="<?=base_url('event/');?>" method="GET">
                     <div class="row">
                       <!-- <div class="col-md-4">
                         <div class="form-group">
@@ -115,7 +115,7 @@
                     <div class="listboxd-date"><?=date('d M Y', strtotime($data->start_date));?> - <?=date('d M Y', strtotime($data->end_date));?></div>
                   </div>
                 </div>
-                <a href="<?=base_url().'event-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-title">
+                <a href="<?=base_url().'event-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-title min-heigt-title">
                   <?=$data->title;?>
                 </a>
                 <div class="listboxd-desc">

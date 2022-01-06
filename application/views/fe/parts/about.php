@@ -12,8 +12,11 @@
       </div>
       <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
         <p>
-          <?=$datas_about[0]->description;?>
+          <?=substr($datas_about[0]->description, 0, 750);?>...
         </p>
+        <div>
+          <a href="<?=base_url().'directurs-greeting.html';?>">Selengkapnya</a>
+        </div>
       </div>
     </div>
 

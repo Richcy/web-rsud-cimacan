@@ -65,6 +65,12 @@ $route['profile-(:any).html'] = 'profil/detail/$1';
 $route['sketch.html'] = 'denah';
 $route['sketch-(:any).html'] = 'denah/detail/$1';
 
+$route['structure.html'] = 'structure';
+$route['^(en|id)/structure.html'] = 'structure/language/$1';
+
+$route['directurs-greeting.html'] = 'directurs_greeting';
+$route['^(en|id)/directurs-greeting.html'] = 'directurs_greeting/language/$1';
+
 $route['outpatient-installation.html'] = 'instalasi_rawat_jalan';
 $route['outpatient-installation-(:any).html'] = 'instalasi_rawat_jalan/detail/$1';
 
@@ -76,6 +82,9 @@ $route['igd-(:any).html'] = 'igd/detail/$1';
 
 $route['laboratorium.html'] = 'laboratorium';
 $route['laboratorium-(:any).html'] = 'laboratorium/detail/$1';
+
+$route['medical-support.html'] = 'medical_support';
+$route['medical-support-(:any).html'] = 'medical_support/detail/$1';
 
 $route['radiology.html'] = 'radiologi';
 $route['radiology-(:any).html'] = 'radiologi/detail/$1';

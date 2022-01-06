@@ -22,6 +22,10 @@
             <ul>
               <li class="navbar-child"><a class="<?=$cur_page=='profil_rs' ? 'active' : '';?>" href="<?=base_url('profile.html')?>">Profil Rumah Sakit</a></li>
 
+              <li class="navbar-child"><a class="<?=$cur_page=='directurs_greeting' ? 'active' : '';?>" href="<?=base_url('directurs-greeting.html')?>">Sambutan Direktur</a></li>
+
+              <li class="navbar-child"><a class="<?=$cur_page=='structure_or' ? 'active' : '';?>" href="<?=base_url('structure.html')?>">Struktur Organisasi</a></li>
+
               <li class="navbar-child"><a class="<?=$cur_page=='denah_rs' ? 'active' : '';?>" href="<?=base_url('sketch.html')?>">Denah Rumah Sakit</a></li>
             </ul>
           </li>
@@ -52,6 +56,7 @@
               <li class="navbar-child"><a class="<?=$cur_page=='igd' ? 'active' : '';?>" href="<?=base_url('igd.html')?>">Instalasi Gawat Darurat</a></li>
               <li class="navbar-child"><a class="<?=$cur_page=='laboratorium' ? 'active' : '';?>" href="<?=base_url('laboratorium.html')?>">Laboratorium</a></li>
               <li class="navbar-child"><a class="<?=$cur_page=='radiology' ? 'active' : '';?>" href="<?=base_url('radiology.html')?>">Radiologi</a></li>
+              <!-- <li class="navbar-child"><a class="<?=$cur_page=='medical_support' ? 'active' : '';?>" href="<?=base_url('medical-support.html')?>">Penunjang Medis</a></li> -->
             </ul>
           </li>
           <!--END Dropdown Menu Layanan -->

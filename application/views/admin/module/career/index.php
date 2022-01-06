@@ -41,6 +41,7 @@
                       <tr>
                         <th>Action</th>
                         <th>#</th>
+                        <th>Status</th>
                         <th>Image</th>
                         <th>Title</th>
                         <th>Description</th>
@@ -51,10 +52,16 @@
                       <?php $num = 0; foreach ($datas as $data) { $num++;?>
                       <tr class="sort-wrap" data-snum="<?=$num;?>" data-sid="<?=$data->id;?>">
                         <td style="width: 20%;">
-                          <button onclick="confirmDelete('<?=$data->id;?>')" style="font-size: 12px;" class="btn btn-danger">Delete</button>
-                          <a href="<?=base_url('administrator/career/edit/').$data->id;?>" style="font-size: 12px;" class="btn btn-warning">Edit</a>
+                          <!-- <button onclick="confirmDelete('<?=$data->id;?>')" style="font-size: 12px;" class="btn btn-danger"><i class="fa fa-trash"></i></button> -->
+                          <a href="<?=base_url('administrator/career/edit/').$data->id;?>" style="font-size: 12px;" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
+                          <?php if ($data->status == 'publish') {?>
+                          <button onclick="changeStatus('<?=$data->id;?>', 'unpublish', '<?=$data->title;?>')" style="font-size: 12px;" class="btn btn-danger"><i class="fa fa-times-circle"></i></button>
+                          <?php }else if($data->status == 'unpublish'){ ?>
+                            <button onclick="changeStatus('<?=$data->id;?>', 'publish', '<?=$data->title;?>')" style="font-size: 12px;" class="btn btn-success"><i class="fa fa-send"></i></button>
+                          <?php } ?>
                         </td>
                         <td style="width: 10%;"><?=$num;?></td>
+                        <td style="padding-right: 0.8rem; padding-left: 0.8rem;"><div class="<?=$data->status == 'publish' ? 'status-publish' : 'status-unpublish';?>"><?=ucwords($data->status);?></div></td>
                         <td style="width: 20%;">
                           <a href="<?=$data->img ? base_url().'assets/uploads/'.$data->img : base_url().'assets/uploads/default-image.jpg';?>" class="ngalleryswiper-zoom gallery-lightbox">
                             <img style="max-width: 100px" src="<?=$data->img ? base_url().'assets/uploads/'.$data->img : base_url().'assets/uploads/default-image.jpg';?>">
@@ -171,6 +178,54 @@
                 swal({
                   title: "Failed",
                   text: "Deleted data. Please try again",
+                  icon: "error",
+                  button: "Ok",
+                });
+              }
+            }
+          });
+
+        } else {
+        }
+      });
+    }
+
+
+    function changeStatus(id, status, title){
+      swal({
+        title: "Are you sure?",
+        text: "Change "+title+" to "+status+"!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+        closeOnCancel: true
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+          var url = "<?=base_url('administrator/career/change_status')?>";
+          $.ajax({
+            type:'POST',
+            url: url, 
+            data : {id: id, status: status}, 
+            success:function(result){
+              // console.log(result);
+              if (result == 1) {
+                swal({
+                  title: "Success",
+                  text: "Update data",
+                  icon: "success",
+                  button: "Ok",
+                }).then((isconfirm) => {
+                  if (isconfirm) {
+                    location.reload();
+                  }else{
+                    
+                  }
+                });
+              }else{
+                swal({
+                  title: "Failed",
+                  text: "Update data. Please try again",
                   icon: "error",
                   button: "Ok",
                 });

@@ -1,7 +1,7 @@
 <?php 
 class T_Event extends CI_Model {
 
-	private $itemPerPage = 8;
+	private $itemPerPage = 6;
 
 
 	public function show_all()
@@ -61,7 +61,7 @@ class T_Event extends CI_Model {
   public function getAll($category, $s)
   {
     $query = $this->db->select('event.id, event.title, event.description, event.category, event.url, event.start_date, event.end_date, event.start_time, event.end_time, event.img, category.id as category_id, category.name as category_name');
-    $query = $this->db->order_by('event.create_date', 'ASC');
+    $query = $this->db->order_by('event.start_date', 'DESC');
     $query = $this->db->join('t_event_category as category', 'category.id = event.category', 'left');
     $query =  $this->db->where('status', 'publish');
     if (!empty($category)) {
@@ -78,7 +78,7 @@ class T_Event extends CI_Model {
   {
     $limitbefore = $page <= 1 ? 0 : ($page-1) * $this->itemPerPage;
     $query = $this->db->select('event.id, event.title, event.description, event.category, event.url, event.start_date, event.end_date, event.start_time, event.end_time, event.img, category.id as category_id, category.name as category_name');
-    $query = $this->db->order_by('event.create_date', 'ASC');
+    $query = $this->db->order_by('event.start_date', 'DESC');
     $query = $this->db->join('t_event_category as category', 'category.id = event.category', 'left');
     $query =  $this->db->where('status', 'publish');
     if (!empty($category)) {

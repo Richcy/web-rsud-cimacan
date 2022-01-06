@@ -18,7 +18,7 @@ class Career extends CI_Controller {
 		$s = $this->input->get('s') ? $this->input->get('s') : '';
 		$page = 1;
 		$totalData = $this->T_Career->getTotal($s);
-		$totalPage = ceil($totalData[0]->totalData/8);
+		$totalPage = ceil($totalData[0]->totalData/6);
 
 		$data['s'] = $s;
 		$data['lang'] = 'id';
@@ -37,7 +37,7 @@ class Career extends CI_Controller {
 		$s = $this->input->get('s') ? $this->input->get('s') : '';
 		$page = $page ? $page : 1;
 		$totalData = $this->T_Career->getTotal($s);
-		$totalPage = ceil($totalData[0]->totalData/8);
+		$totalPage = ceil($totalData[0]->totalData/6);
 
 		$data['s'] = $s;
 		$data['lang'] = 'id';

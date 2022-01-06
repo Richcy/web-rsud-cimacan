@@ -13,7 +13,7 @@ class About_company extends CI_Controller {
 	public function index()
 	{
 		$data['cur_page'] = 'about_company';
-		$data['cur_parent_page'] = '';
+		$data['cur_parent_page'] = 'about_company';
 		$data['datas'] = $this->M_About_Company->show_about_company();
 		$this->load->view('admin/module/about_company/index', $data);
 	}
@@ -21,7 +21,7 @@ class About_company extends CI_Controller {
 	public function gallery()
 	{
 		$data['cur_page'] = 'about_company';
-		$data['cur_parent_page'] = '';
+		$data['cur_parent_page'] = 'about_company';
 		// $data['datas'] = $this->M_About_Company->show_about_company();
 		$data['datas'] = $this->M_About_Company->show_gallery('about_company');
 		$this->load->view('admin/module/about_company/gallery', $data);
@@ -124,7 +124,7 @@ class About_company extends CI_Controller {
 	public function add_gallery()
 	{
 		$data['cur_page'] = 'about_company';
-		$data['cur_parent_page'] = '';
+		$data['cur_parent_page'] = 'about_company';
 		$this->load->view('admin/module/about_company/add_gallery', $data);
 	}
 

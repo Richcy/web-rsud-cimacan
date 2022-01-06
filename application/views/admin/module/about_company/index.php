@@ -22,7 +22,8 @@
             <h1 class="h3 mb-0 text-gray-800">Data Tentang Rumah Sakit</h1>
             <ol class="breadcrumb">
               <li class="breadcrumb-item">Content</li>
-              <li class="breadcrumb-item active" aria-current="page">Tentang Rumah Sakit</li>
+              <li class="breadcrumb-item" aria-current="page">About Hospital</li>
+              <li class="breadcrumb-item active" aria-current="page">Profile</li>
             </ol>
           </div>
 

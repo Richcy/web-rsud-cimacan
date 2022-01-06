@@ -103,14 +103,14 @@
 
   <!-- Modal detail doctor -->
   <div class="modal fade" id="doctor-detail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-schedule">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Jadwal Dokter</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <table class="table table-striped" style="font-size: 14px;">
+          <table class="table table-striped font-size-table">
             <thead>
               <th>Senin</th>
               <th>Selasa</th>

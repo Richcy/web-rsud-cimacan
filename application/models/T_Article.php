@@ -1,7 +1,7 @@
 <?php 
 class T_Article extends CI_Model {
 
-	private $itemPerPage = 8;
+	private $itemPerPage = 6;
 
 
 	public function show_all()

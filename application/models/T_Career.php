@@ -1,13 +1,14 @@
 <?php 
 class T_Career extends CI_Model {
 
-	private $itemPerPage = 8;
+	private $itemPerPage = 6;
 
 
 	public function show_all()
 	{
     $query = $this->db->select('*');
-    $query = $this->db->order_by('create_date', 'ASC');
+    $query = $this->db->order_by('create_date', 'DESC');
+    $query = $this->db->order_by('status', 'ASC');
 		$query = $this->db->get('t_career');
     return $query->result();
 	}
@@ -60,7 +61,7 @@ class T_Career extends CI_Model {
   public function getAll($s)
   {
     $query = $this->db->select('*');
-    $query = $this->db->order_by('create_date', 'ASC');
+    $query = $this->db->order_by('create_date', 'DESC');
     $query =  $this->db->where('status', 'publish');
     if (!empty($s)) {
       $query =  $this->db->like('title', $s);
@@ -73,7 +74,7 @@ class T_Career extends CI_Model {
   {
     $limitbefore = $page <= 1 ? 0 : ($page-1) * $this->itemPerPage;
     $query = $this->db->select('*');
-    $query = $this->db->order_by('create_date', 'ASC');
+    $query = $this->db->order_by('create_date', 'DESC');
     $query =  $this->db->where('status', 'publish');
     if (!empty($s)) {
       $query =  $this->db->like('title', $s);
