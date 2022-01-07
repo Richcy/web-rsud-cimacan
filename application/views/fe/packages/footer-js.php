@@ -18,5 +18,6 @@
   <script type="text/javascript">
     $(document).ready(function(){
         // location.reload();
+        $('#desc_card br').replaceWith(' ');
     });
   </script>

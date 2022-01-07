@@ -7,8 +7,8 @@
     </div>
 
     <div class="row">
-      <div class="col-lg-6" data-aos="fade-right">
-        <img src="<?=$datas_about[0]->banner ? base_url().'assets/uploads/'.$datas_about[0]->banner : base_url().'assets/fe/img/rsud_gedung.jpg';?>" class="img-fluid" alt="">
+      <div class="col-lg-5 img-left-position" data-aos="fade-right">
+        <img src="<?=$datas_about[0]->banner ? base_url().'assets/uploads/'.$datas_about[0]->banner : base_url().'assets/fe/img/rsud_gedung.jpg';?>" class="img-fluid img-greeting" alt="">
       </div>
       <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
         <p>

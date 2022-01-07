@@ -119,7 +119,7 @@
                 <a href="<?=base_url().'event-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-title min-heigt-title">
                   <?=$data->title;?>
                 </a>
-                <div class="listboxd-desc" id="desc_event">
+                <div class="listboxd-desc" id="desc_card">
                  <?=substr($data->description, 0, 150);?>...
                 </div>
                 <div class="row up2 top-footer-card">
@@ -201,8 +201,6 @@
     $(document).ready(function() {
         $('.type-search').select2();
         $('.category-search').select2();
-
-        // $('#desc_event br').replaceWith(' ');
     });
   </script>
 

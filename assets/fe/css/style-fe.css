@@ -2,6 +2,16 @@
 /*#a82024 -> Merah*/
 /*#a82024 -> Hijau*/
 
+
+/*Posisition*/
+.right-position{
+    text-align: right;
+}
+
+.left-position{
+    text-align: left;
+}
+
 .center-content{
     text-align: center;
 }
@@ -172,6 +182,15 @@ a:hover{
 	}
 }
 /*End resize slider*/
+
+/*Greeting Home*/
+.img-greeting{
+    max-width: 78% !important;
+}
+
+.img-left-position{
+    text-align: right;
+}
 
 /*Event home section*/
 .part-levent {
@@ -912,6 +931,14 @@ position: fixed;
 
     .detail-article{
         text-align: center;
+    }
+
+    .img-left-position{
+        text-align: center;
+    }
+
+    .img-greeting{
+        max-width: 60% !important;
     }
 }
 

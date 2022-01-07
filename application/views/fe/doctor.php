@@ -95,7 +95,7 @@
                 <?php $fix_name = str_replace(' ', '-', $delete_coma); ?>
                 <a href="<?=base_url().'doctor-'.$data->id.'-'.$fix_name.'.html';?>">
                   <div class="member-img">
-                    <img src="<?=$data->img ? base_url().'assets/uploads/'.$data->img : base_url().'assets/uploads/doctor.jpg' ;?>" class="img-fluid" alt="">
+                    <img src="<?=$data->img ? base_url().'assets/uploads/'.$data->img : base_url().'assets/uploads/doctor-default.png' ;?>" class="img-fluid" alt="">
                     
                   </div>
                   <div class="member-info">

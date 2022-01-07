@@ -121,7 +121,7 @@
                   <div class="author">
                     <span><i class="fa fa-user"></i></span> <?=$data->author;?>
                   </div>
-                  <div class="listboxd-desc">
+                  <div class="listboxd-desc" id="desc_card">
                    <?=substr($data->description, 0, 150);?>...
                   </div>
                   <div class="row up2">

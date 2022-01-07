@@ -95,7 +95,7 @@
                   <a href="<?=base_url().'career-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-title">
                     <?=$data->title;?>
                   </a>
-                  <div class="listboxd-desc">
+                  <div class="listboxd-desc" id="desc_card">
                    <?=substr($data->description, 0, 100);?>...
                   </div>
                   <div class="row up2">
