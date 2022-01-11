@@ -43,6 +43,9 @@
                         if ($datas[0]->id) {
                     ?>
                       <li class="nav-item">
+                        <a class="nav-link" href="<?=base_url('administrator/unggulan/sub_menu/').$datas[0]->id?>">Sub Menu</a>
+                      </li>
+                      <li class="nav-item">
                         <a class="nav-link" href="<?=base_url('administrator/unggulan/gallery')?>">Gallery</a>
                       </li>
                     <?php 

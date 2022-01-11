@@ -22,9 +22,19 @@ class unggulan extends CI_Controller {
 	{
 		$data['cur_page'] = 'unggulan';
 		$data['cur_parent_page'] = 'service';
-		// $data['datas'] = $this->M_Unggulan->show_unggulan();
+		$data['datas_sub'] = $this->M_Unggulan->show_unggulan();
 		$data['datas'] = $this->M_Unggulan->show_gallery('unggulan');
 		$this->load->view('admin/module/service/unggulan/gallery', $data);
+	}
+
+	public function sub_menu($id)
+	{
+		$data['cur_page'] = 'unggulan';
+		$data['cur_parent_page'] = 'service';
+		// $data['datas'] = $this->M_Unggulan->show_unggulan();
+		$data['datas'] = $this->M_Unggulan->show_sub_menu($id);
+		$data['service_id'] = $id;
+		$this->load->view('admin/module/service/unggulan/sub_menu/index', $data);
 	}
 
 	public function create()
@@ -183,6 +193,80 @@ class unggulan extends CI_Controller {
         }
 	}
 
+	public function add_sub_menu($id)
+	{
+		$data['cur_page'] = 'unggulan';
+		$data['cur_parent_page'] = 'service';
+		$data['service_id'] = $id;
+		$this->load->view('admin/module/service/unggulan/sub_menu/add_sub_menu', $data);
+	}
+
+	public function create_sub_menu()
+	{
+		$now = date('Y-m-d H:i:s');
+		$id = random_string('alnum',24);
+		$service_id = $this->input->post('service_id') ? $this->input->post('service_id') : '';
+		$title = $this->input->post('title') ? $this->input->post('title') : '';
+		$description = $this->input->post('desc') ? str_replace("'", "’", $this->input->post('desc')) : '';
+		
+        $datas = array(
+        	'id' => $id,
+        	'service_id' => $service_id,
+        	'title' => $title,
+        	'description' => $description,
+        	'type' => 'unggulan',
+        	'create_date' => $now
+        );
+        $insert = $this->M_Unggulan->insert($datas,'t_sub_service');
+        if ($insert) {
+        	$this->session->set_flashdata('title','Success');
+        	$this->session->set_flashdata('message','Add data Sub Menu Layanan Unggulan');
+        	$this->session->set_flashdata('status','success');
+        	redirect('/administrator/unggulan/sub_menu/'.$service_id.'/');
+        }else{
+        	$this->session->set_flashdata('title','Failed');
+        	$this->session->set_flashdata('message','Add data Sub Menu Layanan Unggulan');
+        	$this->session->set_flashdata('status','error');
+        	redirect('/administrator/unggulan/sub_menu/add_sub_menu/'.$service_id.'/');
+        }
+	}
+
+	public function edit_sub_menu($id)
+	{
+		$data['cur_page'] = 'unggulan';
+		$data['cur_parent_page'] = 'service';
+		// $data['service_id'] = $id;
+		$datas = $this->M_Unggulan->detail_sub_menu($id);
+		$data['datas'] = $datas;
+		$data['service_id'] = $datas[0]->service_id;
+		$this->load->view('admin/module/service/unggulan/sub_menu/edit_sub_menu', $data);
+	}
+
+	public function update_sub_menu()
+	{
+		$id = $this->input->post('id') ? $this->input->post('id') : '';
+		$service_id = $this->input->post('service_id') ? $this->input->post('service_id') : '';
+		$title = $this->input->post('title') ? $this->input->post('title') : '';
+		$description = $this->input->post('desc') ? str_replace("'", "’", $this->input->post('desc')) : '';
+		
+        $datas = array(
+        	'title' => $title,
+        	'description' => $description
+        );
+        $update = $this->M_Unggulan->update_sub_menu($datas, $id);
+        if ($update) {
+        	$this->session->set_flashdata('title','Success');
+        	$this->session->set_flashdata('message','Update data Sub Menu Layanan Unggulan');
+        	$this->session->set_flashdata('status','success');
+        	redirect('/administrator/unggulan/sub_menu/'.$service_id.'/');
+        }else{
+        	$this->session->set_flashdata('title','Failed');
+        	$this->session->set_flashdata('message','Update data Sub Menu Layanan Unggulan');
+        	$this->session->set_flashdata('status','error');
+        	redirect('/administrator/unggulan/edit_sub_menu/'.$id.'/');
+        }
+	}
+
 	public function save_sort()
 	{
 		$data_sort = $this->input->post('data_id');
@@ -206,6 +290,18 @@ class unggulan extends CI_Controller {
 			$path = FCPATH.'/assets/uploads/'.$result[0]->img;
 			$action_delete = unlink($path);
 			$action = $this->M_Unggulan->delete($id);
+		}else{
+			$action = false;
+		}
+		echo $action;
+	}
+
+	public function delete_sub_menu()
+	{
+		$id = $this->input->post('id');
+		$result = $this->M_Unggulan->detail_sub_menu($id);
+		if ($result) {
+			$action = $this->M_Unggulan->delete_sub_menu($id);
 		}else{
 			$action = false;
 		}
