@@ -42,5 +42,44 @@
       const galleryLightbox = GLightbox({
         selector: '.gallery-lightbox'
       });
+
+      tinymce.init({
+        selector: ".tinymce",
+        plugins: [
+        "advlist autolink lists link image charmap print preview anchor",
+        "searchreplace visualblocks code fullscreen",
+        "insertdatetime media table contextmenu paste",
+        "textcolor"
+        ],
+        toolbar: "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | forecolor backcolor",
+        relative_urls: false,
+        forced_root_block : false,
+        height : 500,
+        // width : 500
+        /* without images_upload_url set, Upload tab won't show up*/
+        automatic_uploads: true,
+        images_upload_url: '<?=base_url('plugin/postacceptor')?>',
+        paste_data_images:true,
+        relative_urls: false,
+        remove_script_host: false,
+          file_picker_callback: function(cb, value, meta) {
+           var input = document.createElement('input');
+           input.setAttribute('type', 'file');
+           input.setAttribute('accept', 'image/*');
+           input.onchange = function() {
+            var file = this.files[0];
+            var reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function () {
+               var id = 'post-image-' + (new Date()).getTime();
+               var blobCache =  tinymce.activeEditor.editorUpload.blobCache;
+               var blobInfo = blobCache.create(id, file, reader.result);
+               blobCache.add(blobInfo);
+               cb(blobInfo.blobUri(), { title: file.name });
+            };
+           };
+           input.click();
+          }
+      });
     });
   </script>

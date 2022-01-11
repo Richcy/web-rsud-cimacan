@@ -19,12 +19,12 @@
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Instalasi Rawat Jalan Gallery</h1>
+            <h1 class="h3 mb-0 text-gray-800">Instalasi Rawat Jalan Sub Menu</h1>
             <ol class="breadcrumb">
               <li class="breadcrumb-item">Content</li>
               <li class="breadcrumb-item" aria-current="page">Service</li>
               <li class="breadcrumb-item" aria-current="page"><a style="text-decoration: none; color: inherit;" href="<?=base_url('administrator/irj')?>">Instalasi Rawat Jalan</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+              <li class="breadcrumb-item active" aria-current="page">Sub Menu</li>
             </ol>
           </div>
 
@@ -40,17 +40,18 @@
                         <a class="nav-link" href="<?=base_url('administrator/irj')?>">Description</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="<?=base_url('administrator/irj/sub_menu/').$datas_irj[0]->id?>">Sub Menu</a>
+                        <a class="nav-link active" href="<?=base_url('administrator/irj/sub_menu/')?>">Sub Menu</a>
                       </li>
+
                       <li class="nav-item">
-                        <a class="nav-link active" href="<?=base_url('administrator/irj/gallery/')?>">Gallery</a>
+                        <a class="nav-link" href="<?=base_url('administrator/irj/gallery/')?>">Gallery</a>
                       </li>
                     </ul>
                   </div>
                   <!-- End tab menu content -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold primary-color">Instalasi Rawat Jalan's Gallery</h6>
-                  <a href="<?=base_url('administrator/irj/add_gallery')?>" class="btn btn-primary"><span><i class="fa fa-plus"></i></span> Add Data</a>
+                  <h6 class="m-0 font-weight-bold primary-color">Instalasi Rawat Jalan's Sub Menu</h6>
+                  <a href="<?=base_url('administrator/irj/add_sub_menu/').$service_id.'/'?>" class="btn btn-primary"><span><i class="fa fa-plus"></i></span> Add Data</a>
                 </div>
                 <div class="table-responsive p-3">
                   <table class="table align-items-center table-flush table-hover" id="dataTableHover" style="font-size: 14px;">
@@ -58,28 +59,26 @@
                       <tr>
                         <th>Action</th>
                         <th>#</th>
-                        <th>Image</th>
+                        <th>Title</th>
                       </tr>
                     </thead>
                     <tfoot>
                       <tr>
                         <th>Action</th>
                         <th>#</th>
-                        <th>Image</th>
+                        <th>Title</th>
                       </tr>
                     </tfoot>
                     <tbody id="table_body">
                       <?php $num = 0; foreach ($datas as $data) { $num++;?>
                       <tr class="sort-wrap" data-snum="<?=$num;?>" data-sid="<?=$data->id;?>">
                         <td style="width: 20%;">
-                          <button onclick="confirmDelete('<?=$data->id;?>')" style="font-size: 12px;" class="btn btn-danger">Delete</button>
+                          <button onclick="confirmDelete('<?=$data->id;?>');" style="font-size: 12px;" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                          <a href="<?=base_url('administrator/irj/edit_sub_menu/').$data->id.'/';?>" style="font-size: 12px;" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
                         </td>
                         <td><?=$num;?></td>
                         <td>
-                          <a href="<?=base_url().'assets/uploads/'.$data->img;?>" class="ngalleryswiper-zoom gallery-lightbox">
-                            <img style="max-width: 100px" src="<?=base_url().'assets/uploads/'.$data->img;?>">
-                          </a>
-                          <input type="hidden" name="sort<?=$num;?>" id="sort<?=$num;?>" value="<?=$data->sort;?>">
+                          <?=$data->title;?>
                         </td>
                       </tr>
                       <?php } ?>
@@ -118,46 +117,10 @@
       // $( "#table_body" ).disableSelection();
     });
 
-    function save_sort(){
-      var order = [];
-      var element = $('.sort-wrap');
-      for(var ab = 0; ab < element.length; ab++){
-          var qid = element.eq(ab).attr('data-sid')
-          order.push(qid);
-
-          element.eq(ab).attr("data-snum", (ab+1));
-          $('#snumber-'+qid).attr("data-sort_num", (ab+1));
-          $('#sort_news-'+qid).text((ab+1));
-      }
-      // console.log(order);
-
-      var data = {
-        data : order
-      } 
-
-      var url = "<?=base_url('administrator/irj/save_sort')?>";
-      $.ajax({
-        type:'POST',
-        url: url, 
-        data : {data_id: order}, 
-        success:function(data){
-          var alertText = "Sort Order Saved!";
-          successAlert(alertText);
-          // console.log(data);
-          // console.log(html);
-          $('#table_body').html(data);
-          const galleryLightbox = GLightbox({
-            selector: '.gallery-lightbox'
-          });
-          return false;
-        }
-      });
-    }
-
     function confirmDelete(id){
       swal({
         title: "Are you sure?",
-        text: "Once deleted, you will not be able to recover this image!",
+        text: "Once deleted, you will not be able to recover this Data!",
         icon: "warning",
         buttons: true,
         dangerMode: true,
@@ -165,7 +128,7 @@
       })
       .then((willDelete) => {
         if (willDelete) {
-          var url = "<?=base_url('administrator/irj/delete_gallery')?>";
+          var url = "<?=base_url('administrator/irj/delete_sub_menu')?>";
           $.ajax({
             type:'POST',
             url: url, 
@@ -175,7 +138,7 @@
               if (result == 1) {
                 swal({
                   title: "Success",
-                  text: "Deleted image",
+                  text: "Deleted data",
                   icon: "success",
                   button: "Ok",
                 }).then((isconfirm) => {
@@ -188,7 +151,7 @@
               }else{
                 swal({
                   title: "Failed",
-                  text: "Deleted image. Please try again",
+                  text: "Deleted data. Please try again",
                   icon: "error",
                   button: "Ok",
                 });

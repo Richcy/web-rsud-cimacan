@@ -53,7 +53,7 @@
   <main id="main">
     <!-- ======= Event Section ======= -->
       <?php 
-        // $this->load->view('fe/parts/event');
+        $this->load->view('fe/parts/event');
       ?>
     <!-- End Event Section -->
 

@@ -30,8 +30,8 @@
       </div>
       <!-- End breadcumb -->
       <?php if (!empty($datas[0]->banner)) {?>
+      <?php } ?>
     </div>
-    <?php } ?>
   <!-- End Hero -->
   <main id="main">
     <section id="content" class="main-page">

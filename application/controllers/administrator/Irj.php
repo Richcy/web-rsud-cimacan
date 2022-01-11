@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class IRJ extends CI_Controller {
+class Irj extends CI_Controller {
 
 	function __construct()
 	{
@@ -22,9 +22,19 @@ class IRJ extends CI_Controller {
 	{
 		$data['cur_page'] = 'irj';
 		$data['cur_parent_page'] = 'service';
-		// $data['datas'] = $this->M_IRJ->show_irj();
+		$data['datas_irj'] = $this->M_IRJ->show_irj();
 		$data['datas'] = $this->M_IRJ->show_gallery('irj');
 		$this->load->view('admin/module/service/irj/gallery', $data);
+	}
+
+	public function sub_menu($id)
+	{
+		$data['cur_page'] = 'irj';
+		$data['cur_parent_page'] = 'service';
+		// $data['datas'] = $this->M_IRJ->show_irj();
+		$data['datas'] = $this->M_IRJ->show_sub_menu($id);
+		$data['service_id'] = $id;
+		$this->load->view('admin/module/service/irj/sub_menu/index', $data);
 	}
 
 	public function create()
@@ -165,7 +175,7 @@ class IRJ extends CI_Controller {
 	        	'img' => 'irj/'.$file_name,
 	        	'sort' => $fix_sort,
 	        	'type' => 'irj',
-	        	'create_date' => $now
+	        	'create_date' => date('Y-m-d H:i:s')
 	        );
 	        $insert = $this->M_IRJ->insert_gallery($datas,'t_gallery');
 	        if ($insert) {
@@ -179,6 +189,80 @@ class IRJ extends CI_Controller {
 	        	$this->session->set_flashdata('status','error');
 	        	redirect('/administrator/irj/gallery');
 	        }
+        }
+	}
+
+	public function add_sub_menu($id)
+	{
+		$data['cur_page'] = 'irj';
+		$data['cur_parent_page'] = 'service';
+		$data['service_id'] = $id;
+		$this->load->view('admin/module/service/irj/sub_menu/add_sub_menu', $data);
+	}
+
+	public function create_sub_menu()
+	{
+		$now = date('Y-m-d H:i:s');
+		$id = random_string('alnum',24);
+		$service_id = $this->input->post('service_id') ? $this->input->post('service_id') : '';
+		$title = $this->input->post('title') ? $this->input->post('title') : '';
+		$description = $this->input->post('desc') ? str_replace("'", "’", $this->input->post('desc')) : '';
+		
+        $datas = array(
+        	'id' => $id,
+        	'service_id' => $service_id,
+        	'title' => $title,
+        	'description' => $description,
+        	'type' => 'irj',
+        	'create_date' => $now
+        );
+        $insert = $this->M_IRJ->insert($datas,'t_sub_service');
+        if ($insert) {
+        	$this->session->set_flashdata('title','Success');
+        	$this->session->set_flashdata('message','Add data Sub Menu Instalasi Rawat Jalan');
+        	$this->session->set_flashdata('status','success');
+        	redirect('/administrator/irj/sub_menu/'.$service_id.'/');
+        }else{
+        	$this->session->set_flashdata('title','Failed');
+        	$this->session->set_flashdata('message','Add data Sub Menu Instalasi Rawat Jalan');
+        	$this->session->set_flashdata('status','error');
+        	redirect('/administrator/irj/sub_menu/add_sub_menu/'.$service_id.'/');
+        }
+	}
+
+	public function edit_sub_menu($id)
+	{
+		$data['cur_page'] = 'irj';
+		$data['cur_parent_page'] = 'service';
+		// $data['service_id'] = $id;
+		$datas = $this->M_IRJ->detail_sub_menu($id);
+		$data['datas'] = $datas;
+		$data['service_id'] = $datas[0]->service_id;
+		$this->load->view('admin/module/service/irj/sub_menu/edit_sub_menu', $data);
+	}
+
+	public function update_sub_menu()
+	{
+		$id = $this->input->post('id') ? $this->input->post('id') : '';
+		$service_id = $this->input->post('service_id') ? $this->input->post('service_id') : '';
+		$title = $this->input->post('title') ? $this->input->post('title') : '';
+		$description = $this->input->post('desc') ? str_replace("'", "’", $this->input->post('desc')) : '';
+		
+        $datas = array(
+        	'title' => $title,
+        	'description' => $description
+        );
+        $update = $this->M_IRJ->update_sub_menu($datas, $id);
+        if ($update) {
+        	$this->session->set_flashdata('title','Success');
+        	$this->session->set_flashdata('message','Update data Sub Menu Instalasi Rawat Jalan');
+        	$this->session->set_flashdata('status','success');
+        	redirect('/administrator/irj/sub_menu/'.$service_id.'/');
+        }else{
+        	$this->session->set_flashdata('title','Failed');
+        	$this->session->set_flashdata('message','Update data Sub Menu Instalasi Rawat Jalan');
+        	$this->session->set_flashdata('status','error');
+        	redirect('/administrator/irj/edit_sub_menu/'.$id.'/');
         }
 	}
 
@@ -205,6 +289,18 @@ class IRJ extends CI_Controller {
 			$path = FCPATH.'/assets/uploads/'.$result[0]->img;
 			$action_delete = unlink($path);
 			$action = $this->M_IRJ->delete($id);
+		}else{
+			$action = false;
+		}
+		echo $action;
+	}
+
+	public function delete_sub_menu()
+	{
+		$id = $this->input->post('id');
+		$result = $this->M_IRJ->detail_sub_menu($id);
+		if ($result) {
+			$action = $this->M_IRJ->delete_sub_menu($id);
 		}else{
 			$action = false;
 		}

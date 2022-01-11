@@ -120,9 +120,11 @@ class T_Event extends CI_Model {
   {
     $query = $this->db->select('event.id, event.title, event.description, event.category, event.location, event.url, event.start_date, event.end_date, event.start_time, event.end_time, event.img, category.id as category_id, category.name as category_name');
     $query = $this->db->join('t_event_category as category', 'category.id = event.category', 'left');
+    $query = $this->db->where('end_date >=', date('Y-m-d') );
+    $query = $this->db->where('start_date <=', date('Y-m-d') );
     $query = $this->db->order_by('start_date', 'DESC');
     $query = $this->db->order_by('end_date', 'DESC');
-    $query = $query->limit(4);
+    $query = $query->limit(3);
     $query = $this->db->get('t_event as event');
     return $query->result();
   }

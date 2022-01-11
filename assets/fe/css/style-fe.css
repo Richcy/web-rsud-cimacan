@@ -23,6 +23,10 @@
 	background: #a82024 !important;
 }
 
+.main-border-color{
+    border-color: #a82024 !important;
+}
+
 .main-color{
 	color: #a82024 !important;
 }
@@ -197,13 +201,13 @@ a:hover{
     padding: 50px 0;
 }
 
-.row-le {
+.row-event-home {
 	display: table;
 	width: 100%;
 	margin-bottom: 30px;
 }
 
-.col-le {
+.col-event-home {
     display: block;
     float: left;
     width: 60%;
@@ -211,7 +215,7 @@ a:hover{
     vertical-align: middle;
     padding: 0 15px;
 }
-.col-le-img {
+.col-event-home-img {
     display: block;
     float: left;
     vertical-align: middle;
@@ -219,7 +223,7 @@ a:hover{
     -moz-margin-end:-4px;
     padding: 0 15px;
 }
-.le-img {
+.event-home-img {
     display: block;
     padding-bottom: 65%;
     background-repeat: no-repeat;
@@ -229,33 +233,31 @@ a:hover{
     max-width: 100%;
     margin: 0 auto;
 }
-.le-date {
+.event-home-date {
     color: #B9BBBC;
-    
     font-size: 14px;
     margin-bottom: 5px;
 }
-.le-title {
-    
+.event-home-title {
     color: #333333;
     font-size: 24px;
     font-weight: 600;
 }
-.le-location {
+.event-home-location {
     
     letter-spacing: 0.5px;
     color: #333333;
     margin-top: 3px;
     font-size: 14px;
 }
-.le-desc {
+.event-home-desc {
     color: #818283;
     
     letter-spacing: 0.5px;
     font-size: 15px;
     margin-top: 25px;
 }
-.le-see > a {
+.event-home-see > a {
     
     font-size: 14px;
     display: inline-block;
@@ -264,43 +266,43 @@ a:hover{
     color: #a82024;
     border-radius: 20px;
 }
-.le-see > a > img {
+.event-home-see > a > img {
      width: 25px;
      margin-left:3px;
      position:relative;
      top:-1px;
 }
-.le-see > a > i {
+.event-home-see > a > i {
     position: relative;
     margin-left: 3px;
     font-size: 20px;
     top: 1px;
 }
-.le-see > a:hover,.le-see > a:focus {
+.event-home-see > a:hover,.event-home-see > a:focus {
     color: #fff !important;
     background-color: #a82024;
 }
-.le-location img {
+.event-home-location img {
     height: 16px;
 }
-.le-see {
+.event-home-see {
     margin-top: 15px;
 }
-.right-le {
+.right-event-home {
     text-align: right;
 }
-.le-wrap {
+.event-home-wrap {
     width: 400px;
     display: inline-block;
     max-width: 100%;
 }
-.le-all {
+.event-home-all {
     text-align: center;
     padding: 0 15px;
     margin: 50px 0 0 0;
     font-size: 14px;
 }
-.le-all > a {
+.event-home-all > a {
     display: inline-block;
     padding: 6px 22px;
     border: solid 2px #a82024;
@@ -310,9 +312,13 @@ a:hover{
     width: 180px;
     max-width: 100%;
 }
-.le-all > a:hover,.le-all > a:focus,.le-all > a:active {
+.event-home-all > a:hover,.event-home-all > a:focus,.event-home-all > a:active {
     color: #fff !important;
     background-color: #a82024;
+}
+
+.margin-left-25{
+    margin-left: 25%;
 }
 
 .row-ln {
@@ -368,29 +374,33 @@ a:hover{
 }
 
 @media(max-width: 767px){
-	.le-location .visible-xs {
+	.event-home-location .visible-xs {
 	    display: inline-block !important;
 	}
 
-	.row-le {
+	.row-event-home {
 	    display: block;
 	    margin-bottom: 20px;
 	}
 
-	.col-le-img {
+	.col-event-home-img {
 	    display: block;
 	    width: 100% !important;
 	}
 
-	.col-le {
+    .margin-left-25{
+        margin-left: 0%;
+    }
+
+	.col-event-home {
     	width: 100%;
 	}
 
-	.right-le {
+	.right-event-home {
     	text-align: left;
 	}
 
-	.le-wrap {
+	.event-home-wrap {
 	    display: block;
 	    width: 100%;
 	    padding: 25px 0;
@@ -485,6 +495,71 @@ a:hover{
     margin-top: 12%;
 }
 /*End Banner*/
+
+/*Collaps Service Section*/
+.collapsible {
+  background-color: #fff;
+  /*color: white;*/
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/*.collapsible.active, .collapsible:hover {
+  background-color: #555;
+}*/
+
+.collapsible::after{
+    content: '\002B';
+    /*color: white;*/
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.collapsible.active::after {
+  content: "\2212";
+}
+
+.btn.button-collapse.collapsed::after{
+    content: '\002B';
+}
+
+a.button-collapse:hover{
+    color: #fff !important;
+}
+
+a.button-collapse:focus{
+    box-shadow: none !important;
+}
+
+.btn.button-collapse::after{
+    content: '\2212';
+}
+
+.btn.button-collapse{
+    width: 22px;
+    height: 22px;
+    padding: 0px !important;
+}
+
+.label-collapse{
+    padding-left: 16px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.content-collapse{
+    padding-left: 38px;
+}
+
+.collaps-menu{
+    margin: 0 0 17.73913043px 0;
+}
 
 /*Sectoin main*/
 .main-page{

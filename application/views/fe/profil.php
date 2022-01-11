@@ -19,7 +19,7 @@
 
   <!-- ======= Hero Section ======= -->
   <div class="space-xs visible-xs"></div>
-    <div class="container banner">
+    <div class="banner">
       <!-- Breadcumb -->
       <div class="breadcrumb-part">
         <a href="javascript:void(0);">Home</a>

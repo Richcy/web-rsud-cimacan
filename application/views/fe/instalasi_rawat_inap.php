@@ -39,8 +39,8 @@
           </div>
         </div>
       </div>
+      <?php } ?>
     </div>
-    <?php } ?>
   <!-- End Hero -->
   <main id="main">
     <section id="content" class="main-page">
@@ -56,6 +56,20 @@
                 <p>
                   <?=$datas[0]->description;?>
                 </p>
+                <div class="collapsible-section">
+                  <div class="collaps-menu">
+                    <!-- Button Collaps -->
+                    <a class="btn btn-primary button-collapse main-bg-color main-border-color collapsed" data-bs-toggle="collapse" href="#collapse-1" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    </a><span class="label-collapse">Testing Collapse Title</span>
+                    <!-- Content collapse -->
+                    <div class="collapse" id="collapse-1">
+                      <div class="card-body content-collapse">
+                        Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                      </div>
+                    </div>
+                    <!-- End Content -->
+                  </div>
+                </div>
               </div>
               <?php if (!empty($galleries)) {?>
               <div class="col-md-5">
@@ -134,6 +148,22 @@
     const galleryLightbox = GLightbox({
       selector: '.gallery-lightbox'
     });
+  </script>
+
+  <script type="text/javascript">
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
   </script>
 
 </body>
