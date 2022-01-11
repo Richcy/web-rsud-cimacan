@@ -95,4 +95,11 @@ class M_IRI extends CI_Model {
     return $query;
   }
 
+  public function delete_sub_menu($id)
+  {
+    $query =  $this->db->where('id', $id);
+    $query =  $this->db->delete('t_sub_service');
+    return $query;
+  }
+
 }

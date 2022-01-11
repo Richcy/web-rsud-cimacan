@@ -296,5 +296,17 @@ class Iri extends CI_Controller {
 		echo $action;
 	}
 
+	public function delete_sub_menu()
+	{
+		$id = $this->input->post('id');
+		$result = $this->M_IRI->detail_sub_menu($id);
+		if ($result) {
+			$action = $this->M_IRI->delete_sub_menu($id);
+		}else{
+			$action = false;
+		}
+		echo $action;
+	}
+
 	// End gallery section
 }

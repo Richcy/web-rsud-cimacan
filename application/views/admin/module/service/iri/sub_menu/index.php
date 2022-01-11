@@ -40,7 +40,7 @@
                         <a class="nav-link" href="<?=base_url('administrator/iri')?>">Description</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link active" href="<?=base_url('administrator/iri/sub_menu/')?>">Sub Menu</a>
+                        <a class="nav-link active" href="<?=base_url('administrator/iri/sub_menu/').$service_id.'/'?>">Sub Menu</a>
                       </li>
 
                       <li class="nav-item">
