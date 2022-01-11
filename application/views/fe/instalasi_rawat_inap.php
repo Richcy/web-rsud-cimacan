@@ -52,24 +52,32 @@
         <div class="container">
           <div class="content-section">
             <div class="row">
-              <div class="col-md-7 min-font-size">
+              <?php if (!empty($galleries)) {?>
+                <div class="col-md-7 min-font-size">
+              <?php }else{ ?>
+                <div class="col-md-12 min-font-size">
+              <?php } ?>
                 <p>
                   <?=$datas[0]->description;?>
                 </p>
+                <?php if (!empty($sub_menus)) {?>
                 <div class="collapsible-section">
+                  <?php $num = 0; foreach ($sub_menus as $data_sub) { $num++;?>
                   <div class="collaps-menu">
                     <!-- Button Collaps -->
-                    <a class="btn btn-primary button-collapse main-bg-color main-border-color collapsed" data-bs-toggle="collapse" href="#collapse-1" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    </a><span class="label-collapse">Testing Collapse Title</span>
+                    <a class="btn btn-primary button-collapse main-bg-color main-border-color collapsed" data-bs-toggle="collapse" href="#collapse-<?=$num;?>" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    </a><span class="label-collapse"><?=$data_sub->title;?></span>
                     <!-- Content collapse -->
-                    <div class="collapse" id="collapse-1">
+                    <div class="collapse" id="collapse-<?=$num;?>">
                       <div class="card-body content-collapse">
-                        Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                        <?=$data_sub->description;?>
                       </div>
                     </div>
                     <!-- End Content -->
                   </div>
+                  <?php } ?>
                 </div>
+                <?php } ?>
               </div>
               <?php if (!empty($galleries)) {?>
               <div class="col-md-5">
