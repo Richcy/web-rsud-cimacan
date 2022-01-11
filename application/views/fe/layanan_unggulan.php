@@ -52,7 +52,11 @@
         <div class="container">
           <div class="content-section">
             <div class="row">
-              <div class="col-md-7">
+              <?php if (!empty($galleries)) {?>
+                <div class="col-md-7 min-font-size">
+              <?php }else{ ?>
+                <div class="col-md-12 min-font-size">
+              <?php } ?>
                 <p>
                   <?=$datas[0]->description;?>
                 </p>
