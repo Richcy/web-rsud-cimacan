@@ -60,20 +60,6 @@
                 <p>
                   <?=$datas[0]->description;?>
                 </p>
-                <div class="collapsible-section">
-                  <div class="collaps-menu">
-                    <!-- Button Collaps -->
-                    <a class="btn btn-primary button-collapse main-bg-color main-border-color collapsed" data-bs-toggle="collapse" href="#collapse-1" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    </a><span class="label-collapse">Testing Collapse Title</span>
-                    <!-- Content collapse -->
-                    <div class="collapse" id="collapse-1">
-                      <div class="card-body content-collapse">
-                        Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-                      </div>
-                    </div>
-                    <!-- End Content -->
-                  </div>
-                </div>
               </div>
               <?php if (!empty($galleries)) {?>
               <div class="col-md-5">
