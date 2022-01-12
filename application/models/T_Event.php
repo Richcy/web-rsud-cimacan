@@ -129,4 +129,16 @@ class T_Event extends CI_Model {
     return $query->result();
   }
 
+  public function getOther($id)
+  {
+    $query = $this->db->select('event.id, event.title, event.description, event.category, event.location, event.url, event.start_date, event.end_date, event.start_time, event.end_time, event.img, category.id as category_id, category.name as category_name');
+    $query = $this->db->order_by('event.start_date', 'DESC');
+    $query = $this->db->join('t_event_category as category', 'category.id = event.category', 'left');
+    $query =  $this->db->where('status', 'publish');
+    $query =  $this->db->where_not_in('event.id', $id);
+    $query = $query->limit(3);
+    $query = $this->db->get('t_event as event');
+    return $query->result();
+  }
+
 }

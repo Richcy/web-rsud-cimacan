@@ -61,6 +61,7 @@ class Doctor extends CI_Controller {
 		$data['cur_page'] = 'doctor';
 		$data['cur_parent_page'] = '';
 		$data['datas'] = $this->T_Doctor->getDetail($id);
+		$data['datas_other'] = $this->T_Doctor->getOther($id);
 		$data['schedules'] = $this->T_Schedule_Doctor->getDoctorDetail($id);
 		$this->load->view('fe/doctor_detail', $data);
 	}

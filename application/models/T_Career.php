@@ -113,4 +113,15 @@ class T_Career extends CI_Model {
     return $query->result();
   }
 
+  public function getOther($id)
+  {
+    $query = $this->db->select('*');
+    $query = $this->db->order_by('create_date', 'DESC');
+    $query =  $this->db->where('status', 'publish');
+    $query =  $this->db->where_not_in('id', $id);
+    $query = $query->limit(3);
+    $query = $this->db->get('t_career');
+    return $query->result();
+  }
+
 }

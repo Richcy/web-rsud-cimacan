@@ -98,6 +98,62 @@
             </div>
           </div>
         </div>
+
+        <!-- Other Section -->
+        <div class="section-title-other">
+          <h2 class="title-page">Karir Lainnya</h2>
+        </div>
+
+        <!-- career list -->
+          <div class="row" id="list">
+            <?php if (!empty($datas_other)) {?>
+            <?php foreach ($datas_other as $data) {?>
+            <div class="col-listbox">
+              <div class="listboxd-wrap">
+                <?php
+                  $lowerText = strtolower($data->title); 
+                  $change_url = str_replace(' ', '-', $lowerText); 
+                ?>
+                <a href="<?=base_url().'career-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-img" style="background-image: url('<?=$data->img ? base_url().'assets/uploads/'.$data->img : base_url().'assets/uploads/default-image.jpg';?>')">
+                  <span style=" opacity: 0;">
+                    Event Title 1
+                  </span>
+                </a>
+                <div class="listboxd-content">
+                  <!-- <div class="row down1" style="height:50px;">
+                    <div class="col-xs-8" style="padding-left:0;">
+                      <div class="listboxd-date"><?=date('d M Y', strtotime($data->start_date));?> - <?=date('d M Y', strtotime($data->end_date));?></div>
+                    </div>
+                  </div> -->
+                  <a href="<?=base_url().'career-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-title">
+                    <?=$data->title;?>
+                  </a>
+                  <div class="listboxd-desc" id="desc_card">
+                   <?=substr($data->description, 0, 100);?>...
+                  </div>
+                  <div class="row up2">
+                    <div class="col-xs-6 pad0">
+                      <div class="listboxd-category"><?=date('d F Y', strtotime($data->create_date));?></div>
+                    </div>
+                    <div class="col-xs-6 pad0">
+                      <div class="listboxd-read">
+                      <a href="<?=base_url().'career-'.$data->id.'-'.$change_url.'.html';?>">Selengkapnya</a>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <?php } }else{ ?>
+            <!-- End looping event -->
+            <p class="empty-data">Data karir tidak tersedia</p>
+            <?php } ?>
+          </div>
+        <!-- End career list -->
+
+        <div class="event-home-all">
+          <a href="<?=base_url('career/');?>">Lihat Lainnya</a>
+        </div>
       </div>
     </section>
   </main>

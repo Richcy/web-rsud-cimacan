@@ -39,6 +39,11 @@
     background: #a82024 !important;
 }
 
+/*Mobile Navbar*/
+.navbar-mobile a{
+    color: #626262 !important;
+}
+
 .text-size-default{
     font-size: min(15px);
 }
@@ -60,7 +65,63 @@ ul li{
 }
 
 .section-title h2{
-    font-size: 30px !important;
+    font-size: 25px !important;
+}
+
+.section-title .title-page::after{
+    left: calc(50% - 40px) !important;
+}
+
+.section-title h1{
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.section-title h1:after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #a82024;
+    bottom: 0;
+}
+
+.section-title-other .title-page::after{
+    left: calc(50% - 40px) !important;
+}
+
+.section-title-other{
+    text-align: center;
+    padding-bottom: 30px;
+    margin-top: 5%;
+}
+
+.section-title-other h2{
+    font-size: 25px !important;
+}
+
+.section-title-other h2{
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.section-title-other h2:after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 65px;
+    height: 3px;
+    background: #a82024;
+    bottom: 0;
 }
 
 .arrow-hero{
@@ -299,7 +360,7 @@ a:hover{
 .event-home-all {
     text-align: center;
     padding: 0 15px;
-    margin: 50px 0 0 0;
+    margin: 25px 0 0 0;
     font-size: 14px;
 }
 .event-home-all > a {
@@ -573,6 +634,15 @@ a.button-collapse:focus{
 
     .section-title .title-page::after{
         left: 0% !important;
+    }
+
+    .section-title-other .title-page{
+        text-align: left !important;
+    }
+
+    .section-title-other .title-page::after{
+        left: 0% !important;
+        width: 100px;
     }
 }
 
@@ -962,14 +1032,6 @@ position: fixed;
     .banner{
         margin-top: 14%;
     }
-
-    .navbar a{
-        color: #626262 !important;
-    }
-
-    .mobile-nav-toggle{
-        color: #fff !important;   
-    }
 }
 
 @media(max-width: 770px){
@@ -1044,6 +1106,12 @@ position: fixed;
 
     .mobile-nav-toggle{
         color: #fff !important;   
+    }
+}
+
+@media(min-width: 768px) and (max-width: 912px){
+    .col-listbox{
+        width: 50%;
     }
 }
 

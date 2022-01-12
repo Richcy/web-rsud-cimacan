@@ -44,7 +44,7 @@
     <section id="doctors" class="main-page">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2 class="title-page"><?=$datas[0]->name;?></h2>
+          <h1 class="title-page"><?=$datas[0]->name;?></h1>
         </div>
         <!-- Doctor list -->
           <div class="row">
@@ -68,15 +68,6 @@
                     <td>Kantor/Unit Kerja</td>
                     <td><?=$datas[0]->office;?></td>
                   </tr>
-                  <!-- <tr>
-                    <td>Pengalaman</td>
-                    <td><?=$datas[0]->experience;?> Tahun</td>
-                  </tr> -->
-                  <!-- <tr>
-                    <td>Alumni</td>
-                    <td><?=$datas[0]->alumni;?></td>
-                  </tr>
-                  <tr> -->
                     <td>NIP</td>
                     <td><?=$datas[0]->nip ? $datas[0]->nip : '-';?></td>
                   </tr>
@@ -85,10 +76,8 @@
                     <td><?=$datas[0]->sip ? $datas[0]->sip : '-';?></td>
                   </tr>
                   <tr>
-                    <td>
+                    <td colspan="2">
                       <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#doctor-detail">Cek Jadwal</button>
-                    </td>
-                    <td>
                     </td>
                   </tr>
                 </tbody>
@@ -96,6 +85,40 @@
             </div>
           </div>
         <!-- End Doctor list -->
+        <!-- Other Section -->
+        <?php if (!empty($datas_other)) {?>
+        <div class="section-title-other">
+          <h2 class="title-page">Dokter Lainnya</h2>
+        </div>
+        <section id="doctors" class="doctors">
+        <div class="row" id="list">
+            <?php foreach ($datas_other as $data){?>
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="member">
+                <?php $lower_name = strtolower($data->name); ?>
+                <?php $delete_dots = str_replace('.', ' ', $lower_name); ?>
+                <?php $delete_coma = str_replace(',', ' ', $delete_dots); ?>
+                <?php $fix_name = str_replace(' ', '-', $delete_coma); ?>
+                <a href="<?=base_url().'doctor-'.$data->id.'-'.$fix_name.'.html';?>">
+                  <div class="member-img">
+                    <img src="<?=$data->img ? base_url().'assets/uploads/'.$data->img : base_url().'assets/uploads/doctor-default.png' ;?>" class="img-fluid" alt="">
+                    
+                  </div>
+                  <div class="member-info">
+                    <h4><?=$data->name;?></h4>
+                    <span><?=$data->field;?></span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          <?php } ?>
+
+          </div>
+          <div class="event-home-all">
+            <a href="<?=base_url('doctor/');?>">Lihat Lainnya</a>
+          </div>
+        </section>
+        <?php } ?>
       </div>
     </section>
   </main>

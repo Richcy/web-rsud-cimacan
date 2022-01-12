@@ -159,4 +159,16 @@ class T_Doctor extends CI_Model {
     return $query->result();
   }
 
+  public function getOther($id)
+  {
+    $query = $this->db->select('doctor.id, doctor.name, doctor.field, doctor.office, doctor.experience, doctor.year, doctor.month, doctor.alumni, doctor.nip, doctor.str, doctor.sip, doctor.img, fields.id as field_id, fields.name as field');
+    $query = $this->db->order_by('name', 'ASC');
+    $query = $this->db->join('t_field_doctor as fields', 'fields.id = doctor.field', 'left');
+    $query =  $this->db->where('status', 'publish');
+    $query = $this->db->where_not_in('doctor.id', $id); 
+    $query = $query->limit(4);
+    $query = $this->db->get('t_doctor as doctor');
+    return $query->result();
+  }
+
 }

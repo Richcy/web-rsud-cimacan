@@ -42,7 +42,7 @@
     <section id="content" class="main-page">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2 class="title-page">Dokter RSD Cimacan</h2>
+          <h1 class="title-page">Dokter RSD Cimacan</h1>
         </div>
         <!-- Search Section -->
         <div class="row-ln" style="display: table;">
