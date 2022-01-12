@@ -1066,6 +1066,10 @@ position: fixed;
         margin-top: 8%;
     }
 
+    #ambulance-modal .modal-body{
+        height: 250px;
+    }
+
     .detail-article{
         text-align: center;
     }
