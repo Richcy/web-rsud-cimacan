@@ -14,6 +14,7 @@ class Layanan_unggulan extends CI_Controller {
 	{
 		$data['cur_page'] = 'layanan_unggulan';
 		$data['cur_parent_page'] = 'layanan';
+		$data['lang'] = 'id';
 		$datas = $this->M_Unggulan->show_unggulan();
 		$data['datas'] = $datas;
 		$data['galleries'] = $this->M_Unggulan->show_gallery('unggulan');

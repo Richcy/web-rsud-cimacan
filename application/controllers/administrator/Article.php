@@ -13,6 +13,12 @@ class Article extends CI_Controller {
 
 	public function index()
 	{
+		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
+		if ($role_admin != 1) {
+			$this->session->sess_destroy();
+			redirect('/administrator/');
+		}
+		
 		$data['cur_page'] = 'article';
 		$data['cur_parent_page'] = 'article';
 		$data['datas'] = $this->T_Article->show_all();
@@ -21,6 +27,12 @@ class Article extends CI_Controller {
 
 	public function Add()
 	{
+		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
+		if ($role_admin != 1) {
+			$this->session->sess_destroy();
+			redirect('/administrator/');
+		}
+		
 		$data['cur_page'] = 'article';
 		$data['cur_parent_page'] = 'article';
 		$data['fields'] = $this->T_Article_Category->show_all();
@@ -29,6 +41,12 @@ class Article extends CI_Controller {
 
 	public function edit($id)
 	{
+		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
+		if ($role_admin != 1) {
+			$this->session->sess_destroy();
+			redirect('/administrator/');
+		}
+		
 		$data['cur_page'] = 'article';
 		$data['cur_parent_page'] = 'article';
 		$data['fields'] = $this->T_Article_Category->show_all();

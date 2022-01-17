@@ -12,6 +12,11 @@ class Slider extends CI_Controller {
 
 	public function index()
 	{
+		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
+		if ($role_admin != 1) {
+			$this->session->sess_destroy();
+			redirect('/administrator/');
+		}
 		$datas = $this->T_Slider->show_all();
 		$totalData = count($datas);
 		$data['cur_page'] = 'slider';
@@ -23,6 +28,11 @@ class Slider extends CI_Controller {
 
 	public function detail($id)
 	{
+		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
+		if ($role_admin != 1) {
+			$this->session->sess_destroy();
+			redirect('/administrator/');
+		}
 		$data['cur_page'] = 'slider';
 		$data['cur_parent_page'] = '';
 		$this->load->view('admin/module/slider/index', $data);
@@ -30,6 +40,11 @@ class Slider extends CI_Controller {
 
 	public function Add()
 	{
+		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
+		if ($role_admin != 1) {
+			$this->session->sess_destroy();
+			redirect('/administrator/');
+		}
 		$data['cur_page'] = 'slider';
 		$data['cur_parent_page'] = '';
 		$this->load->view('admin/module/slider/add', $data);
@@ -93,6 +108,11 @@ class Slider extends CI_Controller {
 
 	public function edit($id)
 	{
+		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
+		if ($role_admin != 1) {
+			$this->session->sess_destroy();
+			redirect('/administrator/');
+		}
 		$data['cur_page'] = 'slider';
 		$data['cur_parent_page'] = '';
 		$data['detail'] = $this->T_Slider->get_detail($id);

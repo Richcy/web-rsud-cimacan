@@ -14,6 +14,7 @@ class Laboratorium extends CI_Controller {
 	{
 		$data['cur_page'] = 'laboratorium';
 		$data['cur_parent_page'] = 'layanan';
+		$data['lang'] = 'id';
 		$data['datas'] = $this->M_Lab->show_lab();
 		$data['galleries'] = $this->M_Lab->show_gallery('laboratorium');
 		$this->load->view('fe/laboratorium', $data);

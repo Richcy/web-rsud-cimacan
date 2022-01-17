@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?=$lang;?>">
 
 <head>
   <title>RSD Cimacan | Karir</title>
@@ -42,7 +42,7 @@
     <section id="content" class="main-page">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2 class="title-page">Karir RSD Cimacan</h2>
+          <h1 class="title-page">Karir RSD Cimacan</h1>
         </div>
         <!-- Search Section -->
         <div class="row-ln" style="display: table;">
@@ -72,7 +72,7 @@
         <!-- End Search Section -->
 
         <!-- career list -->
-          <div class="row" id="list">
+          <div class="row-listbox" id="list">
             <?php if (!empty($datas)) {?>
             <?php foreach ($datas as $data) {?>
             <div class="col-listbox">
@@ -83,7 +83,7 @@
                 ?>
                 <a href="<?=base_url().'career-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-img" style="background-image: url('<?=$data->img ? base_url().'assets/uploads/'.$data->img : base_url().'assets/uploads/default-image.jpg';?>')">
                   <span style=" opacity: 0;">
-                    Event Title 1
+                    <?=$data->title;?>
                   </span>
                 </a>
                 <div class="listboxd-content">
@@ -96,7 +96,7 @@
                     <?=$data->title;?>
                   </a>
                   <div class="listboxd-desc" id="desc_card">
-                   <?=substr($data->description, 0, 100);?>...
+                   <?=substr($data->description, 0, 250);?>...
                   </div>
                   <div class="row up2">
                     <div class="col-xs-6 pad0">

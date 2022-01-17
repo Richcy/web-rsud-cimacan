@@ -12,6 +12,12 @@ class Sketch extends CI_Controller {
 
 	public function index()
 	{
+		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
+		if ($role_admin != 1) {
+			$this->session->sess_destroy();
+			redirect('/administrator/');
+		}
+		
 		$data['cur_page'] = 'sketch';
 		$data['cur_parent_page'] = 'about_company';
 		$data['datas'] = $this->M_Sketch->show_sketch();

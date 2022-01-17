@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?=$lang;?>">
 
 <head>
   <title>RSD Cimacan | Dokter</title>
@@ -96,7 +96,9 @@
                 <a href="<?=base_url().'doctor-'.$data->id.'-'.$fix_name.'.html';?>">
                   <div class="member-img">
                     <img src="<?=$data->img ? base_url().'assets/uploads/'.$data->img : base_url().'assets/uploads/doctor-default.png' ;?>" class="img-fluid" alt="">
-                    
+                      <span style=" opacity: 0;">
+                        <?=$data->name;?>
+                      </span>
                   </div>
                   <div class="member-info">
                     <h4><?=$data->name;?></h4>

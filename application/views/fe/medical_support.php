@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?=$lang;?>">
 
 <head>
   <title>RSD Cimacan | Penunjang Medis</title>
@@ -46,7 +46,7 @@
     <section id="content" class="main-page">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2 class="title-page">Penunjang Medis</h2>
+          <h1 class="title-page">Penunjang Medis</h1>
         </div>
 
         <div class="container">

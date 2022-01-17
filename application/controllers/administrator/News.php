@@ -13,6 +13,12 @@ class News extends CI_Controller {
 
 	public function index()
 	{
+		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
+		if ($role_admin != 1) {
+			$this->session->sess_destroy();
+			redirect('/administrator/');
+		}
+		
 		$data['cur_page'] = 'doctor';
 		$data['cur_parent_page'] = 'doctor';
 		$data['datas'] = $this->T_Doctor->show_all();
@@ -21,6 +27,12 @@ class News extends CI_Controller {
 
 	public function Add()
 	{
+		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
+		if ($role_admin != 1) {
+			$this->session->sess_destroy();
+			redirect('/administrator/');
+		}
+		
 		$data['cur_page'] = 'doctor';
 		$data['cur_parent_page'] = 'doctor';
 		$data['fields'] = $this->T_Field_Doctor->show_all();
@@ -29,6 +41,12 @@ class News extends CI_Controller {
 
 	public function edit($id)
 	{
+		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
+		if ($role_admin != 1) {
+			$this->session->sess_destroy();
+			redirect('/administrator/');
+		}
+		
 		$data['cur_page'] = 'doctor';
 		$data['cur_parent_page'] = 'doctor';
 		$data['fields'] = $this->T_Field_Doctor->show_all();

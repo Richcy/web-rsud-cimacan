@@ -16,7 +16,7 @@
           ?>
           <a href="<?=base_url().'event-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-img" style="background-image: url('<?=$data->img ? base_url().'assets/uploads/'.$data->img : base_url().'assets/uploads/default-image.jpg';?>')">
             <span style=" opacity: 0;">
-              Event Title 1
+              <?=$data->title;?>
             </span>
           </a>
           <div class="listboxd-content">
@@ -29,8 +29,8 @@
             <a href="<?=base_url().'event-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-title min-heigt-title">
               <?=$data->title;?>
             </a>
-            <div class="listboxd-desc" id="desc_card">
-             <?=substr($data->description, 0, 300);?>...
+            <div class="listboxd-desc listboxd-desc-home" id="desc_card">
+             <?=substr($data->description, 0, 200);?>...
             </div>
             <div class="row up2 top-footer-card">
               <div class="col-xs-6 pad0">
@@ -38,7 +38,7 @@
               </div>
               <div class="col-xs-6 pad0">
                 <div class="listboxd-read">
-                  <a href="<?=base_url().'event-'.$data->id.'-'.$change_url.'.html';?>">Detail</a>
+                  <a href="<?=base_url().'event-'.$data->id.'-'.$change_url.'.html';?>">Detail Event</a>
                 </div>
               </div>
             </div>

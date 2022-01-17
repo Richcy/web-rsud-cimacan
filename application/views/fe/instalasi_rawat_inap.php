@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?=$lang;?>">
 
 <head>
   <title>RSD Cimacan | Instalasi Rawat Inap</title>
@@ -46,7 +46,7 @@
     <section id="content" class="main-page">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2 class="title-page">Instalasi Rawat Inap</h2>
+          <h1 class="title-page">Instalasi Rawat Inap</h1>
         </div>
 
         <div class="container">

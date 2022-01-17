@@ -1,3 +1,4 @@
+<?php $role = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : ''; ?>
 <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
       <a class="sidebar-brand d-flex align-items-center justify-content-center primary-bg" href="index.html">
         <div class="sidebar-brand-icon">
@@ -15,12 +16,14 @@
       <div class="sidebar-heading">
         Home
       </div>
+      <?php if ($role == 1) {?>
       <li class="nav-item <?=$cur_page == 'slider' ? 'active' : '' ?>">
         <a class="nav-link" href="<?=base_url('administrator/slider')?>">
           <i class="fas fa-fw fa-image"></i>
           <span>Slider</span>
         </a>
       </li>
+      <?php } ?>
       <!-- <li class="nav-item <?=$cur_page == 'about_home' ? 'active' : '' ?>">
         <a class="nav-link" href="<?=base_url('administrator/about_home')?>">
           <i class="fas fa-fw fa-hospital"></i>
@@ -50,16 +53,19 @@
           </div>
         </div>
       </li>
+      <?php if ($role == 1) {?>
       <hr class="sidebar-divider">
       <div class="sidebar-heading">
         Content
       </div>
+      <?php } ?>
       <!-- <li class="nav-item <?=$cur_page == 'about_company' ? 'active' : '' ?>">
         <a class="nav-link" href="<?=base_url('administrator/about_company')?>">
           <i class="fas fa-fw fa-hospital"></i>
           <span>About Hospital</span>
         </a>
       </li> -->
+      <?php if ($role == 1) {?>
       <li class="nav-item <?=$cur_parent_page == 'about_company' ? 'active' : ''?>">
         <a class="nav-link <?=$cur_parent_page == 'about_company' ? '' : 'collapsed'?>" haref="javascript:void(0);" data-toggle="collapse" data-target="#about_company" aria-expanded="true"
           aria-controls="collapsePage">
@@ -76,6 +82,8 @@
           </div>
         </div>
       </li>
+      <?php } ?>
+      <?php if ($role == 1) {?>
       <li class="nav-item <?=$cur_parent_page == 'service' ? 'active' : ''?>">
         <a class="nav-link <?=$cur_parent_page == 'service' ? '' : 'collapsed'?>" haref="javascript:void(0);" data-toggle="collapse" data-target="#collapsePage" aria-expanded="true"
           aria-controls="collapsePage">
@@ -96,7 +104,9 @@
           </div>
         </div>
       </li>
+      <?php } ?>
 
+      <?php if ($role == 1) {?>
       <li class="nav-item <?=$cur_parent_page == 'doctor' ? 'active' : ''?>">
         <a class="nav-link <?=$cur_parent_page == 'doctor' ? '' : 'collapsed'?>" haref="javascript:void(0);" data-toggle="collapse" data-target="#doctor" aria-expanded="true"
           aria-controls="collapsePage">
@@ -113,7 +123,9 @@
           </div>
         </div>
       </li>
+      <?php } ?>
 
+      <?php if ($role == 1) {?>
       <li class="nav-item <?=$cur_parent_page == 'event' ? 'active' : ''?>">
         <a class="nav-link <?=$cur_parent_page == 'event' ? '' : 'collapsed'?>" haref="javascript:void(0);" data-toggle="collapse" data-target="#event" aria-expanded="true"
           aria-controls="collapsePage">
@@ -128,7 +140,9 @@
           </div>
         </div>
       </li>
+      <?php } ?>
 
+      <?php if ($role == 1) {?>
       <li class="nav-item <?=$cur_parent_page == 'article' ? 'active' : ''?>">
         <a class="nav-link <?=$cur_parent_page == 'article' ? '' : 'collapsed'?>" haref="javascript:void(0);" data-toggle="collapse" data-target="#article" aria-expanded="true"
           aria-controls="collapsePage">
@@ -143,12 +157,16 @@
           </div>
         </div>
       </li>
+      <?php } ?>
+
+      <?php if ($role == 1) {?>
       <li class="nav-item <?=$cur_page == 'career' ? 'active' : '' ?>">
         <a class="nav-link" href="<?=base_url('administrator/career')?>">
           <i class="fas fa-fw fa-binoculars"></i>
           <span>Career</span>
         </a>
       </li>
+      <?php } ?>
       <!-- <li class="nav-item">
         <a class="nav-link" href="charts.html">
           <i class="fas fa-fw fa-chart-area"></i>

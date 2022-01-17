@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?=$lang;?>">
 
 <head>
   <title>RSD Cimacan | Career</title>
@@ -68,7 +68,7 @@
           </div>
         </div>
         <div class="section-title">
-          <h2 class="title-page"><?=$datas[0]->title;?></h2>
+          <h1 class="title-page"><?=$datas[0]->title;?></h1>
         </div>
 
         <div class="container">

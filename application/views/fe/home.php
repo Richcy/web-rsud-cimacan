@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?=$lang;?>">
 
 <head>
   <title>RSD Cimacan | Home</title>
@@ -53,7 +53,7 @@
   <main id="main">
     <!-- ======= Event Section ======= -->
       <?php 
-        $this->load->view('fe/parts/event');
+        // $this->load->view('fe/parts/event');
       ?>
     <!-- End Event Section -->
 
@@ -64,6 +64,11 @@
     <!-- End Event Section -->
 
     <!-- ======= About Us Section ======= -->
+   <!--  <div class="row">
+      <div class="col-sm-10">
+        
+      <div class="col-sm-2"></div>
+    </div> -->
       <?php 
         $this->load->view('fe/parts/about'); 
       ?>

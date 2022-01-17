@@ -14,6 +14,7 @@ class Denah extends CI_Controller {
 	{
 		$data['cur_page'] = 'denah_rs';
 		$data['cur_parent_page'] = 'tentang';
+		$data['lang'] = 'id';
 		$data['datas'] = $this->M_Sketch->getAll();
 		$this->load->view('fe/denah', $data);
 	}
@@ -22,6 +23,7 @@ class Denah extends CI_Controller {
 	{
 		$data['cur_page'] = 'denah_rs';
 		$data['cur_parent_page'] = 'tentang';
+		$data['lang'] = 'id';
 		$this->load->view('fe/denah', $data);
 	}
 

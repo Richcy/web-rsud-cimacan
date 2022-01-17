@@ -91,6 +91,10 @@ ul li{
     bottom: 0;
 }
 
+.section-title h1.title-home:after{
+    left: calc(50% - 25px) !important;
+}
+
 .section-title-other .title-page::after{
     left: calc(50% - 40px) !important;
 }
@@ -434,6 +438,10 @@ a:hover{
     color: #125FAB;
 }
 
+.listboxd-desc-home{
+    height: 65px !important;
+}
+
 @media(max-width: 767px){
 	.event-home-location .visible-xs {
 	    display: inline-block !important;
@@ -755,6 +763,10 @@ table{
 
 .margin-top-table-doctor tr:nth-child(odd) {
     background: #F0F0F0;
+}
+
+.padding-button-schedule{
+    padding: 21px 0px !important;
 }
 
 .member-info h4{
@@ -1172,6 +1184,18 @@ position: fixed;
     .font-size-table{
         font-size: 12px;
     }
+
+    .margin-top-table-doctor tr{
+        font-size: 14px;
+    }
+
+    .margin-top-table-doctor{
+        margin-top: 3%;
+    }
+
+    .section-title-other{
+        margin-top: 25%;
+    }
 }
 
 @media(max-width: 380px){
@@ -1190,6 +1214,18 @@ position: fixed;
     .font-size-table{
         font-size: 10px;
     }
+    .margin-top-table-doctor tr{
+        font-size: 14px;
+    }
+
+    .margin-top-table-doctor{
+        margin-top: 3%;
+    }
+
+    .section-title-other{
+        margin-top: 25%;
+    }
+
 }
 
 @media(max-width: 300px){
@@ -1199,6 +1235,18 @@ position: fixed;
 
     .space-xs{
         margin-top: 43%;
+    }
+
+    .margin-top-table-doctor tr{
+        font-size: 14px;
+    }
+
+    .margin-top-table-doctor{
+        margin-top: 3%;
+    }
+
+    .section-title-other{
+        margin-top: 25%;
     }
 }
 

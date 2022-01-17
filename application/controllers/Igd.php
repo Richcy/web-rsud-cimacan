@@ -14,6 +14,7 @@ class Igd extends CI_Controller {
 	{
 		$data['cur_page'] = 'igd';
 		$data['cur_parent_page'] = 'layanan';
+		$data['lang'] = 'id';
 		$datas = $this->M_IGD->show_igd();
 		$data['datas'] = $datas;
 		$data['galleries'] = $this->M_IGD->show_gallery('igd');

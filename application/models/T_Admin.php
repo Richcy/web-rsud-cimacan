@@ -11,10 +11,11 @@ class T_Admin extends CI_Model {
 
   public function get_detail($user_name)
   {
-    $query = $this->db->select('*');
-    $query = $this->db->where('username', $user_name);
+    $query = $this->db->select('admin.id, admin.username, admin.password, admin.name, admin.email, admin.role, admin.create_date, admin.update_date, role.id as role_id, role.name as role_name');
+    $query = $this->db->join('t_role as role', 'role.id = admin.role', 'left');
+    $query = $this->db->where('admin.username', $user_name);
     $query = $query->limit(1);
-    $query = $this->db->get('t_admin');
+    $query = $this->db->get('t_admin as admin');
     return $query->result();
   }
 

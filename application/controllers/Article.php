@@ -59,6 +59,7 @@ class Article extends CI_Controller {
 	{
 		$data['cur_page'] = 'article';
 		$data['cur_parent_page'] = '';
+		$data['lang'] = 'id';
 		$data['datas'] = $this->T_Article->getDetail($id);
 		$this->load->view('fe/article_detail', $data);
 	}

@@ -15,6 +15,7 @@ class Directurs_greeting extends CI_Controller {
 		$lang = 'id';
 		$data['cur_page'] = 'directurs_greeting';
 		$data['cur_parent_page'] = 'tentang';
+		$data['lang'] = 'id';
 		$data['datas'] = $this->M_About_Home->getAll($lang);
 		$this->load->view('fe/sambutan_direktur', $data);
 	}
@@ -23,6 +24,7 @@ class Directurs_greeting extends CI_Controller {
 	{
 		$data['cur_page'] = 'directurs_greeting';
 		$data['cur_parent_page'] = 'tentang';
+		$data['lang'] = 'id';
 		$this->load->view('fe/denah', $data);
 	}
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?=$lang;?>">
 
 <head>
   <title>RSUD Cimacan | Event</title>
@@ -42,7 +42,7 @@
     <section id="content" class="main-page">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2 class="title-page">Event RSD Cimacan</h2>
+          <h1 class="title-page">Event RSD Cimacan</h1>
         </div>
 
         <!-- Search Section -->
@@ -106,7 +106,7 @@
               ?>
               <a href="<?=base_url().'event-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-img" style="background-image: url('<?=$data->img ? base_url().'assets/uploads/'.$data->img : base_url().'assets/uploads/default-image.jpg';?>')">
                 <span style=" opacity: 0;">
-                  Event Title 1
+                  <?=$data->title;?>
                 </span>
               </a>
               <div class="listboxd-content">

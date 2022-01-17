@@ -41,6 +41,8 @@ class Login extends CI_Controller {
 			$this->session->set_userdata('id_admin',$checkAdmin[0]->id);
             $this->session->set_userdata('username_admin',$checkAdmin[0]->username);
             $this->session->set_userdata('name_admin',$checkAdmin[0]->name);
+            $this->session->set_userdata('role_name',$checkAdmin[0]->role_name);
+            $this->session->set_userdata('role_id',$checkAdmin[0]->role_id);
 		}
 		redirect('/administrator/slider');
 	}

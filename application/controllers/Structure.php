@@ -14,6 +14,7 @@ class Structure extends CI_Controller {
 	{
 		$data['cur_page'] = 'structure_or';
 		$data['cur_parent_page'] = 'tentang';
+		$data['lang'] = 'id';
 		$data['datas'] = $this->M_Structure->getAll();
 		$this->load->view('fe/structure', $data);
 	}
@@ -22,6 +23,7 @@ class Structure extends CI_Controller {
 	{
 		$data['cur_page'] = 'structure_or';
 		$data['cur_parent_page'] = 'tentang';
+		$data['lang'] = 'id';
 		$this->load->view('fe/structure', $data);
 	}
 

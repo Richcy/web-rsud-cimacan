@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?=$lang;?>">
 
 <head>
   <title>RSD Cimacan | Medical Check Up</title>
@@ -44,7 +44,7 @@
     <section id="content" class="main-page">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2 class="title-page">Medical Check Up</h2>
+          <h1 class="title-page">Medical Check Up</h1>
         </div>
 
         <div class="container">

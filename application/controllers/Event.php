@@ -59,6 +59,7 @@ class Event extends CI_Controller {
 	{
 		$data['cur_page'] = 'event';
 		$data['cur_parent_page'] = '';
+		$data['lang'] = 'id';
 		$data['datas'] = $this->T_Event->getDetail($id);
 		$data['datas_other'] = $this->T_Event->getOther($id);
 		$this->load->view('fe/event_detail', $data);

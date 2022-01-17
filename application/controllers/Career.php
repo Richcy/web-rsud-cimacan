@@ -52,6 +52,7 @@ class Career extends CI_Controller {
 	{
 		$data['cur_page'] = 'career';
 		$data['cur_parent_page'] = '';
+		$data['lang'] = 'id';
 		$data['datas'] = $this->T_Career->getDetail($id);
 		$data['datas_other'] = $this->T_Career->getOther($id);
 		$this->load->view('fe/career_detail', $data);

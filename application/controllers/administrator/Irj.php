@@ -12,6 +12,12 @@ class Irj extends CI_Controller {
 
 	public function index()
 	{
+		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
+		if ($role_admin != 1) {
+			$this->session->sess_destroy();
+			redirect('/administrator/');
+		}
+		
 		$data['cur_page'] = 'irj';
 		$data['cur_parent_page'] = 'service';
 		$data['datas'] = $this->M_IRJ->show_irj();
@@ -20,6 +26,12 @@ class Irj extends CI_Controller {
 
 	public function gallery()
 	{
+		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
+		if ($role_admin != 1) {
+			$this->session->sess_destroy();
+			redirect('/administrator/');
+		}
+		
 		$data['cur_page'] = 'irj';
 		$data['cur_parent_page'] = 'service';
 		$data['datas_irj'] = $this->M_IRJ->show_irj();
@@ -29,6 +41,12 @@ class Irj extends CI_Controller {
 
 	public function sub_menu($id)
 	{
+		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
+		if ($role_admin != 1) {
+			$this->session->sess_destroy();
+			redirect('/administrator/');
+		}
+		
 		$data['cur_page'] = 'irj';
 		$data['cur_parent_page'] = 'service';
 		// $data['datas'] = $this->M_IRJ->show_irj();
@@ -133,6 +151,12 @@ class Irj extends CI_Controller {
 
 	public function add_gallery()
 	{
+		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
+		if ($role_admin != 1) {
+			$this->session->sess_destroy();
+			redirect('/administrator/');
+		}
+		
 		$data['cur_page'] = 'irj';
 		$data['cur_parent_page'] = 'service';
 		$this->load->view('admin/module/service/irj/add_gallery', $data);
@@ -194,6 +218,12 @@ class Irj extends CI_Controller {
 
 	public function add_sub_menu($id)
 	{
+		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
+		if ($role_admin != 1) {
+			$this->session->sess_destroy();
+			redirect('/administrator/');
+		}
+		
 		$data['cur_page'] = 'irj';
 		$data['cur_parent_page'] = 'service';
 		$data['service_id'] = $id;
@@ -232,6 +262,12 @@ class Irj extends CI_Controller {
 
 	public function edit_sub_menu($id)
 	{
+		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
+		if ($role_admin != 1) {
+			$this->session->sess_destroy();
+			redirect('/administrator/');
+		}
+		
 		$data['cur_page'] = 'irj';
 		$data['cur_parent_page'] = 'service';
 		// $data['service_id'] = $id;

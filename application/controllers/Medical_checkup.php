@@ -14,6 +14,7 @@ class Medical_checkup extends CI_Controller {
 	{
 		$data['cur_page'] = 'medical_checkup';
 		$data['cur_parent_page'] = 'layanan';
+		$data['lang'] = 'id';
 		$data['datas'] = $this->M_MCU->show_mcu();
 		$data['datas_gallery'] = $this->M_MCU->show_gallery('mcu');
 		$this->load->view('fe/medical_checkup', $data);

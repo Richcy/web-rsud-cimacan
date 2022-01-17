@@ -121,7 +121,7 @@
             </div> -->
             <div class="phone-number-modal"><i class="fas fa-phone"></i><span> (+62) 811-2465-888</span></div>
 
-            <a href="tel:628112465888" class="btn btn-warning call-ambulance hidden-lg hidden-md">Call Ambulance</a>
+            <a href="tel:+628112465888" class="btn btn-warning call-ambulance hidden-lg hidden-md">Call Ambulance</a>
           </div>
         </div>
       </div>

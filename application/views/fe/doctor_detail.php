@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?=$lang;?>">
 
 <head>
   <title>RSD Cimacan | Dokter</title>
@@ -76,7 +76,7 @@
                     <td><?=$datas[0]->sip ? $datas[0]->sip : '-';?></td>
                   </tr>
                   <tr>
-                    <td colspan="2">
+                    <td class="padding-button-schedule" colspan="2">
                       <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#doctor-detail">Cek Jadwal</button>
                     </td>
                   </tr>

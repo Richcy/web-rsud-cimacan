@@ -7,7 +7,7 @@ class Contact extends CI_Controller {
 	{
 		$data['cur_page'] = 'contact';
 		$data['cur_parent_page'] = '';
-
+		$data['lang'] = 'id';
 		$this->load->view('fe/contact', $data);
 	}
 

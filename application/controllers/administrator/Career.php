@@ -12,6 +12,12 @@ class Career extends CI_Controller {
 
 	public function index()
 	{
+		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
+		if ($role_admin != 1) {
+			$this->session->sess_destroy();
+			redirect('/administrator/');
+		}
+		
 		$data['cur_page'] = 'career';
 		$data['cur_parent_page'] = 'career';
 		$data['datas'] = $this->T_Career->show_all();
@@ -20,6 +26,12 @@ class Career extends CI_Controller {
 
 	public function Add()
 	{
+		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
+		if ($role_admin != 1) {
+			$this->session->sess_destroy();
+			redirect('/administrator/');
+		}
+		
 		$data['cur_page'] = 'career';
 		$data['cur_parent_page'] = 'career';
 		$this->load->view('admin/module/career/add', $data);
@@ -27,6 +39,12 @@ class Career extends CI_Controller {
 
 	public function edit($id)
 	{
+		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
+		if ($role_admin != 1) {
+			$this->session->sess_destroy();
+			redirect('/administrator/');
+		}
+		
 		$data['cur_page'] = 'career';
 		$data['cur_parent_page'] = 'career';
 		$data['datas'] = $this->T_Career->get_detail($id);

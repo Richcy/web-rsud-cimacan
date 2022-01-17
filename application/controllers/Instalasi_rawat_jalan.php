@@ -14,6 +14,7 @@ class Instalasi_rawat_jalan extends CI_Controller {
 	{
 		$data['cur_page'] = 'instalasi_rawat_jalan';
 		$data['cur_parent_page'] = 'layanan';
+		$data['lang'] = 'id';
 		$datas = $this->M_IRJ->show_irj();
 		$data['datas'] = $datas;
 		$data['galleries'] = $this->M_IRJ->show_gallery('unggulan');
