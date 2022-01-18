@@ -279,24 +279,6 @@
       reader.readAsDataURL(event.target.files[0]);
       galleryLightbox.reload();
     };
-
-    tinymce.init({
-        selector: ".tinymce",
-        plugins: [
-        "advlist autolink lists link image charmap print preview anchor",
-        "searchreplace visualblocks code fullscreen",
-        "insertdatetime media table contextmenu paste",
-        "textcolor"
-        ],
-        toolbar: "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | forecolor backcolor",
-        relative_urls: false,
-        forced_root_block : false,
-        height : 500,
-        // width : 500
-        /* without images_upload_url set, Upload tab won't show up*/
-        images_upload_url: '<?=base_url()?>assets/be/vendor/tinymce/postAcceptor.php',
-        automatic_uploads: false
-    });
   </script>
 </body>
 
