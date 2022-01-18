@@ -6,7 +6,7 @@
 
   <!-- Favicons -->
   <link href="<?php echo base_url();?>assets/fe/img/logo_rsud_cimacan.png" rel="icon">
-  <link href="<?php echo base_url();?>assets/fe/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- <link href="<?php echo base_url();?>assets/fe/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -18,7 +18,7 @@
   <link href="<?php echo base_url();?>assets/fe/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="<?php echo base_url();?>assets/fe/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="<?php echo base_url();?>assets/fe/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
   <link href="<?php echo base_url();?>assets/fe/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="<?php echo base_url();?>assets/fe/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
