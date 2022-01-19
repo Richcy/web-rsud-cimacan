@@ -6,7 +6,7 @@
   <link href="<?php echo base_url();?>assets/fe/img/logo_rsud_cimacan.png" rel="icon">
   <title>Admin RSD Cimacan</title>
   <link href="<?=base_url()?>assets/be/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
   <link href="<?=base_url()?>assets/be/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="<?=base_url()?>assets/be/css/ruang-admin.min.css" rel="stylesheet">
   <link href="<?=base_url()?>assets/be/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
