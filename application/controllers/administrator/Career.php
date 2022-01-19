@@ -78,7 +78,7 @@ class Career extends CI_Controller {
 	        	'description' => $description,
 	        	'create_date' => date('Y-m-d H:i:s')
 	        );
-	        $insert = $this->T_Career->insert($datas,'T_Career');
+	        $insert = $this->T_Career->insert($datas,'t_career');
 	        if ($insert) {
 	        	$this->session->set_flashdata('title','Success');
 	        	$this->session->set_flashdata('message','Insert data career');
@@ -111,7 +111,7 @@ class Career extends CI_Controller {
 		        	'description' => $description,
 		        	'create_date' => date('Y-m-d H:i:s')
 		        );
-		        $insert = $this->T_Career->insert($datas,'T_Career');
+		        $insert = $this->T_Career->insert($datas,'t_career');
 		        if ($insert) {
 		        	$this->session->set_flashdata('title','Success');
 		        	$this->session->set_flashdata('message','Insert data career');
