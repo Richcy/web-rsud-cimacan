@@ -12,11 +12,7 @@ class About_home extends CI_Controller {
 
 	public function index()
 	{
-		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
-		if ($role_admin != 1) {
-			$this->session->sess_destroy();
-			redirect('/administrator/');
-		}
+		
 		
 		$data['cur_page'] = 'about_home';
 		$data['cur_parent_page'] = 'about_company';

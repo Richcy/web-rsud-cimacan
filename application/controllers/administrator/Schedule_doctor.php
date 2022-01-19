@@ -13,11 +13,7 @@ class Schedule_doctor extends CI_Controller {
 
 	public function index()
 	{
-		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
-		if ($role_admin != 1) {
-			$this->session->sess_destroy();
-			redirect('/administrator/');
-		}
+		
 		
 		$data['cur_page'] = 'schedule_doctor';
 		$data['cur_parent_page'] = 'doctor';
@@ -27,11 +23,7 @@ class Schedule_doctor extends CI_Controller {
 
 	public function add()
 	{
-		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
-		if ($role_admin != 1) {
-			$this->session->sess_destroy();
-			redirect('/administrator/');
-		}
+		
 		
 		$data['cur_page'] = 'schedule_doctor';
 		$data['cur_parent_page'] = 'doctor';
@@ -46,11 +38,7 @@ class Schedule_doctor extends CI_Controller {
 
 	public function edit($id)
 	{
-		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
-		if ($role_admin != 1) {
-			$this->session->sess_destroy();
-			redirect('/administrator/');
-		}
+		
 		
 		$data['cur_page'] = 'schedule_doctor';
 		$data['cur_parent_page'] = 'doctor';

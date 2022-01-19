@@ -12,11 +12,7 @@ class About_company extends CI_Controller {
 
 	public function index()
 	{
-		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
-		if ($role_admin != 1) {
-			$this->session->sess_destroy();
-			redirect('/administrator/');
-		}
+		
 		
 		$data['cur_page'] = 'about_company';
 		$data['cur_parent_page'] = 'about_company';
@@ -26,11 +22,7 @@ class About_company extends CI_Controller {
 
 	public function gallery()
 	{
-		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
-		if ($role_admin != 1) {
-			$this->session->sess_destroy();
-			redirect('/administrator/');
-		}
+		
 		
 		$data['cur_page'] = 'about_company';
 		$data['cur_parent_page'] = 'about_company';
@@ -135,11 +127,7 @@ class About_company extends CI_Controller {
 
 	public function add_gallery()
 	{
-		$role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
-		if ($role_admin != 1) {
-			$this->session->sess_destroy();
-			redirect('/administrator/');
-		}
+		
 		
 		$data['cur_page'] = 'about_company';
 		$data['cur_parent_page'] = 'about_company';
