@@ -37,7 +37,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Peugeot_Regular,sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -242,7 +242,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: space-between;
   padding: 10px 0 10px 30px;
-  font-family: Peugeot_Regular,sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 13px;
   color: #626262;
   white-space: nowrap;
@@ -506,7 +506,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #3fbbc0;
 }
 #hero .btn-get-started {
-  font-family: Peugeot_Regular,sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
@@ -708,7 +708,7 @@ section {
   font-weight: 700;
 }
 .cta .cta-btn {
-  font-family: Peugeot_Regular,sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -776,7 +776,7 @@ section {
 .counts .count-box p {
   padding: 30px 0 0 0;
   margin: 0;
-  font-family: Peugeot_Regular,sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
 }
 .counts .count-box a {
@@ -785,7 +785,7 @@ section {
   margin-top: 20px;
   color: #7b7b7b;
   font-size: 15px;
-  font-family: Peugeot_Regular,sans-serif;
+  font-family: "Poppins", sans-serif;
   transition: ease-in-out 0.3s;
 }
 .counts .count-box a:hover {
@@ -1235,7 +1235,7 @@ section {
   font-size: 36px;
   color: #3fbbc0;
   font-weight: 600;
-  font-family: Peugeot_Regular,sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-bottom: 20px;
 }
 .pricing h4 sup {
@@ -1283,7 +1283,7 @@ section {
   transition: none;
   font-size: 14px;
   font-weight: 400;
-  font-family: Peugeot_Regular,sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   transition: 0.3s;
 }
@@ -1501,7 +1501,7 @@ section {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: Peugeot_Regular,sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 #footer .footer-top .social-links a {
   font-size: 18px;
