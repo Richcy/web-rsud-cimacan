@@ -122,7 +122,7 @@
                     <div>
                       <label for="exampleInputEmail1" class="form-label">Event's Poster <span class="required-fill">*</span></label>
                       <div>
-                        <!-- <a id="link-zoom" href="<?=base_url()?>assets/uploads/default-image.jpg" class="ngalleryswiper-zoom gallery-lightbox"> -->
+                        <!-- <a id="link-zoom" href="<?=base_url()?>assets/uploads/default-image.jpg" class="gallery-imgswiper-zoom gallery-lightbox"> -->
                           <img id="preview-image" style="max-width: 245px; margin-bottom: 1%;" src="<?=base_url()?>assets/uploads/default-image.jpg">
                         <!-- </a> -->
                       </div>

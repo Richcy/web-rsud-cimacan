@@ -37,7 +37,7 @@
                     <div>
                       <label for="exampleInputEmail1" class="form-label">Denah</label>
                       <div>
-                        <a href="<?=$datas[0]->img ? base_url().'assets/uploads/'.$datas[0]->img : base_url().'assets/uploads/default-image.jpg';?>" class="ngalleryswiper-zoom gallery-lightbox">
+                        <a href="<?=$datas[0]->img ? base_url().'assets/uploads/'.$datas[0]->img : base_url().'assets/uploads/default-image.jpg';?>" class="gallery-imgswiper-zoom gallery-lightbox">
                           <img id="preview-image" style="max-width: 245px; margin-bottom: 1%;" src="<?=$datas ? ($datas[0]->img ? base_url().'assets/uploads/'.$datas[0]->img : base_url().'assets/uploads/default-image.jpg') : base_url().'assets/uploads/default-image.jpg';?>">
                         </a>
                       </div>

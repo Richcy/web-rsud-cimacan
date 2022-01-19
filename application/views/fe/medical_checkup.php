@@ -62,11 +62,11 @@
                     <div class="swiper-wrapper align-items-center">
                       <?php foreach ($datas_gallery as $gallery) {?>
                       <div class="swiper-slide">
-                        <div class="ngalleryswiper-image" style="background-image: url('<?php echo base_url()."assets/uploads/".$gallery->img;?>');">
-                          <div class="ngalleryswiper-content">
-                            <a href="<?php echo base_url()."assets/uploads/".$gallery->img;?>" class="ngalleryswiper-zoom gallery-lightbox" rel="news">
+                        <div class="gallery-imgswiper-image" style="background-image: url('<?php echo base_url()."assets/uploads/".$gallery->img;?>');">
+                          <div class="gallery-imgswiper-content">
+                            <a href="<?php echo base_url()."assets/uploads/".$gallery->img;?>" class="gallery-imgswiper-zoom gallery-lightbox" rel="news">
                               <i class="fa fa-search"></i>
-                              <div class="ngalleryswiper-enlarge">Click to enlarge image</div>
+                              <div class="gallery-imgswiper-enlarge">Click to enlarge image</div>
                             </a>
                           </div>
                         </div>
@@ -74,10 +74,10 @@
                       <?php } ?>
 
                     </div>
-                    <div class="arrow-ngallery swiper-prev">
+                    <div class="arrow-gallery-img swiper-prev">
                       <i class="fa fa-chevron-left"></i>
                     </div>
-                    <div class="arrow-ngallery swiper-next">
+                    <div class="arrow-gallery-img swiper-next">
                       <i class="fa fa-chevron-right"></i>
                     </div>
                     <div class="swiper-pagination"></div>

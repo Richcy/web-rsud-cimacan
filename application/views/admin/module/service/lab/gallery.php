@@ -73,7 +73,7 @@
                         </td>
                         <td><?=$num;?></td>
                         <td>
-                          <a href="<?=base_url().'assets/uploads/'.$data->img;?>" class="ngalleryswiper-zoom gallery-lightbox">
+                          <a href="<?=base_url().'assets/uploads/'.$data->img;?>" class="gallery-imgswiper-zoom gallery-lightbox">
                             <img style="max-width: 100px" src="<?=base_url().'assets/uploads/'.$data->img;?>">
                           </a>
                           <input type="hidden" name="sort<?=$num;?>" id="sort<?=$num;?>" value="<?=$data->sort;?>">

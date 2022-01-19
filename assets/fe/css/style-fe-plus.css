@@ -5055,7 +5055,7 @@ body{
     line-height: normal;
     margin-bottom: 20px;
 }
-.ngalleryswiper-image {
+.gallery-imgswiper-image {
     display: block;
     width: 100%;
     background-size: cover;
@@ -5064,7 +5064,7 @@ body{
     height: 300px;
     position: relative;
 }
-.ngalleryswiper-content {
+.gallery-imgswiper-content {
     position: absolute;
     top: 0;
     left: 0;
@@ -5075,36 +5075,36 @@ body{
     z-index: 3;
     opacity: 0;
 }
-.ngalleryswiper-image:hover > .ngalleryswiper-content{
+.gallery-imgswiper-image:hover > .gallery-imgswiper-content{
     opacity: 1;
 }
-.ngalleryswiper-zoom {
+.gallery-imgswiper-zoom {
     color: #FFFFFF !important;
     font-size: 14px;
     position: relative;
     top: 45%;
     display: block;
 }
-.ngalleryswiper-zoom > .fa {
+.gallery-imgswiper-zoom > .fa {
     font-size: 20px;
 }
-.arrow-ngallery {
+.arrow-gallery-img {
     position: absolute;
     top: 50%;
     z-index: 5;
     cursor: pointer;
 }
-.arrow-ngallery > .fa {
+.arrow-gallery-img > .fa {
     color: #FFFFFF;
     font-size: 20px;
 }
-.ngallery-next {
+.gallery-img-next {
     right: 5px;
 }
-.ngallery-prev {
+.gallery-img-prev {
     left: 5px;
 }
-.ngalleryswiper-container {
+.gallery-imgswiper-container {
     margin-bottom: 20px !important;
 }
 .dlistbox-bookmark > .title {
@@ -5275,7 +5275,7 @@ body{
     .dlistbox-gallery-head {
         margin-top: 10px;
     }
-    .ngalleryswiper-image{
+    .gallery-imgswiper-image{
         height: 250px;
     }
 }

@@ -62,7 +62,7 @@
                         </td>
                         <td style="width: 10%;"><?=$num;?></td>
                         <td style="width: 20%;">
-                          <a href="<?=$data->img ? base_url().'assets/uploads/'.$data->img : base_url().'assets/uploads/default-image.jpg';?>" class="ngalleryswiper-zoom gallery-lightbox">
+                          <a href="<?=$data->img ? base_url().'assets/uploads/'.$data->img : base_url().'assets/uploads/default-image.jpg';?>" class="gallery-imgswiper-zoom gallery-lightbox">
                             <img style="max-width: 100px" src="<?=$data->img ? base_url().'assets/uploads/'.$data->img : base_url().'assets/uploads/default-image.jpg';?>">
                           </a>
                         </td>

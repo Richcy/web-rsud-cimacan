@@ -83,11 +83,11 @@
                     <div class="swiper-wrapper1 align-items-center">
                       <!-- Looping -->
                       <div class="swiper-slide">
-                        <div class="ngalleryswiper-image" style="background-image: url('<?=$datas[0]->img ? base_url().'assets/uploads/'.$datas[0]->img : base_url().'assets/uploads/default-image.jpg';?>');">
-                          <div class="ngalleryswiper-content">
-                            <a href="<?=$datas[0]->img ? base_url().'assets/uploads/'.$datas[0]->img : base_url().'assets/uploads/default-image.jpg';?>" class="ngalleryswiper-zoom gallery-lightbox" rel="news">
+                        <div class="gallery-imgswiper-image" style="background-image: url('<?=$datas[0]->img ? base_url().'assets/uploads/'.$datas[0]->img : base_url().'assets/uploads/default-image.jpg';?>');">
+                          <div class="gallery-imgswiper-content">
+                            <a href="<?=$datas[0]->img ? base_url().'assets/uploads/'.$datas[0]->img : base_url().'assets/uploads/default-image.jpg';?>" class="gallery-imgswiper-zoom gallery-lightbox" rel="news">
                               <i class="fa fa-search"></i>
-                              <div class="ngalleryswiper-enlarge">Click to enlarge image</div>
+                              <div class="gallery-imgswiper-enlarge">Click to enlarge image</div>
                             </a>
                           </div>
                         </div>
