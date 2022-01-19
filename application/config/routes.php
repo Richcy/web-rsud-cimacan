@@ -106,6 +106,10 @@ $route['career/(:num)'] = 'career/page/$1';
 
 $route['contact.html'] = 'contact';
 
+// SEO Section
+$route['sitemap\.xml'] = 'Sitemapseo';
+$route['googlee2acf700a897067a.html'] = 'searchconsole';
+
 // Admin Section
 $route['administrator'] = 'administrator/login';
 $route['administrator/login'] = 'administrator/login/loginAdmin';

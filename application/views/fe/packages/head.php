@@ -1,8 +1,8 @@
 <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow" />
+  <meta name="google-site-verification" content="vWAgVaWw63x8fSarefmtTOdB2iC2TkfNO193gvNCusQ" />
 
   <!-- Favicons -->
   <link href="<?php echo base_url();?>assets/fe/img/logo_rsud_cimacan.png" rel="icon">

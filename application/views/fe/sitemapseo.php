@@ -1,0 +1,305 @@
+<?php
+  header('Content-type: application/xml; charset="ISO-8859-1"',true);  
+  $datetime1 = new DateTime(date('Y-m-d H:i:s'));
+?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.rsdcimacan.com/</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/home</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/profile.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/directurs-greeting.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/structure.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/sketch.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/superior-service.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/outpatient-installation.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/inpatient-installation.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/igd.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/laboratorium.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/radiology.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/doctor/</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/event/</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/article/</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/career/</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/contact.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/doctor-15-dr--andri-saputra--sp-a.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/doctor-14-dr--chica-pratiwi--sp-pd.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/doctor-30-dr--gita-ayu-saraswati.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/doctor-25-dr--hj--hawik-muzdalifah--sp-kfr--mars.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/doctor-17-dr--jacky-junaedi--sp-b.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/doctor-16-dr--nelis-fitriah-handayani--mars--sp-b.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/doctor-13-dr--panji-gugah-baskara--sp-pd.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/doctor-21-dr--pudya-astuti-rachyanti--sp-t-h-t-k-l.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/doctor/1/</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/doctor/2/</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/doctor/3/</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/event-21-vaksin-bulan-januari-minggu-3.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/event-19-vaksinasi-januari-minggu-2.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/event-4-vaksinasi-januari-minggu-1.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/event-5-vaksinasi-desember-minggu-4.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/event-6-vaksinasi-desember-minggu-3.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/event-7-vaksinasi-desember-minggu-2.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/event/1/</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/event/2/</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/event/3/</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/career-8-dokter-umum.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/career-7-perawat.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/career/1/</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/doctor-22-dr--putri-ratna-palupi-puspitasari--sp-kj.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/doctor-20-dr--ratna-andriyati--sp-jp.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/doctor-18-dr--wulan-nurmala--sp-og.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/doctor-19-dr--yanto-hasitongan-sinaga--sp-og.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/doctor-29-drg--dwi-anie-lestari--sp--orth.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/doctor-24-drg--hariansyah-buana-putra.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/doctor-28-drg--indah-sukartinah.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/doctor-23-drg--intan-sri-fajarwati.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/doctor-26-drg--rindang-yuasari--sp-bm.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/doctor-27-drg--yulia-jayaputri-moeslim-t.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/event-8-ig-live-serumen-telinga-bahaya-atau-tidak.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/event-9-vaksinasi-desember-minggu-1.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/event-10-vaksinasi-november-minggu-5.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/event-16-vaksinasi-november-minggu-4.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/event-11-vaksinasi-november-minggu-3.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/event-12-donor-darah-bulan-november.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/event-13-vaksinasi-november-minggu-2.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.rsdcimacan.com/event-15-vaksinasi-november-minggu-1.html</loc>
+  <lastmod>2022-01-19T07:38:36+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
