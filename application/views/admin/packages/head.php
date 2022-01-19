@@ -29,10 +29,18 @@
     $name_session =  $this->session->userdata('name_admin');
     $id_session = $this->session->userdata('id_admin');
     $username_session = $this->session->userdata('username_admin');
+    $role_admin = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : '';
     if ($name_session == null && $id_session == null && $username_session == null) {
       $this->session->set_flashdata('title','Error');
       $this->session->set_flashdata('message','Please Login First!');
       $this->session->set_flashdata('status','error');
       redirect('/administrator');
-    } 
+    }
+
+    if ($cur_page == 'about_company' && $role_admin != 1) {
+      $this->session->set_flashdata('title','Error');
+      $this->session->set_flashdata('message','Please Just Access Your Own!');
+      $this->session->set_flashdata('status','error');
+      redirect('/administrator');
+    }
   ?>
