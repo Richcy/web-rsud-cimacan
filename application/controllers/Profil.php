@@ -16,7 +16,12 @@ class Profil extends CI_Controller {
 		$data['cur_parent_page'] = 'tentang';
 		$lang = 'id';
 		$data['lang'] = $lang;
-		$data['datas'] = $this->M_About_Company->getAll($lang);
+		$datas = $this->M_About_Company->getAll($lang);
+		$data['seo_title'] = "RSD Cimacan | Profil";
+		$data['seo_keyword'] = "Profl RSD Cimacan";
+		$data['seo_desc'] = $datas[0]->description ? substr($datas[0]->description, 0, 150).'...' : '';
+		$data['seo_url'] = base_url().'profile.html';
+		$data['datas'] = $datas;
 		$this->load->view('fe/profil', $data);
 	}
 

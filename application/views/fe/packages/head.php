@@ -30,12 +30,3 @@
   <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/fe/css/datatables.min.css"/>
   <link rel="stylesheet" href="<?php echo base_url();?>assets/fe/css/jquery-ui.css">
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-
-
-
-  <!-- =======================================================
-  * Template Name: Medicio - v4.6.0
-  * Template URL: https://bootstrapmade.com/medicio-free-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->

@@ -20,6 +20,11 @@ class Home extends CI_Controller {
 		$data['cur_page'] = 'home';
 		$data['cur_parent_page'] = '';
 
+		$data['seo_title'] = "RSD Cimacan | Beranda";
+		$data['seo_keyword'] = "Beranda RSD Cimacan";
+		$data['seo_desc'] = 'Beranda RSD Cimacan berisi informasi singkat tentang rumah sakit yang disuguhkan kepada user.';
+		$data['seo_url'] = base_url();
+
 		$lang = 'id';
 		$data['lang'] = $lang;
 		$data['datas_slide'] = $this->T_Slider->show_all();

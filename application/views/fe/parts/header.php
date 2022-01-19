@@ -1,8 +1,6 @@
 <div class="container d-flex align-items-center">
 
       <a href="<?=base_url('home');?>" class="logo me-auto"><img class="logo-header hidden-md hidden-lg" src="<?=base_url();?>assets/fe/img/logo_rsud_cimacan.png" alt=""></a>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <h1 class="logo me-auto"><a href="index.html">Medicio</a></h1> -->
 
       <nav class="navbar order-lg-0 hidden-xs hidden-sm">
         <ul>
