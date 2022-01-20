@@ -1,6 +1,6 @@
 <div class="container d-flex align-items-center">
 
-      <a href="<?=base_url('home');?>" class="logo me-auto"><img class="logo-header hidden-md hidden-lg" src="<?=base_url();?>assets/fe/img/logo_rsud_cimacan.png" alt=""></a>
+      <a href="<?=base_url();?>" class="logo me-auto"><img class="logo-header hidden-md hidden-lg" src="<?=base_url();?>assets/fe/img/logo_rsud_cimacan.png" alt=""></a>
 
       <nav class="navbar order-lg-0 hidden-xs hidden-sm">
         <ul>

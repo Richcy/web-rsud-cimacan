@@ -3,7 +3,7 @@
     <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
       <div class="align-items-center d-none d-md-flex">
         <!-- <i class="bi bi-clock"></i> Senin - Sabtu -->
-        <a href="<?=base_url('home');?>" class="logo me-auto"><img style="width: 46%;" class="logo-header" src="<?=base_url();?>assets/fe/img/logo_rsud_cimacan.png" alt=""></a>
+        <a href="<?=base_url();?>" class="logo me-auto"><img style="width: 46%;" class="logo-header" src="<?=base_url();?>assets/fe/img/logo_rsud_cimacan.png" alt=""></a>
       </div>
       <div class="d-flex align-items-center">
         <div class="row">
