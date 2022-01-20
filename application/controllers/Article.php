@@ -17,7 +17,7 @@ class Article extends CI_Controller {
 		$data['cur_parent_page'] = '';
 
 		$data['seo_title'] = "RSD Cimacan | Article";
-		$data['seo_keyword'] = "Artikel Berita Blog RSD Cimacan";
+		$data['seo_keyword'] = "Artikel, Berita, Blog, rumah sakit, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan";
 		$data['seo_desc'] = 'Daftar Artikel yang diterbitkan oleh Rumah Sakit Daerah Cimacan';
 		$data['seo_url'] = base_url().'article/';
 

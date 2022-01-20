@@ -17,7 +17,7 @@ class Instalasi_rawat_inap extends CI_Controller {
 		$data['lang'] = 'id';
 		$datas = $this->M_IRI->show_iri();
 		$data['seo_title'] = "RSD Cimacan | Instalasi Rawat Inap";
-		$data['seo_keyword'] = "Instalasi Rawat Inap RSD Cimacan";
+		$data['seo_keyword'] = "Instalasi Rawat Inap, rumah sakit, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan";
 		$data['seo_desc'] = 'Instalasi Rawat Inap (IRI) merupakan instalasi yang memberikan pelayanan kesehatan perorangan dan perawatan yang meliputi observasi, pemeriksaan...';
 		$data['seo_url'] = base_url().'inpatient-installation.html';
 		$data['datas'] = $datas;
