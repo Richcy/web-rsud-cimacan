@@ -16,6 +16,10 @@ class Igd extends CI_Controller {
 		$data['cur_parent_page'] = 'layanan';
 		$data['lang'] = 'id';
 		$datas = $this->M_IGD->show_igd();
+		$data['seo_title'] = "RSD Cimacan | Instalasi Gawat Darurat";
+		$data['seo_keyword'] = "Instalasi Gawat Darurat RSD Cimacan";
+		$data['seo_desc'] = 'Instalasi Gawat Darurat (IGD) merupakan layanan yang disediakan oleh Rumah Sakit untuk membantu kebutuhan pasien yang dialami dalam keadaan gawat...';
+		$data['seo_url'] = base_url().'igd.html';
 		$data['datas'] = $datas;
 		$data['galleries'] = $this->M_IGD->show_gallery('igd');
 		$data['sub_menus'] = $this->M_IGD->show_sub_menu($datas[0]->id);
