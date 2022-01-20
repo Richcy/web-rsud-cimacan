@@ -1032,6 +1032,19 @@ position: fixed;
 }
 
 /*Responsive section*/
+
+@media(max-width: 1200px){
+    .denah-rs{
+        max-width: 630px;
+    }
+}
+
+@media(max-width: 1024px){
+    .denah-rs{
+        max-width: 705px;
+    }
+}
+
 @media(max-width: 1023px ){
     .denah-rs{
         max-width: 900px;
@@ -1043,6 +1056,12 @@ position: fixed;
 
     .banner{
         margin-top: 14%;
+    }
+}
+
+@media(max-width: 915px){
+    .denah-rs{
+        max-width: 660px;
     }
 }
 
@@ -1198,6 +1217,12 @@ position: fixed;
     }
 }
 
+@media(max-width: 400px){
+    .denah-rs{
+        max-width: 315px;
+    }
+}
+
 @media(max-width: 380px){
     .denah-rs{
         max-width: 325px;
@@ -1226,6 +1251,12 @@ position: fixed;
         margin-top: 25%;
     }
 
+}
+
+@media(max-width: 370px){
+    .denah-rs{
+        max-width: 300px;
+    }
 }
 
 @media(max-width: 300px){

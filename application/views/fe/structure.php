@@ -67,7 +67,7 @@
           <div class="content-section">
             <div class="row">
               <div class="col-md-12">
-                <img class="Struktur Organisasi-rs" src="<?php echo base_url().'assets/uploads/'.$datas[0]->img;?>">
+                <img class="Struktur Organisasi-rs denah-rs" src="<?php echo base_url().'assets/uploads/'.$datas[0]->img;?>">
               </div>
 
             </div>
