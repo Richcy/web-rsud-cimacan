@@ -16,7 +16,12 @@ class Directurs_greeting extends CI_Controller {
 		$data['cur_page'] = 'directurs_greeting';
 		$data['cur_parent_page'] = 'tentang';
 		$data['lang'] = 'id';
-		$data['datas'] = $this->M_About_Home->getAll($lang);
+		$datas = $this->M_About_Home->getAll($lang);
+		$data['seo_title'] = "RSD Cimacan | Sambutan Direktur";
+		$data['seo_keyword'] = "Sambutan Direktur RSD Cimacan";
+		$data['seo_desc'] = "Puji syukur kami panjatkan kepada Allah SWT. atas segala anugerah yang telah diberikan sehingga pelayanan kesehatan kepada masyarakat masih dapat....";
+		$data['seo_url'] = base_url().'directurs-greeting.html';
+		$data['datas'] = $datas;
 		$this->load->view('fe/sambutan_direktur', $data);
 	}
 
