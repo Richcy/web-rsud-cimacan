@@ -16,6 +16,10 @@ class Instalasi_rawat_jalan extends CI_Controller {
 		$data['cur_parent_page'] = 'layanan';
 		$data['lang'] = 'id';
 		$datas = $this->M_IRJ->show_irj();
+		$data['seo_title'] = "RSD Cimacan | Instalasi Rawat Jalan";
+		$data['seo_keyword'] = "Instalasi Rawat Jalan RSD Cimacan";
+		$data['seo_desc'] = 'Instalasi Rawat Jalan (IRJ) adalah salah satu instalasi yang berada di RSD Cimacan yang memberikan pelayanan rawat jalan kepada pasien sesuai dengan...';
+		$data['seo_url'] = base_url().'outpatient-installation.html';
 		$data['datas'] = $datas;
 		$data['galleries'] = $this->M_IRJ->show_gallery('unggulan');
 		$data['sub_menus'] = $this->M_IRJ->show_sub_menu($datas[0]->id);
