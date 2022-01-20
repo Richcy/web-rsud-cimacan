@@ -15,6 +15,10 @@ class Denah extends CI_Controller {
 		$data['cur_page'] = 'denah_rs';
 		$data['cur_parent_page'] = 'tentang';
 		$data['lang'] = 'id';
+		$data['seo_title'] = "RSD Cimacan | Denah";
+		$data['seo_keyword'] = "Denah Bangunan RSD Cimacan";
+		$data['seo_desc'] = "Denah bangunan Rumah Sakit Daerah Cimacan";
+		$data['seo_url'] = base_url().'sketch.html';
 		$data['datas'] = $this->M_Sketch->getAll();
 		$this->load->view('fe/denah', $data);
 	}
