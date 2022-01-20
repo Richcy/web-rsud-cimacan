@@ -15,6 +15,10 @@ class Structure extends CI_Controller {
 		$data['cur_page'] = 'structure_or';
 		$data['cur_parent_page'] = 'tentang';
 		$data['lang'] = 'id';
+		$data['seo_title'] = "RSD Cimacan | Struktur Organisasi";
+		$data['seo_keyword'] = "Struktur Organisasi RSD Cimacan";
+		$data['seo_desc'] = "Bagan struktur organisasi Rumah Sakit Daerah Cimacan";
+		$data['seo_url'] = base_url().'structure.html';
 		$data['datas'] = $this->M_Structure->getAll();
 		$this->load->view('fe/structure', $data);
 	}
