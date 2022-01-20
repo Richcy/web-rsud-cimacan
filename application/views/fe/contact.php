@@ -2,7 +2,21 @@
 <html lang="<?=$lang;?>">
 
 <head>
-  <title>RSD Cimacan | Kontak</title>
+  <title><?=$seo_title;?></title>
+  <!-- SEO Section -->
+  <meta name="keywords" content="<?=$seo_keyword;?>">
+  <meta name="description" content="<?=$seo_desc;?>">
+  <link rel="canonical" href="<?=$seo_url;?>">
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="<?=$seo_keyword;?>" />
+  <meta property="og:image" content="" />
+  <meta property="og:description" content="<?=$seo_desc;?>" />
+  <meta property="og:url" content="<?=$seo_url;?>"/>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="<?=$seo_keyword;?>" />
+  <meta name="twitter:image:src" content="" />
+  <meta name="twitter:description" content="<?=$seo_desc;?>"/>
+  <!-- End SEO -->
   <?php 
     $this->load->view('fe/packages/head');
   ?>
