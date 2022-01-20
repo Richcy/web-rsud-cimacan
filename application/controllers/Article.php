@@ -16,6 +16,11 @@ class Article extends CI_Controller {
 		$data['cur_page'] = 'article';
 		$data['cur_parent_page'] = '';
 
+		$data['seo_title'] = "RSD Cimacan | Article";
+		$data['seo_keyword'] = "Artikel Berita Blog RSD Cimacan";
+		$data['seo_desc'] = 'Daftar Artikel yang diterbitkan oleh Rumah Sakit Daerah Cimacan';
+		$data['seo_url'] = base_url().'article/';
+
 		$category = $this->input->get('category') ? $this->input->get('category') : '';
 		$s = $this->input->get('s') ? $this->input->get('s') : '';
 		$page = 1;
