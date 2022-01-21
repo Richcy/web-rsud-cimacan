@@ -109,6 +109,7 @@ $route['contact.html'] = 'contact';
 // SEO Section
 $route['sitemap\.xml'] = 'Sitemapseo';
 $route['googlee2acf700a897067a.html'] = 'searchconsole';
+$route['robots.txt'] = 'robots';
 
 // Admin Section
 $route['administrator'] = 'administrator/login';
