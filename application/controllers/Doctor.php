@@ -54,6 +54,12 @@ class Doctor extends CI_Controller {
 		$data['field_selected'] = $field;
 		$data['s'] = $s;
 		$data['lang'] = 'id';
+
+		$data['seo_title'] = "RSD Cimacan | Dokter";
+		$data['seo_keyword'] = "Dokter, rumah sakit, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan";
+		$data['seo_desc'] = 'Daftar dokter spesialis Rumah Sakit Daerah Cimacan';
+		$data['seo_url'] = base_url().'doctor/'.$page.'/';
+
 		$data['page'] = $page ? $page : 1;
 		$data['totalData'] = $totalData[0]->totalData;
 		$data['totalPage'] = $totalPage;

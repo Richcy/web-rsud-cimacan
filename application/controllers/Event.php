@@ -52,6 +52,12 @@ class Event extends CI_Controller {
 		$data['category_selected'] = $category;
 		$data['s'] = $s;
 		$data['lang'] = 'id';
+
+		$data['seo_title'] = "RSD Cimacan | Event";
+		$data['seo_keyword'] = "event, acara, agenda, rumah sakit, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan";
+		$data['seo_desc'] = 'Daftar Acara yang diadakan oleh Rumah Sakit Daerah Cimacan';
+		$data['seo_url'] = base_url().'event/'.$page.'/';
+
 		$data['page'] = $page ? $page : 1;
 		$data['totalData'] = $totalData[0]->totalData;
 		$data['totalPage'] = $totalPage;
