@@ -130,7 +130,7 @@
                 ?>
                 <a href="<?=base_url().'career-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-img" style="background-image: url('<?=$data->img ? base_url().'assets/uploads/'.$data->img : base_url().'assets/uploads/default-image.jpg';?>')">
                   <span style=" opacity: 0;">
-                    Event Title 1
+                    <?=$data->title;?>
                   </span>
                 </a>
                 <div class="listboxd-content">
