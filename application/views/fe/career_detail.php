@@ -143,7 +143,7 @@
                     <?=$data->title;?>
                   </a>
                   <div class="listboxd-desc" id="desc_card">
-                   <?=substr($data->description, 0, 100);?>...
+                   <?=substr($data->description, 0, 250);?>...
                   </div>
                   <div class="row up2">
                     <div class="col-xs-6 pad0">
