@@ -50,7 +50,7 @@ class Career extends CI_Controller {
 
 		$data['seo_title'] = "RSD Cimacan | Karir";
 		$data['seo_keyword'] = "karir, lowongan, kerja, recruitment, rumah sakit, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan";
-		$data['seo_desc'] = 'Karir atau lowongan pekerjaan yang dibutuhkan oleh Rumah Sakit Daerah Cimacan';
+		$data['seo_desc'] = 'Karir atau lowongan pekerjaan yang dibutuhkan oleh Rumah Sakit Daerah Cimacan pada halaman ke-'.$page;
 		$data['seo_url'] = base_url().'career/'.$page.'/';
 
 		$data['page'] = $page ? $page : 1;
