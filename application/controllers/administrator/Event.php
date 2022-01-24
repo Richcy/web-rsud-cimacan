@@ -83,7 +83,7 @@ class Event extends CI_Controller {
 	        	'location' => $location,
 	        	'create_date' => date('Y-m-d H:i:s')
 	        );
-	        $insert = $this->T_Event->insert($datas,'T_Event');
+	        $insert = $this->T_Event->insert($datas,'t_event');
 	        if ($insert) {
 	        	$this->session->set_flashdata('title','Success');
 	        	$this->session->set_flashdata('message','Insert data event');
@@ -123,7 +123,7 @@ class Event extends CI_Controller {
 		        	'location' => $location,
 		        	'create_date' => date('Y-m-d H:i:s')
 		        );
-		        $insert = $this->T_Event->insert($datas,'T_Event');
+		        $insert = $this->T_Event->insert($datas,'t_event');
 		        if ($insert) {
 		        	$this->session->set_flashdata('title','Success');
 		        	$this->session->set_flashdata('message','Insert data event');

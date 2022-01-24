@@ -7,7 +7,7 @@ class T_Event extends CI_Model {
 	public function show_all()
 	{
     $query = $this->db->select('event.id, event.title, event.description, event.category, event.location, event.url, event.start_date, event.end_date, event.start_time, event.end_time, event.img, category.id as category_id, category.name as category_name');
-    $query = $this->db->order_by('event.create_date', 'ASC');
+    $query = $this->db->order_by('event.create_date', 'DESC');
     $query = $this->db->join('t_event_category as category', 'category.id = event.category', 'left');
 		$query = $this->db->get('t_event as event');
     return $query->result();

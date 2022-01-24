@@ -145,7 +145,7 @@
 
                   <div class="datetime-event">Tanggal dan Waktu</div>
                   <div class="detail-date"><?=$start_date;?>, <?=date('d M Y', strtotime($datas[0]->start_date));?> - <?=$end_date;?>, <?=date('d M Y', strtotime($datas[0]->end_date));?></div>
-                  <div class="detail-time"><?=$datas[0]->start_time;?> - <?=$datas[0]->end_time;?></div>
+                  <div class="detail-time"><?=date('H:i', strtotime($datas[0]->start_time));?> - <?=date('H:i', strtotime($datas[0]->end_time));?></div>
 
                   <div class="datetime-event">Lokasi</div>
                   <div class="detail-date"><?=$datas[0]->location ? $datas[0]->location : '-' ;?></div>
@@ -193,7 +193,7 @@
               ?>
               <a href="<?=base_url().'event-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-img" style="background-image: url('<?=$data->img ? base_url().'assets/uploads/'.$data->img : base_url().'assets/uploads/default-image.jpg';?>')">
                 <span style=" opacity: 0;">
-                  Event Title 1
+                  <?=$data->title;?>
                 </span>
               </a>
               <div class="listboxd-content">
