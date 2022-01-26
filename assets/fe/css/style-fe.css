@@ -679,6 +679,10 @@ a.button-collapse:focus{
     margin-top: 33%;
 }
 
+.zoom-for-sketch{
+    top: 0 !important;
+}
+
 /*End section denah*/
 
 /*Section Greeting*/
@@ -1029,6 +1033,36 @@ position: fixed;
 
 .empty-data{
     text-align: center;
+}
+
+/*Covid section*/
+.covid-count{
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #555555;
+}
+
+/*Login Section*/
+.red-color{
+    color: #a82024;
+}
+
+/*Error section*/
+.error-message{
+    color: #dc3545;
+}
+
+.required-fill{
+    color: #dc3545;
+}
+
+.hidden{
+    display: none;
+}
+
+.tox-browse-url {
+    display: none !important;
 }
 
 /*Responsive section*/

@@ -7156,9 +7156,9 @@ a:hover > div > div > div > div > div > .title-color{
     background-size: cover;
 }
 .login-section {
-    padding: 50px 200px;
+    padding: 0px 200px;
 }
-.login-square {
+.login-card {
     background-color: white;
     border-radius: 8px;
     box-shadow: 1px 1px 5px 1px black;
@@ -7213,34 +7213,34 @@ a:hover > div > div > div > div > div > .title-color{
         width: 100%;
     }
 }
-.login-square > h1 {
+.login-card > h1 {
     color: #a82024;
     
     text-align: center;
     padding: 30px 0;
 }
 @media(max-width: 1200px) {
-    .login-square > h1 {
+    .login-card > h1 {
         font-size: 22px;
     }
 }
 @media(max-width: 991px) {
-    .login-square > h1 {
+    .login-card > h1 {
         font-size: 21px;
     }
 }
 @media(max-width: 767px) {
-    .login-square > h1 {
+    .login-card > h1 {
         font-size: 20px;
         padding: 20px 0;
     }
 }
 @media(max-width: 500px) {
-    .login-square > h1 {
+    .login-card > h1 {
         font-size: 18px;
     }
 }
-.btn-login-socmed {
+.btn-login-third {
     border-radius: 5px;
     
     font-size: 18px;
@@ -7252,27 +7252,27 @@ a:hover > div > div > div > div > div > .title-color{
     text-align: center;
 }
 @media(max-width: 991px) {
-    .btn-login-socmed {
+    .btn-login-third {
         font-size: 17px;
     }
 }
 @media(max-width: 767px) {
-    .btn-login-socmed {
+    .btn-login-third {
         font-size: 15px;
     }
 }
 @media(max-width: 500px) {
-    .btn-login-socmed {
+    .btn-login-third {
         font-size: 14px;
     }
 }
-.btn-login-socmed:hover {
+.btn-login-third:hover {
     opacity: 0.8;
     color: #FFFFFF;
 }
-.forgot-pass {
+.forgot-pass-position {
     margin: 15px 0;
-    text-align: right;
+    text-align: left;
 }
 .btn-login {
     border-radius: 5px;
@@ -7289,13 +7289,13 @@ a:hover > div > div > div > div > div > .title-color{
     opacity: 0.58
     color: #FFFFFF;
 }
-#fb-btn {
+#btn-facebook {
     background-color: #3b5998;
 }
-#google-btn {
+#btn-google {
     background-color: #cd4432;
 }
-#linkedin-btn {
+#btn-linkedin {
     background-color: #0285b6;
 }
 #border-left {
@@ -7360,18 +7360,18 @@ a:hover > div > div > div > div > div > .title-color{
         border-left: none;
     }
 }
-.loginput-wrap {
+.login-input-wrap {
     width: 100%;
     max-width: 100%;
     padding: 0 20px;
 }
 @media(max-width: 991px) {
-    .loginput-wrap {
+    .login-input-wrap {
         padding: 0 15px;
     }
 }
 @media(max-width: 767px) {
-    .loginput-wrap {
+    .login-input-wrap {
         width: 100%;
         padding: 0 15px;
     }
