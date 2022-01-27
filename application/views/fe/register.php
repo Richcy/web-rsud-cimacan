@@ -59,22 +59,33 @@
                   <input type="text" name="name" id="name" class="form-control" placeholder="Nama Lengkap" autocomplete="off">
                   <div class="error-message hidden" id="error-name-message">Please Fill this input section!</div>
                   <br>
+                  
                   <label for="email" class="label-input">No. Hp & Whatsapp</label>
                   <br>
                   <input type="number" name="phone" id="phone" class="form-control" placeholder="No. Hp yang aktif WA" autocomplete="off">
                   <div class="error-message hidden" id="error-phone-message">Please Fill this input section!</div>
                   <br>
+
                   <label for="email" class="label-input">E-mail</label>
                   <br>
                   <input type="text" name="email" id="email" class="form-control" placeholder="Alamat E-mail" autocomplete="off">
                   <div class="error-message hidden" id="error-email-message">Please Fill this input section!</div>
                   <div class="error-message hidden" id="error-emailformat-message">Please check the mail format! (example@example.com)</div>
                   <br>
+
                   <label for="password" class="label-input">Password</label>
                   <br>
                   <input type="password" name="password" id="password" class="form-control" placeholder="Panjang minumum password 8!" autocomplete="off">
                   <div class="error-message hidden" id="error-password-message">Please Fill this input section!</div>
                   <div class="error-message hidden" id="error-passwordlength-message">Minimum length password 8!</div>
+                  <br>
+
+                  <label for="password" class="label-input">Ulangi Password</label>
+                  <br>
+                  <input type="password" name="repassword" id="repassword" class="form-control" placeholder="Ulangi Password" autocomplete="off">
+                  <div class="error-message hidden" id="error-repassword-message">Please Fill this input section!</div>
+                  <div class="error-message hidden" id="error-repasswordlength-message">password does not match!</div>
+
                   <div id="captcha" class="forgot-pass-position">
                     <?=$captcha; //menampilkan captcha?>
                     <div class="error-message hidden" id="error-captcha-message">Please Fill this Captcha!</div>

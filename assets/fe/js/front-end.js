@@ -3,6 +3,7 @@ function registerValidation(){
   var phone = $('#phone').val();
   var email = $('#email').val();
   var password = $('#password').val();
+  var repassword = $('#repassword').val();
   var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
 
   if (name == '') {
@@ -51,6 +52,22 @@ function registerValidation(){
       return false;
     }else{
       $("#error-passwordlength-message").addClass("hidden");
+    }
+  }
+
+  if (repassword == '') {
+    $("#error-repassword-message").removeClass("hidden");
+    $("#error-repasswordlength-message").addClass("hidden");
+    $("#repassword").focus();
+    return false;
+  }else{
+    $("#error-repassword-message").addClass("hidden");
+    if (repassword != password) {
+      $("#error-repasswordlength-message").removeClass("hidden");
+      $("#repassword").focus();
+      return false;
+    }else{
+      $("#error-repasswordlength-message").addClass("hidden");
     }
   }
 
