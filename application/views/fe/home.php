@@ -106,6 +106,12 @@
       ?>
     <!-- End Gallery Section -->
 
+    <!-- ======= Covid Section ======= -->
+      <?php 
+        // $this->load->view('fe/parts/covid'); 
+      ?>
+    <!-- End Covid Section -->
+
     <!-- ======= Contact Section ======= -->
       <?php 
         $this->load->view('fe/parts/contact'); 
@@ -133,7 +139,14 @@
         close: 'Cancel'
       });
 
-      // $('#department').select2();
+      var probable = document.getElementById('covid-probable');
+      change_probable = probable.setAttribute('data-purecounter-end', 10);
+
+      var suspek = document.getElementById('covid-suspek');
+      change_suspek = suspek.setAttribute('data-purecounter-end', 7);
+
+      var positif = document.getElementById('covid-positif');
+      change_positif = positif.setAttribute('data-purecounter-end', 3);
     });
   </script>
 
