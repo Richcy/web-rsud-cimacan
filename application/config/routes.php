@@ -109,6 +109,7 @@ $route['contact.html'] = 'contact';
 $route['login.html'] = 'login';
 $route['register.html'] = 'login/register';
 $route['actionregister'] = 'login/actionregister';
+$route['verify-user'] = 'login/verify';
 
 // SEO Section
 $route['sitemap\.xml'] = 'Sitemapseo';

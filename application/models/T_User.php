@@ -19,6 +19,25 @@ class T_User extends CI_Model {
     return $query->result();
   }
 
+  public function checkData($email)
+  {
+    $query = $this->db->select('*');
+    $query = $this->db->where('email', $email);
+    $query = $query->limit(1);
+    $query = $this->db->get('t_user');
+    return $query->result();
+  }
+
+  public function checkAccount($id, $auth_code)
+  {
+    $query = $this->db->select('*');
+    $query = $this->db->where('id', $id);
+    $query = $this->db->where('auth_code', $auth_code);
+    $query = $query->limit(1);
+    $query = $this->db->get('t_user');
+    return $query->result();
+  }
+
   public function insert($data,$table){
     $insert = $this->db->insert($table, $data);
     return $insert;
