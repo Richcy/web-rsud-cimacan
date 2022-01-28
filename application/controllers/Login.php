@@ -47,13 +47,13 @@ class Login extends CI_Controller {
 		$response = $this->recaptcha->verifyResponse($recaptcha);
 
 		// Input data
-		$id = random_string('alnum',16);
+		$id = random_string('alnum',32);
+		$auth_code = random_string('alnum',6);
 		$name = $this->input->post('name');
 		$phone = $this->input->post('phone');
 		$email = $this->input->post('email');
 		$password = $this->input->post('password');
 		$hashpassword = password_hash($password, PASSWORD_DEFAULT);
-		$type_login = 'manual';
 		// $verifypass = password_verify($password, $hashpassword);
 		// var_dump($id);
 		// die();
@@ -70,6 +70,7 @@ class Login extends CI_Controller {
 	        	'phone' => $phone,
 	        	'email' => $email,
 	        	'password' => $hashpassword,
+	        	'auth_code' => $auth_code,
 	        	'create_date' => date('Y-m-d H:i:s')
 	        );
 
