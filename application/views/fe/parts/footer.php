@@ -18,7 +18,7 @@
                 Jl. Raya Cimacan No.17A, Palasari, Kec. Cipanas, Kabupaten Cianjur, Jawa Barat 43253
                 <br><br>
                 <strong>Phone:</strong> (+62)8112031117<br>
-                <strong>Email:</strong> rsudcimacan@gmail.com<br>
+                <strong>Email:</strong> info@rsdcimacan.com<br>
               </p>
               <div class="social-links mt-3">
                 <a href="https://wa.me/628112031117?text=Halo%20Admin%20.%20.%20." target="_blank" class="whatapp"><i class="bx bxl-whatsapp"></i></a>
