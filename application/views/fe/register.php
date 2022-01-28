@@ -1,158 +1,110 @@
 <!DOCTYPE html>
-<html lang="<?=$lang;?>">
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="<?=base_url();?>assets/fe/img/logo_rsud_cimacan.png" rel="icon">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
-<head>
-  <title><?=$seo_title;?></title>
-  <!-- SEO Section -->
-  <meta name="keywords" content="<?=$seo_keyword;?>">
-  <meta name="description" content="<?=$seo_desc;?>">
-  <link rel="canonical" href="<?=$seo_url;?>">
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="<?=$seo_keyword;?>" />
-  <meta property="og:image" content="" />
-  <meta property="og:description" content="<?=$seo_desc;?>" />
-  <meta property="og:url" content="<?=$seo_url;?>"/>
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="<?=$seo_keyword;?>" />
-  <meta name="twitter:image:src" content="" />
-  <meta name="twitter:description" content="<?=$seo_desc;?>"/>
-  <!-- End SEO -->
-  <?php 
-    $this->load->view('fe/packages/head');
-  ?>
-  <?=$script_captcha; //penempatan javascript captcha?>
-</head>
+    <link rel="stylesheet" href="<?=base_url();?>assetslogin/fonts/icomoon/style.css">
 
-<body>
+    <link rel="stylesheet" href="<?=base_url();?>assetslogin/css/owl.carousel.min.css">
 
-  <?php include("parts/top-bar.php") ?>
-  <header id="header" class="header-bar fixed-top">
-    <?php 
-      $this->load->view('fe/parts/header');
-    ?>
-  </header><!-- End Header -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="<?=base_url();?>assetslogin/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="<?=base_url();?>assetslogin/css/style-register.css">
+    <?=$script_captcha; //penempatan javascript captcha?>
 
-  <!-- ======= Hero Section ======= -->
-  <div class="space-xs visible-xs"></div>
-  <div class="container banner">
-    <!-- Breadcumb -->
-    <div class="breadcrumb-part">
-      <a href="javascript:void(0);">Home</a>
-      <span><i class="fa fa-angle-right"></i></span>
-      <a href="javascript:void(0);">Register</a>
-    </div>
-  </div>
-  <!-- End Hero -->
-  <main id="main">
-    <section id="content" class="main-page">
-      <div class="container" data-aos="fade-up">
+    <title>Register to RSD Cimacan</title>
+  </head>
+  <body>
+  
 
-        <div class="login-section">
-        <div class="login-card">
-          <h1><b>REGISTER</b></h1>
-          <div class="row-login">
-            <div class="col-login">
-              <div class="login-input-wrap">
-                <form action="<?=base_url().'actionregister/';?>" enctype="multipart/form-data" method="post" onsubmit="return validateForm();">
-                  <label for="name" class="label-input">Nama</label>
-                  <br>
-                  <input type="text" name="name" id="name" class="form-control" placeholder="Nama Lengkap" autocomplete="off">
-                  <div class="error-message hidden" id="error-name-message">Please Fill this input section!</div>
-                  <br>
-                  
-                  <label for="email" class="label-input">No. Hp & Whatsapp</label>
-                  <br>
-                  <input type="number" name="phone" id="phone" class="form-control" placeholder="No. Hp yang aktif WA" autocomplete="off">
-                  <div class="error-message hidden" id="error-phone-message">Please Fill this input section!</div>
-                  <br>
-
-                  <label for="email" class="label-input">E-mail</label>
-                  <br>
-                  <input type="text" name="email" id="email" class="form-control" placeholder="Alamat E-mail" autocomplete="off">
-                  <div class="error-message hidden" id="error-email-message">Please Fill this input section!</div>
-                  <div class="error-message hidden" id="error-emailformat-message">Please check the mail format! (example@example.com)</div>
-                  <br>
-
-                  <label for="password" class="label-input">Password</label>
-                  <br>
-                  <input type="password" name="password" id="password" class="form-control" placeholder="Panjang minumum password 8!" autocomplete="off">
-                  <div class="error-message hidden" id="error-password-message">Please Fill this input section!</div>
-                  <div class="error-message hidden" id="error-passwordlength-message">Minimum length password 8!</div>
-                  <br>
-
-                  <label for="password" class="label-input">Ulangi Password</label>
-                  <br>
-                  <input type="password" name="repassword" id="repassword" class="form-control" placeholder="Ulangi Password" autocomplete="off">
-                  <div class="error-message hidden" id="error-repassword-message">Please Fill this input section!</div>
-                  <div class="error-message hidden" id="error-repasswordlength-message">password does not match!</div>
-
-                  <div id="captcha" class="forgot-pass-position">
-                    <?=$captcha; //menampilkan captcha?>
-                    <div class="error-message hidden" id="error-captcha-message">Please Fill this Captcha!</div>
-                  </div>
-                  <button onclick="return registerValidation();" class="btn-login">Submit</button>
-                </form>
-              </div>
-            </div>
-            <div class="col-login">
-              <div class="socmed-wrap">
-                <p> <span id="socmed-txt">Login dengan Sosial Media</span><br><span class="red-color">*Under Maintanance</span></p>
-                <a href="javascript:void(0);" id="btn-facebook" class="btn-login-third">Facebook</a>
-                <a href="javascript:void(0);" id="btn-google" class="btn-login-third">Google+</a>
-              </div>
-            </div>
-          </div>
-          <p id="signup-txt">Sudah memiliki akun?<span id="signuphere"><a class="link" href="<?=base_url().'login.html';?>"> Masuk disini</a></span></p>
-        </div>
-      </div>
-      </div>
+  <div class="d-lg-flex half-register">
+    <div class="bg order-1 order-md-2" style="background-image: url('<?=base_url();?>assetslogin/images/bg_1.jpg');"></div>
+    <div class="contents order-2 order-md-1">
 
       <div class="container">
+        <div class="row align-items-center justify-content-center">          
+          <div class="col-md-7">
+            <div class="home-icon"> <a href="<?=base_url();?>"> <i class="fa fa-home"> Beranda</i> </a></div>
+            <h3>Register to <strong>RSD Cimacan</strong></h3>
+            
+            <form action="<?=base_url().'actionregister/';?>" enctype="multipart/form-data" method="post" onsubmit="return registerValidation();">
+              <div class="form-group first">
+                <label for="username">Name</label>
+                <input type="text" class="form-control" placeholder="Your name" id="name" name="name" value="">
+                <div class="error-message hidden" id="error-name-message">Please Fill this input section!</div>
+              </div>
 
+              <div class="form-group mid">
+                <label for="phone">Phone & Whatsapp</label>
+                <input type="text" class="form-control" placeholder="Your phone nummber" id="phone" name="phone" value="">
+                <div class="error-message hidden" id="error-phone-message">Please Fill this input section!</div>
+              </div>
+
+              <div class="form-group mid">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" placeholder="your-email@gmail.com" id="email" name="email" value="">
+                <div class="error-message hidden" id="error-email-message">Please Fill this input section!</div>
+                <div class="error-message hidden" id="error-emailformat-message">Please check the mail format! (example@example.com)</div>
+              </div>
+
+              <div class="form-group mid mb-3">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" placeholder="Your Password" id="password" name="password" value="">
+                <div class="error-message hidden" id="error-password-message">Please Fill this input section!</div>
+                <div class="error-message hidden" id="error-passwordlength-message">Minimum length password 8!</div>
+              </div>
+
+              <div class="form-group mid mb-3">
+                <label for="password">Repeat Password</label>
+                <input type="password" class="form-control" placeholder="Your Password" id="repassword" name="repassword" value="">
+                <div class="error-message hidden" id="error-repassword-message">Please Fill this input section!</div>
+                <div class="error-message hidden" id="error-repasswordlength-message">password does not match!</div>
+              </div>
+
+              <div class="form-group last mb-3">
+                <?=$captcha; //menampilkan captcha?>
+                <div class="error-message hidden" id="error-captcha-message">Please Fill this Captcha!</div>
+              </div>
+              
+              <div class="d-flex mb-5 align-items-center">
+                <!-- <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label> -->
+                <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span> 
+              </div>
+
+              <input type="submit" value="Register" class="btn btn-block btn-primary button-red">
+
+            </form>
+            <p id="signup-txt">Sudah memiliki akun?<span id="signuphere"><a class="link" href="<?=base_url().'login.html';?>"> Masuk disini</a></span></p>
+          </div>
+        </div>
       </div>
-    </section>
-  </main>
-  <!-- End #main -->
+    </div>
 
-  <?php 
-    $this->load->view('fe/parts/footer'); 
-  ?>
+    
+  </div>
+    
+    
 
-  <!-- <div id="preloader"></div> -->
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center main-bg-color"><i class="bi bi-arrow-up-short"></i></a>
-
-  <?php
-    $this->load->view('fe/packages/footer-js'); 
-  ?>
-
-  <script type="text/javascript">
-    new Swiper('.page-gallery-slider', {
-      speed: 400,
-      loop: true,
-      centeredSlides: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
-      },
-      slidesPerView: 'auto',
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true
-      },
-      breakpoints: {
-          slidesPerView: 1,
-          spaceBetween: 20
-      },
-      navigation: {
-      nextEl: '.swiper-next',
-      prevEl: '.swiper-prev'
-  },
-    });
-
-    const galleryLightbox = GLightbox({
-      selector: '.gallery-lightbox'
-    });
-  </script>
-</body>
+    <script src="<?=base_url();?>assetslogin/js/jquery-3.3.1.min.js"></script>
+    <script src="<?=base_url();?>assetslogin/js/popper.min.js"></script>
+    <script src="<?=base_url();?>assetslogin/js/bootstrap.min.js"></script>
+    <script src="<?=base_url();?>assetslogin/js/main.js"></script>
+    <script src="<?=base_url();?>assets/fe/js/front-end.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript">
+      <?php if ($this->session->flashdata('title') && $this->session->flashdata('message') && $this->session->flashdata('status')) { ?>
+          swal("<?=$this->session->flashdata('title')?>", "<?=$this->session->flashdata('message')?>", "<?=$this->session->flashdata('status')?>");
+        <?php } ?>
+    </script>
+  </body>
 </html>

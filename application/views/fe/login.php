@@ -1,150 +1,80 @@
 <!DOCTYPE html>
-<html lang="<?=$lang;?>">
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="<?=base_url();?>assets/fe/img/logo_rsud_cimacan.png" rel="icon">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
-<head>
-  <title><?=$seo_title;?></title>
-  <!-- SEO Section -->
-  <meta name="keywords" content="<?=$seo_keyword;?>">
-  <meta name="description" content="<?=$seo_desc;?>">
-  <link rel="canonical" href="<?=$seo_url;?>">
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="<?=$seo_keyword;?>" />
-  <meta property="og:image" content="" />
-  <meta property="og:description" content="<?=$seo_desc;?>" />
-  <meta property="og:url" content="<?=$seo_url;?>"/>
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="<?=$seo_keyword;?>" />
-  <meta name="twitter:image:src" content="" />
-  <meta name="twitter:description" content="<?=$seo_desc;?>"/>
-  <!-- End SEO -->
-  <?php 
-    $this->load->view('fe/packages/head');
-  ?>
-</head>
+    <link rel="stylesheet" href="<?=base_url();?>assetslogin/fonts/icomoon/style.css">
 
-<body>
+    <link rel="stylesheet" href="<?=base_url();?>assetslogin/css/owl.carousel.min.css">
 
-  <?php include("parts/top-bar.php") ?>
-  <header id="header" class="header-bar fixed-top">
-    <?php 
-      $this->load->view('fe/parts/header');
-    ?>
-  </header><!-- End Header -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="<?=base_url();?>assetslogin/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="<?=base_url();?>assetslogin/css/style.css">
 
-  <!-- ======= Hero Section ======= -->
-  <div class="space-xs visible-xs"></div>
-  <div class="container banner">
-    <!-- Breadcumb -->
-    <div class="breadcrumb-part">
-      <a href="javascript:void(0);">Home</a>
-      <span><i class="fa fa-angle-right"></i></span>
-      <a href="javascript:void(0);">Login</a>
-    </div>
-  </div>
-  <!-- End Hero -->
-  <main id="main">
-    <section id="content" class="main-page">
-      <div class="container" data-aos="fade-up">
+    <title>Login to RSD Cimacan</title>
+  </head>
+  <body>
+  
 
-        <div class="login-section">
-        <div class="login-card">
-          <h1><b>LOG IN</b></h1>
-          <div class="row-login">
-            <div class="col-login">
-              <div class="login-input-wrap">
-                <form action="" enctype="multipart/form-data" method="post" onsubmit="return validateForm();">
-                  <label for="email" class="label-input">E-mail</label>
-                  <br>
-                  <input type="text" name="email" class="form-control" placeholder="Alamat E-mail" autocomplete="off">
-                  <label for="password" class="label-input">Password</label>
-                  <br>
-                  <input type="password" name="password" class="form-control" placeholder="Password" autocomplete="off">
-                  <div class="forgot-pass-position">
-                    <a class="link" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modalforgetpassword">Lupa Password?</a>
-                  </div>
-                  <button type="submit" class="btn-login">Submit</button>
-                </form>
-              </div>
-            </div>
-            <div class="col-login">
-              <div class="socmed-wrap">
-                <p> <span id="socmed-txt">Login dengan Sosial Media</span><br><span class="red-color">*Under Maintanance</span></p>
-                <a href="javascript:void(0);" id="btn-facebook" class="btn-login-third">Facebook</a>
-                <a href="javascript:void(0);" id="btn-google" class="btn-login-third">Google+</a>
-              </div>
-            </div>
-          </div>
-          <p id="signup-txt">Belum memiliki akun?<span id="signuphere"><a class="link" href="<?=base_url().'register.html';?>"> Daftar disini</a></span></p>
-        </div>
-      </div>
-      </div>
+  <div class="d-lg-flex half">
+    <div class="bg order-1 order-md-2" style="background-image: url('<?=base_url();?>assetslogin/images/bg_1.jpg');"></div>
+    <div class="contents order-2 order-md-1">
 
       <div class="container">
+        <div class="row align-items-center justify-content-center">          
+          <div class="col-md-7">
+            <div class="home-icon"> <a href="<?=base_url();?>"> <i class="fa fa-home"> Beranda</i> </a></div>
+            <h3>Login to <strong>RSD Cimacan</strong></h3>
+            
+            <form action="#" method="post">
+              <div class="form-group first">
+                <label for="username">Email</label>
+                <input type="text" class="form-control" placeholder="your-email@gmail.com" id="username">
+              </div>
+              <div class="form-group last mb-3">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" placeholder="Your Password" id="password">
+              </div>
+              
+              <div class="d-flex mb-5 align-items-center">
+                <!-- <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label> -->
+                <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span> 
+              </div>
 
-      </div>
-    </section>
-  </main>
-  <!-- End #main -->
+              <input type="submit" value="Log In" class="btn btn-block btn-primary button-red">
 
-  <!-- Modal detail doctor -->
-  <div class="modal fade" id="modalforgetpassword" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-schedule">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Lupa Password</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            </form>
+            <p id="signup-txt">Belum memiliki akun?<span id="signuphere"><a class="link" href="<?=base_url();?>register.html"> Daftar disini</a></span></p>
+          </div>
         </div>
       </div>
     </div>
+
+    
   </div>
+    
+    
 
-  <?php 
-    $this->load->view('fe/parts/footer'); 
-  ?>
-
-  <!-- <div id="preloader"></div> -->
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center main-bg-color"><i class="bi bi-arrow-up-short"></i></a>
-
-  <?php
-    $this->load->view('fe/packages/footer-js'); 
-  ?>
-
-  <script type="text/javascript">
-    new Swiper('.page-gallery-slider', {
-      speed: 400,
-      loop: true,
-      centeredSlides: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
-      },
-      slidesPerView: 'auto',
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true
-      },
-      breakpoints: {
-          slidesPerView: 1,
-          spaceBetween: 20
-      },
-      navigation: {
-      nextEl: '.swiper-next',
-      prevEl: '.swiper-prev'
-  },
-    });
-
-    const galleryLightbox = GLightbox({
-      selector: '.gallery-lightbox'
-    });
-  </script>
-
-</body>
+    <script src="<?=base_url();?>assetslogin/js/jquery-3.3.1.min.js"></script>
+    <script src="<?=base_url();?>assetslogin/js/popper.min.js"></script>
+    <script src="<?=base_url();?>assetslogin/js/bootstrap.min.js"></script>
+    <script src="<?=base_url();?>assetslogin/js/main.js"></script>
+    <script src="<?=base_url();?>assets/fe/js/front-end.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript">
+      <?php if ($this->session->flashdata('title') && $this->session->flashdata('message') && $this->session->flashdata('status')) { ?>
+          swal("<?=$this->session->flashdata('title')?>", "<?=$this->session->flashdata('message')?>", "<?=$this->session->flashdata('status')?>");
+        <?php } ?>
+    </script>
+  </body>
 </html>
