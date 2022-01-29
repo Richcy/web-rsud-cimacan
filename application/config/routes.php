@@ -110,6 +110,7 @@ $route['login.html'] = 'login';
 $route['register.html'] = 'login/register';
 $route['actionregister'] = 'login/actionregister';
 $route['verify-user'] = 'login/verify';
+$route['forgot-password'] = 'login/forgot';
 
 // SEO Section
 $route['sitemap\.xml'] = 'Sitemapseo';

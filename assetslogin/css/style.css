@@ -205,6 +205,10 @@ h2 {
 .required-fill{
     color: #dc3545;
 }
+
+.position-forgotpass{
+  margin-top: 20%;
+}
 /*responsive*/
 
 @media(max-width: 860px){

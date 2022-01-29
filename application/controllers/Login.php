@@ -21,6 +21,9 @@ class Login extends CI_Controller {
 		$data['seo_desc'] = 'Masuk atau daftarkan diri anda pada kaman web Rumah Sakit Daerah Cimacan';
 		$data['seo_url'] = base_url().'login.html';
 
+		$data['captcha'] = $this->recaptcha->getWidget(); //menampilkan captcha
+		$data['script_captcha'] = $this->recaptcha->getScriptTag(); // javascript recaptch pada head
+
 		$this->load->view('fe/login', $data);
 	}
 
@@ -67,7 +70,7 @@ class Login extends CI_Controller {
 		    </div>
 		    <div class="mail-event" style ="text-align: center; font-size: 16px; width: 500px; max-width: 100%; margin: 0 auto 20px auto;">
 		        Please verify your account using this link to activate your account<br/>
-		        <a style="color:#98232b; font-weight:bold;" href="'.base_url().'verify-user?id='.$id.'&auth='.$auth_code.'">Verify</a>
+		        <a style="color:#98232b; font-weight:bold;" href="'.base_url().'verify-user?id='.$id.'&auth='.$auth_code.'">'.base_url().'verify-user?id='.$id.'&auth='.$auth_code.'</a>
 		    </div>
 		    <div class="mail-reply" style = "text-align: center;">
 		        This is an auto-generated email, please do not reply. Any replies to this email will be disregarded.
@@ -186,7 +189,7 @@ class Login extends CI_Controller {
 				    </div>
 				    <div class="mail-event" style ="text-align: center; font-size: 16px; width: 500px; max-width: 100%; margin: 0 auto 20px auto;">
 				        Please verify your account using this link to activate your account<br/>
-				        <a style="color:#98232b; font-weight:bold;" href="'.base_url().'verify-user?id='.$checkUserID[0]->id.'&auth='.$checkUserID[0]->auth_code.'">Verify</a>
+				        <a style="color:#98232b; font-weight:bold;" href="'.base_url().'verify-user?id='.$checkUserID[0]->id.'&auth='.$checkUserID[0]->auth_code.'">'.base_url().'verify-user?id='.$checkUserID[0]->id.'&auth='.$checkUserID[0]->auth_code.'</a>
 				    </div>
 				    <div class="mail-reply" style = "text-align: center;">
 				        This is an auto-generated email, please do not reply. Any replies to this email will be disregarded.
@@ -238,6 +241,84 @@ class Login extends CI_Controller {
 		// die();
 
 		$this->load->view('fe/verify', $data);
+	}
+
+	public function forgot()
+	{
+		$recaptcha = $this->input->post('g-recaptcha-response');
+		$response = $this->recaptcha->verifyResponse($recaptcha);
+
+		$email = $this->input->post('email');
+
+		if ($response['success'] == false) {
+			$this->session->set_flashdata('title','Failed');
+        	$this->session->set_flashdata('message','Invalid Captcha. Please Try again!');
+        	$this->session->set_flashdata('status','error');
+        	redirect('login.html');
+		}else{
+			$checkUser = $this->T_User->checkData($email);
+			if (empty($checkUser)) {
+				$this->session->set_flashdata('title','Failed');
+	        	$this->session->set_flashdata('message','Email not found. Please Try again!');
+	        	$this->session->set_flashdata('status','error');
+	        	redirect('login.html');
+			}else{
+				$isipesan='
+					<div class="box-mail" style="width: 767px; max-width: 100%; margin: 20px auto; padding: 0 15px;">
+				    <div class="logo-mail" style="text-align: center; margin-bottom:  20px;">
+				        <img src="'.base_url().'assets/fe/img/logo_rsud_cimacan.png" alt="img" style = "width: 100px; max-width: 100%;">
+				    </div>
+				    <div class="mail-event" style ="text-align: center; font-size: 16px; width: 500px; max-width: 100%; margin: 0 auto 20px auto;">
+				        Please using this link to reset your password<br/>
+				        <a style="color:#98232b; font-weight:bold;" href="'.base_url().'reset-password?id='.$checkUser[0]->id.'&auth='.$checkUser[0]->auth_code.'">'.base_url().'reset-password?id='.$checkUser[0]->id.'&auth='.$checkUser[0]->auth_code.'</a>
+				    </div>
+				    <div class="mail-reply" style = "text-align: center;">
+				        This is an auto-generated email, please do not reply. Any replies to this email will be disregarded.
+				    </div>
+				</div>
+				';
+
+				$config = [
+					'mailtype'	=>'html',
+					'charset'	=>'utf-8',
+					'protocol'	=>'smtp',
+					'smtp_host'	=>'mail.rsdcimacan.com',
+					'smtp_user'	=>'noreply@rsdcimacan.com',
+					'smtp_pass'	=>'EVi4a^ZS',
+					'smtp_crypto'=>'ssl',
+					'smtp_port'	=>'465',
+					'crlf'		=>"\r\n",
+					'newline'	=>"\r\n"
+				];
+
+				// Load library email dan konfigurasinya
+				$this->load->library('email', $config);
+
+				// Email dan nama pengirim
+				$this->email->from('noreply@rsdcimacan.com', 'noreply@rsdcimacan.com');
+
+				// Email penerima
+				$this->email->to($checkUser[0]->email,$checkUser[0]->name); // Ganti dengan email tujuan
+
+				// Subject email
+				$this->email->subject('Reset Password');
+
+				$this->email->message($isipesan);
+
+				// Kirim Email
+				if($this->email->send()){
+				   	$this->session->set_flashdata('title','Success');
+		        	$this->session->set_flashdata('message','Success send email forgot password. Please check your email!');
+		        	$this->session->set_flashdata('status','success');
+		        	redirect('login.html');
+				}else{	
+		        	$this->session->set_flashdata('title','Failed');
+		        	$this->session->set_flashdata('message','Failed send email forgot password. Please try again!');
+		        	$this->session->set_flashdata('status','error');
+		        	redirect('login.html');
+				}
+			}
+		}
 	}
 
 }

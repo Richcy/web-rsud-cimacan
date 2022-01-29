@@ -81,3 +81,35 @@ function registerValidation(){
 
   
 }
+
+function sendEmailForgot(){
+  var email = $('#emailForgot').val();
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+
+  if (email == '') {
+    $("#error-email-forgot-message").removeClass("hidden");
+    $("#error-emailformat-forgot-message").addClass("hidden");
+    $("#email").focus();
+    return false;
+  }else{
+    $("#error-email-forgot-message").addClass("hidden");
+    if(email.match(mailformat)){ 
+      $("#error-emailformat-forgot-message").addClass("hidden");
+    }else{
+      $("#error-emailformat-forgot-message").removeClass("hidden");
+      $("#email").focus();
+      return false;
+    }
+  }
+
+  if (grecaptcha.getResponse() == '') {
+    $("#error-captcha-message").removeClass("hidden");
+    $("#captcha").focus();
+    return false;
+  }else{
+    $("#error-captcha-message").addClass("hidden");
+  }
+
+  $( "#formForgot" ).submit();
+  
+}
