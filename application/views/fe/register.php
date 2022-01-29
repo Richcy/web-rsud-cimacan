@@ -7,16 +7,16 @@
     <link href="<?=base_url();?>assets/fe/img/logo_rsud_cimacan.png" rel="icon">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="<?=base_url();?>assetslogin/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="<?=base_url();?>assetslogin/fonts/icomoon/style.css?<?=mt_rand();?>">
 
-    <link rel="stylesheet" href="<?=base_url();?>assetslogin/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?=base_url();?>assetslogin/css/owl.carousel.min.css?<?=mt_rand();?>">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?=base_url();?>assetslogin/css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?=base_url();?>assetslogin/css/bootstrap.min.css?<?=mt_rand();?>">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css?<?=mt_rand();?>" rel="stylesheet">
     
     <!-- Style -->
-    <link rel="stylesheet" href="<?=base_url();?>assetslogin/css/style-register.css">
+    <link rel="stylesheet" href="<?=base_url();?>assetslogin/css/style-register.css?<?=mt_rand();?>">
     <?=$script_captcha; //penempatan javascript captcha?>
 
     <title>Register to RSD Cimacan</title>
