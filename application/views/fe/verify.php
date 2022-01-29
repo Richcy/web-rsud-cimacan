@@ -46,7 +46,7 @@
       <?php }else{ ?>
         swal({
             title : "Failed",
-            text : "Verify Account Failed. Please check your email",
+            text : "Verify Account Failed. Please check your email or register new account",
             icon: "error",
             button: "Ok"
           }).then((isconfirm) => {

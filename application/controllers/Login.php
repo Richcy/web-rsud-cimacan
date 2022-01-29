@@ -172,6 +172,64 @@ class Login extends CI_Controller {
 			}else{
 				$verify = false;
 			}			
+		}else{
+			$checkUserID = $this->T_User->checkUserID($id);
+			if (!empty($checkUserID)) {
+				// Isi email
+				$isipesan='
+					<div class="box-mail" style="width: 767px; max-width: 100%; margin: 20px auto; padding: 0 15px;">
+				    <div class="logo-mail" style="text-align: center; margin-bottom:  20px;">
+				        <img src="'.base_url().'assets/fe/img/logo_rsud_cimacan.png" alt="img" style = "width: 100px; max-width: 100%;">
+				    </div>
+				    <div class="mail-desc" style = "text-align: center; font-size: 16px; width: 500px; max-width: 100%; margin: 0 auto 20px auto;">
+				        Selamat pembuatan akun RSD Cimacan dengan nama '.$checkUserID[0]->name.' berhasil. Silahkan verifikasi akun terlebih dahulu untuk melanjutkan proses.
+				    </div>
+				    <div class="mail-event" style ="text-align: center; font-size: 16px; width: 500px; max-width: 100%; margin: 0 auto 20px auto;">
+				        Please verify your account using this link to activate your account<br/>
+				        <a style="color:#98232b; font-weight:bold;" href="'.base_url().'verify-user?id='.$checkUserID[0]->id.'&auth='.$checkUserID[0]->auth_code.'">Verify</a>
+				    </div>
+				    <div class="mail-reply" style = "text-align: center;">
+				        This is an auto-generated email, please do not reply. Any replies to this email will be disregarded.
+				    </div>
+				</div>
+				';
+
+				$config = [
+					'mailtype'	=>'html',
+					'charset'	=>'utf-8',
+					'protocol'	=>'smtp',
+					'smtp_host'	=>'mail.rsdcimacan.com',
+					'smtp_user'	=>'noreply@rsdcimacan.com',
+					'smtp_pass'	=>'EVi4a^ZS',
+					'smtp_crypto'=>'ssl',
+					'smtp_port'	=>'465',
+					'crlf'		=>"\r\n",
+					'newline'	=>"\r\n"
+				];
+
+				// Load library email dan konfigurasinya
+				$this->load->library('email', $config);
+
+				// Email dan nama pengirim
+				$this->email->from('noreply@rsdcimacan.com', 'noreply@rsdcimacan.com');
+
+				// Email penerima
+				$this->email->to($checkUserID[0]->email,$checkUserID[0]->name); // Ganti dengan email tujuan
+
+				// Subject email
+				$this->email->subject('Verify New Account');
+
+				$this->email->message($isipesan);
+
+				// Kirim Email
+				if($this->email->send()){
+				   	$verify = false;
+				}else{	
+		        	$verify = false;
+				}
+			}else{
+				$verify = false;
+			}
 		}
 
 		$data['verify'] = $verify;

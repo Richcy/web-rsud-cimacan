@@ -28,6 +28,15 @@ class T_User extends CI_Model {
     return $query->result();
   }
 
+  public function checkUserID($id)
+  {
+    $query = $this->db->select('*');
+    $query = $this->db->where('id', $id);
+    $query = $query->limit(1);
+    $query = $this->db->get('t_user');
+    return $query->result();
+  }
+
   public function checkAccount($id, $auth_code)
   {
     $query = $this->db->select('*');
