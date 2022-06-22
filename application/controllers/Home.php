@@ -20,9 +20,9 @@ class Home extends CI_Controller {
 		$data['cur_page'] = 'home';
 		$data['cur_parent_page'] = '';
 
-		$data['seo_title'] = "RSD Cimacan | Beranda";
-		$data['seo_keyword'] = "Beranda, rumah sakit, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan";
-		$data['seo_desc'] = 'Beranda RSD Cimacan berisi informasi singkat tentang rumah sakit yang disuguhkan kepada user.';
+		$data['seo_title'] = "RSUD Cimacan | Beranda";
+		$data['seo_keyword'] = "Beranda, Halaman Utama, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan";
+		$data['seo_desc'] = 'Rumah Sakit Umum Daerah Cimacan pada awalnya adalah Puskesmas Pacet (Cimacan) yang sudah berdiri sejak tahun 1953, kemudian pada tahun 1981 statusnya meningkat menjadi Puskesmas DTP dan berubah status menjadi Rumah Sakit dengan ditetapkannya Surat Keputusan Bupati Cianjur atas nama Pemerintah Daerah Kabupaten Cianjur Nomor 19 Tahu…';
 		$data['seo_url'] = base_url();
 
 		$lang = 'id';

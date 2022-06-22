@@ -73,7 +73,7 @@ class Article extends CI_Controller {
 	        	'description' => $description,
 	        	'create_date' => date('Y-m-d H:i:s')
 	        );
-	        $insert = $this->T_Article->insert($datas,'T_Article');
+	        $insert = $this->T_Article->insert($datas,'t_article');
 	        if ($insert) {
 	        	$this->session->set_flashdata('title','Success');
 	        	$this->session->set_flashdata('message','Insert data article');
@@ -108,7 +108,7 @@ class Article extends CI_Controller {
 		        	'description' => $description,
 		        	'create_date' => date('Y-m-d H:i:s')
 		        );
-		        $insert = $this->T_Article->insert($datas,'T_Article');
+		        $insert = $this->T_Article->insert($datas,'t_article');
 		        if ($insert) {
 		        	$this->session->set_flashdata('title','Success');
 		        	$this->session->set_flashdata('message','Insert data article');

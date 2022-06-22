@@ -61,7 +61,7 @@ class T_Article extends CI_Model {
   public function getAll($category, $s)
   {
     $query = $this->db->select('article.id, article.title, article.description, article.author, article.category, article.create_date, article.update_date, article.img, category.id as category_id, category.name as category_name');
-    $query = $this->db->order_by('article.create_date', 'ASC');
+    $query = $this->db->order_by('article.create_date', 'DESC');
     $query = $this->db->join('t_article_category as category', 'category.id = article.category', 'left');
     $query =  $this->db->where('status', 'publish');
     if (!empty($category)) {
@@ -78,7 +78,7 @@ class T_Article extends CI_Model {
   {
     $limitbefore = $page <= 1 ? 0 : ($page-1) * $this->itemPerPage;
     $query = $this->db->select('article.id, article.title, article.description, article.author, article.category, article.create_date, article.update_date, article.img, category.id as category_id, category.name as category_name');
-    $query = $this->db->order_by('article.create_date', 'ASC');
+    $query = $this->db->order_by('article.create_date', 'DESC');
     $query = $this->db->join('t_article_category as category', 'category.id = article.category', 'left');
     $query =  $this->db->where('status', 'publish');
     if (!empty($category)) {

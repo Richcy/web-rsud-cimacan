@@ -40,7 +40,9 @@
       <div class="carousel-inner" role="listbox">
 
         <?php $no = 0 ; foreach ($datas_slide as $data_slide) { $no++;?>
-        <div class="carousel-item <?=$no == 1 ? 'active' : '';?>" style="background-image: url(<?php echo base_url().'assets/uploads/'.$data_slide->img;?>)">
+        <!--<div class="carousel-item <?=$no == 1 ? 'active' : '';?>" style="background-image: url(<?php echo base_url().'assets/uploads/'.$data_slide->img;?>)">-->
+        <div class="carousel-item <?=$no == 1 ? 'active' : '';?>" style="background-image: url()">
+          <img src="<?php echo base_url().'assets/uploads/'.$data_slide->img;?>" class="img-carousel">
           <?php if ($data_slide->title != '') {?>
           <div class="container">
             <h2><?=$data_slide->title?></h2>

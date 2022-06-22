@@ -7631,6 +7631,7 @@ a:hover > div > div > div > div > div > .title-color{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    height: 330px;
 }
 .listboxd-content {
     padding: 15px;

@@ -114,7 +114,7 @@ $route['forgot-password'] = 'login/forgot';
 
 // SEO Section
 $route['sitemap\.xml'] = 'Sitemapseo';
-$route['googlee2acf700a897067a.html'] = 'searchconsole';
+$route['google7e18bca591226ab8.html'] = 'searchconsole';
 $route['robots.txt'] = 'robots';
 
 // Admin Section

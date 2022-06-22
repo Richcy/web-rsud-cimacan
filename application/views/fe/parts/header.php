@@ -1,3 +1,8 @@
+ <?php
+  $id_user = !empty($this->session->userdata('id_user')) ? $this->session->userdata('id_user') : '' ;
+  $name_user = $this->session->userdata('user_name') ? $this->session->userdata('user_name') : '' ;
+  $email_user = $this->session->userdata('email_user') ? $this->session->userdata('email_user') : '';
+?>
 <div class="container d-flex align-items-center">
 
       <a href="<?=base_url();?>" class="logo me-auto"><img class="logo-header hidden-md hidden-lg" src="<?=base_url();?>assets/fe/img/logo_rsud_cimacan.png" alt=""></a>
@@ -68,6 +73,8 @@
           <li><a class="nav-link <?=$cur_page=='contact' ? 'active' : '';?>" href="<?=base_url('contact.html')?>">Kontak</a></li>
           <?php } ?>
           <li><a class="nav-link <?=$cur_page=='career' ? 'active' : '';?>" href="<?=base_url('career/')?>">Karir</a></li>
+
+          <!-- Menu AKun -->
         </ul>
         <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
       </nav><!-- .navbar -->

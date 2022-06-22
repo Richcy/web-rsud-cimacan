@@ -8,13 +8,13 @@
   <meta name="description" content="<?=$seo_desc;?>">
   <link rel="canonical" href="<?=$seo_url;?>">
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="<?=$seo_keyword;?>" />
-  <meta property="og:image" content="" />
+  <meta property="og:title" content="<?=$seo_title;?>" />
+  <meta property="og:image" content="<?=$datas[0]->img ? base_url().'assets/uploads/'.$datas[0]->img : base_url().'assets/uploads/default-image.jpg';?>" />
   <meta property="og:description" content="<?=$seo_desc;?>" />
   <meta property="og:url" content="<?=$seo_url;?>"/>
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="<?=$seo_keyword;?>" />
-  <meta name="twitter:image:src" content="" />
+  <meta name="twitter:title" content="<?=$seo_title;?>" />
+  <meta name="twitter:image:src" content="<?=$datas[0]->img ? base_url().'assets/uploads/'.$datas[0]->img : base_url().'assets/uploads/default-image.jpg';?>" />
   <meta name="twitter:description" content="<?=$seo_desc;?>"/>
   <!-- End SEO -->
   <?php 
@@ -108,6 +108,12 @@
                       </div>
                     </div>
                   </div>
+                  <?php if ($datas[0]->url != '') {?>
+                  <div class="datetime-event">Apply</div>
+                  <div class="button-apply">
+                    <a href="<?=$datas[0]->url;?>" target="_blank">Click Here</a>
+                  </div>
+                  <?php } ?>
               </div>
             </div>
           </div>

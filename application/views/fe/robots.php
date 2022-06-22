@@ -1,4 +1,6 @@
-<pre>User-agent: *
+<pre>
+User-agent: *
 Disallow: /api/
 
-Sitemap: https://www.rsdcimacan.com/sitemap.xml</pre>
+Sitemap: https://www.rsudcimacan.com/sitemap.xml
+</pre>

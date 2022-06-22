@@ -31,7 +31,7 @@ class Article_category extends CI_Controller {
         	'create_date' => date('Y-m-d H:i:s')
         );
 
-        $insert = $this->T_Article_Category->insert($datas,'T_Article_Category');
+        $insert = $this->T_Article_Category->insert($datas,'t_article_category');
         if ($insert) {
         	$this->session->set_flashdata('title','Success');
         	$this->session->set_flashdata('message','Insert data article category');

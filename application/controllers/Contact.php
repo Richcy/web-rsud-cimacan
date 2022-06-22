@@ -15,8 +15,8 @@ class Contact extends CI_Controller {
 		$data['cur_parent_page'] = '';
 		$data['lang'] = 'id';
 
-		$data['seo_title'] = "RSD Cimacan | Kontak";
-		$data['seo_keyword'] = "Kontak, Alamat, Handphone, Email, rumah sakit, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan";
+		$data['seo_title'] = "Kontak | RSUD Cimacan";
+		$data['seo_keyword'] = "Kontak, Contact, Alamat, Handphone, Email, rumah sakit umum daerah cimacan, rsud cimacan";
 		$data['seo_desc'] = 'Kontak lengkap dengan alamat, no. Hp dan e-mail Rumah Sakit Daerah Cimacan';
 		$data['seo_url'] = base_url().'contact/';
 

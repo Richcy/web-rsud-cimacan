@@ -47,6 +47,11 @@
                       <textarea name="desc" id="desc" class="tinymce"><?=$datas[0]->description;?></textarea>
                     </div>
 
+                    <div class="mb-3" style="margin-top: 2%;">
+                      <label class="form-label">URL</label>
+                      <input type="text" class="form-control input-length" id="url" name="url" value="<?=$datas[0]->url;?>">
+                    </div>
+
                     <div>
                       <label for="exampleInputEmail1" class="form-label">Career's Image <span class="required-fill">*</span></label>
                       <div>
@@ -57,7 +62,7 @@
                       
                     </div>
                     <div>
-                      <input type="file" class="form-control input-length" id="career_img" name="career_img" style="display: inline;" onchange="previewImage(Career)" accept="image/*">
+                      <input type="file" class="form-control input-length" id="career_img" name="career_img" style="display: inline;" onchange="previewImage(event)" accept="image/*">
                       <div id="" class="form-text">Format: jpg, jpeg, png</div>
                       <div class="error-message hidden" id="error-Career_img-message">Please Fill this input section!</div>
                     </div>

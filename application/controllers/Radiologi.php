@@ -16,8 +16,8 @@ class Radiologi extends CI_Controller {
 		$data['cur_parent_page'] = 'layanan';
 		$data['lang'] = 'id';
 
-		$data['seo_title'] = "RSD Cimacan | Radiologi";
-		$data['seo_keyword'] = "Radiologi, rumah sakit, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan";
+		$data['seo_title'] = "RSUD Cimacan | Radiologi";
+		$data['seo_keyword'] = "Radiolog Rumah Sakit, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan";
 		$data['seo_desc'] = 'Layanan radiologi merupakan unit penunjang yang ada di RSD Cimacan yang dapat memberikan pelayana pemeriksaan secara profesional dengan hasil beru...';
 		$data['seo_url'] = base_url().'radiology.html';
 

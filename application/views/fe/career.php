@@ -8,12 +8,12 @@
   <meta name="description" content="<?=$seo_desc;?>">
   <link rel="canonical" href="<?=$seo_url;?>">
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="<?=$seo_keyword;?>" />
+  <meta property="og:title" content="<?=$seo_title;?>" />
   <meta property="og:image" content="" />
   <meta property="og:description" content="<?=$seo_desc;?>" />
   <meta property="og:url" content="<?=$seo_url;?>"/>
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="<?=$seo_keyword;?>" />
+  <meta name="twitter:title" content="<?=$seo_title;?>" />
   <meta name="twitter:image:src" content="" />
   <meta name="twitter:description" content="<?=$seo_desc;?>"/>
   <!-- End SEO -->
@@ -106,7 +106,7 @@
                       <div class="listboxd-date"><?=date('d M Y', strtotime($data->start_date));?> - <?=date('d M Y', strtotime($data->end_date));?></div>
                     </div>
                   </div> -->
-                  <a href="<?=base_url().'career-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-title">
+                  <a href="<?=base_url().'career-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-title min-heigt-title">
                     <?=$data->title;?>
                   </a>
                   <div class="listboxd-desc" id="desc_card">

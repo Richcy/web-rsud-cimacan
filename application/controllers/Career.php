@@ -23,8 +23,8 @@ class Career extends CI_Controller {
 		$data['s'] = $s;
 		$data['lang'] = 'id';
 		
-		$data['seo_title'] = "RSD Cimacan | Karir";
-		$data['seo_keyword'] = "karir, lowongan, kerja, recruitment, rumah sakit, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan";
+		$data['seo_title'] = "RSUD Cimacan | Karir";
+		$data['seo_keyword'] = "karir, lowongan, kerja, recruitment rumah sakit umum daerah cimacan, rsud cimacan";
 		$data['seo_desc'] = 'Karir atau lowongan pekerjaan yang dibutuhkan oleh Rumah Sakit Daerah Cimacan';
 		$data['seo_url'] = base_url().'career/';
 
@@ -48,8 +48,8 @@ class Career extends CI_Controller {
 		$data['s'] = $s;
 		$data['lang'] = 'id';
 
-		$data['seo_title'] = "RSD Cimacan | Karir";
-		$data['seo_keyword'] = "karir, lowongan, kerja, recruitment, rumah sakit, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan";
+		$data['seo_title'] = "RSUD Cimacan | Karir";
+		$data['seo_keyword'] = "karir, lowongan, kerja, recruitment rumah sakit umum daerah cimacan, rsud cimacan";
 		$data['seo_desc'] = 'Karir atau lowongan pekerjaan yang dibutuhkan oleh Rumah Sakit Daerah Cimacan pada halaman ke-'.$page;
 		$data['seo_url'] = base_url().'career/'.$page.'/';
 
@@ -67,8 +67,8 @@ class Career extends CI_Controller {
 		$data['lang'] = 'id';
 		$datas = $this->T_Career->getDetail($id);
 
-		$data['seo_title'] = substr($datas[0]->title,0, 30).' | RSD Cimacan';
-		$data['seo_keyword'] = strtolower($datas[0]->title).', rumah sakit, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan';
+		$data['seo_title'] = substr($datas[0]->title,0, 30).' | RSUD Cimacan';
+		$data['seo_keyword'] = strtolower($datas[0]->title).', rumah sakit umum daerah cimacan, rsud cimacan';
 		$data['seo_desc'] = substr($datas[0]->description,0, 147).'...';
 		$lowerText = strtolower($datas[0]->title);
         $change_url = str_replace(' ', '-', $lowerText);

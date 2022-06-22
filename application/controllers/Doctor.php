@@ -17,8 +17,8 @@ class Doctor extends CI_Controller {
 		$data['cur_page'] = 'doctor';
 		$data['cur_parent_page'] = '';
 
-		$data['seo_title'] = "RSD Cimacan | Dokter";
-		$data['seo_keyword'] = "Dokter, rumah sakit, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan";
+		$data['seo_title'] = "RSUD Cimacan | Dokter";
+		$data['seo_keyword'] = "Dokter, rumah sakit umum daerah cimacan, rsud cimacan";
 		$data['seo_desc'] = 'Daftar dokter spesialis Rumah Sakit Daerah Cimacan';
 		$data['seo_url'] = base_url().'doctor/';
 
@@ -55,8 +55,8 @@ class Doctor extends CI_Controller {
 		$data['s'] = $s;
 		$data['lang'] = 'id';
 
-		$data['seo_title'] = "RSD Cimacan | Dokter";
-		$data['seo_keyword'] = "Dokter, rumah sakit, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan";
+		$data['seo_title'] = "RSUD Cimacan | Dokter";
+		$data['seo_keyword'] = "Dokter, rumah sakit umum daerah cimacan, rsud cimacan";
 		$data['seo_desc'] = 'Daftar dokter spesialis Rumah Sakit Daerah Cimacan pada halaman ke-'.$page;
 		$data['seo_url'] = base_url().'doctor/'.$page.'/';
 
@@ -74,8 +74,8 @@ class Doctor extends CI_Controller {
 		$data['cur_parent_page'] = '';
 		$data['lang'] = 'id';
 		$datas = $this->T_Doctor->getDetail($id);
-		$data['seo_title'] = strtoupper($datas[0]->name).' | RSD Cimacan';
-		$data['seo_keyword'] = $datas[0]->name.", rumah sakit, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan";
+		$data['seo_title'] = strtoupper($datas[0]->name).' | RSUD Cimacan';
+		$data['seo_keyword'] = $datas[0]->name.", rumah sakit umum daerah cimacan, rsud cimacan";
 		$data['seo_desc'] = $datas[0]->name.' dengan spesialisasi '.$datas[0]->field.' yang memiliki tanggung jawab di '.$datas[0]->office.' Rumah Sakit Daerah Cimacan';
 
 		 $lower_name = strtolower($datas[0]->name);

@@ -17,8 +17,8 @@ class Profil extends CI_Controller {
 		$lang = 'id';
 		$data['lang'] = $lang;
 		$datas = $this->M_About_Company->getAll($lang);
-		$data['seo_title'] = "RSD Cimacan | Profil";
-		$data['seo_keyword'] = "Profl, rumah sakit, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan";
+		$data['seo_title'] = "RSUD Cimacan | Profil";
+		$data['seo_keyword'] = "Profl Rumah Sakit, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan";
 		$data['seo_desc'] = $datas[0]->description ? substr($datas[0]->description, 0, 150).'...' : '';
 		$data['seo_url'] = base_url().'profile.html';
 		$data['datas'] = $datas;

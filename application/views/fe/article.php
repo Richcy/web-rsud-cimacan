@@ -8,12 +8,12 @@
   <meta name="description" content="<?=$seo_desc;?>">
   <link rel="canonical" href="<?=$seo_url;?>">
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="<?=$seo_keyword;?>" />
+  <meta property="og:title" content="<?=$seo_title;?>" />
   <meta property="og:image" content="" />
   <meta property="og:description" content="<?=$seo_desc;?>" />
   <meta property="og:url" content="<?=$seo_url;?>"/>
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="<?=$seo_keyword;?>" />
+  <meta name="twitter:title" content="<?=$seo_title;?>" />
   <meta name="twitter:image:src" content="" />
   <meta name="twitter:description" content="<?=$seo_desc;?>"/>
   <!-- End SEO -->
@@ -115,8 +115,9 @@
             <div class="col-listbox">
               <div class="listboxd-wrap">
                 <?php
-                  $lowerText = strtolower($data->title); 
-                  $change_url = str_replace(' ', '-', $lowerText); 
+                  $lowerText = strtolower($data->title);
+                  $deleteUnique = str_replace('?', '', $lowerText);
+                  $change_url = str_replace(' ', '-', $deleteUnique); 
                 ?>
                 <a href="<?=base_url().'article-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-img" style="background-image: url('<?=$data->img ? base_url().'assets/uploads/'.$data->img : base_url().'assets/uploads/default-image.jpg';?>')">
                   <span style=" opacity: 0;">
@@ -124,12 +125,8 @@
                   </span>
                 </a>
                 <div class="listboxd-content">
-                  <!-- <div class="row down1" style="height:50px;">
-                    <div class="col-xs-8" style="padding-left:0;">
-                      <div class="listboxd-date"><?=date('d M Y', strtotime($data->start_date));?> - <?=date('d M Y', strtotime($data->end_date));?></div>
-                    </div>
-                  </div> -->
-                  <a href="<?=base_url().'article-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-title">
+                  
+                  <a href="<?=base_url().'article-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-title min-heigt-title">
                     <?=$data->title;?>
                   </a>
                   <div class="author">

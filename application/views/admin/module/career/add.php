@@ -47,6 +47,11 @@
                       <textarea name="desc" id="desc" class="tinymce"></textarea>
                     </div>
 
+                    <div class="mb-3" style="margin-top: 2%;">
+                      <label class="form-label">URL</label>
+                      <input type="text" class="form-control input-length" id="url" name="url">
+                    </div>
+
                     <div>
                       <label for="exampleInputEmail1" class="form-label">Career's Image <span class="required-fill">*</span></label>
                       <div>

@@ -40,7 +40,7 @@
         <a href="<?=base_url('radiology.html')?>">
           <div class="icon"><i class="fas fa-medkit"></i></div>
         </a>
-        <h4 class="title"><a href="<?=base_url('radiology.html')?>">Radiology</a></h4>
+        <h4 class="title"><a href="<?=base_url('radiology.html')?>">Radiologi</a></h4>
       </div>
     </div>
 

@@ -13,12 +13,12 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="footer-info">
-              <h3>RSD Cimacan</h3>
+              <h3>RSUD Cimacan</h3>
               <p>
                 Jl. Raya Cimacan No.17A, Palasari, Kec. Cipanas, Kabupaten Cianjur, Jawa Barat 43253
                 <br><br>
                 <strong>Phone:</strong> (+62)8112031117<br>
-                <strong>Email:</strong> info@rsdcimacan.com<br>
+                <strong>Email:</strong> rsud.cimacann@gmail.com<br>
               </p>
               <div class="social-links mt-3">
                 <a href="https://wa.me/628112031117?text=Halo%20Admin%20.%20.%20." target="_blank" class="whatapp"><i class="bx bxl-whatsapp"></i></a>
@@ -64,6 +64,7 @@
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="https://www.kemkes.go.id/" target="_blank">Kemenkes</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="https://cianjurkab.go.id/" target="_blank">PEMDA Cianjur</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://dinkes.cianjurkab.go.id/" target="_blank">DINKES Cianjur</a></li>
             </ul>
           </div>
 
@@ -82,7 +83,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>RSD Cimacan</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>RSUD Cimacan</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->

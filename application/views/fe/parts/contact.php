@@ -28,7 +28,7 @@
                 <div class="info-box mt-4">
                   <i class="bx bx-envelope"></i>
                   <h3>Email Kami</h3>
-                  <p>info@rsdcimacan.com</p>
+                  <p>rsud.cimacann@gmail.com</p>
                 </div>
               </div>
               <div class="col-md-6">

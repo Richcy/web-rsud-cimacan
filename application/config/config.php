@@ -23,8 +23,9 @@ date_default_timezone_set('Asia/Jakarta');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://www.localhost/rsud-cimacan-web/';
+// $config['base_url'] = 'https://rsudcimacan.cianjurkab.go.id/';
 // $config['base_url'] = 'http://192.168.43.197/rsud-cimacan-web/';
+$config['base_url'] = 'http://localhost/rsud-cimacan-web/';
 
 /*
 |--------------------------------------------------------------------------
