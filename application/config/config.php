@@ -24,7 +24,7 @@ date_default_timezone_set('Asia/Jakarta');
 |
 */
 // $config['base_url'] = 'https://rsudcimacan.cianjurkab.go.id/';
-// $config['base_url'] = 'http://192.168.43.197/rsud-cimacan-web/';
+// $config['base_url'] = 'http:// 192.168.1.15/rsud-cimacan-web/';
 $config['base_url'] = 'http://localhost/rsud-cimacan-web/';
 
 /*
