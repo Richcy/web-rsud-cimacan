@@ -21,7 +21,9 @@ class Laboratorium extends CI_Controller {
 		$data['seo_url'] = base_url().'laboratorium.html';
 
 		$data['datas'] = $this->M_Lab->show_lab();
+		$datas = $data['datas'];
 		$data['galleries'] = $this->M_Lab->show_gallery('laboratorium');
+		$data['sub_menus'] = $this->M_Lab->show_sub_menu($datas[0]->id);
 		$this->load->view('fe/laboratorium', $data);
 	}
 

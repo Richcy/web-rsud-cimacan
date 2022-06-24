@@ -637,6 +637,7 @@ a.button-collapse:focus{
 
 .content-collapse{
     padding-left: 38px;
+    overflow: auto;
 }
 
 .collaps-menu{
