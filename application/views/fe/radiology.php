@@ -74,6 +74,24 @@
                 <p>
                   <?=$datas[0]->description;?>
                 </p>
+                <?php if (!empty($sub_menus)) {?>
+                <div class="collapsible-section">
+                  <?php $num = 0; foreach ($sub_menus as $data_sub) { $num++;?>
+                  <div class="collaps-menu">
+                    <!-- Button Collaps -->
+                    <a class="btn btn-primary button-collapse main-bg-color main-border-color collapsed" data-bs-toggle="collapse" href="#collapse-<?=$num;?>" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    </a><span class="label-collapse"><?=$data_sub->title;?></span>
+                    <!-- Content collapse -->
+                    <div class="collapse" id="collapse-<?=$num;?>">
+                      <div class="card-body content-collapse">
+                        <?=$data_sub->description;?>
+                      </div>
+                    </div>
+                    <!-- End Content -->
+                  </div>
+                  <?php } ?>
+                </div>
+                <?php } ?>
               </div>
               <?php if (!empty($galleries)) {?>
               <div class="col-md-5">

@@ -22,6 +22,8 @@ class Radiologi extends CI_Controller {
 		$data['seo_url'] = base_url().'radiology.html';
 
 		$data['datas'] = $this->M_Radiology->show_radiology();
+		$datas = $data['datas'];
+		$data['sub_menus'] = $this->M_Radiology->show_sub_menu($datas[0]->id);
 		$data['galleries'] = $this->M_Radiology->show_gallery('radiology');
 		$this->load->view('fe/radiology', $data);
 	}

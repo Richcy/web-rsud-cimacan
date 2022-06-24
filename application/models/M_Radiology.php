@@ -70,4 +70,36 @@ class M_Radiology extends CI_Model {
     return $query;
   }
 
+  public function show_sub_menu($id)
+  {
+    $query = $this->db->select('*');
+    $query = $this->db->where('service_id', $id);
+    $query = $this->db->order_by('title', 'ASC');
+    $query = $this->db->get('t_sub_service');
+    return $query->result();
+  }
+
+  public function detail_sub_menu($id)
+  {
+    $query = $this->db->select('*');
+    $query = $this->db->where('id', $id);
+    $query = $query->limit(1);
+    $query = $this->db->get('t_sub_service');
+    return $query->result();
+  }
+
+  public function update_sub_menu($data, $id)
+  {
+    $query =  $this->db->where('id', $id);
+    $query =  $this->db->update('t_sub_service', $data);
+    return $query;
+  }
+
+  public function delete_sub_menu($id)
+  {
+    $query =  $this->db->where('id', $id);
+    $query =  $this->db->delete('t_sub_service');
+    return $query;
+  }
+
 }
