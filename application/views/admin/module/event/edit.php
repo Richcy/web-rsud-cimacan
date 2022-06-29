@@ -42,6 +42,11 @@
                     </div>
 
                     <div class="mb-3" style="margin-top: 2%;">
+                      <label class="form-label">Sub Description</label>
+                      <textarea name="sub_desc" class="form-control" maxlength="200"><?=$datas[0]->sub_desc;?></textarea>
+                    </div>
+
+                    <div class="mb-3" style="margin-top: 2%;">
                       <label class="form-label">Description <span class="required-fill">*</span> </label>
                       <div class="error-message hidden" id="error-desc-message">Please Fill this input section!</div>
                       <textarea name="desc" id="desc" class="tinymce"><?=$datas[0]->description;?></textarea>

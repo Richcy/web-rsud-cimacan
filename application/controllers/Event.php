@@ -76,7 +76,7 @@ class Event extends CI_Controller {
 
 		$data['seo_title'] = substr(strtoupper($datas[0]->title),0, 30).' | RSUD Cimacan';
 		$data['seo_keyword'] = strtolower($datas[0]->title).', rumah sakit umum daerah cimacan, rsud cimacan';
-		$data['seo_desc'] = substr($datas[0]->description,0, 147).'...';
+		$data['seo_desc'] = substr($datas[0]->sub_desc,0, 150).'...';
 
 		$lowerText = strtolower($datas[0]->title); 
 		$change_url = str_replace(' ', '-', $lowerText);

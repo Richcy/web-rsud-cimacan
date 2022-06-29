@@ -47,6 +47,7 @@ class Event extends CI_Controller {
 		// $id = random_string('alnum',24);
 		$title = $this->input->post('title') ? $this->input->post('title') : '';
 		$category = $this->input->post('category') ? $this->input->post('category') : '';
+		$sub_desc = $this->input->post('sub_desc') ? $this->input->post('sub_desc') : '';
 		$url = $this->input->post('url') ? $this->input->post('url') : '';
 		$description = $this->input->post('desc') ? str_replace("'", "’", $this->input->post('desc')) : '';
 		$start_date = $this->input->post('start_date') ? $this->input->post('start_date'): '';
@@ -75,6 +76,7 @@ class Event extends CI_Controller {
 	        	'title' => $title,
 	        	'category' => $category,
 	        	'url' => $url,
+	        	'sub_desc' => $sub_desc,
 	        	'description' => $description,
 	        	'start_date' => $start_date,
 	        	'end_date' => $end_date,
@@ -145,6 +147,7 @@ class Event extends CI_Controller {
 		$title = $this->input->post('title') ? $this->input->post('title') : '';
 		$category = $this->input->post('category') ? $this->input->post('category') : '';
 		$url = $this->input->post('url') ? $this->input->post('url') : '';
+		$sub_desc = $this->input->post('sub_desc') ? $this->input->post('sub_desc') : '';
 		$description = $this->input->post('desc') ? str_replace("'", "’", $this->input->post('desc')) : '';
 		$start_date = $this->input->post('start_date') ? $this->input->post('start_date'): '';
 		$end_date = $this->input->post('end_date') ? $this->input->post('end_date'): '';
@@ -169,6 +172,7 @@ class Event extends CI_Controller {
 	        	'title' => $title,
 	        	'category' => $category,
 	        	'url' => $url,
+	        	'sub_desc' => $sub_desc,
 	        	'description' => $description,
 	        	'start_date' => $start_date,
 	        	'end_date' => $end_date,
@@ -211,6 +215,7 @@ class Event extends CI_Controller {
 		        	'title' => $title,
 		        	'category' => $category,
 		        	'url' => $url,
+		        	'sub_desc' => $sub_desc,
 		        	'description' => $description,
 		        	'start_date' => $start_date,
 		        	'end_date' => $end_date,

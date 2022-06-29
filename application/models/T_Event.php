@@ -6,7 +6,7 @@ class T_Event extends CI_Model {
 
 	public function show_all()
 	{
-    $query = $this->db->select('event.id, event.title, event.description, event.category, event.location, event.url, event.start_date, event.end_date, event.start_time, event.end_time, event.img, category.id as category_id, category.name as category_name');
+    $query = $this->db->select('event.id, event.title, event.description, event.sub_desc, event.category, event.location, event.url, event.start_date, event.end_date, event.start_time, event.end_time, event.img, category.id as category_id, category.name as category_name');
     $query = $this->db->order_by('event.create_date', 'DESC');
     $query = $this->db->join('t_event_category as category', 'category.id = event.category', 'left');
 		$query = $this->db->get('t_event as event');
@@ -77,7 +77,7 @@ class T_Event extends CI_Model {
   public function getPage($page, $category, $s)
   {
     $limitbefore = $page <= 1 ? 0 : ($page-1) * $this->itemPerPage;
-    $query = $this->db->select('event.id, event.title, event.description, event.category, event.location, event.url, event.start_date, event.end_date, event.start_time, event.end_time, event.img, category.id as category_id, category.name as category_name');
+    $query = $this->db->select('event.id, event.title, event.description, event.sub_desc, event.category, event.location, event.url, event.start_date, event.end_date, event.start_time, event.end_time, event.img, category.id as category_id, category.name as category_name');
     $query = $this->db->order_by('event.start_date', 'DESC');
     $query = $this->db->join('t_event_category as category', 'category.id = event.category', 'left');
     $query =  $this->db->where('status', 'publish');
@@ -108,7 +108,7 @@ class T_Event extends CI_Model {
 
   public function getDetail($id)
   {
-    $query = $this->db->select('event.id, event.title, event.description, event.category, event.location, event.url, event.start_date, event.end_date, event.start_time, event.end_time, event.img, category.id as category_id, category.name as category_name');
+    $query = $this->db->select('event.id, event.title, event.sub_desc, event.description, event.category, event.location, event.url, event.start_date, event.end_date, event.start_time, event.end_time, event.img, category.id as category_id, category.name as category_name');
     $query = $this->db->join('t_event_category as category', 'category.id = event.category', 'left');
     $query = $this->db->where('event.id', $id);
     $query = $query->limit(1);
