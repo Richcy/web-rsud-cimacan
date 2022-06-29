@@ -45,6 +45,7 @@ class Career extends CI_Controller {
 		$title = $this->input->post('title') ? $this->input->post('title') : '';
 		$description = $this->input->post('desc') ? str_replace("'", "’", $this->input->post('desc')) : '';
 		$url = $this->input->post('url') ? $this->input->post('url') : '';
+		$sub_desc = $this->input->post('sub_desc') ? $this->input->post('sub_desc') : '';
 		
 		$now = date('YmdHis');
 		$edit_name = str_replace(' ', '-', $_FILES["career_img"]['name']);
@@ -65,6 +66,7 @@ class Career extends CI_Controller {
 			$datas = array(
 	        	'title' => $title,
 	        	'description' => $description,
+	        	'sub_desc' => $sub_desc,
 	        	'url' => $url,
 	        	'create_date' => date('Y-m-d H:i:s')
 	        );
@@ -99,6 +101,7 @@ class Career extends CI_Controller {
 		        	'img' => 'career/'.$file_name,
 		        	'title' => $title,
 		        	'description' => $description,
+		        	'sub_desc' => $sub_desc,
 		        	'url' => $url,
 		        	'create_date' => date('Y-m-d H:i:s')
 		        );
@@ -122,6 +125,7 @@ class Career extends CI_Controller {
 	{
 		$id = $this->input->post('id') ? $this->input->post('id'): '';
 		$title = $this->input->post('title') ? $this->input->post('title') : '';
+		$sub_desc = $this->input->post('sub_desc') ? $this->input->post('sub_desc') : '';
 		$url = $this->input->post('url') ? $this->input->post('url') : '';
 		$description = $this->input->post('desc') ? str_replace("'", "’", $this->input->post('desc')) : '';
 		
@@ -141,6 +145,7 @@ class Career extends CI_Controller {
         	$datas = array(
 	        	'title' => $title,
 	        	'description' => $description,
+	        	'sub_desc' => $sub_desc,
 	        	'url' => $url
 	        );
 	        $update = $this->T_Career->update($datas, $id);
@@ -177,6 +182,7 @@ class Career extends CI_Controller {
 		        	'img' => 'career/'.$file_name,
 		        	'title' => $title,
 		        	'url' => $url,
+		        	'sub_desc' => $sub_desc,
 		        	'description' => $description
 		        );
 		        $update = $this->T_Career->update($datas, $id);
