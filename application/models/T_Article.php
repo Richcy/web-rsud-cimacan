@@ -6,7 +6,7 @@ class T_Article extends CI_Model {
 
 	public function show_all()
 	{
-    $query = $this->db->select('article.id, article.title, article.description, article.author, article.category, article.create_date, article.update_date, article.img, category.id as category_id, category.name as category_name');
+    $query = $this->db->select('article.id, article.title, article.sub_desc, article.description, article.author, article.category, article.create_date, article.update_date, article.img, category.id as category_id, category.name as category_name');
     $query = $this->db->order_by('article.create_date', 'ASC');
     $query = $this->db->join('t_article_category as category', 'category.id = article.category', 'left');
 		$query = $this->db->get('t_article as article');
@@ -60,7 +60,7 @@ class T_Article extends CI_Model {
  // FE Section 
   public function getAll($category, $s)
   {
-    $query = $this->db->select('article.id, article.title, article.description, article.author, article.category, article.create_date, article.update_date, article.img, category.id as category_id, category.name as category_name');
+    $query = $this->db->select('article.id, article.title, article.sub_desc, article.description, article.author, article.category, article.create_date, article.update_date, article.img, category.id as category_id, category.name as category_name');
     $query = $this->db->order_by('article.create_date', 'DESC');
     $query = $this->db->join('t_article_category as category', 'category.id = article.category', 'left');
     $query =  $this->db->where('status', 'publish');
@@ -77,7 +77,7 @@ class T_Article extends CI_Model {
   public function getPage($page, $category, $s)
   {
     $limitbefore = $page <= 1 ? 0 : ($page-1) * $this->itemPerPage;
-    $query = $this->db->select('article.id, article.title, article.description, article.author, article.category, article.create_date, article.update_date, article.img, category.id as category_id, category.name as category_name');
+    $query = $this->db->select('article.id, article.title, article.sub_desc, article.description, article.author, article.category, article.create_date, article.update_date, article.img, category.id as category_id, category.name as category_name');
     $query = $this->db->order_by('article.create_date', 'DESC');
     $query = $this->db->join('t_article_category as category', 'category.id = article.category', 'left');
     $query =  $this->db->where('status', 'publish');
@@ -108,7 +108,7 @@ class T_Article extends CI_Model {
 
   public function getDetail($id)
   {
-    $query = $this->db->select('article.id, article.title, article.description, article.author, article.category, article.create_date, article.update_date, article.img, category.id as category_id, category.name as category_name');
+    $query = $this->db->select('article.id, article.title, article.sub_desc, article.description, article.author, article.category, article.create_date, article.update_date, article.img, category.id as category_id, category.name as category_name');
     $query = $this->db->join('t_article_category as category', 'category.id = article.category', 'left');
     $query = $this->db->where('article.id', $id);
     $query = $query->limit(1);
@@ -118,7 +118,7 @@ class T_Article extends CI_Model {
 
   public function getHome()
   {
-    $query = $this->db->select('article.id, article.title, article.description, article.author, article.category, article.create_date, article.update_date, article.img, category.id as category_id, category.name as category_name');
+    $query = $this->db->select('article.id, article.title, article.sub_desc, article.description, article.author, article.category, article.create_date, article.update_date, article.img, category.id as category_id, category.name as category_name');
     $query = $this->db->join('t_article_category as category', 'category.id = article.category', 'left');
     $query = $this->db->order_by('start_date', 'DESC');
     $query = $this->db->order_by('end_date', 'DESC');

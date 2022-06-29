@@ -75,7 +75,7 @@ class Article extends CI_Controller {
 		
 		$data['seo_title'] = substr($datas[0]->title,0, 30).' | RSUD Cimacan';
 		$data['seo_keyword'] = strtolower($datas[0]->title).', rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan';
-		$data['seo_desc'] = substr($datas[0]->description,0, 147).'...';
+		$data['seo_desc'] = substr($datas[0]->sub_desd,0, 150).'...';
 		$lowerText = strtolower($datas[0]->title);
 		$deleteUnique = str_replace('?', '', $lowerText);
         $change_url = str_replace(' ', '-', $deleteUnique);

@@ -48,6 +48,7 @@ class Article extends CI_Controller {
 		$author = $this->input->post('author') ? $this->input->post('author') : '';
 		$title = $this->input->post('title') ? $this->input->post('title') : '';
 		$category = $this->input->post('category') ? $this->input->post('category') : '';
+		$sub_desc = $this->input->post('sub_desc') ? $this->input->post('sub_desc') : '';
 		$description = $this->input->post('desc') ? str_replace("'", "’", $this->input->post('desc')) : '';
 		
 		$now = date('YmdHis');
@@ -70,6 +71,7 @@ class Article extends CI_Controller {
 	        	'author' => $author,
 	        	'title' => $title,
 	        	'category' => $category,
+	        	'sub_desc' => $sub_desc,
 	        	'description' => $description,
 	        	'create_date' => date('Y-m-d H:i:s')
 	        );
@@ -105,6 +107,7 @@ class Article extends CI_Controller {
 		        	'author' => $author,
 		        	'title' => $title,
 		        	'category' => $category,
+		        	'sub_desc' => $sub_desc,
 		        	'description' => $description,
 		        	'create_date' => date('Y-m-d H:i:s')
 		        );
@@ -130,6 +133,7 @@ class Article extends CI_Controller {
 		$author = $this->input->post('author') ? $this->input->post('author') : '';
 		$title = $this->input->post('title') ? $this->input->post('title') : '';
 		$category = $this->input->post('category') ? $this->input->post('category') : '';
+		$sub_desc = $this->input->post('sub_desc') ? $this->input->post('sub_desc') : '';
 		$description = $this->input->post('desc') ? str_replace("'", "’", $this->input->post('desc')) : '';
 		
 		$now = date('YmdHis');
@@ -149,6 +153,7 @@ class Article extends CI_Controller {
 	        	'author' => $author,
 	        	'title' => $title,
 	        	'category' => $category,
+	        	'sub_desc' => $sub_desc,
 	        	'description' => $description
 	        );
 	        $update = $this->T_Article->update($datas, $id);
@@ -186,6 +191,7 @@ class Article extends CI_Controller {
 		        	'author' => $author,
 		        	'title' => $title,
 		        	'category' => $category,
+		        	'sub_desc' => $sub_desc,
 		        	'description' => $description
 		        );
 		        $update = $this->T_Article->update($datas, $id);

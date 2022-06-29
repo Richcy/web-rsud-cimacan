@@ -48,6 +48,11 @@
                     </div>
 
                     <div class="mb-3" style="margin-top: 2%;">
+                      <label class="form-label">Sub Description</label>
+                      <textarea class="form-control" maxlength="250" name="sub_desc"></textarea>
+                    </div>
+
+                    <div class="mb-3" style="margin-top: 2%;">
                       <label class="form-label">Description <span class="required-fill">*</span> </label>
                       <div class="error-message hidden" id="error-desc-message">Please Fill this input section!</div>
                       <textarea name="desc" id="desc" class="tinymce"></textarea>

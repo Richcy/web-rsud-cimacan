@@ -133,7 +133,7 @@
                     <span><i class="fa fa-user"></i></span> <?=$data->author;?>
                   </div>
                   <div class="listboxd-desc" id="desc_card">
-                   <?=substr($data->description, 0, 150);?>...
+                   <?=$data->sub_desc ? substr($data->sub_desc, 0, 150) : substr($data->description, 0, 150);?>...
                   </div>
                   <div class="row up2">
                     <div class="col-xs-6 pad0">
