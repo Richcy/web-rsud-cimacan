@@ -7,6 +7,7 @@ class T_Article extends CI_Model {
 	public function show_all()
 	{
     $query = $this->db->select('article.id, article.title, article.sub_desc, article.description, article.author, article.category, article.create_date, article.update_date, article.img, category.id as category_id, category.name as category_name');
+    $query = $this->db->where_not_in('category.name', 'cimanews');
     $query = $this->db->order_by('article.create_date', 'ASC');
     $query = $this->db->join('t_article_category as category', 'category.id = article.category', 'left');
 		$query = $this->db->get('t_article as article');
@@ -61,6 +62,7 @@ class T_Article extends CI_Model {
   public function getAll($category, $s)
   {
     $query = $this->db->select('article.id, article.title, article.sub_desc, article.description, article.author, article.category, article.create_date, article.update_date, article.img, category.id as category_id, category.name as category_name');
+    $query = $this->db->where_not_in('category.name', 'cimanews');
     $query = $this->db->order_by('article.create_date', 'DESC');
     $query = $this->db->join('t_article_category as category', 'category.id = article.category', 'left');
     $query =  $this->db->where('status', 'publish');
@@ -78,6 +80,7 @@ class T_Article extends CI_Model {
   {
     $limitbefore = $page <= 1 ? 0 : ($page-1) * $this->itemPerPage;
     $query = $this->db->select('article.id, article.title, article.sub_desc, article.description, article.author, article.category, article.create_date, article.update_date, article.img, category.id as category_id, category.name as category_name');
+    $query = $this->db->where_not_in('category.name', 'cimanews');
     $query = $this->db->order_by('article.create_date', 'DESC');
     $query = $this->db->join('t_article_category as category', 'category.id = article.category', 'left');
     $query =  $this->db->where('status', 'publish');
@@ -94,8 +97,10 @@ class T_Article extends CI_Model {
 
   public function getTotal($category, $s)
   {
-    $query = $this->db->select('count(id) as totalData');
+    $query = $this->db->select('count(article.id) as totalData');
+    $query = $this->db->where_not_in('category.name', 'cimanews');
     $query =  $this->db->where('status', 'publish');
+    $query = $this->db->join('t_article_category as category', 'category.id = article.category', 'left');
     if (!empty($category)) {
       $query =  $this->db->where('article.category', $category);
     }
@@ -119,6 +124,7 @@ class T_Article extends CI_Model {
   public function getHome()
   {
     $query = $this->db->select('article.id, article.title, article.sub_desc, article.description, article.author, article.category, article.create_date, article.update_date, article.img, category.id as category_id, category.name as category_name');
+    $query = $this->db->where_not_in('category.name', 'cimanews');
     $query = $this->db->join('t_article_category as category', 'category.id = article.category', 'left');
     $query = $this->db->order_by('start_date', 'DESC');
     $query = $this->db->order_by('end_date', 'DESC');
@@ -128,3 +134,4 @@ class T_Article extends CI_Model {
   }
 
 }
+

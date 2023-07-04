@@ -5257,6 +5257,10 @@ body{
         width: 50%;
     }
 
+    .col-box-home{
+      width: 50%;
+    }
+
     .listbox-headline {
         height: 350px;
     }
@@ -5283,8 +5287,9 @@ body{
     .listboxswiper-content {
         height: 350px;
     }
-    .col-listbox {
-        width: 100%;
+
+    .col-box-home{
+      width: 100% !important;
     }
 
     .col-listbox-home {

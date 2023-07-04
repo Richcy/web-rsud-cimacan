@@ -1,8 +1,8 @@
 <?php $role = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : ''; ?>
 <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-      <a class="sidebar-brand d-flex align-items-center justify-content-center primary-bg" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center primary-bg" href="<?= base_url('administrator/slider') ?>">
         <div class="sidebar-brand-icon">
-          RSD Cimacan
+          RSUD Cimacan
         </div>
         <!-- <div class="sidebar-brand-text mx-3">RSD Cimacan</div> -->
       </a>
@@ -23,6 +23,13 @@
           <span>Slider</span>
         </a>
       </li>
+      <li class="nav-item <?=$cur_page == 'slider' ? 'active' : '' ?>">
+          <a class="nav-link" href="<?=base_url('administrator/running_text')?>">
+              <i class="fas fa-fw fa-list"></i>
+              <span>Running Text</span>
+          </a>
+      </li>
+      <br>
       <?php } ?>
       <!-- <li class="nav-item <?=$cur_page == 'about_home' ? 'active' : '' ?>">
         <a class="nav-link" href="<?=base_url('administrator/about_home')?>">
@@ -79,6 +86,10 @@
             <a class="collapse-item <?=$cur_page == 'greeting_directur' ? 'active' : ''?>" href="<?=base_url('administrator/greeting_directur')?>">Sambutan Direktur</a>
             <a class="collapse-item <?=$cur_page == 'structure' ? 'active' : ''?>" href="<?=base_url('administrator/structure')?>">Struktur Organisasi</a>
             <a class="collapse-item <?=$cur_page == 'sketch' ? 'active' : ''?>" href="<?=base_url('administrator/sketch')?>">Denah</a>
+            <a class="collapse-item <?=$cur_page == 'quality' ? 'active' : ''?>" href="<?=base_url('administrator/quality_check')?>">Penilaian Mutu</a>
+          <a class="collapse-item <?=$cur_page == 'maklumat_pelayanan' ? 'active' : ''?>" href="<?=base_url('administrator/maklumat_pelayanan')?>">Maklumat Pelayanan</a>
+          <!-- <a class="collapse-item <?=$cur_page == 'standard_pelayanan' ? 'active' : ''?>" href="<?=base_url('administrator/standard_pelayanan')?>">Standard Pelayanan</a>-->
+          <a class="collapse-item <?=$cur_page == 'hak_kewajiban' ? 'active' : ''?>" href="<?=base_url('administrator/hak_kewajiban')?>">Hak dan Kewajiban</a>
           </div>
         </div>
       </li>
@@ -100,6 +111,10 @@
             <a class="collapse-item <?=$cur_page == 'igd' ? 'active' : ''?>" href="<?=base_url('administrator/igd')?>">Instalasi Gawat Darurat</a>
             <a class="collapse-item <?=$cur_page == 'lab' ? 'active' : ''?>" href="<?=base_url('administrator/lab')?>">Laboratorium</a>
             <a class="collapse-item <?=$cur_page == 'radiology' ? 'active' : ''?>" href="<?=base_url('administrator/radiology')?>">Radiology</a>
+            <a class="collapse-item <?=$cur_page == 'hemodialisis' ? 'active' : ''?>" href="<?=base_url('administrator/hemodialisis')?>">Hemodialisis</a>
+            <a class="collapse-item <?=$cur_page == 'farmasi' ? 'active' : ''?>" href="<?=base_url('administrator/farmasi')?>">Farmasi</a>
+            <a class="collapse-item <?=$cur_page == 'rehab_medik' ? 'active' : ''?>" href="<?=base_url('administrator/rehab_medik')?>">Rehab Medik</a>
+            <a class="collapse-item <?=$cur_page == 'ambulance' ? 'active' : ''?>" href="<?=base_url('administrator/ambulance')?>">Ambulance</a>
             <!-- <a class="collapse-item <?=$cur_page == 'medical_support' ? 'active' : ''?>" href="<?=base_url('administrator/medical_support')?>">Penunjang Medis</a> -->
           </div>
         </div>
@@ -154,6 +169,7 @@
             <h6 class="collapse-header">Article Module</h6>
             <a class="collapse-item <?=$cur_page == 'article_category' ? 'active' : ''?>" href="<?=base_url('administrator/article_category')?>">Article Category</a>
             <a class="collapse-item <?=$cur_page == 'article' ? 'active' : ''?>" href="<?=base_url('administrator/article')?>">Article</a>
+            <a class="collapse-item <?=$cur_page == 'cimanews' ? 'active' : ''?>" href="<?=base_url('administrator/cimanews')?>">Cimanews</a>
           </div>
         </div>
       </li>

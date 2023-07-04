@@ -155,6 +155,7 @@ ul li{
     width: 100%;
     height: 100%;
     position: absolute;
+    object-fit: cover;
 }
 
 .carousel-item .btn-get-started:hover{
@@ -243,6 +244,12 @@ ul li{
 	color: #a82024 !important;
 }
 
+.clock-symbol{
+    font-size: 14px !important;
+    line-height: 24px !important;
+    color: #444444 !important;
+}
+
 .social-links a{
 	background: #a82024 !important;
 }
@@ -267,7 +274,8 @@ a:hover{
 
 /*Greeting Home*/
 .img-greeting{
-    max-width: 78% !important;
+    max-width: 300px !important;
+    max-height: 400px;
 }
 
 .img-left-position{
@@ -528,6 +536,13 @@ a:hover{
 }*/
 
 /*Section Article*/
+.col-box-home{
+    width: 25% !important;
+}
+
+.listboxd-title{
+    text-transform: uppercase;
+}
 
 .space-detail{
     margin-bottom: 1%;
@@ -710,6 +725,26 @@ a.button-collapse:focus{
 }
 
 /*Section Doctor*/
+
+.row-home-doctor{
+    text-align: center;
+    margin-top: 1px;
+    margin-bottom: 15px;
+}
+
+.btn-doctor{
+    font-size: 18px;
+    border-radius: 25px !important;
+    color: #000 !important;
+    background-color: #fff !important;
+    border-color: #a82024 !important;
+}
+
+.btn-doctor:hover{
+    color: #fff !important;
+    background-color: #a82024 !important;
+}
+
 section.doctors{
     padding: 0px;
 }
@@ -957,7 +992,7 @@ position: fixed;
     font-size: 14px;
     z-index: 1;
     right: 10%;
-    width: 125%;
+    width: 200px;
     height: 40px;
     padding: 0 50px 0 20px;
     -webkit-border-radius: 40px;
@@ -983,6 +1018,26 @@ position: fixed;
     display: block;
     border: none;
     background: 0 0;
+}
+
+.sampleMarquee {
+    color: #7b767f;
+    font-size: 15px;
+    line-height: 70px;
+    padding: 15px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 1920px) {
+    .sampleMarquee {
+        width: 1050px;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .sampleMarquee {
+        width: 900px;
+    }
 }
 
 .search-section .submit-search:before{
@@ -1038,11 +1093,24 @@ position: fixed;
     letter-spacing: 3px;
 }
 
+.clock-title-modal
+{
+    margin-top: 15px;
+}
+
 #ambulance-modal .modal-body{
     height: 210px;
 }
 
 #ambulance-modal .modal-content{
+    margin-top: 40%;
+}
+
+#phone-modal .modal-body{
+    height: 250px;
+}
+
+#phone-modal .modal-content{
     margin-top: 40%;
 }
 
@@ -1167,6 +1235,10 @@ position: fixed;
         height: 250px;
     }
 
+    #phone-modal .modal-body{
+        height: 270px;
+    }
+
     .detail-article{
         text-align: center;
     }
@@ -1176,7 +1248,8 @@ position: fixed;
     }
 
     .img-greeting{
-        max-width: 60% !important;
+        max-width: 200px !important;
+        max-height: 285px;
     }
 }
 
@@ -1214,6 +1287,10 @@ position: fixed;
     .col-listbox{
         width: 50%;
     }
+
+    .col-box-home{
+        width: 50% !important;
+    }
 }
 
 @media(min-width: 500px) and (max-width: 630px){
@@ -1248,6 +1325,12 @@ position: fixed;
 
     .font-size-table{
         font-size: 12px;
+    }
+}
+
+@media(max-width: 580px){
+    .col-listbox {
+        width: 100% !important;
     }
 }
 
@@ -1413,7 +1496,7 @@ position: fixed;
     }
 
     #header .logo{
-        pointer-events: none;
+        /*pointer-events: none;*/
     }
 
     .modal-schedule{

@@ -48,8 +48,8 @@
                       <?php $num = 0; foreach ($datas as $data) { $num++;?>
                       <tr class="sort-wrap" data-snum="<?=$num;?>" data-sid="<?=$data->id;?>">
                         <td style="width: 20%;">
-                          <button onclick="confirmDelete('<?=$data->id;?>')" style="font-size: 12px;" class="btn btn-danger">Delete</button>
-                          <button data-toggle="modal" data-target="#editData<?=$num?>" style="font-size: 12px;" class="btn btn-warning">Edit</button>
+                          <button onclick="confirmDelete('<?=$data->id;?>')" style="font-size: 12px;" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                          <button data-toggle="modal" data-target="#editData<?=$num?>" style="font-size: 12px;" class="btn btn-warning"><i class="fa fa-pencil"></i></button>
                         </td>
                         <td style="width: 10%;"><?=$num;?></td>
                         <td><?=$data->name;?></td>

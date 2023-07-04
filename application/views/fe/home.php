@@ -43,12 +43,13 @@
         <!--<div class="carousel-item <?=$no == 1 ? 'active' : '';?>" style="background-image: url(<?php echo base_url().'assets/uploads/'.$data_slide->img;?>)">-->
         <div class="carousel-item <?=$no == 1 ? 'active' : '';?>" style="background-image: url()">
           <img src="<?php echo base_url().'assets/uploads/'.$data_slide->img;?>" class="img-carousel">
+
           <?php if ($data_slide->title != '') {?>
-          <div class="container">
+          <!-- <div class="container">
             <h2><?=$data_slide->title?></h2>
             <p><?=$data_slide->description?></p>
-            <!-- <a href="#about" class="btn-get-started scrollto main-bg-color">Scroll page</a> -->
-          </div>
+            <a href="#about" class="btn-get-started scrollto main-bg-color">Scroll page</a>
+          </div> -->
           <?php } ?>
         </div>
         <?php } ?>
@@ -102,9 +103,15 @@
       ?>
     <!-- End Doctors Section -->
 
+    <!-- ======= Article Section ======= -->
+      <?php 
+        $this->load->view('fe/parts/articles'); 
+      ?>
+    <!-- End Article Section -->
+
     <!-- ======= Gallery Section ======= -->
       <?php 
-        $this->load->view('fe/parts/gallery'); 
+        // $this->load->view('fe/parts/gallery'); 
       ?>
     <!-- End Gallery Section -->
 

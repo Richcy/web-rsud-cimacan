@@ -12,7 +12,7 @@
 
   <!-- Favicons -->
 
-  <link href="<?php echo base_url();?>assets/fe/img/logo_rsud_cimacan.png" rel="icon">
+  <link href="<?php echo base_url();?>assets/fe/img/rsc_white.png" rel="icon">
 
 
 

@@ -78,12 +78,21 @@
               </div>
               <div class="col-md-6">
                 <div class="info-box mt-4">
-                  <i class="bx bx-phone-call"></i>
-                  <h3>Hotline WA</h3>
-                  <p>(+62) 8112031117</p>
+                  <i class="fa fa-whatsapp"></i>
+                  <h3>WA Pengaduan</h3>
+                  <p><a href="https://wa.me/6285864817874?text=Halo%20Kak%20.%20.%20." target="_blank">(+62) 858-6481-7874</a></p>
 
                   <!-- <h3>Ambulance</h3>
                   <p>(+62)8112031117</p> -->
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="info-box">
+                  <i class="bx bx-phone-call"></i>
+                  <h3>Kontak Operator</h3>
+                  <p>0263 2950 771</p>
+                  <p>Jam Operasional :</p>
+                  <p><span class="clock-symbol fas fa-clock"></span><span> 08.00 - 14.00 WIB</span></p>
                 </div>
               </div>
             </div>

@@ -12,6 +12,8 @@ class Home extends CI_Controller {
     	$this->load->model('T_Doctor');
     	$this->load->model('T_Featured_Doctor');
     	$this->load->model('T_Gallery');
+    	$this->load->model('M_Cimanews');
+        $this->load->model('M_Running_text');
         $this->load->library('session');
 	}
 
@@ -32,6 +34,8 @@ class Home extends CI_Controller {
 		$data['datas_about'] = $this->M_About_Home->getAll($lang);
 		$data['datas_doctor'] = $this->T_Featured_Doctor->show_all();
 		$data['datas_gallery'] = $this->T_Gallery->getHome();
+		$data['datas_article'] = $this->M_Cimanews->getHome();
+        $data['datas_running_text'] = $this->M_Running_text->show_running_text();
 		$this->load->view('fe/home', $data);
 	}
 
@@ -48,3 +52,4 @@ class Home extends CI_Controller {
 
 
 }
+

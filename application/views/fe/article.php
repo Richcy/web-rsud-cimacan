@@ -36,9 +36,11 @@
     <div class="container banner">
       <!-- Breadcumb -->
       <div class="breadcrumb-part">
-        <a href="javascript:void(0);">Home</a>
+        <a href="javascript:void(0);">Beranda</a>
         <span><i class="fa fa-angle-right"></i></span>
-        <a href="javascript:void(0);">Article</a>
+        <a href="javascript:void(0);">Artikel</a>
+        <span><i class="fa fa-angle-right"></i></span>
+        <a href="javascript:void(0);">Artikel Cimacan</a>
       </div>
       <!-- End breadcumb -->
       <!-- <div class="nhead-bg hidden-xs" style="background-image: url('<?php echo base_url();?>assets/fe/img/departments-1.jpg');">
@@ -56,7 +58,7 @@
     <section id="content" class="main-page">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h1 class="title-page">Article RSD Cimacan</h1>
+          <h1 class="title-page">Artikel RSUD Cimacan</h1>
         </div>
 
         <!-- Search Section -->

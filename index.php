@@ -311,6 +311,7 @@ switch (ENVIRONMENT)
 	}
 
 	define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
+ ini_set('display_errors','off');
 
 /*
  * --------------------------------------------------------------------

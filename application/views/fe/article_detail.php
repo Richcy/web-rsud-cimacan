@@ -52,9 +52,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
-    <?php } ?> -->
+  <!--  <?php } ?> -->
   <!-- End Hero -->
   <main id="main">
     <section id="content" class="main-page">

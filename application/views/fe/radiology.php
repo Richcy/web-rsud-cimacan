@@ -60,7 +60,7 @@
     <section id="content" class="main-page">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h1 class="title-page">Radiology</h1>
+          <h1 class="title-page">Radiologi</h1>
         </div>
 
         <div class="container">

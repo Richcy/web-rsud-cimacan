@@ -33,7 +33,7 @@
 
   <!-- ======= Hero Section ======= -->
   <div class="space-xs visible-xs"></div>
-    <div class="banner">
+    <div class="container banner">
       <!-- Breadcumb -->
       <div class="breadcrumb-part">
         <a href="javascript:void(0);">Home</a>
@@ -43,20 +43,22 @@
         <a href="javascript:void(0);">Profil</a>
       </div>
       <!-- End breadcumb -->
-      <?php if ($datas[0]->banner) {?>
-      <div class="nhead-bg hidden-xs" style="background-image: url('<?=base_url().'assets/uploads/'.$datas[0]->banner;?>');">
-        <div class="nhead-layer" style="background-color: rgb(10 10 10 / 0%);">
-          <div class="nhead-wrap">
-            <div class="nhead-title">
-              
+        <?php if (!empty($datas[0]->banner)) {?>
+            <div class="hidden-xs nhead-bg" style="background-image: url('<?php echo base_url().'assets/uploads/'.$datas[0]->banner;?>');">
+                <div class="nhead-layer" style="background-color: rgb(10 10 10 / 0%);">
+                    <div class="nhead-wrap">
+                        <div class="nhead-title">
+
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
+        <?php } ?>
     </div>
-    <?php } ?>
+
   <!-- End Hero -->
   <main id="main">
+
     <section id="content" class="main-page">
       <div class="container" data-aos="fade-up">
         <div class="section-title">

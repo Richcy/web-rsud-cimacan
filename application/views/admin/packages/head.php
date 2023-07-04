@@ -4,7 +4,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="<?php echo base_url();?>assets/fe/img/logo_rsud_cimacan.png" rel="icon">
-  <title>Admin RSD Cimacan</title>
+  <title>Admin RSUD Cimacan</title>
   <link href="<?=base_url()?>assets/be/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
   <link href="<?=base_url()?>assets/be/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">

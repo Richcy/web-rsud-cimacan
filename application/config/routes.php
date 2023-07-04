@@ -65,6 +65,8 @@ $route['profile-(:any).html'] = 'profil/detail/$1';
 $route['sketch.html'] = 'denah';
 $route['sketch-(:any).html'] = 'denah/detail/$1';
 
+$route['quality-check.html'] = 'quality_check';
+
 $route['structure.html'] = 'structure';
 $route['^(en|id)/structure.html'] = 'structure/language/$1';
 
@@ -89,6 +91,22 @@ $route['medical-support-(:any).html'] = 'medical_support/detail/$1';
 $route['radiology.html'] = 'radiologi';
 $route['radiology-(:any).html'] = 'radiologi/detail/$1';
 
+$route['hemodialisis.html'] = 'hemodialisis';
+
+$route['farmasi.html'] = 'farmasi';
+
+$route['medical-rehabilitation.html'] = 'rehab_medik';
+
+$route['ambulance.html'] = 'ambulance';
+
+$route['hak_kewajiban.html'] = 'hak_kewajiban';
+$route['maklumat_pelayanan.html'] = 'maklumat_pelayanan';
+
+$route['standard_pelayanan.html'] = 'standard_pelayanan';
+$route['standard_pelayanan-(:any).html'] = 'standard_pelayanan/detail/$1';
+
+
+
 // $route['doctor'] = 'doctor';
 $route['doctor-(:num)-(:any).html'] = 'doctor/detail/$1/$2';
 $route['doctor/(:num)'] = 'doctor/page/$1';
@@ -100,6 +118,10 @@ $route['event/(:num)'] = 'event/page/$1';
 // $route['article'] = 'news';
 $route['article-(:num)-(:any).html'] = 'article/detail/$1';
 $route['article/(:num)'] = 'article/page/$1';
+
+//cimanews
+$route['cimanews-(:num)-(:any).html'] = 'cimanews/detail/$1';
+$route['cimanews/(:num)'] = 'cimanews/page/$1';
 
 $route['career-(:num)-(:any).html'] = 'career/detail/$1';
 $route['career/(:num)'] = 'career/page/$1';
@@ -122,5 +144,6 @@ $route['administrator'] = 'administrator/login';
 $route['administrator/login'] = 'administrator/login/loginAdmin';
 $route['administrator/logout'] = 'administrator/login/logoutAdmin';
 
-$route['404_override'] = '';
+$route['404_override'] = 'redirect_home';
 $route['translate_uri_dashes'] = FALSE;
+

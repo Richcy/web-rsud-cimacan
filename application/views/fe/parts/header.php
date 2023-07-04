@@ -5,7 +5,7 @@
 ?>
 <div class="container d-flex align-items-center">
 
-      <a href="<?=base_url();?>" class="logo me-auto"><img class="logo-header hidden-md hidden-lg" src="<?=base_url();?>assets/fe/img/logo_rsud_cimacan.png" alt=""></a>
+    <a href="<?=base_url();?>" class="logo me-auto mb-1"><img src="<?=base_url();?>assets/fe/img/rsc_white.png" alt=""></a>
 
       <nav class="navbar order-lg-0 hidden-xs hidden-sm">
         <ul>
@@ -30,6 +30,11 @@
               <li class="navbar-child"><a class="<?=$cur_page=='structure_or' ? 'active' : '';?>" href="<?=base_url('structure.html')?>">Struktur Organisasi</a></li>
 
               <li class="navbar-child"><a class="<?=$cur_page=='denah_rs' ? 'active' : '';?>" href="<?=base_url('sketch.html')?>">Denah Rumah Sakit</a></li>
+
+              <li class="navbar-child"><a class="<?=$cur_page=='quality' ? 'active' : '';?>" href="<?=base_url('quality-check.html')?>">Penilaian Mutu</a></li>
+                <li class="navbar-child"><a class="<?=$cur_page=='hak_kewajiban' ? 'active' : '';?>" href="<?=base_url('hak_kewajiban.html')?>">Hak dan Kewajiban Pasien</a></li>
+                <li class="navbar-child"><a class="<?=$cur_page=='maklumat_pelayanan' ? 'active' : '';?>" href="<?=base_url('maklumat_pelayanan.html')?>">Maklumat dan Standard Pelayanan</a></li>
+                <!--<li class="navbar-child"><a class="<?=$cur_page=='standard_pelayanan' ? 'active' : '';?>" href="<?=base_url('standard_pelayanan.html')?>">Standard Pelayanan</a></li>-->
             </ul>
           </li>
           <!-- END Dropdown Tentang -->
@@ -58,7 +63,11 @@
               <li class="navbar-child"><a class="<?=$cur_page=='instalasi_rawat_inap' ? 'active' : '';?>" href="<?=base_url('inpatient-installation.html')?>">Instalasi Rawat Inap</a></li>
               <li class="navbar-child"><a class="<?=$cur_page=='igd' ? 'active' : '';?>" href="<?=base_url('igd.html')?>">Instalasi Gawat Darurat</a></li>
               <li class="navbar-child"><a class="<?=$cur_page=='laboratorium' ? 'active' : '';?>" href="<?=base_url('laboratorium.html')?>">Laboratorium</a></li>
+              <li class="navbar-child"><a class="<?=$cur_page=='hemodialisis' ? 'active' : '';?>" href="<?=base_url('hemodialisis.html')?>">Hemodialisis</a></li>
+              <li class="navbar-child"><a class="<?=$cur_page=='rehab_medik' ? 'active' : '';?>" href="<?=base_url('medical-rehabilitation.html')?>">Rehabilitasi Medik</a></li>
               <li class="navbar-child"><a class="<?=$cur_page=='radiology' ? 'active' : '';?>" href="<?=base_url('radiology.html')?>">Radiologi</a></li>
+              <li class="navbar-child"><a class="<?=$cur_page=='farmasi' ? 'active' : '';?>" href="<?=base_url('farmasi.html')?>">Farmasi</a></li>
+              <li class="navbar-child"><a class="<?=$cur_page=='ambulance' ? 'active' : '';?>" href="<?=base_url('ambulance.html')?>">Ambulance</a></li>
               <!-- <li class="navbar-child"><a class="<?=$cur_page=='medical_support' ? 'active' : '';?>" href="<?=base_url('medical-support.html')?>">Penunjang Medis</a></li> -->
             </ul>
           </li>
@@ -66,7 +75,26 @@
           <!-- <li><a class="nav-link" href="javascript:void();">Departemen</a></li> -->
           <li><a class="nav-link <?=$cur_page=='doctor' ? 'active' : '';?>" href="<?=base_url('doctor/');?>">Dokter</a></li>
           <li><a class="nav-link <?=$cur_page=='event' ? 'active' : '';?>" href="<?=base_url('event/');?>">Event</a></li>
-          <li><a class="nav-link <?=$cur_page=='article' ? 'active' : '';?>" href="<?=base_url('article/');?>">Artikel</a></li>
+          <!-- <li><a class="nav-link <?=$cur_page=='article' ? 'active' : '';?>" href="<?=base_url('article/');?>">Artikel</a></li> -->
+          <!-- Artikel -->
+          <?php 
+            $dropdown_article = '';
+
+            if ($cur_parent_page == 'article') {
+              $dropdown_article = 'active';
+            }
+           ?>
+           <li class="dropdown">
+            <a href="javascript:void();" class="nav-parent <?=$dropdown_article;?>"><span>Artikel</span>
+              <i class="bi bi-chevron-down"></i>
+            </a>
+            <ul>
+              <li class="navbar-child"><a class="<?=$cur_page=='article' ? 'active' : '';?>" href="<?=base_url('article/')?>">Informasi Kesehatan</a></li>
+              <li class="navbar-child"><a class="<?=$cur_page=='cimanews' ? 'active' : '';?>" href="<?=base_url('cimanews/')?>">CimaNEWS</a></li>
+            </ul>
+          </li>
+          <!-- End artikel -->
+
           <?php if ($cur_page == 'home') {?>
             <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
           <?php }else{ ?>
@@ -96,6 +124,13 @@
               <li class="navbar-child"><a class="<?=$cur_page=='structure_or' ? 'active' : '';?>" href="<?=base_url('structure.html')?>">Struktur Organisasi</a></li>
 
               <li class="navbar-child"><a class="<?=$cur_page=='denah_rs' ? 'active' : '';?>" href="<?=base_url('sketch.html')?>">Denah Rumah Sakit</a></li>
+
+              <li class="navbar-child"><a class="<?=$cur_page=='quality' ? 'active' : '';?>" href="<?=base_url('quality-check.html')?>">Penilaian Mutu</a></li>
+                <li class="navbar-child"><a class="<?=$cur_page=='hak_kewajiban' ? 'active' : '';?>" href="<?=base_url('hak_kewajiban.html')?>">Hak dan Kewajiban Pasien</a></li>
+
+                <li class="navbar-child"><a class="<?=$cur_page=='maklumat_pelayanan' ? 'active' : '';?>" href="<?=base_url('maklumat_pelayanan.html')?>">Maklumat da Standard Pelayanan</a></li>
+                <!--<li class="navbar-child"><a class="<?=$cur_page=='standard_pelayanan' ? 'active' : '';?>" href="<?=base_url('standard_pelayanan.html')?>">Standard Pelayanan</a></li>-->
+                
             </ul>
           </li>
           <li class="dropdown">
@@ -110,7 +145,11 @@
               <li class="navbar-child"><a class="<?=$cur_page=='instalasi_rawat_inap' ? 'active' : '';?>" href="<?=base_url('inpatient-installation.html')?>">Instalasi Rawat Inap</a></li>
               <li class="navbar-child"><a class="<?=$cur_page=='igd' ? 'active' : '';?>" href="<?=base_url('igd.html')?>">Instalasi Gawat Darurat</a></li>
               <li class="navbar-child"><a class="<?=$cur_page=='laboratorium' ? 'active' : '';?>" href="<?=base_url('laboratorium.html')?>">Laboratorium</a></li>
+              <li class="navbar-child"><a class="<?=$cur_page=='hemodialisis' ? 'active' : '';?>" href="<?=base_url('hemodialisis.html')?>">Hemodialisis</a></li>
+              <li class="navbar-child"><a class="<?=$cur_page=='rehab_medik' ? 'active' : '';?>" href="<?=base_url('medical-rehabilitation.html')?>">Rehabilitasi Medik</a></li>
               <li class="navbar-child"><a class="<?=$cur_page=='radiology' ? 'active' : '';?>" href="<?=base_url('radiology.html')?>">Radiologi</a></li>
+              <li class="navbar-child"><a class="<?=$cur_page=='farmasi' ? 'active' : '';?>" href="<?=base_url('farmasi.html')?>">Farmasi</a></li>
+              <li class="navbar-child"><a class="<?=$cur_page=='ambulance' ? 'active' : '';?>" href="<?=base_url('ambulance.html')?>">Ambulance</a></li>
               <!-- <li class="navbar-child"><a class="<?=$cur_page=='medical_support' ? 'active' : '';?>" href="<?=base_url('medical-support.html')?>">Penunjang Medis</a></li> -->
             </ul>
           </li>
@@ -118,7 +157,25 @@
           <!-- <li><a class="nav-link" href="javascript:void();">Departemen</a></li> -->
           <li><a class="nav-link <?=$cur_page=='doctor' ? 'active' : '';?>" href="<?=base_url('doctor/');?>">Dokter</a></li>
           <li><a class="nav-link <?=$cur_page=='event' ? 'active' : '';?>" href="<?=base_url('event/');?>">Event</a></li>
-          <li><a class="nav-link <?=$cur_page=='article' ? 'active' : '';?>" href="<?=base_url('article/');?>">Artikel</a></li>
+          <!-- <li><a class="nav-link <?=$cur_page=='article' ? 'active' : '';?>" href="<?=base_url('article/');?>">Artikel</a></li> -->
+          <!-- Artikel -->
+          <?php 
+            $dropdown_article = '';
+
+            if ($cur_parent_page == 'article') {
+              $dropdown_article = 'active';
+            }
+           ?>
+           <li class="dropdown">
+            <a href="javascript:void();" class="nav-parent <?=$dropdown_article;?>"><span>Artikel</span>
+              <i class="bi bi-chevron-down"></i>
+            </a>
+            <ul>
+              <li class="navbar-child"><a class="<?=$cur_page=='article' ? 'active' : '';?>" href="<?=base_url('article/')?>">Informasi Kesehatan</a></li>
+              <li class="navbar-child"><a class="<?=$cur_page=='cimanews' ? 'active' : '';?>" href="<?=base_url('cimanews/')?>">CimaNEWS</a></li>
+            </ul>
+          </li>
+          <!-- End artikel -->
           <?php if ($cur_page == 'home') {?>
             <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
           <?php }else{ ?>

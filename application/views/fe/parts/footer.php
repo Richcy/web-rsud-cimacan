@@ -2,7 +2,12 @@
     <a href="javascript:void(0)" id="ambulance" class="ambulance-share" data-bs-toggle="modal" data-bs-target="#ambulance-modal">
       <i class="old-ambulance fa fa-ambulance"></i>
     </a>
-    <a href="https://wa.me/628112031117?text=Halo%20Admin%20.%20.%20." target="_blank" class="whatsapp-share"><i class="fa fa-whatsapp"></i></a>
+    <!-- <a href="https://wa.me/628112031117?text=Halo%20Admin%20Hotline%20WA%20.%20.%20." target="_blank" class="whatsapp-share"><i class="fa fa-whatsapp"></i></a> -->
+    <a href="javascript:void(0)" target="_blank" class="whatsapp-share" data-bs-toggle="modal" data-bs-target="#phone-modal"><i class="fa fa-phone"></i>
+    </a>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <a href="https://play.google.com/store/apps/details?id=com.reservcimacan&hl=in&gl=US" target="_blank" class="google-share">
+     <i class="bi bi-google-play"></i></i></a>
   </div>
 
   <!-- ======= Footer ======= -->
@@ -17,7 +22,7 @@
               <p>
                 Jl. Raya Cimacan No.17A, Palasari, Kec. Cipanas, Kabupaten Cianjur, Jawa Barat 43253
                 <br><br>
-                <strong>Phone:</strong> (+62)8112031117<br>
+                <strong>Phone:</strong> <a href="https://wa.me/6285864817874?text=Halo%20Kak%20.%20.%20." target="_blank">(+62) 858-6481-7874</a><br>
                 <strong>Email:</strong> rsud.cimacann@gmail.com<br>
               </p>
               <div class="social-links mt-3">
@@ -26,6 +31,8 @@
                 <a href="https://www.instagram.com/rsud_cimacan/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
                 <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
                 <!-- <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
+                <a href="https://play.google.com/store/apps/details?id=com.reservcimacan&hl=in&gl=US" target="_blank" class="google-share"><i class="bi bi-google-play mt">
+                </i></a>
               </div>
             </div>
           </div>
@@ -49,6 +56,7 @@
               <li><i class="bx bx-chevron-right"></i> <a href="<?=base_url();?>igd.html">Instalasi Gawat Darurat</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="<?=base_url();?>laboratorium.html">Laboratorium</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="<?=base_url();?>radiology.html">Radiologi</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="<?=base_url();?>hemodialisis.html">Hemodialisis</a></li>
             </ul>
           </div>
 
@@ -123,6 +131,41 @@
             <div class="phone-number-modal"><i class="fas fa-phone"></i><span> (+62) 811-2465-888</span></div>
 
             <a href="tel:+628112465888" class="btn btn-warning call-ambulance hidden-lg hidden-md">Call Ambulance</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phone Modal -->
+  <div class="modal fade" id="phone-modal" tabindex="-1" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-10">
+              <!-- <h4>Call Ambulance</h4> -->
+            </div>
+            <div class="col-md-2 close-modal">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+          </div>
+
+          <div class="contact-ambulance">
+            <h2>Kontak RSUD Cimacan :</h2>
+            <!-- <div class="row">
+              <div class="col-md-6 logo-phone-modal">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="col-md-6 number-phone-modal">
+                (+62) 811-2465-888
+              </div>
+            </div> -->
+            <div class="phone-number-modal"><i class="fas fa-phone"></i><span> 0263 2956 036 </span></div>
+            <div class="clock-title-modal"><span> Jam Operasional :</span></div>
+            <div class="detail-clock-modal"><i class="fas fa-clock"></i><span> 08.00 - 20.00 WIB</span></div>
+
+            <a href="tel:+622632956036" class="btn btn-warning call-ambulance hidden-lg hidden-md">Call Contact</a>
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@
   <div class="container my-auto">
     <div class="copyright text-center my-auto">
       <span>copyright &copy; <script> document.write(new Date().getFullYear()); </script> -
-        <b><a href="https://indrijunanda.gitlab.io/" target="_blank">RSD Cimacan</a></b>
+        <b><a href="<?=base_url();?>" target="_blank">RSUD Cimacan</a></b>
       </span>
     </div>
   </div>

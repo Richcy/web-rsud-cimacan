@@ -5,6 +5,7 @@ class T_Article_Category extends CI_Model {
 	public function show_all()
 	{
     $query = $this->db->order_by('name', 'ASC');
+    $query = $this->db->where_not_in('name', 'cimanews');
 		$query = $this->db->get('t_article_category');
     return $query->result();
 	}
@@ -63,3 +64,4 @@ class T_Article_Category extends CI_Model {
   }
 
 }
+

@@ -51,8 +51,8 @@
             </div>
           </div>
         </div>
-      </div>
-    </div> -->
+      </div> -->
+    </div> 
   <!-- End Hero -->
   <main id="main">
     <section id="doctors" class="main-page">

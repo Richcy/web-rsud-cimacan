@@ -14,7 +14,7 @@ class Article extends CI_Controller {
 	public function index()
 	{
 		$data['cur_page'] = 'article';
-		$data['cur_parent_page'] = '';
+		$data['cur_parent_page'] = 'article';
 
 		$data['seo_title'] = "RSUD Cimacan | Article";
 		$data['seo_keyword'] = "Artikel, Berita, Blog, rumah sakit, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan";
@@ -41,7 +41,7 @@ class Article extends CI_Controller {
 	public function page($page)
 	{
 		$data['cur_page'] = 'article';
-		$data['cur_parent_page'] = '';
+		$data['cur_parent_page'] = 'article';
 		
 		$data['seo_title'] = "RSUD Cimacan | Article";
 		$data['seo_keyword'] = "Artikel, Berita, Blog, rumah sakit, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan";
@@ -68,14 +68,14 @@ class Article extends CI_Controller {
 	public function detail($id)
 	{
 		$data['cur_page'] = 'article';
-		$data['cur_parent_page'] = '';
+		$data['cur_parent_page'] = 'article';
 		$data['lang'] = 'id';
 		$data['datas'] = $this->T_Article->getDetail($id);
 		$datas = $data['datas'];
 		
 		$data['seo_title'] = substr($datas[0]->title,0, 30).' | RSUD Cimacan';
 		$data['seo_keyword'] = strtolower($datas[0]->title).', rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan';
-		$data['seo_desc'] = substr($datas[0]->sub_desd,0, 150).'...';
+		$data['seo_desc'] = substr($datas[0]->sub_desc ? $datas[0]->sub_desc : $datas[0]->description,0, 120).'...';
 		$lowerText = strtolower($datas[0]->title);
 		$deleteUnique = str_replace('?', '', $lowerText);
         $change_url = str_replace(' ', '-', $deleteUnique);
@@ -86,3 +86,4 @@ class Article extends CI_Controller {
 
 
 }
+

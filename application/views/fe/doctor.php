@@ -56,7 +56,7 @@
     <section id="content" class="main-page">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h1 class="title-page">Dokter RSD Cimacan</h1>
+          <h1 class="title-page">Dokter RSUD Cimacan</h1>
         </div>
         <!-- Search Section -->
         <div class="row-ln" style="display: table;">
