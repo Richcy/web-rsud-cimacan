@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -146,4 +146,3 @@ $route['administrator/logout'] = 'administrator/login/logoutAdmin';
 
 $route['404_override'] = 'redirect_home';
 $route['translate_uri_dashes'] = FALSE;
-

@@ -7,6 +7,7 @@ class Cimanews extends CI_Controller {
 	{
 		parent::__construct();
     	$this->load->model('M_Cimanews');
+    	$this->load->model('T_Article_Category');
         $this->load->library('session');
 	}
 
@@ -19,18 +20,20 @@ class Cimanews extends CI_Controller {
 		$data['seo_keyword'] = "Cimanews, Berita, Blog, Berita rumah sakit, Berita rumah sakit umum daerah cimacan,Berita rsud cimacan";
 		$data['seo_desc'] = 'Daftar Berita terbaru yang diterbitkan oleh Rumah Sakit Daerah Cimacan';
 		$data['seo_url'] = base_url().'cimanews/';
-
+		$category = $this->input->get('category') ? $this->input->get('category') : '';
 		$s = $this->input->get('s') ? $this->input->get('s') : '';
 		$page = 1;
 		$totalData = $this->M_Cimanews->getTotal($s);
 		$totalPage = ceil($totalData[0]->totalData/6);
 
+		$data['category_selected'] = $category;
 		$data['s'] = $s;
 		$data['lang'] = 'id';
 		$data['page'] = 1;
 		$data['totalData'] = $totalData[0]->totalData;
 		$data['totalPage'] = $totalPage;
-		$data['datas'] = $this->M_Cimanews->getPage($page, $s);
+		$data['datas'] = $this->M_Cimanews->getPage($page, $category, $s);
+		$data['categories'] = $this->T_Article_Category->show_all();
 		$this->load->view('fe/cimanews', $data);
 	}
 
@@ -44,17 +47,20 @@ class Cimanews extends CI_Controller {
 		$data['seo_desc'] = 'Daftar Berita terbaru yang diterbitkan oleh Rumah Sakit Daerah Cimacan';
 		$data['seo_url'] = base_url().'cimanews/'.$page.'/';
 
+		$category = $this->input->get('category') ? $this->input->get('category') : '';
 		$s = $this->input->get('s') ? $this->input->get('s') : '';
 		$page = $page ? $page : 1;
 		$totalData = $this->M_Cimanews->getTotal($s);
 		$totalPage = ceil($totalData[0]->totalData/6);
 
+		$data['category_selected'] = $category;
 		$data['s'] = $s;
 		$data['lang'] = 'id';
 		$data['page'] = $page ? $page : 1;
 		$data['totalData'] = $totalData[0]->totalData;
 		$data['totalPage'] = $totalPage;
 		$data['datas'] = $this->M_Cimanews->getPage($page, $s);
+		$data['categories'] = $this->T_Article_Category->show_all();
 		$this->load->view('fe/cimanews', $data);
 	}
 
