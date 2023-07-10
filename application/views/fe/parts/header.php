@@ -101,6 +101,7 @@
           <li><a class="nav-link <?=$cur_page=='contact' ? 'active' : '';?>" href="<?=base_url('contact.html')?>">Kontak</a></li>
           <?php } ?>
           <li><a class="nav-link <?=$cur_page=='career' ? 'active' : '';?>" href="<?=base_url('career/')?>">Karir</a></li>
+          <li><a class="nav-link <?=$cur_page=='administrator' ? 'active' : '';?>" href="<?=base_url('administrator/');?>">Login Admin</a></li>
 
           <!-- Menu AKun -->
         </ul>

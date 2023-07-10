@@ -12,55 +12,47 @@
       </div>
 
       <div class="container">
-
         <div class="row mt-5">
-
           <div class="col-lg-12">
             <div class="row">
-              <div class="col-md-12">
-                <div class="info-box">
+              <div class="col-md-6">
+                <div class="info-box mt-4">
                   <i class="bx bx-map"></i>
-                  <h3>Alamat Kami Asikk</h3>
+                  <h3>Alamat Kami</h3>
                   <p>Jl. Raya Cimacan No.17A, Palasari, Kec. Cipanas, Kabupaten Cianjur, Jawa Barat 43253</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box mt-4">
                   <i class="bx bx-envelope"></i>
-                  <h3>Email Kami sama Email A Imam</h3>
+                  <h3>Email Kami</h3>
                   <p>rsud.cimacann@gmail.com</p>
+                  <p>abs</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box mt-4">
                   <i class="fa fa-whatsapp"></i>
-                  <h3>Whatsapp Pengaduan (Boleh juga ke Teh Myura)</h3>
+                  <h3>Whatsapp Pengaduan</h3>
                   <p><a href="https://wa.me/6285864817874?text=Halo%20Kak%20.%20.%20." target="_blank">(+62) 858-6481-7874</a></p>
 
                   <!-- <h3>Ambulance</h3>
                   <p>(+62)8112031117</p> -->
                 </div>
               </div>
-              <div class="col-md-12">
+              <div class="col-md-6">
                 <div class="info-box mt-4">
                   <i class="bx bx-phone-call"></i>
                   <h3>Kontak Operator</h3>
                   <p>0263 2956 036</p>
                   <p>Jam Operasional :</p>
-                  <p><span class="clock-symbol fas fa-clock"></span><span> 08.00 - 20.00 WIB</span></p>
-
-                  <i class="fa fa-whatsapp"></i>
-                  <h3>Whatsapp Pengaduan (Boleh juga ke Teh Myura)</h3>
-                  <p><a href="https://wa.me/6285864817874?text=Halo%20Kak%20.%20.%20." target="_blank">(+62) 858-6481-7874</a></p>
-
+                  <p><span class="clock-symbol fas fa-clock"></span><span>08.00 - 20.00 WIB</span></p>
                   <!-- <h3>Ambulance</h3>
                   <p>(+62)8112031117</p> -->
                 </div>
               </div>
             </div>
           </div>
-
         </div>
-
       </div>
     </section>
