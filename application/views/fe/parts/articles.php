@@ -57,23 +57,21 @@
 
 <!-- Start Artikel div-->
     <div class ="col-lg-3">
-      <div class="section-title mt-4">
-        <h2>Artikel</h2>
-      </div>
-        <div class ="row">
-          <div class ="col-listbox-home">
-            <div class ="listboxd-wrap">
-              <p>CONTOH ARTIKEL</p>
-            </div>
+      <div class="container" data-aos="fade-up">
+        <div class="section-title mt-4">
+          <h2>Artikel</h2>
+        </div>
+        <div class="row">
+          <h2 style="text-align: center;">Test</h2>
+        </div>
+        <div class="row row-home-doctor">
+          <div class="button-doctor">
+            <a href="<?=base_url()."article/";?>" class="btn btn-primary btn-doctor">Artikel Lainnya</a>
           </div>
         </div>
-         <div class="row row-home-doctor">
-        <div class="button-doctor">
-          <a href="<?=base_url()."article/";?>" class="btn btn-primary btn-doctor">Artikel Lainnya</a>
-        </div>
       </div>
-    </div> 
-  </div>
+    </div>
+     
 <!-- End Artikel div-->
 </section>
 <?php } ?>

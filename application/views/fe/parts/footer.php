@@ -27,7 +27,8 @@
               </p>
               <div class="social-links mt-3">
                 <a href="https://wa.me/628112031117?text=Halo%20Admin%20.%20.%20." target="_blank" class="whatapp"><i class="bx bxl-whatsapp"></i></a>
-                <!-- <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> -->
+                <a href="https://www.facebook.com/profile.php?id=100071691815827" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="https://www.youtube.com/@rsudcimacan1887" target="_blank" class="youtube"><i class="bx bxl-youtube"></i></a>
                 <a href="https://www.instagram.com/rsud.cimacan/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
                 <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
                 <!-- <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->

@@ -245,3 +245,11 @@ ERROR - 2023-07-10 10:38:16 --> Severity: Warning --> Undefined array key 0 C:\x
 ERROR - 2023-07-10 10:38:16 --> Severity: Warning --> Attempt to read property "content" on null C:\xampp\htdocs\web-rsud-cimacan\application\views\fe\parts\top-bar.php 11
 ERROR - 2023-07-10 10:38:17 --> Severity: Warning --> Undefined array key 0 C:\xampp\htdocs\web-rsud-cimacan\application\views\fe\parts\top-bar.php 11
 ERROR - 2023-07-10 10:38:17 --> Severity: Warning --> Attempt to read property "content" on null C:\xampp\htdocs\web-rsud-cimacan\application\views\fe\parts\top-bar.php 11
+ERROR - 2023-07-10 13:16:26 --> Severity: Warning --> Undefined array key 0 C:\xampp\htdocs\web-rsud-cimacan\application\views\fe\parts\top-bar.php 11
+ERROR - 2023-07-10 13:16:26 --> Severity: Warning --> Attempt to read property "content" on null C:\xampp\htdocs\web-rsud-cimacan\application\views\fe\parts\top-bar.php 11
+ERROR - 2023-07-10 13:16:27 --> Severity: Warning --> Undefined array key 0 C:\xampp\htdocs\web-rsud-cimacan\application\views\fe\parts\top-bar.php 11
+ERROR - 2023-07-10 13:16:27 --> Severity: Warning --> Attempt to read property "content" on null C:\xampp\htdocs\web-rsud-cimacan\application\views\fe\parts\top-bar.php 11
+ERROR - 2023-07-10 13:32:54 --> Severity: Warning --> Undefined array key 0 C:\xampp\htdocs\web-rsud-cimacan\application\views\fe\parts\top-bar.php 11
+ERROR - 2023-07-10 13:32:54 --> Severity: Warning --> Attempt to read property "content" on null C:\xampp\htdocs\web-rsud-cimacan\application\views\fe\parts\top-bar.php 11
+ERROR - 2023-07-10 13:32:55 --> Severity: Warning --> Undefined array key 0 C:\xampp\htdocs\web-rsud-cimacan\application\views\fe\parts\top-bar.php 11
+ERROR - 2023-07-10 13:32:55 --> Severity: Warning --> Attempt to read property "content" on null C:\xampp\htdocs\web-rsud-cimacan\application\views\fe\parts\top-bar.php 11

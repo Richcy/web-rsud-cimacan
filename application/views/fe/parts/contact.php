@@ -35,7 +35,8 @@
                   <i class="fa fa-whatsapp"></i>
                   <h3>Whatsapp Pengaduan</h3>
                   <p><a href="https://wa.me/6285864817874?text=Halo%20Kak%20.%20.%20." target="_blank">(+62) 858-6481-7874</a></p>
-
+                  <p><a href="https://wa.me/6282119751092?text=Halo%20Kak%20.%20.%20." target="_blank">(+62) 821-1975-1092</a></p>
+                  <p><a href="https://wa.me/6282199999999?text=Halo%20Kak%20.%20.%20." target="_blank">(+62) 821-9999-9999</a></p>
                   <!-- <h3>Ambulance</h3>
                   <p>(+62)8112031117</p> -->
                 </div>

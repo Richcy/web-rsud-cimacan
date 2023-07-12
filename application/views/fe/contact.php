@@ -79,8 +79,9 @@
               <div class="col-md-6">
                 <div class="info-box mt-4">
                   <i class="fa fa-whatsapp"></i>
-                  <h3>WA Pengaduan</h3>
+                  <h3>WA Pengaduan TEST</h3>
                   <p><a href="https://wa.me/6285864817874?text=Halo%20Kak%20.%20.%20." target="_blank">(+62) 858-6481-7874</a></p>
+
 
                   <!-- <h3>Ambulance</h3>
                   <p>(+62)8112031117</p> -->
