@@ -70,13 +70,13 @@
   <main id="main">
     <!-- ======= Event Section ======= -->
       <?php 
-        // $this->load->view('fe/parts/event');
+         //$this->load->view('fe/parts/event');
       ?>
     <!-- End Event Section -->
 
     <!-- ======= News Section ======= -->
       <?php 
-        // $this->load->view('fe/parts/news'); 
+         $this->load->view('fe/parts/news'); 
       ?>
     <!-- End Event Section -->
 
@@ -126,6 +126,12 @@
         $this->load->view('fe/parts/contact'); 
       ?>
     <!-- End Contact Section -->
+
+      <!-- ======= Pengaduan Section ======= -->
+      <?php 
+        $this->load->view('fe/parts/pengaduan'); 
+      ?>
+    <!-- End Pengaduan Section -->
 
   </main><!-- End #main -->
 
