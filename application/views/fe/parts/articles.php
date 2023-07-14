@@ -1,7 +1,7 @@
 <?php if (!empty($datas_article)) {?>
 <section id="doctors" class="doctors">
   <!-- Start CimaNEWS Div -->
-  <div class ="col-lg-9">
+  <div class ="col-lg-12">
     <div class="container" data-aos="fade-up">
       <div class="section-title mt-4">
         <h2>CimaNEWS</h2>
@@ -56,7 +56,7 @@
     <!-- End CimaNEWS Div -->
 
 <!-- Start Artikel div-->
-    <div class ="col-lg-3">
+ <!--    <div class ="col-lg-3">
       <div class="container" data-aos="fade-up">
         <div class="section-title mt-4">
           <h2>Artikel</h2>
@@ -70,7 +70,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
      
 <!-- End Artikel div-->
 </section>

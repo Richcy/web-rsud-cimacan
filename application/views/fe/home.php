@@ -76,7 +76,7 @@
 
     <!-- ======= News Section ======= -->
       <?php 
-         $this->load->view('fe/parts/news'); 
+         // $this->load->view('fe/parts/news'); 
       ?>
     <!-- End Event Section -->
 
