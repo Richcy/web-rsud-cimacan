@@ -43,11 +43,14 @@
   </div>
   <!-- End Hero -->
   <main id="main">
-    <section id="contact" class="contact section-bg">
+    <section id="content" class="main-page">
       <div class="container" data-aos="fade-up">
+
         <div class="section-title">
-          <h1 class="title-page">Kontak</h1>
+          <h1 class="title-page">Kontak RSD Cimacan</h1>
         </div>
+
+      </div>
       <div>
         <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.403937234007!2d107.03033791384557!3d-6.720464567574099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c41c14b26fab%3A0x6230e0dec5dc2dd9!2sRumah%20Sakit%20Umum%20Daerah%20(RSUD)%20Cimacan!5e0!3m2!1sen!2sid!4v1637289497439!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>

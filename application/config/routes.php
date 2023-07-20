@@ -105,6 +105,8 @@ $route['maklumat_pelayanan.html'] = 'maklumat_pelayanan';
 $route['standard_pelayanan.html'] = 'standard_pelayanan';
 $route['standard_pelayanan-(:any).html'] = 'standard_pelayanan/detail/$1';
 
+$route['pengaduan.html'] = 'pengaduan';
+
 
 
 // $route['doctor'] = 'doctor';
