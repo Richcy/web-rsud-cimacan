@@ -991,11 +991,22 @@ section {
   -webkit-animation: slide-down 0.5s ease-out;
   animation: slide-down 0.5s ease-out;
 }
-.departments .tab-pane img {
-  float: left ;
-  max-width: 500px;
+.departments .tab-pane .img2 {
+  float: left;
+  max-width: 600px;
+  max-height: 300px;
   padding: 0 15px 15px 0;
 }
+
+.departments .tab-pane .img3 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  max-height: 300px;
+  padding: 0 15px 15px 0;
+}
+
 @media (max-width: 768px) {
   .departments .tab-pane img {
     float: none;
