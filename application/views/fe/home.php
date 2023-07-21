@@ -33,6 +33,7 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
+
     <div id="heroCarousel" data-bs-interval="8000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
       <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
@@ -80,6 +81,12 @@
       ?>
     <!-- End Event Section -->
 
+    <!-- ======= Department Section ======= -->
+      <?php 
+        $this->load->view('fe/parts/department'); 
+      ?>
+    <!-- End Department Section -->
+
     <!-- ======= About Us Section ======= -->
    <!--  <div class="row">
       <div class="col-sm-10">
@@ -87,7 +94,7 @@
       <div class="col-sm-2"></div>
     </div> -->
       <?php 
-        $this->load->view('fe/parts/about'); 
+        // $this->load->view('fe/parts/about'); 
       ?>
     <!-- End About Us Section -->
 
@@ -127,11 +134,11 @@
       ?>
     <!-- End Contact Section -->
 
-      <!-- ======= Pengaduan Section ======= -->
-      <?php 
-        $this->load->view('fe/parts/pengaduan'); 
-      ?>
-    <!-- End Pengaduan Section -->
+    <!-- ======= Pengaduan Section ======= -->
+    <?php 
+      $this->load->view('fe/parts/pengaduan'); 
+    ?>
+  <!-- End Pengaduan Section -->
 
   </main><!-- End #main -->
 

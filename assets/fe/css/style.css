@@ -992,8 +992,8 @@ section {
   animation: slide-down 0.5s ease-out;
 }
 .departments .tab-pane img {
-  float: left;
-  max-width: 300px;
+  float: left ;
+  max-width: 500px;
   padding: 0 15px 15px 0;
 }
 @media (max-width: 768px) {
