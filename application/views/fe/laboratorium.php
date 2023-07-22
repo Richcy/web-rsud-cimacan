@@ -40,7 +40,7 @@
         <span><i class="fa fa-angle-right"></i></span>
         <a href="javascript:void(0);">Layanan</a>
         <span><i class="fa fa-angle-right"></i></span>
-        <a href="javascript:void(0);">Laboratorium</a>
+        <a href="javascript:void(0);">Laboratorium TEST</a>
       </div>
       <!-- End breadcumb -->
       <?php if (!empty($datas[0]->banner)) {?>
