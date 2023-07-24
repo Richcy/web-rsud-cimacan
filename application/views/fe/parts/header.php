@@ -129,7 +129,7 @@
               <li class="navbar-child"><a class="<?=$cur_page=='quality' ? 'active' : '';?>" href="<?=base_url('quality-check.html')?>">Penilaian Mutu</a></li>
                 <li class="navbar-child"><a class="<?=$cur_page=='hak_kewajiban' ? 'active' : '';?>" href="<?=base_url('hak_kewajiban.html')?>">Hak dan Kewajiban Pasien</a></li>
 
-                <li class="navbar-child"><a class="<?=$cur_page=='maklumat_pelayanan' ? 'active' : '';?>" href="<?=base_url('maklumat_pelayanan.html')?>">Maklumat da Standard Pelayanan</a></li>
+                <li class="navbar-child"><a class="<?=$cur_page=='maklumat_pelayanan' ? 'active' : '';?>" href="<?=base_url('maklumat_pelayanan.html')?>">Maklumat dan Standard Pelayanan</a></li>
                 <!--<li class="navbar-child"><a class="<?=$cur_page=='standard_pelayanan' ? 'active' : '';?>" href="<?=base_url('standard_pelayanan.html')?>">Standard Pelayanan</a></li>-->
                 
             </ul>
@@ -152,6 +152,7 @@
               <li class="navbar-child"><a class="<?=$cur_page=='farmasi' ? 'active' : '';?>" href="<?=base_url('farmasi.html')?>">Farmasi</a></li>
               <li class="navbar-child"><a class="<?=$cur_page=='ambulance' ? 'active' : '';?>" href="<?=base_url('ambulance.html')?>">Ambulance</a></li>
               <!-- <li class="navbar-child"><a class="<?=$cur_page=='medical_support' ? 'active' : '';?>" href="<?=base_url('medical-support.html')?>">Penunjang Medis</a></li> -->
+              <li class="navbar-child"><a class="<?=$cur_page=='pengaduan' ? 'active' : '';?>" href="<?=base_url('pengaduan.html')?>">Pengaduan</a></li>
             </ul>
           </li>
           <!--END Dropdown Menu Layanan -->
