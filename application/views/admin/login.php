@@ -34,7 +34,6 @@
                       <button type="submit" class="btn btn-primary btn-block primary-bg primary-border">Login</button>
                     </div>
                   </form>
-                  <a href="<?=base_url('')?>">Kembali</a>
                 </div>
               </div>
             </div>

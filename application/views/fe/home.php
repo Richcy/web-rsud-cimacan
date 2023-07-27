@@ -33,7 +33,6 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
-
     <div id="heroCarousel" data-bs-interval="8000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
       <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
@@ -71,21 +70,21 @@
   <main id="main">
     <!-- ======= Event Section ======= -->
       <?php 
-         //$this->load->view('fe/parts/event');
+        // $this->load->view('fe/parts/event');
       ?>
     <!-- End Event Section -->
-
-    <!-- ======= News Section ======= -->
-      <?php 
-         // $this->load->view('fe/parts/news'); 
-      ?>
-    <!-- End Event Section -->
-
+    
     <!-- ======= Department Section ======= -->
       <?php 
         $this->load->view('fe/parts/department'); 
       ?>
     <!-- End Department Section -->
+
+    <!-- ======= News Section ======= -->
+      <?php 
+        // $this->load->view('fe/parts/news'); 
+      ?>
+    <!-- End Event Section -->
 
     <!-- ======= About Us Section ======= -->
    <!--  <div class="row">
@@ -94,7 +93,7 @@
       <div class="col-sm-2"></div>
     </div> -->
       <?php 
-        // $this->load->view('fe/parts/about'); 
+        //$this->load->view('fe/parts/about'); 
       ?>
     <!-- End About Us Section -->
 
@@ -133,12 +132,12 @@
         $this->load->view('fe/parts/contact'); 
       ?>
     <!-- End Contact Section -->
-
+    
     <!-- ======= Pengaduan Section ======= -->
-    <?php 
-      $this->load->view('fe/parts/pengaduan'); 
-    ?>
-  <!-- End Pengaduan Section -->
+      <?php 
+        $this->load->view('fe/parts/pengaduan'); 
+      ?>
+    <!-- End Pengaduan Section -->
 
   </main><!-- End #main -->
 

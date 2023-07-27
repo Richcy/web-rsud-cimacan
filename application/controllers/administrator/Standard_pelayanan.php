@@ -6,7 +6,7 @@ class Standard_pelayanan extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-    	$this->load->model('M_Standard_pelayanan');
+    	$this->load->model('M_Standard_Pelayanan');
         $this->load->library('session');
 	}
 
@@ -16,7 +16,7 @@ class Standard_pelayanan extends CI_Controller {
 		
 		$data['cur_page'] = 'standard_pelayanan';
 		$data['cur_parent_page'] = 'about_company';
-		$data['datas'] = $this->M_Standard_pelayanan->show_standard_pelayanan();
+		$data['datas'] = $this->M_Standard_Pelayanan->show_standard_pelayanan();
 		$this->load->view('admin/module/standard_pelayanan/index', $data);
 	}
 
@@ -44,14 +44,14 @@ class Standard_pelayanan extends CI_Controller {
 		        	'type' => 'standard_pelayanan',
 		        	'create_date' => date('Y-m-d H:i:s')
 		        );
-		        $insert = $this->M_Standard_pelayanan->insert($datas,'t_image_profile');
+		        $insert = $this->M_Standard_Pelayanan->insert($datas,'t_image_profile');
 			}else{
 				$datas = array(
 		        	'id' => $id,
 		        	'type' => 'standard_pelayanan',
 		        	'create_date' => date('Y-m-d H:i:s')
 		        );
-				$insert = $this->M_Standard_pelayanan->update($datas, $id);
+				$insert = $this->M_Standard_Pelayanan->update($datas, $id);
 			}
 	        if ($insert) {
 	        	$this->session->set_flashdata('title','Success');
@@ -85,19 +85,19 @@ class Standard_pelayanan extends CI_Controller {
 			        	'type' => 'standard_pelayanan',
 		        		'create_date' => date('Y-m-d H:i:s')
 			        );
-			        $insert = $this->M_Standard_pelayanan->insert($datas,'t_image_profile');
+			        $insert = $this->M_Standard_Pelayanan->insert($datas,'t_image_profile');
 				}else{
 					$datas = array(
 			        	'img' => 'standard_pelayanan/'.$file_name,
 			        	'type' => 'standard_pelayanan',
 		        		'create_date' => date('Y-m-d H:i:s')
 			        );
-					$result = $this->M_Standard_pelayanan->show_standard_pelayanan();
+					$result = $this->M_Standard_Pelayanan->show_standard_pelayanan();
 					if ($result) {
 						$path = FCPATH.'/assets/uploads/'.$result[0]->banner;
 						$action_delete = unlink($path);
 					}
-					$insert = $this->M_Standard_pelayanan->update($datas, $id);
+					$insert = $this->M_Standard_Pelayanan->update($datas, $id);
 				}
 		        if ($insert) {
 		        	$this->session->set_flashdata('title','Success');
@@ -116,3 +116,4 @@ class Standard_pelayanan extends CI_Controller {
 
 	// End gallery section
 }
+

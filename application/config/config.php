@@ -23,9 +23,11 @@ date_default_timezone_set('Asia/Jakarta');
 | a PHP script and you can easily do that on your own.
 |
 */
- $config['base_url'] = BASE;
-// $config['base_url'] = 'http:// 192.168.1.15/rsud-cimacan-web/';
-//$config['base_url'] = 'http://localhost/rsud-cimacan-web/';
+//online domain
+//$config['base_url'] = 'https://rsudcimacan.cianjurkab.go.id/';
+
+//localhost domain
+$config['base_url'] = 'http://localhost/web-rsud-cimacan/';
 
 /*
 |--------------------------------------------------------------------------
@@ -225,9 +227,7 @@ $config['allow_get_array'] = TRUE;
 | your log files will fill up very fast.
 |
 */
-$config['log_threshold'] = 1;
-$config['display_errors'] = TRUE;
-
+$config['log_threshold'] = 0;
 
 /*
 |--------------------------------------------------------------------------

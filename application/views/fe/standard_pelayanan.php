@@ -63,7 +63,43 @@
           <h1 class="title-page">Standard Pelayanan RSUD Cimacan</h1>
         </div>
 
-1.  <a href="https://drive.google.com/file/d/1F4Fqg1Atvg9Ce9HLwATPqbPsAbiBCVOG/view?usp=share_link" class="link-class">Standard Pelayanan</a>
+<h5><a href="https://drive.google.com/file/d/1F4Fqg1Atvg9Ce9HLwATPqbPsAbiBCVOG/view?usp=share_link" class="link-class">STANDAR
+
+PELAYANAN DI
+LINGKUNGAN RUMAH
+SAKIT UMUM DAERAH
+CIMACAN</a></h5>
+<h3><br>1.  Bank Darah</h3>
+<img src="<?=base_url();?>assets/fe/img/BankDarah.png" alt="logo" width="700"></br>
+
+<h3><br>2.  Bedah Sentral</h3>
+<img src="<?=base_url();?>assets/fe/img/BedahSentral.png" alt="logo" width="700"></br>
+<h3><br>3.  CSSD</h3>
+<img src="<?=base_url();?>assets/fe/img/CSSD.png" alt="logo" width="700"></br>
+<h3><br>4.  Farmasi</h3>
+<img src="<?=base_url();?>assets/fe/img/Farmasi.png" alt="logo" width="700"></br>
+<h3><br>5.  Gizi</h3>
+<img src="<?=base_url();?>assets/fe/img/Gizi.png" alt="logo" width="700"></br>
+<h3><br>6.  Hemodialisa</h3>
+<img src="<?=base_url();?>assets/fe/img/Hemodialisa.png" alt="logo" width="700"></br>
+<h3><br>7.  IGD</h3>
+<img src="<?=base_url();?>assets/fe/img/IGD.png" alt="logo" width="700"></br>
+<h3><br>8.  IPSRS</h3>
+<img src="<?=base_url();?>assets/fe/img/IPSRS.png" alt="logo" width="700"></br>
+<h3><br>9.  Laboratorium</h3>
+<img src="<?=base_url();?>assets/fe/img/Laboratorium.png" alt="logo" width="700"></br>
+<h3><br>10.  Laundry</h3>
+<img src="<?=base_url();?>assets/fe/img/Laundry.png" alt="logo" width="700"></br>
+<h3><br>11.  Radiologi</h3>
+<img src="<?=base_url();?>assets/fe/img/Radiologi.png" alt="logo" width="700"></br>
+<h3><br>12.  Rawat Inap</h3>
+<img src="<?=base_url();?>assets/fe/img/Rawatinap.png" alt="logo" width="700"></br>
+<h3><br>13.  Rawat Jalan</h3>
+<img src="<?=base_url();?>assets/fe/img/Rawatjalan.png" alt="logo" width="700"></br>
+<h3><br>14.  Rehab Medik</h3>
+<img src="<?=base_url();?>assets/fe/img/RehabMedik.png" alt="logo" width="700"></br>
+<h3><br>15.  Rekam Medik</h3>
+<img src="<?=base_url();?>assets/fe/img/RekamMedik.png" alt="logo" width="700"></br>
         <div class="container">
           <div class="content-section">
             <div class="row">

@@ -88,7 +88,7 @@
             <a class="collapse-item <?=$cur_page == 'sketch' ? 'active' : ''?>" href="<?=base_url('administrator/sketch')?>">Denah</a>
             <a class="collapse-item <?=$cur_page == 'quality' ? 'active' : ''?>" href="<?=base_url('administrator/quality_check')?>">Penilaian Mutu</a>
           <a class="collapse-item <?=$cur_page == 'maklumat_pelayanan' ? 'active' : ''?>" href="<?=base_url('administrator/maklumat_pelayanan')?>">Maklumat Pelayanan</a>
-          <!-- <a class="collapse-item <?=$cur_page == 'standard_pelayanan' ? 'active' : ''?>" href="<?=base_url('administrator/standard_pelayanan')?>">Standard Pelayanan</a>-->
+           <a class="collapse-item <?=$cur_page == 'standard_pelayanan' ? 'active' : ''?>" href="<?=base_url('administrator/standard_pelayanan')?>">Standard Pelayanan</a>
           <a class="collapse-item <?=$cur_page == 'hak_kewajiban' ? 'active' : ''?>" href="<?=base_url('administrator/hak_kewajiban')?>">Hak dan Kewajiban</a>
           </div>
         </div>

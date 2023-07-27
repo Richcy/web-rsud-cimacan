@@ -76,9 +76,11 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
+	//for local
 	'username' => 'root',
 	'password' => '',
 	'database' => 'db_cimacan_profile',
+	//
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

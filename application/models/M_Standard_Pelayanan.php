@@ -1,5 +1,5 @@
 <?php 
-class M_Standard_pelayanan extends CI_Model {
+class M_Standard_Pelayanan extends CI_Model {
 
   
   public function show_standard_pelayanan()
@@ -42,3 +42,4 @@ class M_Standard_pelayanan extends CI_Model {
   }
 
 }
+

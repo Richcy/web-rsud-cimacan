@@ -7,22 +7,20 @@ class M_Cimanews extends CI_Model {
 	public function show_all()
 	{
     $query = $this->db->select('article.id, article.title, article.sub_desc, article.description, article.author, article.category, article.create_date, article.update_date, article.img, category.id as category_id, category.name as category_name');
-    $query = $this->db->where_not_in('category.name', 'cimanews');
-    //$query = $this->db->where_in('category.name', 'cimanews');
-    //$query = $this->db->order_by('article.create_date', 'DESC');
-    $this->db->order_by('article.create_date', 'ASC');
+    $query = $this->db->where_in('category.name', 'cimanews');
+    $query = $this->db->order_by('article.create_date', 'DESC');
     $query = $this->db->join('t_article_category as category', 'category.id = article.category', 'left');
 		$query = $this->db->get('t_article as article');
     return $query->result();
 	}
 
-  /*public function cimanews_category(){
+  public function cimanews_category(){
     $query = $this->db->select('id');
     $query = $query->where('name', 'cimanews');
     $query = $query->limit(1);
     $query = $query->get('t_article_category');
     return $query->result();
-  }*/
+  }
 
   public function get_detail($id)
   {
@@ -69,20 +67,26 @@ class M_Cimanews extends CI_Model {
   }
 
  // FE Section 
-  //public function getAll($s)
-  public function getAll($category, $s)
+  public function getHome()
   {
     $query = $this->db->select('article.id, article.title, article.sub_desc, article.description, article.author, article.category, article.create_date, article.update_date, article.img, category.id as category_id, category.name as category_name');
-    //$query = $this->db->where_in('category.name', 'cimanews');
-    $query = $this->db->where_not_in('category.name', 'cimanews');
-    //$query = $this->db->order_by('article.create_date', 'ASC');
+    $query = $this->db->join('t_article_category as category', 'category.id = article.category', 'left');
+    $query = $this->db->where_in('category.name', 'cimanews');
+    $query =  $this->db->where('status', 'publish');
+    $query = $query->limit(4);
+    $query = $this->db->order_by('article.create_date', 'DESC');
+    $query = $this->db->get('t_article as article');
+    return $query->result();
+  }
+
+  public function getAll($s)
+  {
+    $query = $this->db->select('article.id, article.title, article.sub_desc, article.description, article.author, article.category, article.create_date, article.update_date, article.img, category.id as category_id, category.name as category_name');
+    $query = $this->db->where_in('category.name', 'cimanews');
     $query = $this->db->order_by('article.create_date', 'DESC');
     $query = $this->db->join('t_article_category as category', 'category.id = article.category', 'left');
     $query =  $this->db->where('status', 'publish');
-
-    if (!empty($category)) {
-      $query =  $this->db->where('article.category', $category);
-    }
+    
     if (!empty($s)) {
       $query =  $this->db->like('article.title', $s);
     }
@@ -90,18 +94,15 @@ class M_Cimanews extends CI_Model {
     return $query->result();
   }
 
-  public function getPage($page, $category, $s)
+  public function getPage($page, $s)
   {
     $limitbefore = $page <= 1 ? 0 : ($page-1) * $this->itemPerPage;
     $query = $this->db->select('article.id, article.title, article.sub_desc, article.description, article.author, article.category, article.create_date, article.update_date, article.img, category.id as category_id, category.name as category_name');
-    // $query = $this->db->where_in('category.name', 'cimanews');
-    $query = $this->db->where_not_in('category.name', 'cimanews');
+    $query = $this->db->where_in('category.name', 'cimanews');
     $query = $this->db->order_by('article.create_date', 'DESC');
     $query = $this->db->join('t_article_category as category', 'category.id = article.category', 'left');
     $query =  $this->db->where('status', 'publish');
-    if (!empty($category)) {
-      $query =  $this->db->where('article.category', $category);
-    }
+    
     if (!empty($s)) {
       $query =  $this->db->like('article.title', $s);
     }
@@ -113,8 +114,7 @@ class M_Cimanews extends CI_Model {
   public function getTotal($s)
   {
     $query = $this->db->select('count(article.id) as totalData');
-    //$query = $this->db->where_in('category.name', 'cimanews');
-    $query = $this->db->where_not_in('category.name', 'cimanews');
+    $query = $this->db->where_in('category.name', 'cimanews');
     $query = $this->db->where('status', 'publish');
     $query = $this->db->join('t_article_category as category', 'category.id = article.category', 'left');
     
@@ -131,19 +131,6 @@ class M_Cimanews extends CI_Model {
     $query = $this->db->join('t_article_category as category', 'category.id = article.category', 'left');
     $query = $this->db->where('article.id', $id);
     $query = $query->limit(1);
-    $query = $this->db->get('t_article as article');
-    return $query->result();
-  }
-
-  public function getHome()
-  {
-    $query = $this->db->select('article.id, article.title, article.sub_desc, article.description, article.author, article.category, article.create_date, article.update_date, article.img, category.id as category_id, category.name as category_name');
-    //$query = $this->db->where_in('category.name', 'cimanews');
-    $this->db->where_not_in('category.name', 'cimanews');
-    $query = $this->db->join('t_article_category as category', 'category.id = article.category', 'left');
-    $query =  $this->db->where('status', 'publish');
-    $query = $query->limit(4);
-    $query = $this->db->order_by('article.create_date', 'DESC');
     $query = $this->db->get('t_article as article');
     return $query->result();
   }

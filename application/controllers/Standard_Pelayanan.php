@@ -6,7 +6,7 @@ class Standard_pelayanan extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-    	$this->load->model('M_Standard_pelayanan');
+    	$this->load->model('M_Standard_Pelayanan');
         $this->load->library('session');
 	}
 
@@ -19,7 +19,7 @@ class Standard_pelayanan extends CI_Controller {
 		$data['seo_keyword'] = "standard Pelayanan Rumah Sakit, rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan";
 		$data['seo_desc'] = "standard Pelayanan Rumah Sakit Daerah Cimacan";
 		$data['seo_url'] = base_url().'standard_pelayanan.html';
-		$data['datas'] = $this->M_Standard_pelayanan->getAll();
+		$data['datas'] = $this->M_Standard_Pelayanan->getAll();
 		$this->load->view('fe/standard_pelayanan', $data);
 	}
 
@@ -33,3 +33,4 @@ class Standard_pelayanan extends CI_Controller {
 
 
 }
+
