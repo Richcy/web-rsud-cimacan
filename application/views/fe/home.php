@@ -99,9 +99,15 @@
 
     <!-- ======= Services Section ======= -->
       <?php 
-        $this->load->view('fe/parts/services'); 
+        // $this->load->view('fe/parts/services'); 
       ?>
     <!-- End Services Section -->
+
+    <!-- ======= Pengaduan Section ======= -->
+      <?php 
+        $this->load->view('fe/parts/pengaduan'); 
+      ?>
+    <!-- End Pengaduan Section -->
 
     <!-- ======= Doctors Section ======= -->
       <?php 
@@ -132,12 +138,6 @@
         $this->load->view('fe/parts/contact'); 
       ?>
     <!-- End Contact Section -->
-    
-    <!-- ======= Pengaduan Section ======= -->
-      <?php 
-        $this->load->view('fe/parts/pengaduan'); 
-      ?>
-    <!-- End Pengaduan Section -->
 
   </main><!-- End #main -->
 
