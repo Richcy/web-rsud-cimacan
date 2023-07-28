@@ -816,6 +816,22 @@ section {
   background-size: cover;
   min-height: 400px;
 }
+.features .complain {
+  display: grid;
+  grid-template-columns: 1fr ;
+}
+@media (max-width: 991px){
+  .features .complain {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 576px){
+  .features .complain {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
 
 /*--------------------------------------------------------------
 # Services
@@ -1007,7 +1023,7 @@ section {
   padding: 0 15px 15px 0;
 }
 @media (max-width: 768px) {
-  .departments .tab-pane img {
+  .departments .tab-pane .img3 {
     float: none;
     padding: 0 0 15px 0;
     max-width: 100%;
