@@ -805,22 +805,36 @@ section {
   float: left;
   color: #3fbbc0;
 }
+.features .icon-box img {
+  max-width: 48px;
+  max-height: 48px;
+  float: left;
+  color: #3fbbc0;
+}
 .features .icon-box p {
   font-size: 15px;
-  color: #848484;
+  font-weight: bold;
+  color: #444444;
   margin-left: 60px;
+  margin-top: 15px;
 }
 .features .image {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 400px;
+  max-height: 400px;
 }
 .features .complain {
   display: grid;
   grid-template-columns: 1fr ;
 }
 @media (max-width: 991px){
+   .features .image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+}
   .features .complain {
     display: grid;
     grid-template-columns: 1fr 1fr;
