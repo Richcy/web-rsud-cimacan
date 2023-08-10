@@ -1023,8 +1023,8 @@ section {
 }
 .departments .tab-pane .img2 {
   float: left;
-  max-width: 600px;
-  max-height: 300px;
+  max-width: 700px;
+  max-height: 400px;
   padding: 0 15px 15px 0;
 }
 
@@ -1032,8 +1032,8 @@ section {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 600px;
-  max-height: 300px;
+  max-width: 700px;
+  max-height: 400px;
   padding: 0 15px 15px 0;
 }
 @media (max-width: 768px) {

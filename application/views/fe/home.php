@@ -73,12 +73,6 @@
         // $this->load->view('fe/parts/event');
       ?>
     <!-- End Event Section -->
-    
-    <!-- ======= Department Section ======= -->
-      <?php 
-        $this->load->view('fe/parts/department'); 
-      ?>
-    <!-- End Department Section -->
 
     <!-- ======= News Section ======= -->
       <?php 
@@ -97,17 +91,17 @@
       ?>
     <!-- End About Us Section -->
 
-    <!-- ======= Services Section ======= -->
+    <!-- ======= Informasi Publik Section ======= -->
       <?php 
-        // $this->load->view('fe/parts/services'); 
+        $this->load->view('fe/parts/public-info'); 
+      ?>
+    <!-- End Informasi Publik Section -->
+
+     <!-- ======= Services Section ======= -->
+      <?php 
+         $this->load->view('fe/parts/services'); 
       ?>
     <!-- End Services Section -->
-
-    <!-- ======= Pengaduan Section ======= -->
-      <?php 
-        $this->load->view('fe/parts/pengaduan'); 
-      ?>
-    <!-- End Pengaduan Section -->
 
     <!-- ======= Doctors Section ======= -->
       <?php 
@@ -120,6 +114,12 @@
         $this->load->view('fe/parts/articles'); 
       ?>
     <!-- End Article Section -->
+
+    <!-- ======= Pengaduan Section ======= -->
+      <?php 
+        $this->load->view('fe/parts/pengaduan'); 
+      ?>
+    <!-- End Pengaduan Section -->
 
     <!-- ======= Gallery Section ======= -->
       <?php 
