@@ -1,15 +1,11 @@
+<!-- floating icon -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   <div class="icon-bar-share">
-    <a href="javascript:void(0)" id="ambulance" class="ambulance-share" data-bs-toggle="modal" data-bs-target="#ambulance-modal">
-      <i class="old-ambulance fa fa-ambulance"></i>
-    </a>
-    <!-- <a href="https://wa.me/628112031117?text=Halo%20Admin%20Hotline%20WA%20.%20.%20." target="_blank" class="whatsapp-share"><i class="fa fa-whatsapp"></i></a> -->
-    <a href="javascript:void(0)" target="_blank" class="whatsapp-share" data-bs-toggle="modal" data-bs-target="#phone-modal"><i class="fa fa-phone"></i>
-    </a>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <a href="https://play.google.com/store/apps/details?id=com.reservcimacan&hl=in&gl=US" target="_blank" class="google-share">
-     <i class="bi bi-google-play"></i></i></a>
+    <a class="ambulance-share" target="_blank" data-bs-toggle="modal" data-bs-target="#ambulance-modal"><i class="old-ambulance fa fa-ambulance"></i></a>
+    <a class="whatsapp-share" target="_blank" data-bs-toggle="modal" data-bs-target="#phone-modal"><i class="fa fa-phone"></i></a>
+    <a class="google-share" target="_blank" data-bs-toggle="modal" data-bs-target="#google-modal"><i class="bi bi-google-play"></i></a>
   </div>
-
+<!-- end floating icon -->
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="footer-top">
@@ -102,10 +98,10 @@
         <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </footer>
+  <!-- End Footer -->
 
-
-  <!-- Modal -->
+  <!-- ambulance Modal -->
   <div class="modal fade" id="ambulance-modal" tabindex="-1" aria-labelledby="" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -167,6 +163,40 @@
             <div class="detail-clock-modal"><i class="fas fa-clock"></i><span> 08.00 - 20.00 WIB</span></div>
 
             <a href="tel:+622632956036" class="btn btn-warning call-ambulance hidden-lg hidden-md">Call Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Google Playstore Modal -->
+  <div class="modal fade" id="google-modal" tabindex="-1" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-10">
+              <!-- <h4>Call Ambulance</h4> -->
+            </div>
+            <div class="col-md-2 close-modal">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="google-play-content">
+            <h2>Pasien Umum :</h2>
+            <div class="tartimah-modal">
+              <i class="bi bi-google-play"></i>
+              <span>
+                <a href="https://play.google.com/store/apps/details?id=com.reservcimacan" target="_blank"> Tartimah</a>
+              </span>
+            </div>
+            <h2>Pasien BPJS :</h2>
+            <div class="jkn-modal">
+              <i class="bi bi-google-play"></i>
+              <span> 
+                <a href="https://play.google.com/store/apps/details?id=app.bpjs.mobile" target="_blank"> Mobile JKN</a>
+              </span>
+            </div>
           </div>
         </div>
       </div>

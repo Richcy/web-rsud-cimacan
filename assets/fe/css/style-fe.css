@@ -1069,11 +1069,17 @@ position: fixed;
     text-align: center;
 }
 
-
 .contact-ambulance h2{
     color: #a82024;
 }
 
+#ambulance-modal .modal-body{
+    height: 210px;
+}
+
+#ambulance-modal .modal-content{
+    margin-top: 40%;
+}
 
 .logo-phone-modal{
     text-align: right;
@@ -1098,20 +1104,37 @@ position: fixed;
     margin-top: 15px;
 }
 
-#ambulance-modal .modal-body{
-    height: 210px;
-}
-
-#ambulance-modal .modal-content{
-    margin-top: 40%;
-}
-
 #phone-modal .modal-body{
     height: 250px;
 }
 
 #phone-modal .modal-content{
     margin-top: 40%;
+}
+
+.google-play-content{
+    text-align: center;
+}
+
+.google-play-content h2{
+    color: #a82024;
+}
+
+#google-modal .modal-body{
+    height: 210px;
+}
+
+#google-modal .modal-content{
+    margin-top: 40%;
+}
+
+.tartimah-modal{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.jkn-modal{
+    font-size: 20px;
 }
 
 .empty-data{
