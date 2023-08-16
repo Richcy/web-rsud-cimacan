@@ -848,6 +848,15 @@ a:hover.button-reset{
 }
 /*END Section doctor*/
 
+/*standard pelayanan section*/
+
+.standard-pelayanan img{
+    max-width: 65%;
+    max-height: auto;
+}
+
+/*end standard pelayanan section*/
+
 /*Floating section*/
 
 .icon-bar-share {
@@ -1222,6 +1231,7 @@ position: fixed;
     }
 }
 
+/*tablet resolution*/
 @media(max-width: 770px){
     .denah-rs{
         max-width: 670px;
@@ -1274,7 +1284,12 @@ position: fixed;
         max-width: 200px !important;
         max-height: 285px;
     }
+
+     .standard-pelayanan img{
+        max-width: 100%;
+    }
 }
+/*end tablet resolution*/
 
 @media (min-width: 640px) and (max-width: 991px) {
     #header{
@@ -1357,7 +1372,8 @@ position: fixed;
     }
 }
 
-@media(max-width: 420px){
+/*large phone resolution*/
+@media(max-width: 480px){
     .denah-rs{
         max-width: 360px;
     }
@@ -1388,6 +1404,7 @@ position: fixed;
         margin-top: 25%;
     }
 }
+/*end large phone resolution*/
 
 @media(max-width: 400px){
     .denah-rs{

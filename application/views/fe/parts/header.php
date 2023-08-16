@@ -145,10 +145,10 @@
         </ul>
       </li>
       <!--END Dropdown layanan menu -->
-      
+
       <li><a class="nav-link <?=$cur_page=='doctor' ? 'active' : '';?>" href="<?=base_url('doctor/');?>">Dokter</a></li>
       <li><a class="nav-link <?=$cur_page=='event' ? 'active' : '';?>" href="<?=base_url('event/');?>">Event</a></li>
-     
+
       <!-- drop down Artikel menu -->
       <?php 
         $dropdown_article = '';

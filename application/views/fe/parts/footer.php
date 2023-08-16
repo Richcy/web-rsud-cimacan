@@ -3,7 +3,7 @@
   <div class="icon-bar-share">
     <a class="ambulance-share" target="_blank" data-bs-toggle="modal" data-bs-target="#ambulance-modal"><i class="old-ambulance fa fa-ambulance"></i></a>
     <a class="whatsapp-share" target="_blank" data-bs-toggle="modal" data-bs-target="#phone-modal"><i class="fa fa-phone"></i></a>
-    <a class="google-share" target="_blank" data-bs-toggle="modal" data-bs-target="#google-modal"><i class="bi bi-google-play"></i></a>
+     <a class="google-share" target="_blank" data-bs-toggle="modal" data-bs-target="#google-modal"><i class="bi bi-google-play"></i></a>
   </div>
 <!-- end floating icon -->
 
@@ -181,9 +181,14 @@
           <h2>Pasien BPJS :</h2>
           <div class="jkn-modal">
             <i class="bi bi-google-play"></i>
-            <span> 
+           <span> 
               <a href="https://play.google.com/store/apps/details?id=app.bpjs.mobile" target="_blank"> Mobile JKN</a>
             </span>
+            <br>
+            <span> 
+              <a href="https://www.youtube.com/watch?v=ML2vGaaiQK8&ab_channel=BPJSKesehatan" target="_blank"> Tutorial Mobile JKN</a>
+            </span>
+            <br>
           </div>
         </div>
       </div>
