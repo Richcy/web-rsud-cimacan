@@ -5,25 +5,23 @@
   <title><?=$seo_title;?></title>
   <!-- SEO Section -->
   <meta name="keywords" content="<?=$seo_keyword;?>">
-  <meta name="description" content="<?=$seo_desc;?>">
+  <meta name="description" content="">
   <link rel="canonical" href="<?=$seo_url;?>">
   <meta property="og:type" content="article" />
   <meta property="og:title" content="<?=$seo_keyword;?>" />
   <meta property="og:image" content="" />
-  <meta property="og:description" content="<?=$seo_desc;?>" />
+  <meta property="og:description" content="" />
   <meta property="og:url" content="<?=$seo_url;?>"/>
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="<?=$seo_keyword;?>" />
   <meta name="twitter:image:src" content="" />
-  <meta name="twitter:description" content="<?=$seo_desc;?>"/>
+  <meta name="twitter:description" content=""/>
   <!-- End SEO -->
   <?php 
     $this->load->view('fe/packages/head');
   ?>
 </head>
-
 <body>
-
   <?php include("parts/top-bar.php") ?>
   <header id="header" class="header-bar fixed-top">
     <?php 
@@ -44,36 +42,30 @@
       </div>
       <!-- End breadcumb -->
         <?php if (!empty($datas[0]->banner)) {?>
-            <div class="hidden-xs nhead-bg" style="background-image: url('<?php echo base_url().'assets/uploads/'.$datas[0]->banner;?>');">
-                <div class="nhead-layer" style="background-color: rgb(10 10 10 / 0%);">
-                    <div class="nhead-wrap">
-                        <div class="nhead-title">
-
-                        </div>
-                    </div>
+          <div class="hidden-xs nhead-bg" style="background-image: url('<?php echo base_url().'assets/uploads/'.$datas[0]->banner;?>');">
+            <div class="nhead-layer" style="background-color: rgb(10 10 10 / 0%);">
+              <div class="nhead-wrap">
+                <div class="nhead-title">
                 </div>
+              </div>
             </div>
+          </div>
         <?php } ?>
     </div>
 
   <!-- End Hero -->
   <main id="main">
-
     <section id="content" class="main-page">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h1 class="title-page">Profil RSUD Cimacan</h1>
         </div>
-
         <div class="container">
           <div class="content-section">
             <div class="row">
               <div class="col-md-12 min-font-size">
-                <p>
-                  <?=$datas[0]->description;?>
-                </p>
+                <?=$datas[0]->description;?>
               </div>
-
             </div>
           </div>
         </div>
