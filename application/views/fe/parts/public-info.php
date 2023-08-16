@@ -12,21 +12,25 @@
           <li class="nav-item">
             <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
               <h4>Sambutan Direktur</h4>
+              <!-- <p>Indeks Kepuasan Masyarakat</p> -->
             </a>
           </li>
           <li class="nav-item mt-2">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
               <h4>Maklumat</h4>
+              <!-- <p>Isian 2</p> -->
             </a>
           </li>
           <li class="nav-item mt-2">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
               <h4>Indeks Kepuasan Masyarakat</h4>
+              <!-- <p>Isian 3</p> -->
             </a>
           </li>
           <li class="nav-item mt-2">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
               <h4>Jadwal Pelayanan</h4>
+              <!-- <p>Isian 4</p> -->
             </a>
           </li>
         </ul>
@@ -36,7 +40,7 @@
           <div class="tab-pane active show" id="tab-1">
             <!-- <h3 class="main-color">Sambutan Direktur</h3> -->
             <!-- <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p> -->
-            <img src="<?php echo base_url();?>assets/uploads/about_company/20220707081426_bu-direktur.jpg" alt="direktur" class="direktur">
+            <img src="<?php echo base_url();?>assets/uploads/about_company/20220707081426_bu-direktur.jpg" alt="" class="img2">
             <p style="text-align: justify;">Puji syukur kami panjatkan kepada Allah SWT. atas segala anugerah yang telah diberikan sehingga pelayanan kesehatan kepada masyarakat masih dapat dihadirkan di Rumah Sakit Umum Daerah Cimacan (RSUD Cimacan).
             Sebagaimana yang dicantumkan dalam UU No. 44 Tahun 2009 pasal 4 bahwa Rumah Sakit mempunyai tugas memberikan pelayanan kesehatan perorangan secara paripurna, maka RSUD Cimacan selalu bersiap untuk mengemban amanah tersebut. Termasuk hal penting lainnya adalah mampu memberikan perlindungan terhadap keselamatan pasien, masyarakat, lingkungan rumah sakit dan sumberdaya manusia di rumah sakit, merupakan perhatian utama kami dalam upaya mewujudkannya.
             RSUD Cimacan senantiasa berusaha untuk meningkatkan mutu dan mempertahankan standar pelayanan rumah sakit agar dapat memberikan sumbangsih terbaik bagi pembangunan sektor kesehatan khususnya di wilayah Kabupaten Cianjur. Menjadi etalase pelayanan kesehatan yang prima adalah salah satu tujuan kami. Dengan turut mengikuti perkembangan ilmu pengetahuan dan teknologi kesehatan terkini juga menjadi bagian yang tak kami kesampingkan. Seiring dengan itu kami coba sajikan inovasi-inovasi layanan yang berorientasi kepada kepuasan masyarakat.
@@ -45,19 +49,19 @@
           <div class="tab-pane" id="tab-2">
             <!-- <h3 class="main-color">Maklumat</h3> -->
             <!-- <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p> -->
-            <img src="<?php echo base_url();?>assets/uploads/image/Maklumat.png" alt="maklumat" class="maklumat">
+            <img src="<?php echo base_url();?>assets/uploads/image/Maklumat.png" alt="" class="img3">
             <!-- <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p> -->
           </div>
           <div class="tab-pane" id="tab-3">
             <!-- <h3 class="main-color">Indeks Kepuasan Masyarakat</h3> -->
             <!-- <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p> -->
-            <img src="<?php echo base_url();?>assets/uploads/image/IKM.png" alt="ikm" class="ikm">
+            <img src="<?php echo base_url();?>assets/uploads/image/IKM.png" alt="" class="img3">
             <!-- <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p> -->
           </div>
           <div class="tab-pane" id="tab-4">
             <!-- <h3 class="main-color">Pediatrics</h3> -->
             <!-- <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p> -->
-            <img src="<?php echo base_url();?>assets/uploads/image/jadwal.jpg" alt="jadwal" class="jadwal">
+            <img src="<?php echo base_url();?>assets/uploads/image/jadwal.jpg" alt="" class="img3">
             <!-- <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p> -->
           </div>
         </div>
