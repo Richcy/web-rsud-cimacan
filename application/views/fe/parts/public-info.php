@@ -44,7 +44,7 @@
           <div class="tab-pane" id="tab-2">
             <!-- <h3 class="main-color">Maklumat</h3> -->
             <!-- <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p> -->
-            <img src="<?php echo base_url();?>assets/uploads/image/Maklumat.png" alt="maklumat" class="maklumat">
+            <img src="<?php echo base_url();?>assets/uploads/maklumat_pelayanan/20230328165351_MAKLUMAT.jpg" alt="maklumat" class="maklumat">
             <!-- <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p> -->
           </div>
           <div class="tab-pane" id="tab-3">

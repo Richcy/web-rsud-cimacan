@@ -33,4 +33,3 @@ class Standard_pelayanan extends CI_Controller {
 
 
 }
-

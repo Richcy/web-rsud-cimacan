@@ -19,12 +19,12 @@
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Add Instalasi Rawat Jalan's Sub Menu</h1>
+            <h1 class="h3 mb-0 text-gray-800">Add Standard Pelayanan's Sub Menu</h1>
             <ol class="breadcrumb">
               <li class="breadcrumb-item">Content</li>
               <li class="breadcrumb-item" aria-current="page">Service</li>
-              <li class="breadcrumb-item" aria-current="page"> <a style="text-decoration: none; color: inherit;" href="<?=base_url('administrator/irj')?>"> Instalasi Rawat Jalan </a></li>
-              <li class="breadcrumb-item" aria-current="page"> <a style="text-decoration: none; color: inherit;" href="<?=base_url('administrator/irj/sub_menu')?>"> Sub Menu </a></li>
+              <li class="breadcrumb-item" aria-current="page"> <a style="text-decoration: none; color: inherit;" href="<?=base_url('administrator/standard_pelayanan')?>"> Standard Pelayanan </a></li>
+              <li class="breadcrumb-item" aria-current="page"> <a style="text-decoration: none; color: inherit;" href="<?=base_url('administrator/standard_pelayanan/sub_menu')?>"> Sub Menu </a></li>
               <li class="breadcrumb-item active" aria-current="page">Add</li>
             </ol>
           </div>
@@ -35,7 +35,7 @@
             <div class="col-lg-12">
               <div class="card mb-4">
                 <div class="container-form">
-                  <form id="form-sub-menu" action="<?=base_url('administrator/irj/create_sub_menu')?>" method="POST" enctype="multipart/form-data">
+                  <form id="form-sub-menu" action="<?=base_url('administrator/standard_pelayanan/create_sub_menu')?>" method="POST" enctype="multipart/form-data">
                     <input type="hidden" class="form-control input-length" id="service_id" name="service_id" value="<?=$service_id;?>">
                     <div class="mb-3" style="margin-top: 2%;">
                       <label class="form-label">Title <span class="required-fill">*</span></label>

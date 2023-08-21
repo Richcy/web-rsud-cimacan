@@ -48,7 +48,6 @@
         <div class="nhead-layer" style="background-color: rgb(10 10 10 / 0%);">
           <div class="nhead-wrap">
             <div class="nhead-title">
-              
             </div>
           </div>
         </div>
@@ -62,7 +61,6 @@
         <div class="section-title">
           <h1 class="title-page">Instalasi Rawat Jalan</h1>
         </div>
-
         <div class="container">
           <div class="content-section">
             <div class="row">
@@ -95,7 +93,7 @@
               </div>
               <?php if (!empty($galleries)) {?>
               <div class="col-md-5">
-                  <div class="gallery-title">Galeri</div>
+                <div class="gallery-title">Galeri</div>
                   <div class="page-gallery-slider swiper">
                     <div class="swiper-wrapper align-items-center">
                       <?php foreach ($galleries as $gallery) {?>
@@ -110,7 +108,6 @@
                         </div>
                       </div>
                       <?php } ?>
-
                     </div>
                     <div class="arrow-gallery-img swiper-prev">
                       <i class="fa fa-chevron-left"></i>
@@ -120,7 +117,6 @@
                     </div>
                     <div class="swiper-pagination"></div>
                   </div>
-                  
               </div>
             <?php } ?>
             </div>

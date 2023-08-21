@@ -1,7 +1,6 @@
 <?php 
 class M_Standard_Pelayanan extends CI_Model {
 
-  
   public function show_standard_pelayanan()
   {
     $query = $this->db->select('*');
@@ -30,7 +29,6 @@ class M_Standard_Pelayanan extends CI_Model {
     return $query;
   }
 
-
   // Frontend section
   public function getAll()
   {
@@ -42,4 +40,3 @@ class M_Standard_Pelayanan extends CI_Model {
   }
 
 }
-

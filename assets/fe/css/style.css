@@ -1056,13 +1056,6 @@ section {
   padding: 0 15px 15px 0;
 }
 
-@media (max-width: 768px) {
-  .departments .tab-pane .ikm, .maklumat, .jadwal {
-    float: none;
-    padding: 0 0 15px 0;
-    max-width: 100%;
-  }
-}
 .departments .tab-pane h3 {
   font-size: 26px;
   font-weight: 600;
@@ -1089,6 +1082,26 @@ section {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .departments .tab-pane .ikm, .maklumat, .jadwal {
+    display: block;
+    float: none;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 450px) and (min-width: 321px) {
+  .departments .tab-pane .direktur {
+    display: block;
+    float: none;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1425,18 +1438,28 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+
 .contact .info-box {
+  height: 350px;
   color: #444444;
   text-align: center;
   box-shadow: 0 0 20px rgba(214, 215, 216, 0.5);
   padding: 20px 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px){
+  .contact .info-box {
+    height: 200px;
+  }
 }
 .contact .info-box i {
   font-size: 32px;
   color: #3fbbc0;
   border-radius: 50%;
   padding: 8px;
-  /*border: 2px dotted #c5ebec;*/
   border: 2px dotted #a82024;
 }
 .contact .info-box h3 {

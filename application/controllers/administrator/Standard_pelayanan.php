@@ -12,8 +12,6 @@ class Standard_pelayanan extends CI_Controller {
 
 	public function index()
 	{
-		
-		
 		$data['cur_page'] = 'standard_pelayanan';
 		$data['cur_parent_page'] = 'about_company';
 		$data['datas'] = $this->M_Standard_Pelayanan->show_standard_pelayanan();
@@ -116,4 +114,3 @@ class Standard_pelayanan extends CI_Controller {
 
 	// End gallery section
 }
-

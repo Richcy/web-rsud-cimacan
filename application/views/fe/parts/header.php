@@ -90,12 +90,12 @@
       </li>
       <!-- End drop down artikel menu -->
 
+      <li><a class="nav-link <?=$cur_page=='career' ? 'active' : '';?>" href="<?=base_url('career/')?>">Karir</a></li>
       <?php if ($cur_page == 'home') {?>
         <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
       <?php }else{ ?>
       <li><a class="nav-link <?=$cur_page=='contact' ? 'active' : '';?>" href="<?=base_url('contact.html')?>">Kontak</a></li>
       <?php } ?>
-      <li><a class="nav-link <?=$cur_page=='career' ? 'active' : '';?>" href="<?=base_url('career/')?>">Karir</a></li>
     </ul>
     <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
   </nav>
