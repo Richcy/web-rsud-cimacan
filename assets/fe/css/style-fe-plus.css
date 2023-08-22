@@ -4434,15 +4434,14 @@ body{
 }
 .pagination-link {
     font-size: 14px;
-    
     color: #a82024;
     padding: 3px 2px;
     border: solid 1px #a82024;
     display: block;
     text-align: center;
     border-radius: 5px;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }
 .pagination-link:hover,.pagination-link:focus,.pagination-link:active {
     color: #fff !important;

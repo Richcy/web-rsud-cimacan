@@ -128,44 +128,155 @@
             <p class="empty-data">Data dokter tidak tersedia</p>
           <?php } ?>
           <!-- Pagination -->
-        <div class="listbox-pagination">
-          <ul>
-            <?php if ($page != 1) {?>
-            <li>
-              <?php if ($field_selected != '' || $s != '') {?>
-                <a href="<?=base_url().'doctor/'.($page-1).'?field='.$field_selected.'&s='.$s;?>" class="pagination-link">
-              <?php }else{ ?>
-                <a href="<?=base_url().'doctor/'.($page-1).'/';?>" class="pagination-link">
-              <?php } ?>
-                <i class="fa fa-angle-left"></i>
-              </a>
-            </li>
-            <?php } ?>
+          <div class="listbox-pagination">
+            <ul>
 
-            <?php for ($i=1; $i <= $totalPage ; $i++) {?>
-              <li>
-                <?php if ($field_selected != '' || $s != '') {?>
-                  <a href="<?=base_url().'doctor/'.$i.'?field='.$field_selected.'&s='.$s;?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
-                <?php }else{ ?>
-                  <a href="<?=base_url().'doctor/'.$i.'/';?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
+              <!-- conditional if total page is more than 5 -->
+              <?php if ($totalPage >5) {?>
+
+                <!-- conditional for left arrow -->
+                <?php if ($page > 3) {?>
+                <li>
+                  <?php if ($category_selected != '' || $s != '') {?>
+                    <a href="<?=base_url().'doctor/1?category='.$category_selected.'&s='.$s;?>" class="pagination-link">
+                  <?php }else{ ?>
+                    <a href="<?=base_url().'doctor/1/';?>" class="pagination-link">
+                  <?php } ?>
+                    <i class="fa fa-angle-left"></i>
+                    <i class="fa fa-angle-left"></i>
+                  </a>
+                </li>
+                <li>
+                  <?php if ($category_selected != '' || $s != '') {?>
+                    <a href="<?=base_url().'doctor/'.($page-1).'?category='.$category_selected.'&s='.$s;?>" class="pagination-link">
+                  <?php }else{ ?>
+                    <a href="<?=base_url().'doctor/'.($page-1).'/';?>" class="pagination-link">
+                  <?php } ?>
+                    <i class="fa fa-angle-left"></i>
+                  </a>
+                </li>
                 <?php } ?>
-                  <?=$i;?>
-                </a>
-              </li>
-            <?php } ?>
-            <?php if ($page < $totalPage) {?>
-            <li>
-              <?php if ($field_selected != '' || $s != '') {?>
-                <a href="<?=base_url().'doctor/'.($page+1).'?field='.$field_selected.'&s='.$s;?>" class="pagination-link">
-              <?php }else{ ?>
-                <a href="<?=base_url().'doctor/'.($page+1).'/';?>" class="pagination-link">
+                <!-- end conditional -->
+
+                <!-- conditional and looping #1 pagination for middle of total page -->
+                <?php if (($page > 2) && ($page < $totalPage-2)) {?>
+                  <?php for ($i = $page-2; $i <= $page+2 ; $i++) {?>
+                    <li>
+                      <?php if ($category_selected != '' || $s != '') {?>
+                        <a href="<?=base_url().'doctor/'.$i.'?category='.$category_selected.'&s='.$s;?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
+                      <?php } else { ?>
+                        <a href="<?=base_url().'doctor/'.$i.'/';?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
+                      <?php } ?> 
+                        <?=$i;?>
+                      </a>
+                    </li>
+                  <?php } ?>
+                <!-- end conditional and looping #1 -->
+
+                <!-- conditional and looping #2 pagination for first two page -->
+                <?php } elseif ($page <= 2) {?>
+                  <?php for ($i = 1; $i <= 5 ; $i++) {?>
+                    <li>
+                      <?php if ($category_selected != '' || $s != '') {?>
+                        <a href="<?=base_url().'doctor/'.$i.'?category='.$category_selected.'&s='.$s;?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
+                      <?php } else { ?>
+                        <a href="<?=base_url().'doctor/'.$i.'/';?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
+                      <?php } ?> 
+                        <?=$i;?>
+                      </a>
+                    </li>
+                  <?php } ?>
+                <!-- end conditional and looping #2 -->
+
+                <!-- conditional and looping #3 pagination for last two page -->
+                <?php } else { ?> 
+                  <?php for ($i = $totalPage - 4; $i <= $totalPage ; $i++) {?>
+                    <li>
+                      <?php if ($category_selected != '' || $s != '') {?>
+                        <a href="<?=base_url().'doctor/'.$i.'?category='.$category_selected.'&s='.$s;?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
+                      <?php } else { ?>
+                        <a href="<?=base_url().'doctor/'.$i.'/';?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
+                      <?php } ?> 
+                        <?=$i;?>
+                      </a>
+                    </li>
+                  <?php } ?>
+                  <!-- end conditional and looping #3 -->
+                <?php } ?>
+
+                <!-- conditional for right arrow -->
+                <?php if (($page < $totalPage-2) && ($totalPage > 5)) {?>
+                <li>
+                  <?php if ($category_selected != '' || $s != '') {?>
+                    <a href="<?=base_url().'doctor/'.($page+1).'?category='.$category_selected.'&s='.$s;?>" class="pagination-link">
+                  <?php }else{ ?>
+                    <a href="<?=base_url().'doctor/'.($page+1).'/';?>" class="pagination-link">
+                  <?php } ?>
+                    <i class="fa fa-angle-right"></i>
+                  </a>
+                </li>
+                <li>
+                  <?php if ($category_selected != '' || $s != '') {?>
+                    <a href="<?=base_url().'doctor/'.($totalPage).'?category='.$category_selected.'&s='.$s;?>" class="pagination-link">
+                  <?php }else{ ?>
+                    <a href="<?=base_url().'doctor/'.($totalPage).'/';?>" class="pagination-link">
+                  <?php } ?>
+                    <i class="fa fa-angle-right"></i>
+                    <i class="fa fa-angle-right"></i>
+                  </a>
+                </li>
+                <?php } ?>
+                <!-- end conditional -->
               <?php } ?>
-                <i class="fa fa-angle-right"></i>
-              </a>
-            </li>
-            <?php } ?>
-          </ul>
-        </div>
+              <!-- end conditional if total page is more than 5 -->
+
+              <!-- conditional if total page is same or less than 5 -->
+              <?php if ($totalPage < 5) {?>
+                <!-- conditional for left arrow -->
+                <?php if ($page != 1) {?>
+                <li>
+                  <?php if ($category_selected != '' || $s != '') {?>
+                    <a href="<?=base_url().'doctor/'.($page-1).'?category='.$category_selected.'&s='.$s;?>" class="pagination-link">
+                  <?php }else{ ?>
+                    <a href="<?=base_url().'doctor/'.($page-1).'/';?>" class="pagination-link">
+                  <?php } ?>
+                    <i class="fa fa-angle-left"></i>
+                  </a>
+                </li>
+                <?php } ?>
+                <!-- end conditional -->
+
+                <!-- looping pagination -->
+                <?php for ($i=1; $i <= $totalPage ; $i++) {?>
+                  <li>
+                    <?php if ($category_selected != '' || $s != '') {?>
+                      <a href="<?=base_url().'doctor/'.$i.'?category='.$category_selected.'&s='.$s;?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
+                    <?php }else{ ?>
+                      <a href="<?=base_url().'doctor/'.$i.'/';?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
+                    <?php } ?> 
+                      <?=$i;?>
+                    </a>
+                  </li>
+                <?php } ?>
+                <!-- end looping -->
+
+                <!-- conditional for right arrow -->
+                <?php if ($page < $totalPage) {?>
+                <li>
+                  <?php if ($category_selected != '' || $s != '') {?>
+                    <a href="<?=base_url().'doctor/'.($page+1).'?category='.$category_selected.'&s='.$s;?>" class="pagination-link">
+                  <?php }else{ ?>
+                    <a href="<?=base_url().'doctor/'.($page+1).'/';?>" class="pagination-link">
+                  <?php } ?>
+                    <i class="fa fa-angle-right"></i>
+                  </a>
+                </li>
+                <?php } ?>
+                <!-- end conditional -->
+              <?php } ?>
+              <!-- conditional if total page is same or less than 5 -->
+            </ul>
+          </div>
         <!-- End Pagination -->
         </section>
         <!-- End Doctor list -->
