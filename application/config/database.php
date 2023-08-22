@@ -80,7 +80,10 @@ $db['default'] = array(
 	'username' => 'root',
 	'password' => '',
 	'database' => 'db_cimacan_profile',
-	//
+	//for online
+	// 'username' => 'rsud_cimacan_208357',
+	// 'password' => 'ggPirZQOH6MHODL9',
+	// 'database' => 'rsud_cimacan_rsc79451508',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

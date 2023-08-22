@@ -143,8 +143,8 @@
               <!-- conditional for left arrow -->
               <?php if ($page > 3) {?>
               <li>
-                <?php if ($category_selected != '' || $s != '') {?>
-                  <a href="<?=base_url().'cimanews/1?category='.$category_selected.'&s='.$s;?>" class="pagination-link">
+                <?php if ($s != '') {?>
+                  <a href="<?=base_url().'cimanews/1?&s='.$s;?>" class="pagination-link">
                 <?php }else{ ?>
                   <a href="<?=base_url().'cimanews/1/';?>" class="pagination-link">
                 <?php } ?>
@@ -153,8 +153,8 @@
                 </a>
               </li>
               <li>
-                <?php if ($category_selected != '' || $s != '') {?>
-                  <a href="<?=base_url().'cimanews/'.($page-1).'?category='.$category_selected.'&s='.$s;?>" class="pagination-link">
+                <?php if ($s != '') {?>
+                  <a href="<?=base_url().'cimanews/'.($page-1).'&s='.$s;?>" class="pagination-link">
                 <?php }else{ ?>
                   <a href="<?=base_url().'cimanews/'.($page-1).'/';?>" class="pagination-link">
                 <?php } ?>
@@ -168,8 +168,8 @@
               <?php if (($page > 2) && ($page < $totalPage-2)) {?>
                 <?php for ($i = $page-2; $i <= $page+2 ; $i++) {?>
                   <li>
-                    <?php if ($category_selected != '' || $s != '') {?>
-                      <a href="<?=base_url().'cimanews/'.$i.'?category='.$category_selected.'&s='.$s;?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
+                    <?php if ($s != '') {?>
+                      <a href="<?=base_url().'cimanews/'.$i.'&s='.$s;?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
                     <?php } else { ?>
                       <a href="<?=base_url().'cimanews/'.$i.'/';?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
                     <?php } ?> 
@@ -183,8 +183,8 @@
               <?php } elseif ($page <= 2) {?>
                 <?php for ($i = 1; $i <= 5 ; $i++) {?>
                   <li>
-                    <?php if ($category_selected != '' || $s != '') {?>
-                      <a href="<?=base_url().'cimanews/'.$i.'?category='.$category_selected.'&s='.$s;?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
+                    <?php if ($s != '') {?>
+                      <a href="<?=base_url().'cimanews/'.$i.'&s='.$s;?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
                     <?php } else { ?>
                       <a href="<?=base_url().'cimanews/'.$i.'/';?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
                     <?php } ?> 
@@ -198,8 +198,8 @@
               <?php } else { ?> 
                 <?php for ($i = $totalPage - 4; $i <= $totalPage ; $i++) {?>
                   <li>
-                    <?php if ($category_selected != '' || $s != '') {?>
-                      <a href="<?=base_url().'cimanews/'.$i.'?category='.$category_selected.'&s='.$s;?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
+                    <?php if ($s != '') {?>
+                      <a href="<?=base_url().'cimanews/'.$i.'&s='.$s;?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
                     <?php } else { ?>
                       <a href="<?=base_url().'cimanews/'.$i.'/';?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
                     <?php } ?> 
@@ -213,8 +213,8 @@
               <!-- conditional for right arrow -->
               <?php if (($page < $totalPage-2) && ($totalPage > 5)) {?>
               <li>
-                <?php if ($category_selected != '' || $s != '') {?>
-                  <a href="<?=base_url().'cimanews/'.($page+1).'?category='.$category_selected.'&s='.$s;?>" class="pagination-link">
+                <?php if ($s != '') {?>
+                  <a href="<?=base_url().'cimanews/'.($page+1).'&s='.$s;?>" class="pagination-link">
                 <?php }else{ ?>
                   <a href="<?=base_url().'cimanews/'.($page+1).'/';?>" class="pagination-link">
                 <?php } ?>
@@ -222,8 +222,8 @@
                 </a>
               </li>
               <li>
-                <?php if ($category_selected != '' || $s != '') {?>
-                  <a href="<?=base_url().'cimanews/'.($totalPage).'?category='.$category_selected.'&s='.$s;?>" class="pagination-link">
+                <?php if ($s != '') {?>
+                  <a href="<?=base_url().'cimanews/'.($totalPage).'&s='.$s;?>" class="pagination-link">
                 <?php }else{ ?>
                   <a href="<?=base_url().'cimanews/'.($totalPage).'/';?>" class="pagination-link">
                 <?php } ?>
@@ -241,8 +241,8 @@
               <!-- conditional for left arrow -->
               <?php if ($page != 1) {?>
               <li>
-                <?php if ($category_selected != '' || $s != '') {?>
-                  <a href="<?=base_url().'cimanews/'.($page-1).'?category='.$category_selected.'&s='.$s;?>" class="pagination-link">
+                <?php if ($s != '') {?>
+                  <a href="<?=base_url().'cimanews/'.($page-1).'&s='.$s;?>" class="pagination-link">
                 <?php }else{ ?>
                   <a href="<?=base_url().'cimanews/'.($page-1).'/';?>" class="pagination-link">
                 <?php } ?>
@@ -255,8 +255,8 @@
               <!-- looping pagination -->
               <?php for ($i=1; $i <= $totalPage ; $i++) {?>
                 <li>
-                  <?php if ($category_selected != '' || $s != '') {?>
-                    <a href="<?=base_url().'cimanews/'.$i.'?category='.$category_selected.'&s='.$s;?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
+                  <?php if ($s != '') {?>
+                    <a href="<?=base_url().'cimanews/'.$i.'&s='.$s;?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
                   <?php }else{ ?>
                     <a href="<?=base_url().'cimanews/'.$i.'/';?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
                   <?php } ?> 
@@ -269,8 +269,8 @@
               <!-- conditional for right arrow -->
               <?php if ($page < $totalPage) {?>
               <li>
-                <?php if ($category_selected != '' || $s != '') {?>
-                  <a href="<?=base_url().'cimanews/'.($page+1).'?category='.$category_selected.'&s='.$s;?>" class="pagination-link">
+                <?php if ($s != '') {?>
+                  <a href="<?=base_url().'cimanews/'.($page+1).'&s='.$s;?>" class="pagination-link">
                 <?php }else{ ?>
                   <a href="<?=base_url().'cimanews/'.($page+1).'/';?>" class="pagination-link">
                 <?php } ?>
