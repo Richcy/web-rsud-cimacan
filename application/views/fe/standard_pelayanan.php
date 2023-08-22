@@ -49,7 +49,6 @@
         <div class="nhead-layer" style="background-color: rgb(10 10 10 / 0%);">
           <div class="nhead-wrap">
             <div class="nhead-title">
-              
             </div>
           </div>
         </div>
@@ -62,44 +61,207 @@
         <div class="section-title">
           <h1 class="title-page">Standard Pelayanan RSUD Cimacan</h1>
         </div>
-        <div class="standard-pelayanan">
-          <h5><a href="https://drive.google.com/file/d/1F4Fqg1Atvg9Ce9HLwATPqbPsAbiBCVOG/view?usp=share_link" class="link-class" target="_blank">STANDAR PELAYANAN DI LINGKUNGAN RUMAH SAKIT UMUM DAERAH CIMACAN</a></h5>
-          <h3><br>1. Bank Darah</h3>
-          <img src="<?=base_url();?>assets/fe/img/BankDarah.png" alt="logo">
-          <h3><br>2. Bedah Sentral</h3>
-          <img src="<?=base_url();?>assets/fe/img/BedahSentral.png" alt="logo">
-          <h3><br>3. CSSD</h3>
-          <img src="<?=base_url();?>assets/fe/img/CSSD.png" alt="logo">
-          <h3><br>4. Farmasi</h3>
-          <img src="<?=base_url();?>assets/fe/img/Farmasi.png" alt="logo">
-          <h3><br>5. Gizi</h3>
-          <img src="<?=base_url();?>assets/fe/img/Gizi.png" alt="logo">
-          <h3><br>6. Hemodialisa</h3>
-          <img src="<?=base_url();?>assets/fe/img/Hemodialisa.png" alt="logo">
-          <h3><br>7. IGD</h3>
-          <img src="<?=base_url();?>assets/fe/img/IGD.png" alt="logo">
-          <h3><br>8. IPSRS</h3>
-          <img src="<?=base_url();?>assets/fe/img/IPSRS.png" alt="logo">
-          <h3><br>9. Laboratorium</h3>
-          <img src="<?=base_url();?>assets/fe/img/Laboratorium.png" alt="logo">
-          <h3><br>10. Laundry</h3>
-          <img src="<?=base_url();?>assets/fe/img/Laundry.png" alt="logo">
-          <h3><br>11. Radiologi</h3>
-          <img src="<?=base_url();?>assets/fe/img/Radiologi.png" alt="logo">
-          <h3><br>12. Rawat Inap</h3>
-          <img src="<?=base_url();?>assets/fe/img/Rawatinap.png" alt="logo">
-          <h3><br>13. Rawat Jalan</h3>
-          <img src="<?=base_url();?>assets/fe/img/Rawatjalan.png" alt="logo">
-          <h3><br>14. Rehab Medik</h3>
-          <img src="<?=base_url();?>assets/fe/img/RehabMedik.png" alt="logo">
-          <h3><br>15. Rekam Medik</h3>
-          <img src="<?=base_url();?>assets/fe/img/RekamMedik.png" alt="logo">
+        <h5><a href="https://drive.google.com/file/d/1F4Fqg1Atvg9Ce9HLwATPqbPsAbiBCVOG/view?usp=share_link" class="link-class" target="_blank">STANDARD PELAYANAN DI LINGKUNGAN RUMAH SAKIT UMUM DAERAH CIMACAN</a></h5><br>
+        <div class="collapsible-section">
+          <div class="collaps-menu">
+            <!-- Button Collaps -->
+            <a class="btn btn-primary button-collapse main-bg-color main-border-color collapsed" data-bs-toggle="collapse" href="#collapse-1" role="button" aria-expanded="false" aria-controls="collapseExample">
+            </a><span class="label-collapse">1. Bank Darah</span>
+            <!-- Content collapse -->
+            <div class="collapse" id="collapse-1">
+              <div class="card-body content-collapse">
+                <img src="<?=base_url();?>assets/fe/img/BankDarah.png" alt="logo" style="max-width: 100%; max-height: auto;">
+              </div>
+            </div>
+          </div>
         </div>
+          <div class="collapsible-section">
+            <div class="collaps-menu">
+              <!-- Button Collaps -->
+              <a class="btn btn-primary button-collapse main-bg-color main-border-color collapsed" data-bs-toggle="collapse" href="#collapse-2" role="button" aria-expanded="false" aria-controls="collapseExample">
+              </a><span class="label-collapse">2. Bedah Sentral</span>
+              <!-- Content collapse -->
+              <div class="collapse" id="collapse-2">
+                <div class="card-body content-collapse">
+                  <img src="<?=base_url();?>assets/fe/img/BedahSentral.png" alt="logo" style="max-width: 100%; max-height: auto;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collapsible-section">
+            <div class="collaps-menu">
+              <!-- Button Collaps -->
+              <a class="btn btn-primary button-collapse main-bg-color main-border-color collapsed" data-bs-toggle="collapse" href="#collapse-3" role="button" aria-expanded="false" aria-controls="collapseExample">
+              </a><span class="label-collapse">3. CSSD</span>
+              <!-- Content collapse -->
+              <div class="collapse" id="collapse-3">
+                <div class="card-body content-collapse">
+                  <img src="<?=base_url();?>assets/fe/img/CSSD.png" alt="logo" style="max-width: 100%; max-height: auto;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collapsible-section">
+            <div class="collaps-menu">
+              <!-- Button Collaps -->
+              <a class="btn btn-primary button-collapse main-bg-color main-border-color collapsed" data-bs-toggle="collapse" href="#collapse-4" role="button" aria-expanded="false" aria-controls="collapseExample">
+              </a><span class="label-collapse">4. Farmasi</span>
+              <!-- Content collapse -->
+              <div class="collapse" id="collapse-4">
+                <div class="card-body content-collapse">
+                  <img src="<?=base_url();?>assets/fe/img/Farmasi.png" alt="logo" style="max-width: 100%; max-height: auto;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collapsible-section">
+            <div class="collaps-menu">
+              <!-- Button Collaps -->
+              <a class="btn btn-primary button-collapse main-bg-color main-border-color collapsed" data-bs-toggle="collapse" href="#collapse-5" role="button" aria-expanded="false" aria-controls="collapseExample">
+              </a><span class="label-collapse">5. Gizi</span>
+              <!-- Content collapse -->
+              <div class="collapse" id="collapse-5">
+                <div class="card-body content-collapse">
+                  <img src="<?=base_url();?>assets/fe/img/Gizi.png" alt="logo" style="max-width: 100%; max-height: auto;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collapsible-section">
+            <div class="collaps-menu">
+              <!-- Button Collaps -->
+              <a class="btn btn-primary button-collapse main-bg-color main-border-color collapsed" data-bs-toggle="collapse" href="#collapse-6" role="button" aria-expanded="false" aria-controls="collapseExample">
+              </a><span class="label-collapse">6. Hemodialisa</span>
+              <!-- Content collapse -->
+              <div class="collapse" id="collapse-6">
+                <div class="card-body content-collapse">
+                  <img src="<?=base_url();?>assets/fe/img/Hemodialisa.png" alt="logo" style="max-width: 100%; max-height: auto;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collapsible-section">
+            <div class="collaps-menu">
+              <!-- Button Collaps -->
+              <a class="btn btn-primary button-collapse main-bg-color main-border-color collapsed" data-bs-toggle="collapse" href="#collapse-7" role="button" aria-expanded="false" aria-controls="collapseExample">
+              </a><span class="label-collapse">7. IGD</span>
+              <!-- Content collapse -->
+              <div class="collapse" id="collapse-7">
+                <div class="card-body content-collapse">
+                  <img src="<?=base_url();?>assets/fe/img/IGD.png" alt="logo" style="max-width: 100%; max-height: auto;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collapsible-section">
+            <div class="collaps-menu">
+              <!-- Button Collaps -->
+              <a class="btn btn-primary button-collapse main-bg-color main-border-color collapsed" data-bs-toggle="collapse" href="#collapse-8" role="button" aria-expanded="false" aria-controls="collapseExample">
+              </a><span class="label-collapse">8. IPSRS</span>
+              <!-- Content collapse -->
+              <div class="collapse" id="collapse-8">
+                <div class="card-body content-collapse">
+                  <img src="<?=base_url();?>assets/fe/img/IPSRS.png" alt="logo" style="max-width: 100%; max-height: auto;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collapsible-section">
+            <div class="collaps-menu">
+              <!-- Button Collaps -->
+              <a class="btn btn-primary button-collapse main-bg-color main-border-color collapsed" data-bs-toggle="collapse" href="#collapse-9" role="button" aria-expanded="false" aria-controls="collapseExample">
+              </a><span class="label-collapse">9. Laboratorium</span>
+              <!-- Content collapse -->
+              <div class="collapse" id="collapse-9">
+                <div class="card-body content-collapse">
+                  <img src="<?=base_url();?>assets/fe/img/Laboratorium.png" alt="logo" style="max-width: 100%; max-height: auto;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collapsible-section">
+            <div class="collaps-menu">
+              <!-- Button Collaps -->
+              <a class="btn btn-primary button-collapse main-bg-color main-border-color collapsed" data-bs-toggle="collapse" href="#collapse-10" role="button" aria-expanded="false" aria-controls="collapseExample">
+              </a><span class="label-collapse">10. Laundry</span>
+              <!-- Content collapse -->
+              <div class="collapse" id="collapse-10">
+                <div class="card-body content-collapse">
+                  <img src="<?=base_url();?>assets/fe/img/Laundry.png" alt="logo" style="max-width: 100%; max-height: auto;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collapsible-section">
+            <div class="collaps-menu">
+              <!-- Button Collaps -->
+              <a class="btn btn-primary button-collapse main-bg-color main-border-color collapsed" data-bs-toggle="collapse" href="#collapse-11" role="button" aria-expanded="false" aria-controls="collapseExample">
+              </a><span class="label-collapse">11. Radiologi</span>
+              <!-- Content collapse -->
+              <div class="collapse" id="collapse-11">
+                <div class="card-body content-collapse">
+                  <img src="<?=base_url();?>assets/fe/img/Radiologi.png" alt="logo" style="max-width: 100%; max-height: auto;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collapsible-section">
+            <div class="collaps-menu">
+              <!-- Button Collaps -->
+              <a class="btn btn-primary button-collapse main-bg-color main-border-color collapsed" data-bs-toggle="collapse" href="#collapse-12" role="button" aria-expanded="false" aria-controls="collapseExample">
+              </a><span class="label-collapse">12. Rawat Inap</span>
+              <!-- Content collapse -->
+              <div class="collapse" id="collapse-12">
+                <div class="card-body content-collapse">
+                  <img src="<?=base_url();?>assets/fe/img/Rawatinap.png" alt="logo" style="max-width: 100%; max-height: auto;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collapsible-section">
+            <div class="collaps-menu">
+              <!-- Button Collaps -->
+              <a class="btn btn-primary button-collapse main-bg-color main-border-color collapsed" data-bs-toggle="collapse" href="#collapse-13" role="button" aria-expanded="false" aria-controls="collapseExample">
+              </a><span class="label-collapse">13. Rawat Jalan</span>
+              <!-- Content collapse -->
+              <div class="collapse" id="collapse-13">
+                <div class="card-body content-collapse">
+                  <img src="<?=base_url();?>assets/fe/img/Rawatjalan.png" alt="logo" style="max-width: 100%; max-height: auto;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collapsible-section">
+            <div class="collaps-menu">
+              <!-- Button Collaps -->
+              <a class="btn btn-primary button-collapse main-bg-color main-border-color collapsed" data-bs-toggle="collapse" href="#collapse-14" role="button" aria-expanded="false" aria-controls="collapseExample">
+              </a><span class="label-collapse">14. Rehab Medik</span>
+              <!-- Content collapse -->
+              <div class="collapse" id="collapse-14">
+                <div class="card-body content-collapse">
+                  <img src="<?=base_url();?>assets/fe/img/RehabMedik.png" alt="logo" style="max-width: 100%; max-height: auto;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collapsible-section">
+            <div class="collaps-menu">
+              <!-- Button Collaps -->
+              <a class="btn btn-primary button-collapse main-bg-color main-border-color collapsed" data-bs-toggle="collapse" href="#collapse-15" role="button" aria-expanded="false" aria-controls="collapseExample">
+              </a><span class="label-collapse">15. Rekam Medik</span>
+              <!-- Content collapse -->
+              <div class="collapse" id="collapse-15">
+                <div class="card-body content-collapse">
+                  <img src="<?=base_url();?>assets/fe/img/RekamMedik.png" alt="logo" style="max-width: 100%; max-height: auto;">
+                </div>
+              </div>
+            </div>
+          </div>
         <div class="container">
           <div class="content-section">
             <div class="row">
               <div class="col-md-12">
-                <img class="Standard Pelayanan-rs denah-rs" src="<?php echo base_url().'assets/uploads/'.$datas[0]->img;?>">
+              <img class="Standard Pelayanan-rs denah-rs" src="<?php echo base_url().'assets/uploads/'.$datas[0]->img;?>">
               </div>
             </div>
           </div>

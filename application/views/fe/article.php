@@ -156,53 +156,9 @@
             <?php } ?>
         </div>
         <!-- Pagination -->
-        <div class="listbox-pagination">
-          <ul>
-
-            <!-- conditional for left arrow -->
-            <?php if ($page != 1) {?>
-            <li>
-              <?php if ($category_selected != '' || $s != '') {?>
-                <a href="<?=base_url().'article/'.($page-1).'?category='.$category_selected.'&s='.$s;?>" class="pagination-link">
-              <?php }else{ ?>
-                <a href="<?=base_url().'article/'.($page-1).'/';?>" class="pagination-link">
-              <?php } ?>
-                <i class="fa fa-angle-left"></i>
-              </a>
-            </li>
-            <?php } ?>
-            <!-- end conditional -->
-
-            <!-- looping pagination -->
-            <?php for ($i=1; $i <= $totalPage ; $i++) {?>
-              <li>
-                <?php if ($category_selected != '' || $s != '') {?>
-                  <a href="<?=base_url().'article/'.$i.'?category='.$category_selected.'&s='.$s;?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
-                <?php }else{ ?>
-                  <a href="<?=base_url().'article/'.$i.'/';?>" class="pagination-link <?=$i == $page ? 'active-pag' : '' ?>">
-                <?php } ?> 
-                  <?=$i;?>
-                </a>
-              </li>
-            <?php } ?>
-            <!-- end looping -->
-
-            <!-- conditional for right arrow -->
-            <?php if ($page < $totalPage) {?>
-            <li>
-              <?php if ($category_selected != '' || $s != '') {?>
-                <a href="<?=base_url().'article/'.($page+1).'?category='.$category_selected.'&s='.$s;?>" class="pagination-link">
-              <?php }else{ ?>
-                <a href="<?=base_url().'article/'.($page+1).'/';?>" class="pagination-link">
-              <?php } ?>
-                <i class="fa fa-angle-right"></i>
-              </a>
-            </li>
-            <?php } ?>
-            <!-- end conditional -->
-
-          </ul>
-        </div>
+        <?php 
+          $this->load->view('fe/pagination');
+        ?>
         <!-- End Pagination -->
 
       </div>
