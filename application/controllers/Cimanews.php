@@ -25,6 +25,8 @@ class Cimanews extends CI_Controller {
 		$totalData = $this->M_Cimanews->getTotal($s);
 		$totalPage = ceil($totalData[0]->totalData/6);
 
+		$data['category_selected'] = false;
+		$data['field_selected'] = false;
 		$data['s'] = $s;
 		$data['lang'] = 'id';
 		$data['page'] = 1;
@@ -49,12 +51,15 @@ class Cimanews extends CI_Controller {
 		$totalData = $this->M_Cimanews->getTotal($s);
 		$totalPage = ceil($totalData[0]->totalData/6);
 
+		$data['category_selected'] = false;
+		$data['field_selected'] = false;
 		$data['s'] = $s;
 		$data['lang'] = 'id';
 		$data['page'] = $page ? $page : 1;
 		$data['totalData'] = $totalData[0]->totalData;
 		$data['totalPage'] = $totalPage;
 		$data['datas'] = $this->M_Cimanews->getPage($page, $s);
+		$data['categories'] = null;
 		$this->load->view('fe/cimanews', $data);
 	}
 

@@ -35,9 +35,10 @@
         <div class="col-lg-2 col-md-6 footer-links">
           <h4>Persingkat Tautan</h4>
           <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="<?=base_url();?>">Beranda</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="<?=base_url();?>profile.html">Profil Rumah Sakit</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="<?=base_url();?>sketch.html">Denah Rumah Sakit</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="<?=base_url();?>directurs_greeting.html">Sambutan Direktur</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="<?=base_url();?>structure.html">Struktur Organisasi</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="<?=base_url();?>standard_pelayanan.html">Standard Pelayanan</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="<?=base_url();?>doctor/">Dokter</a></li>
           </ul>
         </div>
@@ -66,6 +67,7 @@
         <div class="col-lg-2 col-md-6 footer-links">
           <h4>Pemerintahan</h4>
           <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://www.bpjs-kesehatan.go.id/#/" target="_blank">BPJS</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="https://www.kemkes.go.id/" target="_blank">Kemenkes</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="https://cianjurkab.go.id/" target="_blank">PEMDA Cianjur</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="https://dinkes.cianjurkab.go.id/" target="_blank">DINKES Cianjur</a></li>

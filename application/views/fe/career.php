@@ -101,11 +101,6 @@
                   </span>
                 </a>
                 <div class="listboxd-content">
-                  <!-- <div class="row down1" style="height:50px;">
-                    <div class="col-xs-8" style="padding-left:0;">
-                      <div class="listboxd-date"><?=date('d M Y', strtotime($data->start_date));?> - <?=date('d M Y', strtotime($data->end_date));?></div>
-                    </div>
-                  </div> -->
                   <a href="<?=base_url().'career-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-title min-heigt-title">
                     <?=$data->title;?>
                   </a>

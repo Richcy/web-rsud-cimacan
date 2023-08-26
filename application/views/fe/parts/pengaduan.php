@@ -16,7 +16,7 @@
               </div>
               <div class="icon-box">
                 <img src="assets/uploads/image/sp4n.png">
-                <p><a href="https://www.lapor.go.id/">SP4N LAPOR</a></p>
+                <p><a href="https://www.lapor.go.id/" target="_blank">SP4N LAPOR</a></p>
               </div>
               <div class="icon-box">
                 <i class="bx bxl-whatsapp"></i>
@@ -28,7 +28,7 @@
               </div>
                 <div class="icon-box">
                 <i class="bx bxl-instagram"></i>
-                <p><a href="https://www.instagram.com/rsud.cimacan/">Instagram</a></p>
+                <p><a href="https://www.instagram.com/rsud.cimacan/" target="_blank">Instagram</a></p>
               </div>
                 <div class="icon-box">
                 <i class="bx bx-envelope"></i>
@@ -36,7 +36,7 @@
               </div>
                <div class="icon-box">
                 <i class="bx bxl-facebook"></i>
-                <p><a href="https://www.facebook.com/profile.php?id=100071691815827">Facebook</a></p>
+                <p><a href="https://www.facebook.com/profile.php?id=100071691815827" target="_blank">Facebook</a></p>
               </div>
             </div>
           </div>

@@ -52,6 +52,7 @@ class Doctor extends CI_Controller {
 		$totalPage = ceil($totalData[0]->totalData/8);
 
 		$data['field_selected'] = $field;
+		$data['category_selected'] = false;
 		$data['s'] = $s;
 		$data['lang'] = 'id';
 
