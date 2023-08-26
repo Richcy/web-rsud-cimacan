@@ -1,6 +1,6 @@
 <?php $role = $this->session->userdata('role_id') ? $this->session->userdata('role_id') : ''; ?>
 <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-      <a class="sidebar-brand d-flex align-items-center justify-content-center primary-bg" href="<?= base_url('administrator/slider') ?>">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center primary-bg" href="<?= base_url() ?>" target="_blank">
         <div class="sidebar-brand-icon">
           RSUD Cimacan
         </div>

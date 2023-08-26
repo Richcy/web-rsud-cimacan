@@ -34,6 +34,7 @@
                       <button type="submit" class="btn btn-primary btn-block primary-bg primary-border">Login</button>
                     </div>
                   </form>
+                  <i class="fa fa-angle-left"></i><a href="<?=base_url();?>"> Kembali ke Beranda</a>
                 </div>
               </div>
             </div>
@@ -42,6 +43,7 @@
       </div>
     </div>
   </div>
+
 
   <!-- Footer js -->
   <?php $this->load->view('admin/packages/footer'); ?>

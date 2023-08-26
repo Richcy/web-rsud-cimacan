@@ -206,7 +206,7 @@
 
         <!-- if nothing used (event, article, doctor, cimanews, career)-->
         <?php }else{ ?>
-          <a href="<?=$paginationUrl.'/'.($page-1);?>" class="pagination-link">
+          <a href="<?=$paginationUrl.'/'.($page+1);?>" class="pagination-link">
         <?php } ?>
           <!-- arrow to next page -->
           <i class="fa fa-angle-right"></i>
