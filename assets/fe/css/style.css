@@ -1023,8 +1023,8 @@ section {
 }
 .departments .tab-pane .direktur {
   float: left;
-  max-width: 700px;
-  max-height: 400px;
+  max-width: 500px;
+  max-height: 275px;
   padding: 0 15px 15px 0;
 }
 
@@ -1095,7 +1095,7 @@ section {
   }
 }
 
-@media (max-width: 450px) and (min-width: 321px) {
+@media (max-width: 450px) and (min-width: 320px) {
   .departments .tab-pane .direktur {
     display: block;
     float: none;
