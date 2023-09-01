@@ -28,6 +28,7 @@ class Doctor extends CI_Controller {
 		$totalData = $this->T_Doctor->getTotal($field, $s);
 		$totalPage = ceil($totalData[0]->totalData/8);
 
+		$data['category_selected'] = null;
 		$data['field_selected'] = $field;
 		$data['s'] = $s;
 		$data['lang'] = 'id';
@@ -51,8 +52,8 @@ class Doctor extends CI_Controller {
 		$totalData = $this->T_Doctor->getTotal($field, $s);
 		$totalPage = ceil($totalData[0]->totalData/8);
 
+		$data['category_selected'] = null;
 		$data['field_selected'] = $field;
-		$data['category_selected'] = false;
 		$data['s'] = $s;
 		$data['lang'] = 'id';
 

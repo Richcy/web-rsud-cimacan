@@ -28,8 +28,8 @@ class Career extends CI_Controller {
 		$data['seo_desc'] = 'Karir atau lowongan pekerjaan yang dibutuhkan oleh Rumah Sakit Daerah Cimacan';
 		$data['seo_url'] = base_url().'career/';
 
-		$data['category_selected'] = false;
-		$data['field_selected'] = false;
+		$data['category_selected'] = null;
+		$data['field_selected'] = null;
 		$data['page'] = 1;
 		$data['totalData'] = $totalData[0]->totalData;
 		$data['totalPage'] = $totalPage;
@@ -55,8 +55,8 @@ class Career extends CI_Controller {
 		$data['seo_desc'] = 'Karir atau lowongan pekerjaan yang dibutuhkan oleh Rumah Sakit Daerah Cimacan pada halaman ke-'.$page;
 		$data['seo_url'] = base_url().'career/'.$page.'/';
 
-		$data['category_selected'] = false;
-		$data['field_selected'] = false;
+		$data['category_selected'] = null;
+		$data['field_selected'] = null;
 		$data['page'] = $page ? $page : 1;
 		$data['totalData'] = $totalData[0]->totalData;
 		$data['totalPage'] = $totalPage;
