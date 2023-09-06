@@ -9,6 +9,9 @@ class Home extends CI_Controller {
     	$this->load->model('T_Slider');
     	$this->load->model('T_Event');
     	$this->load->model('M_About_Home');
+		$this->load->model('M_Maklumat_pelayanan');
+		$this->load->model('M_Quality');
+		$this->load->model('M_Structure');
     	$this->load->model('T_Doctor');
     	$this->load->model('T_Featured_Doctor');
     	$this->load->model('T_Gallery');
@@ -31,7 +34,10 @@ class Home extends CI_Controller {
 		$data['lang'] = $lang;
 		$data['datas_slide'] = $this->T_Slider->show_all();
 		$data['data_events'] = $this->T_Event->getHome();
-		$data['datas_about'] = $this->M_About_Home->getAll($lang);
+		$data['datas_greetings'] = $this->M_About_Home->getAll($lang);
+		$data['datas_maklumat'] = $this->M_Maklumat_pelayanan->getAll();
+		$data['datas_ikm'] = $this->M_Quality->getAll();
+		$data['datas_structure'] = $this->M_Structure->getAll();
 		$data['datas_doctor'] = $this->T_Featured_Doctor->show_all();
 		$data['datas_gallery'] = $this->T_Gallery->getHome();
 		$data['datas_article'] = $this->M_Cimanews->getHome();

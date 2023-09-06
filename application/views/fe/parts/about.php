@@ -8,10 +8,10 @@
 
     <div class="row">
       <div class="col-lg-5 img-left-position" data-aos="fade-right">
-        <img src="<?=$datas_about[0]->banner ? base_url().'assets/uploads/'.$datas_about[0]->banner : base_url().'assets/fe/img/rsud_gedung.jpg';?>" class="img-fluid img-greeting" alt="">
+        <img src="<?=$datas_greetings[0]->banner ? base_url().'assets/uploads/'.$datas_greetings[0]->banner : base_url().'assets/fe/img/rsud_gedung.jpg';?>" class="img-fluid img-greeting" alt="">
       </div>
       <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
-          <?=substr($datas_about[0]->description, 0, 750);?>...
+          <?=substr($datas_greetings[0]->description, 0, 750);?>...
         <div>
           <a href="<?=base_url().'directurs-greeting.html';?>">Selengkapnya</a>
         </div>

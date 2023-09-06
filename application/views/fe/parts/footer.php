@@ -27,8 +27,11 @@
               <a href="https://www.instagram.com/rsud.cimacan/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
               <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
               <!-- <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
-              <a href="https://play.google.com/store/apps/details?id=com.reservcimacan&hl=in&gl=US" target="_blank" class="google-share"><i class="bi bi-google-play mt">
               </i></a>
+            </div>
+            <div class="google-playstore mt-3">
+              <h4>Download Tartimah:</h4>
+              <a href="https://play.google.com/store/apps/details?id=com.reservcimacan&hl=in&gl=US" target="_blank"><img src="<?=base_url();?>assets/uploads/image/play-store-logo-33874.png" alt="google-playstore"></a>
             </div>
           </div>
         </div>
