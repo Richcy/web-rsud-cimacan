@@ -183,6 +183,15 @@
         </a>
       </li>
       <?php } ?>
+
+      <?php if ($role == 1) {?>
+      <li class="nav-item <?=$cur_page == 'admin' ? 'active' : '' ?>">
+        <a class="nav-link" href="<?=base_url('administrator/admin')?>">
+          <i class="fas fa-fw fa-clock"></i>
+          <span>Admin Management</span>
+        </a>
+      </li>
+      <?php } ?>
       <!-- <li class="nav-item">
         <a class="nav-link" href="charts.html">
           <i class="fas fa-fw fa-chart-area"></i>
