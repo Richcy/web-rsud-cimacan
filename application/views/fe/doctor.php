@@ -71,7 +71,7 @@
                           <label for="">Spesialis</label>
                           <select class="form-control spesialis" id="" name="field">
                             <option value="">-- Semua Spesialis --</option>
-                            <?php foreach ($fields as $field) {?>
+                            <?php foreach ($page_info['fields'] as $field) {?>
                               <option value="<?=$field->id;?>" <?=$field->id == $field_selected ? 'selected' : '';?>><?=$field->name;?></option>
                             <?php } ?>
                           </select>
@@ -98,35 +98,33 @@
 
         <!-- Doctor list -->
         <section id="doctors" class="doctors">
-          <?php if (!empty($datas)) {?>
-          <div class="row" id="list">
-            <?php foreach ($datas as $data){?>
+        <?php if (!empty($page_info['datas'])) {?>
+        <div class="row" id="list">
+          <?php foreach ($page_info['datas'] as $doctor){?>
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
               <div class="member">
-                <?php $lower_name = strtolower($data->name); ?>
+                <?php $lower_name = strtolower($doctor->name); ?>
                 <?php $delete_dots = str_replace('.', ' ', $lower_name); ?>
                 <?php $delete_coma = str_replace(',', ' ', $delete_dots); ?>
                 <?php $fix_name = str_replace(' ', '-', $delete_coma); ?>
-                <a href="<?=base_url().'doctor-'.$data->id.'-'.$fix_name.'.html';?>">
+                <a href="<?=base_url().'doctor-'.$doctor->id.'-'.$fix_name.'.html';?>">
                   <div class="member-img">
-                    <img src="<?=$data->img ? base_url().'assets/uploads/'.$data->img : base_url().'assets/uploads/doctor-default.png' ;?>" class="img-fluid" alt="">
-                      <span style=" opacity: 0;">
-                        <?=$data->name;?>
-                      </span>
+                    <img src="<?=$doctor->img ? base_url().'assets/uploads/'.$doctor->img : base_url().'assets/uploads/doctor-default.png' ;?>" class="img-fluid" alt="">
+                    <span style="opacity: 0;"><?=$doctor->name;?></span>
                   </div>
                   <div class="member-info">
-                    <h4><?=$data->name;?></h4>
-                    <span><?=$data->field;?></span>
+                    <h4><?=$doctor->name;?></h4>
+                    <span><?=$doctor->field;?></span>
                   </div>
                 </a>
               </div>
             </div>
           <?php } ?>
+        </div>
+      <?php } else { ?>
+        <p class="empty-data">Data dokter tidak tersedia</p>
+      <?php } ?>
 
-          </div>
-          <?php }else{ ?>
-            <p class="empty-data">Data dokter tidak tersedia</p>
-          <?php } ?>
           <!-- Pagination -->
           <?php 
             $this->load->view('fe/pagination');
