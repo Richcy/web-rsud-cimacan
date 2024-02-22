@@ -109,9 +109,9 @@
       ?>
     <!-- End Doctors Section -->
 
-    <!-- ======= Article Section ======= -->
+    <!-- ======= CimaNEWS Section ======= -->
       <?php 
-        $this->load->view('fe/parts/articles'); 
+        $this->load->view('fe/parts/cimanews-section'); 
       ?>
     <!-- End Article Section -->
 

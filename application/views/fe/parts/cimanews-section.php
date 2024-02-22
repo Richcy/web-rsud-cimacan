@@ -1,4 +1,4 @@
-<?php if (!empty($datas_article)) {?>
+<?php if (!empty($datas_cimanews)) {?>
 <section id="doctors" class="doctors">
   <div class="container" data-aos="fade-up">
 
@@ -7,7 +7,7 @@
     </div>
 
     <div class="row">
-      <?php foreach ($datas_article as $data) {?>
+      <?php foreach ($datas_cimanews as $data) {?>
         <div class="col-listbox col-box-home">
           <div class="listboxd-wrap">
             <?php
@@ -15,14 +15,14 @@
               $deleteUnique = str_replace('?', '', $lowerText);
               $change_url = str_replace(' ', '-', $deleteUnique); 
             ?>
-            <a href="<?=base_url().'article-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-img" style="background-image: url('<?=$data->img ? base_url().'assets/uploads/'.$data->img : base_url().'assets/uploads/default-image.jpg';?>')">
+            <a href="<?=base_url().'cimanews-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-img" style="background-image: url('<?=$data->img ? base_url().'assets/uploads/'.$data->img : base_url().'assets/uploads/default-image.jpg';?>')">
               <span style=" opacity: 0;">
                 <?=$data->title;?>
               </span>
             </a>
             <div class="listboxd-content">
               
-              <a href="<?=base_url().'article-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-title min-heigt-title">
+              <a href="<?=base_url().'cimanews-'.$data->id.'-'.$change_url.'.html';?>" class="listboxd-title min-heigt-title">
                 <?=substr($data->title, 0, 30);?>...
               </a>
               <div class="author">
@@ -49,7 +49,7 @@
 
     <div class="row row-home-doctor">
       <div class="button-doctor">
-        <a href="<?=base_url()."article/";?>" class="btn btn-primary btn-doctor">Berita Lainnya</a>
+        <a href="<?=base_url()."cimanews/";?>" class="btn btn-primary btn-doctor">Berita Lainnya</a>
       </div>
     </div>
 

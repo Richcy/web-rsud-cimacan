@@ -74,7 +74,7 @@
                           <label for="">Kategori Artikel</label>
                           <select class="form-control category-search" name="category">
                             <option value="">-- All Category --</option>
-                            <?php foreach ($categories as $cat) {?>
+                            <?php foreach ($page_info['categories'] as $cat) {?>
                               <option value="<?=$cat->id;?>" <?=$cat->id == $category_selected ? 'selected' : '';?>><?=$cat->name;?></option>
                             <?php } ?>
                           </select>
@@ -112,8 +112,8 @@
 
         <div class="row-news">
           <!-- Looping event -->
-            <?php if (!empty($datas)) {?>
-            <?php foreach ($datas as $data) {?>
+            <?php if (!empty($page_info['datas'])) {?>
+            <?php foreach ($page_info['datas'] as $data) {?>
             <div class="col-listbox">
               <div class="listboxd-wrap">
                 <?php
