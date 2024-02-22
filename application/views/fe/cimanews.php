@@ -90,8 +90,8 @@
 
         <div class="row-news">
           <!-- Looping event -->
-            <?php if (!empty($datas)) {?>
-            <?php foreach ($datas as $data) {?>
+            <?php if (!empty($page_info['datas'])) {?>
+            <?php foreach ($page_info['datas'] as $data) {?>
             <div class="col-listbox">
               <div class="listboxd-wrap">
                 <?php

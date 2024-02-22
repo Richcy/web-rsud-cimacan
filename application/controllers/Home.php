@@ -40,7 +40,7 @@ class Home extends CI_Controller {
 		$data['datas_structure'] = $this->M_Structure->getAll();
 		$data['datas_doctor'] = $this->T_Featured_Doctor->show_all();
 		$data['datas_gallery'] = $this->T_Gallery->getHome();
-		$data['datas_article'] = $this->M_Cimanews->getHome();
+		$data['datas_cimanews'] = $this->M_Cimanews->getHome();
         $data['datas_running_text'] = $this->M_Running_text->show_running_text();
 		$this->load->view('fe/home', $data);
 	}

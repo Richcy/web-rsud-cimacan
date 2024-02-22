@@ -4433,6 +4433,7 @@ body{
     margin: 0 3px;
 }
 .pagination-link {
+    list-style-type: none;
     font-size: 14px;
     color: #a82024;
     padding: 2px 2px;

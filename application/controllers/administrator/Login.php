@@ -3,54 +3,70 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
 
-	function __construct()
-	{
-		parent::__construct();
-    	$this->load->model('T_Admin');
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('T_Admin');
         $this->load->library('session');
-        $this->load->library('Myencrypt');
-	}
+        $this->load->library('form_validation');
+    }
 
-	public function index()
-	{
-		$data['cur_page'] = 'login';
-		$data['cur_parent_page'] = '';
-		$this->load->view('admin/login', $data);
-	}
+    public function index()
+    {
+        $data['cur_page'] = 'login';
+        $data['cur_parent_page'] = '';
+        $this->load->view('admin/login', $data);
+    }
 
-	public function loginAdmin()
-	{
-		// $password = 'CimacanRsud001!@';
-		// $password = 'admin1!';
-		$encrypt = new Myencrypt(11);
-		// $hash = $encrypt->hash($password);
-		// var_dump($hash);
-		// die(); 
-		$username = $this->input->post('username') ? $this->input->post('username') : '';
-		$password = $this->input->post('password') ? $this->input->post('password') : '';
-		$checkAdmin = $this->T_Admin->get_detail($username);
+    public function loginAdmin()
+    {
+        // Form validation
+        $this->form_validation->set_rules('username', 'Username', 'trim|required');
+        $this->form_validation->set_rules('password', 'Password', 'required');
 
-		$enc_pass = $checkAdmin[0]->password;
-		$verify = $encrypt->verify($password, $enc_pass);
-		if (empty($checkAdmin) || !$verify) {
-			$this->session->set_flashdata('title','Failed');
-        	$this->session->set_flashdata('message','Invalid Username or Password. Please Try again!');
-        	$this->session->set_flashdata('status','error');
-        	return redirect('/administrator/');
-		}else{
-			$this->session->set_userdata('id_admin',$checkAdmin[0]->id);
-            $this->session->set_userdata('username_admin',$checkAdmin[0]->username);
-            $this->session->set_userdata('name_admin',$checkAdmin[0]->name);
-            $this->session->set_userdata('role_name',$checkAdmin[0]->role_name);
-            $this->session->set_userdata('role_id',$checkAdmin[0]->role_id);
-		}
-		redirect('/administrator/slider');
-	}
+        if ($this->form_validation->run() == FALSE) {
+            $this->setLoginError('Invalid Username or Password. Please try again!');
+            redirect('/administrator/');
+        }
 
-	public function logoutAdmin(){
-          $this->session->sess_destroy();
-          redirect('/administrator/');
-      }
+        $username = $this->input->post('username');
+        $password = $this->input->post('password');
 
+        // Retrieve admin details
+        $admin = $this->T_Admin->get_detail($username);
 
+        // Verify credentials
+        if (!$admin || !password_verify($password, $admin->password)) {
+            $this->setLoginError('Invalid Username or Password. Please try again!');
+            redirect('/administrator/');
+        }
+
+        // Set session data upon successful login
+        $this->setSessionData($admin);
+
+        // Redirect to the appropriate page
+        redirect('/administrator/slider');
+    }
+
+    private function setLoginError($message) {
+        $this->session->set_flashdata('title', 'Failed');
+        $this->session->set_flashdata('message', $message);
+        $this->session->set_flashdata('status', 'error');
+    }
+
+    private function setSessionData($admin) {
+        $userdata = array(
+            'id_admin' => $admin->id,
+            'username_admin' => $admin->username,
+            'name_admin' => $admin->name,
+            'role_name' => $admin->role_name,
+            'role_id' => $admin->role_id
+        );
+        $this->session->set_userdata($userdata);
+    }
+
+    public function logoutAdmin() {
+        $this->session->sess_destroy();
+        redirect('/administrator/');
+    }
 }

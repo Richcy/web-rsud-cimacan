@@ -7,7 +7,9 @@
       $usedCategory = !empty($category_selected);
       $usedField = !empty($field_selected);
       $usedSearch = !empty($s);
-      $paginationUrl = base_url().$cur_page;
+      $paginationUrl = $page_info['url'];
+      $totalPage = $page_info['totalPage'];
+      $page = $page_info['page'];
     ?>
 
     <?php if ($totalPage > 5) {?>
