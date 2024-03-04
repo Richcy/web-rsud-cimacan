@@ -73,21 +73,24 @@ class Cimanews extends CI_Controller {
         $data['cur_page'] = 'cimanews';
         $data['cur_parent_page'] = 'article';
         $data['lang'] = 'id';
-        $datas = $this->M_Cimanews->getDetail($id);
 
-        if (!$datas) {
+        // Retrieve cimanews details
+        $cimanews_details = $this->M_Cimanews->getDetail($id);
+
+        if (!$cimanews_details) {
             // Handle non-existent cimanews
             show_error('Cimanews not found');
             return;
         }
         
-        $data['seo_title'] = substr($datas[0]->title,0, 30).' | RSUD Cimacan';
-        $data['seo_keyword'] = strtolower($datas[0]->title).', rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan';
-        $data['seo_desc'] = substr($datas[0]->sub_desc ? $datas[0]->sub_desc : $datas[0]->description,0, 120).'...';
-        $lowerText = strtolower($datas[0]->title);
+        $data['seo_title'] = substr($cimanews_details[0]->title,0, 30).' | RSUD Cimacan';
+        $data['seo_keyword'] = strtolower($cimanews_details[0]->title).', rumah sakit umum daerah cimacan, rsud cimacan, rsd cimacan';
+        $data['seo_desc'] = substr($cimanews_details[0]->sub_desc ? $cimanews_details[0]->sub_desc : $cimanews_details[0]->description,0, 120).'...';
+        $lowerText = strtolower($cimanews_details[0]->title);
         $deleteUnique = str_replace('?', '', $lowerText);
         $change_url = str_replace(' ', '-', $deleteUnique);
-        $data['seo_url'] = base_url().'cimanews-'.$datas[0]->id.'-'.$change_url.'.html';
+        $data['seo_url'] = base_url().'cimanews-'.$cimanews_details[0]->id.'-'.$change_url.'.html';
+        $data['cimanews'] = $cimanews_details[0];
         
         $this->load->view('fe/cimanews_detail', $data);
     }
