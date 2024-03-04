@@ -9,12 +9,12 @@
   <link rel="canonical" href="<?=$seo_url;?>">
   <meta property="og:type" content="article" />
   <meta property="og:title" content="<?=$seo_title;?>" />
-  <meta property="og:image" content="<?=$datas[0]->img ? base_url().'assets/uploads/'.$datas[0]->img : base_url().'assets/uploads/default-image.jpg';?>" />
+  <meta property="og:image" content="<?=$cimanews->img ? base_url().'assets/uploads/'.$cimanews->img : base_url().'assets/uploads/default-image.jpg';?>" />
   <meta property="og:description" content="<?=$seo_desc;?>" />
   <meta property="og:url" content="<?=$seo_url;?>"/>
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="<?=$seo_title;?>" />
-  <meta name="twitter:image:src" content="<?=$datas[0]->img ? base_url().'assets/uploads/'.$datas[0]->img : base_url().'assets/uploads/default-image.jpg';?>" />
+  <meta name="twitter:image:src" content="<?=$cimanews->img ? base_url().'assets/uploads/'.$cimanews->img : base_url().'assets/uploads/default-image.jpg';?>" />
   <meta name="twitter:description" content="<?=$seo_desc;?>"/>
   <!-- End SEO -->
   <?php 
@@ -43,31 +43,31 @@
         <div class="row space-detail">
           <div class="col-md-6 pad0">
             <div class="detail-article">
-              <?=$datas[0]->category_name;?> <span>|</span> <span><?=date('d F Y', strtotime($datas[0]->create_date));?></span>
-              <div><span><i class="fa fa-user"></i> <?=$datas[0]->author;?></span></div>
+              <?=$cimanews->category_name;?> <span>|</span> <span><?=date('d F Y', strtotime($cimanews->create_date));?></span>
+              <div><span><i class="fa fa-user"></i> <?=$cimanews->author;?></span></div>
             </div>
           </div>
           <div class="col-md-6 pad0 rightPosition">
             <div class="side-share">
               <?php 
-                $lowerText = strtolower($datas[0]->title); 
+                $lowerText = strtolower($cimanews->title); 
                 $deleteUnique = str_replace('?', '', $lowerText);
                 $change_url = str_replace(' ', '-', $deleteUnique);  
               ?>
-              <a href="javascript:void(0);" onclick="popUpSocmed('https://www.facebook.com/sharer/sharer.php?u=<?=base_url().'cimanews-'.$datas[0]->id.'-'.$change_url.'.html';?>','myWindow','500','300','yes');return false" class="share-link">
+              <a href="javascript:void(0);" onclick="popUpSocmed('https://www.facebook.com/sharer/sharer.php?u=<?=base_url().'cimanews-'.$cimanews->id.'-'.$change_url.'.html';?>','myWindow','500','300','yes');return false" class="share-link">
                 <img src="<?=base_url().'assets/fe/img/icon_facebook.png';?>" alt="facebook">
               </a>
-              <a href="javascript:void(0);" onclick="popUpSocmed('https://twitter.com/intent/tweet?url=<?=base_url().'cimanews-'.$datas[0]->id.'-'.$change_url.'.html';?>&text=<?=$datas[0]->title;?>');return false" class="share-link">
+              <a href="javascript:void(0);" onclick="popUpSocmed('https://twitter.com/intent/tweet?url=<?=base_url().'cimanews-'.$cimanews->id.'-'.$change_url.'.html';?>&text=<?=$cimanews->title;?>');return false" class="share-link">
                 <img src="<?=base_url().'assets/fe/img/icon_twitter.png';?>" alt="twitter">
               </a>
-              <a href="javascript:void(0);" onclick="popUpSocmed('https://api.whatsapp.com/send?text=<?=base_url().'cimanews-'.$datas[0]->id.'-'.$change_url.'.html';?>','myWindow','600','300','yes');return false" data-action="share/whatsapp/share" class="share-link">
+              <a href="javascript:void(0);" onclick="popUpSocmed('https://api.whatsapp.com/send?text=<?=base_url().'cimanews-'.$cimanews->id.'-'.$change_url.'.html';?>','myWindow','600','300','yes');return false" data-action="share/whatsapp/share" class="share-link">
                 <img src="<?=base_url().'assets/fe/img/icon_whatsapp.png';?>" alt="whatsapp">
               </a>
             </div>
           </div>
         </div>
         <div class="section-title">
-          <h1 class="title-page"><?=$datas[0]->title;?></h1>
+          <h1 class="title-page"><?=$cimanews->title;?></h1>
         </div>
 
         <div class="container">
@@ -75,7 +75,7 @@
             <div class="row">
               <div class="col-md-6 min-font-size">
                 <p>
-                  <?=$datas[0]->description;?>
+                  <?=$cimanews->description;?>
                 </p>
               </div>
               <div class="col-md-6">
@@ -84,9 +84,9 @@
                     <div class="swiper-wrapper1 align-items-center">
                       <!-- Looping -->
                       <div class="swiper-slide">
-                        <div class="gallery-imgswiper-image" style="background-image: url('<?=$datas[0]->img ? base_url().'assets/uploads/'.$datas[0]->img : base_url().'assets/uploads/default-image.jpg';?>');">
+                        <div class="gallery-imgswiper-image" style="background-image: url('<?=$cimanews->img ? base_url().'assets/uploads/'.$cimanews->img : base_url().'assets/uploads/default-image.jpg';?>');">
                           <div class="gallery-imgswiper-content">
-                            <a href="<?=$datas[0]->img ? base_url().'assets/uploads/'.$datas[0]->img : base_url().'assets/uploads/default-image.jpg';?>" class="gallery-imgswiper-zoom gallery-lightbox" rel="news">
+                            <a href="<?=$cimanews->img ? base_url().'assets/uploads/'.$cimanews->img : base_url().'assets/uploads/default-image.jpg';?>" class="gallery-imgswiper-zoom gallery-lightbox" rel="news">
                               <i class="fa fa-search"></i>
                               <div class="gallery-imgswiper-enlarge">Click to enlarge image</div>
                             </a>
