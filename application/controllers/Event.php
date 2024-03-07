@@ -40,6 +40,7 @@ class Event extends CI_Controller {
         $data['seo_title'] = "RSUD Cimacan | Event";
         $data['seo_keyword'] = "event, acara, agenda, rumah sakit umum daerah cimacan, rsud cimacan";
         $data['seo_desc'] = 'Daftar Acara yang diadakan oleh Rumah Sakit Daerah Cimacan';
+        $data['seo_url'] = base_url().'event/';
 
         // Validate and sanitize input parameters
         $category = $this->input->get('category') ? $this->input->get('category') : '';
@@ -63,11 +64,20 @@ class Event extends CI_Controller {
         $data['field_selected'] = null;
         $data['s'] = $s;
         $data['lang'] = 'id';
-        $data['page'] = $page;
-        $data['totalData'] = $totalData[0]->totalData;
-        $data['totalPage'] = $totalPage;
-        $data['datas'] = $this->T_Event->getPage($page, $category, $s);
-        $data['categories'] = $this->T_Event_Category->show_all();
+
+        $data['page_info']['page'] = $page;
+        $data['page_info']['totalData'] = $totalData[0]->totalData;
+        $data['page_info']['totalPage'] = $totalPage;
+        $data['page_info']['datas'] = $this->T_Event->getPage($page, $category, $s);
+        $data['page_info']['categories'] = $this->T_Event_Category->show_all();
+        $data['page_info']['url'] = base_url() . $data['cur_page'];
+
+        // $data['page'] = $page;
+        // $data['totalData'] = $totalData[0]->totalData;
+        // $data['totalPage'] = $totalPage;
+        // $data['datas'] = $this->T_Event->getPage($page, $category, $s);
+        // $data['categories'] = $this->T_Event_Category->show_all();
+        
         $this->load->view('fe/event', $data);
     }
 
